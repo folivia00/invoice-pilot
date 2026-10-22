@@ -1,0 +1,29 @@
+[project]
+name = "invoice-pilot"
+version = "0.1.0"
+description = "Telegram bot that extracts invoice data with an LLM and validates it with deterministic rules."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Vladimir K" }]
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
