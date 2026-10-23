@@ -21,7 +21,7 @@ from invoice_pilot.domain import (
     ValidationStatus,
     validate,
 )
-from invoice_pilot.domain.constants import quantize_to, tolerance_for
+from invoice_pilot.domain.constants import minor_unit, quantize_to
 from invoice_pilot.domain.currencies import minor_units
 from invoice_pilot.domain.iban import compute_check_digits
 from invoice_pilot.domain.validation import REQUIRED_FIELDS, REQUIRED_LINE_ITEM_FIELDS
@@ -108,7 +108,7 @@ def test_corrupting_one_amount_is_always_caught(
 ) -> None:
     units = minor_units(invoice.currency or "")
     assert units is not None
-    delta = tolerance_for(units) * factor  # strictly larger than the tolerance
+    delta = minor_unit(units) * factor  # at least two minor units
     if target == "amount":
         index = item_pick % len(invoice.line_items)
         items = list(invoice.line_items)

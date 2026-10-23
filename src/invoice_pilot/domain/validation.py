@@ -10,12 +10,13 @@ from decimal import Decimal
 from typing import Final
 
 from invoice_pilot.domain.constants import (
+    EXACT_MATCH_TOLERANCE,
     FALLBACK_MINOR_UNITS,
     HUNDRED,
     MAX_TAX_RATE,
     MIN_TAX_RATE,
     ZERO,
-    tolerance_for,
+    rounding_tolerance_for,
 )
 from invoice_pilot.domain.currencies import minor_units
 from invoice_pilot.domain.iban import check_iban
@@ -59,10 +60,10 @@ def validate(invoice: Invoice, *, today: date) -> ValidationReport:
     issues: list[Issue] = []
     _check_required(invoice, issues)
     units = _check_currency(invoice, issues)
-    tolerance = tolerance_for(units)
+    rounding_tolerance = rounding_tolerance_for(units)
     _check_negative_values(invoice, issues)
-    _check_line_items(invoice, tolerance, issues)
-    _check_sums(invoice, tolerance, issues)
+    _check_line_items(invoice, rounding_tolerance, issues)
+    _check_sums(invoice, rounding_tolerance, issues)
     _check_dates(invoice, today, issues)
     _check_iban(invoice, issues)
     _check_tax_ids(invoice, issues)
@@ -123,7 +124,12 @@ def _check_required(invoice: Invoice, issues: list[Issue]) -> None:
 
 
 def _check_currency(invoice: Invoice, issues: list[Issue]) -> int:
-    """Rule b: active ISO 4217 code with minor units. Returns minor units for rule c."""
+    """Rule b: active ISO 4217 code with minor units. Returns minor units for rule c.
+
+    Rule c: the minor units drive the rounding tolerance of rules d and g
+    (half a unit); rules e and f are exact. An unsupported currency falls back
+    to two decimals without hiding the currency error.
+    """
     if invoice.currency is None or not invoice.currency.strip():
         return FALLBACK_MINOR_UNITS
     units = minor_units(normalize_currency(invoice.currency))
@@ -159,7 +165,7 @@ def _check_negative_values(invoice: Invoice, issues: list[Issue]) -> None:
 
 
 def _check_line_items(invoice: Invoice, tolerance: Decimal, issues: list[Issue]) -> None:
-    """Rule d: quantity x unit_price = amount within tolerance."""
+    """Rule d: quantity x unit_price = amount within the rounding tolerance (half a unit)."""
     for index, item in enumerate(invoice.line_items):
         if item.quantity is None or item.unit_price is None or item.amount is None:
             continue
@@ -177,28 +183,32 @@ def _check_line_items(invoice: Invoice, tolerance: Decimal, issues: list[Issue])
 
 
 def _check_sums(invoice: Invoice, tolerance: Decimal, issues: list[Issue]) -> None:
-    """Rules e, f, g, l: subtotal, total, tax and zero-total consistency."""
+    """Rules e, f, g, l: subtotal, total, tax and zero-total consistency.
+
+    e and f compare already rounded money values and require an exact match;
+    g compares a computed tax with a rounded one and uses ``tolerance``.
+    """
     subtotal, tax_amount, total = invoice.subtotal, invoice.tax_amount, invoice.total
     amounts = [item.amount for item in invoice.line_items]
     if subtotal is not None and amounts and all(a is not None for a in amounts):
         items_sum = sum((a for a in amounts if a is not None), ZERO)
-        if not _within(items_sum, subtotal, tolerance):
+        if not _within(items_sum, subtotal, EXACT_MATCH_TOLERANCE):
             issues.append(
                 _error(
                     IssueCode.SUBTOTAL_MISMATCH,
                     "subtotal",
-                    f"Subtotal {subtotal} differs from the sum of line amounts {items_sum} "
-                    f"by more than {tolerance}.",
+                    f"Subtotal {subtotal} does not equal the sum of line amounts {items_sum} "
+                    "(exact match required).",
                 )
             )
     if subtotal is not None and tax_amount is not None and total is not None:
-        if not _within(subtotal + tax_amount, total, tolerance):
+        if not _within(subtotal + tax_amount, total, EXACT_MATCH_TOLERANCE):
             issues.append(
                 _error(
                     IssueCode.TOTAL_MISMATCH,
                     "total",
-                    f"Total {total} differs from subtotal + tax ({subtotal} + {tax_amount} = "
-                    f"{subtotal + tax_amount}) by more than {tolerance}.",
+                    f"Total {total} does not equal subtotal + tax ({subtotal} + {tax_amount} = "
+                    f"{subtotal + tax_amount}) (exact match required).",
                 )
             )
     if invoice.tax_rate is not None:

@@ -135,23 +135,22 @@ def test_invalid_currency_is_error(currency: str) -> None:
 
 
 def test_invalid_currency_does_not_hide_sum_errors() -> None:
-    # Fallback tolerance 0.01 still catches a 0.05 discrepancy.
+    # With an unsupported currency the sums are still checked (exact match).
     report = validate(eur_invoice(currency="XAU", total=D("29.74")), today=TODAY)
     assert report.has(IssueCode.INVALID_CURRENCY) and report.has(IssueCode.TOTAL_MISMATCH)
 
 
-# --- rule c: tolerance by currency ------------------------------------------------
+# --- rule c: exact sums, rounding tolerance by currency ---------------------------
 
 
-def test_eur_tolerance_is_one_cent() -> None:
-    assert IssueCode.TOTAL_MISMATCH not in codes(eur_invoice(total=D("29.70")))
-    assert IssueCode.TOTAL_MISMATCH in codes(eur_invoice(total=D("29.71")))
+def test_eur_total_must_match_exactly() -> None:
+    assert IssueCode.TOTAL_MISMATCH not in codes(eur_invoice(total=D("29.69")))
+    assert IssueCode.TOTAL_MISMATCH in codes(eur_invoice(total=D("29.70")))
 
 
-def test_jpy_tolerance_is_one_yen() -> None:
+def test_jpy_total_must_match_exactly() -> None:
     assert validate(jpy_invoice(), today=TODAY).status is ValidationStatus.AUTO_APPROVED
-    assert IssueCode.TOTAL_MISMATCH not in codes(jpy_invoice(total=D("331")))
-    assert IssueCode.TOTAL_MISMATCH in codes(jpy_invoice(total=D("332")))
+    assert IssueCode.TOTAL_MISMATCH in codes(jpy_invoice(total=D("331")))
 
 
 # --- rule d: line arithmetic -----------------------------------------------------
@@ -331,3 +330,100 @@ def test_issue_messages_are_human_readable_english() -> None:
         assert issue.message.endswith(".")
         assert issue.message.isascii()
     assert report.has(IssueCode.TOTAL_MISMATCH) and report.has(IssueCode.INVALID_CURRENCY)
+
+
+# --- tolerance semantics (task 05-fix1) ----------------------------------------------
+# Rules e and f compare sums of already rounded amounts: exact Decimal equality.
+# Rules d and g compare a computed value with a rounded one: half a minor unit.
+
+
+def test_total_off_by_one_cent_is_error() -> None:
+    invoice = eur_invoice(
+        line_items=[
+            LineItem(
+                description="Service",
+                quantity=D("1"),
+                unit_price=D("1000.00"),
+                amount=D("1000.00"),
+            )
+        ],
+        subtotal=D("1000.00"),
+        tax_rate=D("19"),
+        tax_amount=D("190.00"),
+        total=D("1190.01"),
+    )
+    report = validate(invoice, today=TODAY)
+    assert report.status is ValidationStatus.NEEDS_REVIEW
+    assert report.has(IssueCode.TOTAL_MISMATCH, "total")
+
+
+def test_subtotal_off_by_one_cent_is_error() -> None:
+    items = [
+        LineItem(description="A", quantity=D("1"), unit_price=D("100.00"), amount=D("100.00")),
+        LineItem(description="B", quantity=D("1"), unit_price=D("200.00"), amount=D("200.00")),
+    ]
+    invoice = eur_invoice(
+        line_items=items,
+        subtotal=D("300.01"),
+        tax_rate=None,
+        tax_amount=D("57.00"),
+        total=D("357.01"),
+    )
+    report = validate(invoice, today=TODAY)
+    assert report.status is ValidationStatus.NEEDS_REVIEW
+    assert report.has(IssueCode.SUBTOTAL_MISMATCH, "subtotal")
+
+
+def test_jpy_total_off_by_one_yen_is_error() -> None:
+    invoice = jpy_invoice(
+        line_items=[
+            LineItem(description="Service", quantity=D("1"), unit_price=D("1000"), amount=D("1000"))
+        ],
+        subtotal=D("1000"),
+        tax_rate=D("10"),
+        tax_amount=D("100"),
+        total=D("1101"),
+    )
+    report = validate(invoice, today=TODAY)
+    assert report.status is ValidationStatus.NEEDS_REVIEW
+    assert report.has(IssueCode.TOTAL_MISMATCH, "total")
+
+
+def test_line_rounding_within_half_cent_passes() -> None:
+    # 3 x 0.333 = 0.999, amount 1.00: |0.999 - 1.00| = 0.001 <= 0.005
+    items = [LineItem(description="x", quantity=D("3"), unit_price=D("0.333"), amount=D("1.00"))]
+    invoice = eur_invoice(
+        line_items=items, subtotal=D("1.00"), tax_rate=None, tax_amount=D("0.19"), total=D("1.19")
+    )
+    report = validate(invoice, today=TODAY)
+    assert report.status is ValidationStatus.AUTO_APPROVED
+    assert not report.has(IssueCode.LINE_AMOUNT_MISMATCH)
+
+
+def test_line_amount_off_by_one_cent_is_error() -> None:
+    # 1 x 10.00 = 10.00, amount 10.01: |10.00 - 10.01| = 0.01 > 0.005
+    items = [LineItem(description="x", quantity=D("1"), unit_price=D("10.00"), amount=D("10.01"))]
+    invoice = eur_invoice(
+        line_items=items, subtotal=D("10.01"), tax_rate=None, tax_amount=D("1.90"), total=D("11.91")
+    )
+    report = validate(invoice, today=TODAY)
+    assert report.status is ValidationStatus.NEEDS_REVIEW
+    assert report.has(IssueCode.LINE_AMOUNT_MISMATCH, "line_items[0].amount")
+
+
+def test_tax_rounding_within_half_unit_passes_but_more_fails() -> None:
+    # JPY: 303 x 10 % = 30.3 -> tax 30 passes (0.3 <= 0.5), tax 31 fails (0.7 > 0.5).
+    base = jpy_invoice(
+        line_items=[
+            LineItem(description="S", quantity=D("1"), unit_price=D("303"), amount=D("303"))
+        ],
+        subtotal=D("303"),
+        tax_rate=D("10"),
+        tax_amount=D("30"),
+        total=D("333"),
+    )
+    assert validate(base, today=TODAY).status is ValidationStatus.AUTO_APPROVED
+    off = base.model_copy(update={"tax_amount": D("31"), "total": D("334")})
+    report = validate(off, today=TODAY)
+    assert report.has(IssueCode.TAX_AMOUNT_MISMATCH, "tax_amount")
+    assert not report.has(IssueCode.TOTAL_MISMATCH)
