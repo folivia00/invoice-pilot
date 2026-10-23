@@ -1,4 +1,4 @@
-.PHONY: lint format test
+.PHONY: lint format test eval-generate
 
 lint:
 	uv run ruff check .
@@ -9,3 +9,6 @@ format:
 
 test:
 	uv run pytest
+
+eval-generate:
+	uv run python eval/generate.py --seed 20261023
