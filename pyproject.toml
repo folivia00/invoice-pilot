@@ -8,12 +8,15 @@ authors = [{ name = "Vladimir K" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "pydantic>=2.13,<2.14",
+    "pypdf>=6.21,<7",
 ]
 
 [dependency-groups]
 dev = [
     "hypothesis>=6.170.8",
+    "pillow>=13.0.0",
     "pytest",
+    "reportlab>=5.1.0",
     "ruff",
 ]
 
@@ -28,5 +31,9 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
 
+[tool.ruff.lint.isort]
+known-first-party = ["invoice_pilot", "evalgen"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["eval"]
