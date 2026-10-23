@@ -26,3 +26,6 @@ build/
 # Coverage
 .coverage
 htmlcov/
+
+# Hypothesis example database (dev profiles)
+.hypothesis/
