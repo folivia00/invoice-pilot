@@ -1,0 +1,114 @@
+{
+  "corruption": "total_mismatch",
+  "currency": "USD",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "total_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-051.pdf",
+  "id": "inv-051",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "310 Sunset Avenue, Raleigh 07315",
+      "name": "Blue Harbour Logistics LLC",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2025-11-14",
+    "iban": null,
+    "invoice_date": "2025-10-15",
+    "invoice_number": "2025-030042",
+    "line_items": [
+      {
+        "amount": "6543.29",
+        "description": "Data migration, hours",
+        "quantity": "50.5",
+        "unit_price": "129.57"
+      },
+      {
+        "amount": "635.03",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "29.73",
+        "unit_price": "21.36"
+      },
+      {
+        "amount": "86.61",
+        "description": "LED panel light",
+        "quantity": "1",
+        "unit_price": "86.61"
+      },
+      {
+        "amount": "68.00",
+        "description": "Steel bracket 40x40",
+        "quantity": "34",
+        "unit_price": "2.00"
+      },
+      {
+        "amount": "329.43",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "24.9",
+        "unit_price": "13.23"
+      },
+      {
+        "amount": "3307.50",
+        "description": "Onsite installation, hours",
+        "quantity": "33.75",
+        "unit_price": "98.00"
+      },
+      {
+        "amount": "77.56",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "2",
+        "unit_price": "38.78"
+      },
+      {
+        "amount": "2906.47",
+        "description": "Monitor 27 inch",
+        "quantity": "7",
+        "unit_price": "415.21"
+      }
+    ],
+    "subtotal": "13953.89",
+    "supplier": {
+      "address": "469 Harbor View Lane, Tucson 88456",
+      "name": "Foxglove Design Corp.",
+      "tax_id": null
+    },
+    "tax_amount": "872.12",
+    "tax_rate": "6.25",
+    "total": "14826.03"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "weight",
+    "piece",
+    "piece",
+    "weight",
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "2025-11-14",
+    "iban": "",
+    "invoice_date": "2025-10-15",
+    "invoice_number": "2025-030042",
+    "subtotal": "$13,953.89",
+    "supplier_tax_id": "",
+    "tax_amount": "$872.12",
+    "total": "$14,826.03"
+  },
+  "sha256": "bc388fbd01360db96f456c5a9e9c260565b09ccb76da01788604aaa97cc056bd",
+  "size_bytes": 363139,
+  "supplier_country": "US",
+  "template": "t01"
+}

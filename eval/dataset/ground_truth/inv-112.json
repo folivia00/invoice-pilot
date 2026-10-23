@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-112.pdf",
+  "id": "inv-112",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "RGSWFRXXB01",
+    "buyer": {
+      "address": "Chemin des Vignes 107, 82529 Lyon",
+      "name": "Klara Gardner",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-01",
+    "iban": "FR554307791350QEQPSVW1UHW31",
+    "invoice_date": "2025-11-17",
+    "invoice_number": "2505-77650",
+    "line_items": [
+      {
+        "amount": "1497.32",
+        "description": "Standing desk 160 cm",
+        "quantity": "4",
+        "unit_price": "374.33"
+      }
+    ],
+    "subtotal": "1497.32",
+    "supplier": {
+      "address": "Avenue du Port 43, 66326 Rennes",
+      "name": "Foxglove Design SAS",
+      "tax_id": "FR44010787622"
+    },
+    "tax_amount": "299.46",
+    "tax_rate": "20",
+    "total": "1796.78"
+  },
+  "language": "en",
+  "line_units": [
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "RGSWFRXXB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2025-12-01",
+    "iban": "FR55 4307 7913 50QE QPSV W1UH W31",
+    "invoice_date": "2025-11-17",
+    "invoice_number": "2505-77650",
+    "subtotal": "EUR 1,497.32",
+    "supplier_tax_id": "FR44010787622",
+    "tax_amount": "EUR 299.46",
+    "total": "EUR 1,796.78"
+  },
+  "sha256": "f5d6dfe3f93e3a84da0e51f7a33333e0159b4f1254b2354844f2aa0e118929fb",
+  "size_bytes": 41243,
+  "supplier_country": "FR",
+  "template": "t02"
+}

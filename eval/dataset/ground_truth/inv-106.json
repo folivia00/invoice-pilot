@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-106.pdf",
+  "id": "inv-106",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "150 Commerce Boulevard, Denver 12580",
+      "name": "Orbit Office Solutions Inc.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-09-30",
+    "iban": null,
+    "invoice_date": "2026-09-23",
+    "invoice_number": "2026-001634",
+    "line_items": [
+      {
+        "amount": "32.38",
+        "description": "Laptop stand, aluminium",
+        "quantity": "1",
+        "unit_price": "32.38"
+      },
+      {
+        "amount": "97.48",
+        "description": "LED panel light",
+        "quantity": "1",
+        "unit_price": "97.48"
+      }
+    ],
+    "subtotal": "129.86",
+    "supplier": {
+      "address": "546 Lakeshore Drive, Raleigh 54549",
+      "name": "Westmarch Textiles Co.",
+      "tax_id": null
+    },
+    "tax_amount": "8.12",
+    "tax_rate": "6.25",
+    "total": "137.98"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "30 September 2026",
+    "iban": "",
+    "invoice_date": "23 September 2026",
+    "invoice_number": "2026-001634",
+    "subtotal": "$129.86",
+    "supplier_tax_id": "",
+    "tax_amount": "$8.12",
+    "total": "$137.98"
+  },
+  "sha256": "653901946a079268ab02fe46e4d7828f17a1025a42b97a9c3bb6701e7bee101e",
+  "size_bytes": 41162,
+  "supplier_country": "US",
+  "template": "t06"
+}

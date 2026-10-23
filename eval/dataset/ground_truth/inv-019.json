@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-019.pdf",
+  "id": "inv-019",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "ELNHITFF200",
+    "buyer": {
+      "address": "Corso Garibaldi 91, 29415 Pisa",
+      "name": "Maple Grove Studio S.p.A.",
+      "tax_id": "IT87786732653"
+    },
+    "currency": "EUR",
+    "due_date": "2026-10-19",
+    "iban": "IT50I1304852219FFGE5UOIITWJ",
+    "invoice_date": "2026-09-19",
+    "invoice_number": "2609-68477",
+    "line_items": [
+      {
+        "amount": "1789.20",
+        "description": "Project management, hours",
+        "quantity": "14",
+        "unit_price": "127.80"
+      },
+      {
+        "amount": "298.63",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "298.63"
+      },
+      {
+        "amount": "29.59",
+        "description": "Vinyl banner print, m",
+        "quantity": "2.39",
+        "unit_price": "12.38"
+      },
+      {
+        "amount": "156.00",
+        "description": "Laptop stand, aluminium",
+        "quantity": "6",
+        "unit_price": "26.00"
+      },
+      {
+        "amount": "2330.27",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "2330.27"
+      },
+      {
+        "amount": "125.31",
+        "description": "Network cable Cat6, m",
+        "quantity": "46.07",
+        "unit_price": "2.72"
+      }
+    ],
+    "subtotal": "4729.00",
+    "supplier": {
+      "address": "Corso Garibaldi 170, 36448 Trieste",
+      "name": "Orbit Office Solutions S.p.A.",
+      "tax_id": "IT68837211192"
+    },
+    "tax_amount": "1040.38",
+    "tax_rate": "22",
+    "total": "5769.38"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "flat",
+    "length",
+    "piece",
+    "flat",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 2,
+  "printed": {
+    "bic": "ELNHITFF200",
+    "buyer_tax_id": "IT87786732653",
+    "currency": "EUR",
+    "due_date": "19.10.2026",
+    "iban": "IT50 I130 4852 219F FGE5 UOII TWJ",
+    "invoice_date": "19.09.2026",
+    "invoice_number": "2609-68477",
+    "subtotal": "EUR 4,729.00",
+    "supplier_tax_id": "IT68837211192",
+    "tax_amount": "EUR 1,040.38",
+    "total": "EUR 5,769.38"
+  },
+  "sha256": "613db6054f92374f32c6ccb55bdc67b0d9d06918c0ada4ea01cfe4d6c01d30c9",
+  "size_bytes": 42622,
+  "supplier_country": "IT",
+  "template": "t09"
+}

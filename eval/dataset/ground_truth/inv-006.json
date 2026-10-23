@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-006.jpg",
+  "id": "inv-006",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Ringstraße 94, 7596 Innsbruck",
+      "name": "Mondsee Optik KG",
+      "tax_id": "ATU48067547"
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-07",
+    "iban": "DE69927082810434644743",
+    "invoice_date": "2025-11-23",
+    "invoice_number": "R006612",
+    "line_items": [
+      {
+        "amount": "702.80",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "50.2",
+        "unit_price": "14.00"
+      },
+      {
+        "amount": "38.05",
+        "description": "Kurierlieferung",
+        "quantity": "1",
+        "unit_price": "38.05"
+      },
+      {
+        "amount": "107.06",
+        "description": "LED-Panel",
+        "quantity": "2",
+        "unit_price": "53.53"
+      },
+      {
+        "amount": "330.45",
+        "description": "Datenmigration (Std.)",
+        "quantity": "5",
+        "unit_price": "66.09"
+      },
+      {
+        "amount": "137.97",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "26.79",
+        "unit_price": "5.15"
+      },
+      {
+        "amount": "7036.90",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "13",
+        "unit_price": "541.30"
+      },
+      {
+        "amount": "3449.19",
+        "description": "Technischer Support (Std.)",
+        "quantity": "68.75",
+        "unit_price": "50.17"
+      }
+    ],
+    "subtotal": "11802.42",
+    "supplier": {
+      "address": "Birkenallee 21, 08630 Freiburg",
+      "name": "Seeblick Fotografie KG",
+      "tax_id": "DE651514835"
+    },
+    "tax_amount": "2242.46",
+    "tax_rate": "19",
+    "total": "14044.88"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "flat",
+    "piece",
+    "hour",
+    "weight",
+    "piece",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "ATU48067547",
+    "currency": "EUR",
+    "due_date": "7. Dezember 2025",
+    "iban": "DE69 9270 8281 0434 6447 43",
+    "invoice_date": "23. November 2025",
+    "invoice_number": "R006612",
+    "subtotal": "11.802,42 EUR",
+    "supplier_tax_id": "DE651514835",
+    "tax_amount": "2.242,46 EUR",
+    "total": "14.044,88 EUR"
+  },
+  "sha256": "d53b08b979fd064233fcb2363aa8a32c01b93247397964b2e678a0d58a1a8f99",
+  "size_bytes": 154624,
+  "supplier_country": "DE",
+  "template": "t06"
+}

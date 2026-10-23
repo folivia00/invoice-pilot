@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-068.pdf",
+  "id": "inv-068",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "RNLLDEHHB01",
+    "buyer": {
+      "address": "Lindenstraße 137, 66656 Freiburg",
+      "name": "Felsenkeller Getränke AG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "DE62470577257506506416",
+    "invoice_date": "2025-12-12",
+    "invoice_number": "R029935",
+    "line_items": [
+      {
+        "amount": "632.71",
+        "description": "Bildbearbeitung (Std.)",
+        "quantity": "8.75",
+        "unit_price": "72.31"
+      },
+      {
+        "amount": "112.58",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "112.58"
+      },
+      {
+        "amount": "104.00",
+        "description": "LED-Panel",
+        "quantity": "4",
+        "unit_price": "26.00"
+      },
+      {
+        "amount": "2148.00",
+        "description": "Monitor 27 Zoll",
+        "quantity": "6",
+        "unit_price": "358.00"
+      },
+      {
+        "amount": "1054.76",
+        "description": "Netzwerk-Switch 24 Ports",
+        "quantity": "7",
+        "unit_price": "150.68"
+      }
+    ],
+    "subtotal": "4052.05",
+    "supplier": {
+      "address": "Industriestraße 132, 82012 Münster",
+      "name": "Kastanienallee Buchhandlung AG",
+      "tax_id": "DE430504484"
+    },
+    "tax_amount": "769.89",
+    "tax_rate": "19",
+    "total": "4821.94"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "flat",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "RNLLDEHHB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "DE62 4705 7725 7506 5064 16",
+    "invoice_date": "2025-12-12",
+    "invoice_number": "R029935",
+    "subtotal": "4.052,05 €",
+    "supplier_tax_id": "DE430504484",
+    "tax_amount": "769,89 €",
+    "total": "4.821,94 €"
+  },
+  "sha256": "a59c17f0afb5131070c136ff6c9edd464d2e0d476235fac91e56cec469177464",
+  "size_bytes": 46041,
+  "supplier_country": "DE",
+  "template": "t08"
+}

@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-092.pdf",
+  "id": "inv-092",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "646 Harbor View Lane, Portland 87359",
+      "name": "Hollow Oak Furniture Corp.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-09-05",
+    "iban": null,
+    "invoice_date": "2026-08-22",
+    "invoice_number": "RE-202661498",
+    "line_items": [
+      {
+        "amount": "659.00",
+        "description": "Standing desk 160 cm",
+        "quantity": "1",
+        "unit_price": "659.00"
+      }
+    ],
+    "subtotal": "659.00",
+    "supplier": {
+      "address": "77 Elm Court, Denver 16046",
+      "name": "Westmarch Textiles Co.",
+      "tax_id": "35-3284115"
+    },
+    "tax_amount": "58.49",
+    "tax_rate": "8.875",
+    "total": "717.49"
+  },
+  "language": "en",
+  "line_units": [
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "5 September 2026",
+    "iban": "",
+    "invoice_date": "22 August 2026",
+    "invoice_number": "RE-202661498",
+    "subtotal": "USD 659.00",
+    "supplier_tax_id": "35-3284115",
+    "tax_amount": "USD 58.49",
+    "total": "USD 717.49"
+  },
+  "sha256": "2368d3be44d3d1871e8e1bc1feb7f99540b639ec2096c892c76a7ae04b8cefbe",
+  "size_bytes": 184434,
+  "supplier_country": "US",
+  "template": "t02"
+}

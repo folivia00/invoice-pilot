@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-027.pdf",
+  "id": "inv-027",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "885 Castle Street, Exeter AH9 6DF",
+      "name": "Clearview Optics Ltd",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-05-03",
+    "invoice_number": "INV-2026-28841",
+    "line_items": [
+      {
+        "amount": "119.32",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "17.73",
+        "unit_price": "6.73"
+      },
+      {
+        "amount": "1239.70",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "1239.70"
+      },
+      {
+        "amount": "166.29",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "166.29"
+      },
+      {
+        "amount": "13.00",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "6.5",
+        "unit_price": "2.00"
+      },
+      {
+        "amount": "99.60",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "8.30",
+        "unit_price": "12.00"
+      },
+      {
+        "amount": "610.67",
+        "description": "Project management, hours",
+        "quantity": "8.25",
+        "unit_price": "74.02"
+      },
+      {
+        "amount": "651.59",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "651.59"
+      },
+      {
+        "amount": "136.83",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "136.83"
+      }
+    ],
+    "subtotal": "3037.00",
+    "supplier": {
+      "address": "252 Foundry Close, Sheffield FH5 9PB",
+      "name": "Ashford Brothers LLP",
+      "tax_id": "GB184147523"
+    },
+    "tax_amount": "607.40",
+    "tax_rate": "20",
+    "total": "3644.40"
+  },
+  "language": "en",
+  "line_units": [
+    "length",
+    "flat",
+    "flat",
+    "weight",
+    "weight",
+    "hour",
+    "flat",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "3 May 2026",
+    "invoice_number": "INV-2026-28841",
+    "subtotal": "GBP 3,037.00",
+    "supplier_tax_id": "GB184147523",
+    "tax_amount": "GBP 607.40",
+    "total": "GBP 3,644.40"
+  },
+  "sha256": "03f6412c44184fbbf12d490cbb61c68aecb6cf435be549045a8330f11fe7630b",
+  "size_bytes": 201342,
+  "supplier_country": "GB",
+  "template": "t07"
+}

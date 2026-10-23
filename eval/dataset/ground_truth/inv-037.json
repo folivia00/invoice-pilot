@@ -1,0 +1,114 @@
+{
+  "corruption": "bad_vat_format",
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "invalid_tax_id"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-037.pdf",
+  "id": "inv-037",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Avenue du Port 155, 75069 Dijon",
+      "name": "Lantern Hill Books SARL",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-25",
+    "iban": "NL91TRTU5009213841",
+    "invoice_date": "2025-12-26",
+    "invoice_number": "2502-62968",
+    "line_items": [
+      {
+        "amount": "681.00",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "681.00"
+      },
+      {
+        "amount": "242.40",
+        "description": "Vinyl banner print, m",
+        "quantity": "15",
+        "unit_price": "16.16"
+      },
+      {
+        "amount": "455.00",
+        "description": "Printer toner cartridge",
+        "quantity": "10",
+        "unit_price": "45.50"
+      },
+      {
+        "amount": "12.78",
+        "description": "Steel bracket 40x40",
+        "quantity": "6",
+        "unit_price": "2.13"
+      },
+      {
+        "amount": "266.00",
+        "description": "Safety gloves, pair",
+        "quantity": "38",
+        "unit_price": "7.00"
+      },
+      {
+        "amount": "1290.59",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1290.59"
+      },
+      {
+        "amount": "21.00",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "3",
+        "unit_price": "7.00"
+      },
+      {
+        "amount": "2652.25",
+        "description": "Project management, hours",
+        "quantity": "25.75",
+        "unit_price": "103.00"
+      }
+    ],
+    "subtotal": "5621.02",
+    "supplier": {
+      "address": "Havenkade 74, 1263 ZY Leiden",
+      "name": "Summit Ridge Tools B.V.",
+      "tax_id": "NL490970972B8"
+    },
+    "tax_amount": "505.89",
+    "tax_rate": "9",
+    "total": "6126.91"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "length",
+    "piece",
+    "piece",
+    "piece",
+    "flat",
+    "piece",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-01-25",
+    "iban": "NL91 TRTU 5009 2138 41",
+    "invoice_date": "2025-12-26",
+    "invoice_number": "2502-62968",
+    "subtotal": "€5,621.02",
+    "supplier_tax_id": "NL490970972B8",
+    "tax_amount": "€505.89",
+    "total": "€6,126.91"
+  },
+  "sha256": "86849c34dd496411ea07f13abecc67666c4899337a5ddd3bd3218b9e8fb3d6bf",
+  "size_bytes": 42224,
+  "supplier_country": "NL",
+  "template": "t07"
+}

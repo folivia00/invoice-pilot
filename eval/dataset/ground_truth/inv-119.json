@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-119.pdf",
+  "id": "inv-119",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "614 Commerce Boulevard, Austin 34884",
+      "name": "Ironbridge Engineering Co.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-03-14",
+    "iban": null,
+    "invoice_date": "2026-03-07",
+    "invoice_number": "INV-2026-29762",
+    "line_items": [
+      {
+        "amount": "9312.00",
+        "description": "USB-C docking station",
+        "quantity": "48",
+        "unit_price": "194.00"
+      },
+      {
+        "amount": "159.60",
+        "description": "Network cable Cat6, m",
+        "quantity": "57",
+        "unit_price": "2.80"
+      },
+      {
+        "amount": "826.76",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "826.76"
+      },
+      {
+        "amount": "687.32",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "49.2",
+        "unit_price": "13.97"
+      }
+    ],
+    "subtotal": "10985.68",
+    "supplier": {
+      "address": "417 Industrial Parkway, Portland 76271",
+      "name": "Quill and Compass Corp.",
+      "tax_id": null
+    },
+    "tax_amount": "686.61",
+    "tax_rate": "6.25",
+    "total": "11672.29"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "length",
+    "flat",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "03/14/2026",
+    "iban": "",
+    "invoice_date": "03/07/2026",
+    "invoice_number": "INV-2026-29762",
+    "subtotal": "$10,985.68",
+    "supplier_tax_id": "",
+    "tax_amount": "$686.61",
+    "total": "$11,672.29"
+  },
+  "sha256": "6b13e9d5e32623a69a1ad7d616831f6e0e5a9b853fc2f272a828907476d4e1bf",
+  "size_bytes": 41370,
+  "supplier_country": "US",
+  "template": "t09"
+}

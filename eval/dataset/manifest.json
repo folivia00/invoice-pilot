@@ -1,0 +1,788 @@
+{
+  "dataset_version": "1.0",
+  "document_count": 120,
+  "documents": [
+    {
+      "file": "docs/inv-001.pdf",
+      "id": "inv-001",
+      "pages": 1,
+      "sha256": "3ea66889354b2fb7c1f79929481c82a97d2a4e8d059f79965e60bb391ec7d001"
+    },
+    {
+      "file": "docs/inv-002.pdf",
+      "id": "inv-002",
+      "pages": 1,
+      "sha256": "1d03320a9523b45407ea02c7fa077d0224a04ac4812a63fa4c35bfbace5428ca"
+    },
+    {
+      "file": "docs/inv-003.pdf",
+      "id": "inv-003",
+      "pages": 2,
+      "sha256": "e67c2b7452623454dcc4b7bbed9131c0a8636c0ce3b5804471b31299c7ce259e"
+    },
+    {
+      "file": "docs/inv-004.pdf",
+      "id": "inv-004",
+      "pages": 1,
+      "sha256": "5b57500a7e54f61335710efbed7d0ec090225cf74ef8dce9c38281453d9e0c85"
+    },
+    {
+      "file": "docs/inv-005.jpg",
+      "id": "inv-005",
+      "pages": 1,
+      "sha256": "7d157940415c853342a2fd0eb67cee9529f22d333875bfe6b70d03cabf7de862"
+    },
+    {
+      "file": "docs/inv-006.jpg",
+      "id": "inv-006",
+      "pages": 1,
+      "sha256": "d53b08b979fd064233fcb2363aa8a32c01b93247397964b2e678a0d58a1a8f99"
+    },
+    {
+      "file": "docs/inv-007.pdf",
+      "id": "inv-007",
+      "pages": 1,
+      "sha256": "1d0c65defa04817752e5d933e78ece3e76012f496676b13c38c3c15d7af0e09d"
+    },
+    {
+      "file": "docs/inv-008.pdf",
+      "id": "inv-008",
+      "pages": 1,
+      "sha256": "825fd926006c925841897600e23e900f04cd4f0ac9dbdf39bdac08da7b120087"
+    },
+    {
+      "file": "docs/inv-009.pdf",
+      "id": "inv-009",
+      "pages": 1,
+      "sha256": "a547fb116b7261d4941dedad2f915231ebb107e45c0b2ae05829e66770c94e08"
+    },
+    {
+      "file": "docs/inv-010.pdf",
+      "id": "inv-010",
+      "pages": 1,
+      "sha256": "b1573aa0b1b850822ee43b2efa9fe74b8860d09d40e617ad2cde8962eeb54df0"
+    },
+    {
+      "file": "docs/inv-011.jpg",
+      "id": "inv-011",
+      "pages": 1,
+      "sha256": "2c4b801196f130492ac9822ff2f37bc12862169b70d15fde8cb4d0dc81f97106"
+    },
+    {
+      "file": "docs/inv-012.jpg",
+      "id": "inv-012",
+      "pages": 1,
+      "sha256": "427d3f1c70359232864e42220e7f787e4e5ae9ea245866f0011ff5e0c0be0dd3"
+    },
+    {
+      "file": "docs/inv-013.pdf",
+      "id": "inv-013",
+      "pages": 1,
+      "sha256": "1b6a68f674d50487a9143d4669f62d513782a904e0928d4d7a502e404ce0f458"
+    },
+    {
+      "file": "docs/inv-014.pdf",
+      "id": "inv-014",
+      "pages": 1,
+      "sha256": "05039e0853a31d8e2ab51aac7e8a7fe7c8f3c804bc11c72933e9a17d65b74b04"
+    },
+    {
+      "file": "docs/inv-015.pdf",
+      "id": "inv-015",
+      "pages": 1,
+      "sha256": "e461c1747c9d48a4b1c9a3e5c7da1b2b877421bd8528719852b5c634ff386eef"
+    },
+    {
+      "file": "docs/inv-016.pdf",
+      "id": "inv-016",
+      "pages": 1,
+      "sha256": "64b7d1079dff56484f67af47da611d7f0d961e9a3e508771fe98899f0ffb8aa2"
+    },
+    {
+      "file": "docs/inv-017.jpg",
+      "id": "inv-017",
+      "pages": 1,
+      "sha256": "8e42f59eb4ab5bc9606fd3d2566854e260e3186fa4c00bb56080dbe911f7b579"
+    },
+    {
+      "file": "docs/inv-018.jpg",
+      "id": "inv-018",
+      "pages": 1,
+      "sha256": "8ecc1ce6a73065b770922628b1911b66c0fd0129f10b969d8e316bc2cffb8574"
+    },
+    {
+      "file": "docs/inv-019.pdf",
+      "id": "inv-019",
+      "pages": 2,
+      "sha256": "613db6054f92374f32c6ccb55bdc67b0d9d06918c0ada4ea01cfe4d6c01d30c9"
+    },
+    {
+      "file": "docs/inv-020.pdf",
+      "id": "inv-020",
+      "pages": 1,
+      "sha256": "25a1a7cbb2b43f1c9af1ee74ddba2e6105540f65fa0fba23ef2240b843c74a53"
+    },
+    {
+      "file": "docs/inv-021.pdf",
+      "id": "inv-021",
+      "pages": 1,
+      "sha256": "a99e779e91e78f4b28f06fa25b8ec41b1142196bc04d770e31f617f4eeb81ff8"
+    },
+    {
+      "file": "docs/inv-022.pdf",
+      "id": "inv-022",
+      "pages": 1,
+      "sha256": "e1230600ee5521dafdeb98fe65521026c2625cf600e7065865baa6e65c5541b9"
+    },
+    {
+      "file": "docs/inv-023.jpg",
+      "id": "inv-023",
+      "pages": 1,
+      "sha256": "b7a7cb6ff572124cc3d915d3dd49c04847d3f1477225986a99832c14110395ab"
+    },
+    {
+      "file": "docs/inv-024.jpg",
+      "id": "inv-024",
+      "pages": 1,
+      "sha256": "7aaa69655081be0472b928545bf4d76380c0de804dfe9ff484cff3a807cbc7bb"
+    },
+    {
+      "file": "docs/inv-025.pdf",
+      "id": "inv-025",
+      "pages": 1,
+      "sha256": "412becf9656942152d3a13ba2fde0c8d0a325665cdad6a3d1c0607ab9517b403"
+    },
+    {
+      "file": "docs/inv-026.pdf",
+      "id": "inv-026",
+      "pages": 1,
+      "sha256": "0441f609ca37f839a9421e19f1f98595a2befb4ffec700b4c409fbfcc5394912"
+    },
+    {
+      "file": "docs/inv-027.pdf",
+      "id": "inv-027",
+      "pages": 1,
+      "sha256": "03f6412c44184fbbf12d490cbb61c68aecb6cf435be549045a8330f11fe7630b"
+    },
+    {
+      "file": "docs/inv-028.pdf",
+      "id": "inv-028",
+      "pages": 1,
+      "sha256": "22f7bf9218655f8353b53d64007507333c166e3e29687796974863156fd49b42"
+    },
+    {
+      "file": "docs/inv-029.jpg",
+      "id": "inv-029",
+      "pages": 1,
+      "sha256": "7ecef50a303b69e04e2305d55218606337d160bb195ca5acda96f60f5b4a6cdb"
+    },
+    {
+      "file": "docs/inv-030.jpg",
+      "id": "inv-030",
+      "pages": 1,
+      "sha256": "a6cba2f7bf79a98bc1fe03fbd1fa1deeab38a4af7837e7cab3e9536caafd1591"
+    },
+    {
+      "file": "docs/inv-031.pdf",
+      "id": "inv-031",
+      "pages": 1,
+      "sha256": "519b057d063bde4a0e213e017724bf54c99ed39fc3020f7f17e1692f8abed159"
+    },
+    {
+      "file": "docs/inv-032.pdf",
+      "id": "inv-032",
+      "pages": 1,
+      "sha256": "f537390059e1e84daa9325a82ce4a65216df8779b338e6273fd6a1e0ec8e2f7d"
+    },
+    {
+      "file": "docs/inv-033.pdf",
+      "id": "inv-033",
+      "pages": 1,
+      "sha256": "79c1aea773302397bb1a15686a19d933fc3e9815ba40f9d4765cdded064efddb"
+    },
+    {
+      "file": "docs/inv-034.pdf",
+      "id": "inv-034",
+      "pages": 2,
+      "sha256": "fc27fcfce7b73cac2c70f73fb0c017b14e4d04581c7f5a713a418a0f4c7c309b"
+    },
+    {
+      "file": "docs/inv-035.jpg",
+      "id": "inv-035",
+      "pages": 1,
+      "sha256": "66a305f3ac8342473b4fc288932db33604f7982351bae95b1effc4ebecc9be8a"
+    },
+    {
+      "file": "docs/inv-036.jpg",
+      "id": "inv-036",
+      "pages": 1,
+      "sha256": "8ba72b18c5960539926af2ace2ed3b0e51a06ed3df36322ca1fc530d552b1689"
+    },
+    {
+      "file": "docs/inv-037.pdf",
+      "id": "inv-037",
+      "pages": 1,
+      "sha256": "86849c34dd496411ea07f13abecc67666c4899337a5ddd3bd3218b9e8fb3d6bf"
+    },
+    {
+      "file": "docs/inv-038.pdf",
+      "id": "inv-038",
+      "pages": 1,
+      "sha256": "02d3dfe638af7e79e9034ee7ab037112811810616877cf758ed518686fd9c229"
+    },
+    {
+      "file": "docs/inv-039.pdf",
+      "id": "inv-039",
+      "pages": 1,
+      "sha256": "0d881362de24ac5a24b1ab2069cecabfe1416881e740cb7bf35ee1c3940182c2"
+    },
+    {
+      "file": "docs/inv-040.pdf",
+      "id": "inv-040",
+      "pages": 1,
+      "sha256": "d736d283353a874e773158a5857ef9fe456c97b5ae25f8c96d1c1f9b710358b2"
+    },
+    {
+      "file": "docs/inv-041.jpg",
+      "id": "inv-041",
+      "pages": 1,
+      "sha256": "030c114a3fd8869d24cc1a4a753ce409674acb7d5e3fd648ebb97f54e42f073e"
+    },
+    {
+      "file": "docs/inv-042.jpg",
+      "id": "inv-042",
+      "pages": 1,
+      "sha256": "e4dfd91a38e71ba2f0c50b33b7de9ab5ea56a907d6ffec78012729bf9b9e3636"
+    },
+    {
+      "file": "docs/inv-043.pdf",
+      "id": "inv-043",
+      "pages": 1,
+      "sha256": "c80c8712797b1e26eb408a95fb07bb8b758b715aabcee47c2ae33ffd5760cb57"
+    },
+    {
+      "file": "docs/inv-044.pdf",
+      "id": "inv-044",
+      "pages": 1,
+      "sha256": "904de8df495a427db2a2d4bf0bf7f5cd7828a57d198227fb1e5fe56c7effd942"
+    },
+    {
+      "file": "docs/inv-045.pdf",
+      "id": "inv-045",
+      "pages": 2,
+      "sha256": "1a94740acfdc1604963d656874c092c3cf239ce0681937b1e625e3480f56511e"
+    },
+    {
+      "file": "docs/inv-046.pdf",
+      "id": "inv-046",
+      "pages": 1,
+      "sha256": "c95a7b5df131cc418e163ba5f19fa3217a1c1117ec405fd93d7926bb5fb4192b"
+    },
+    {
+      "file": "docs/inv-047.jpg",
+      "id": "inv-047",
+      "pages": 1,
+      "sha256": "070d975633701146521958855efbd408e3e0a5296fa29ece4369384cebaff1f9"
+    },
+    {
+      "file": "docs/inv-048.jpg",
+      "id": "inv-048",
+      "pages": 1,
+      "sha256": "721b8288726c00fabeeebd7e51ff0cf21fa3d9e98dbe8eb2bf215341f42e241f"
+    },
+    {
+      "file": "docs/inv-049.pdf",
+      "id": "inv-049",
+      "pages": 1,
+      "sha256": "612ee782da999c27c735aae2b1df4ec93031cc91c1ec93974df1d81573a0cd89"
+    },
+    {
+      "file": "docs/inv-050.pdf",
+      "id": "inv-050",
+      "pages": 1,
+      "sha256": "25c8b3098950adf68e58b30ea1f2d5f2740b8a7437b5e37e4b2865f5013d94e0"
+    },
+    {
+      "file": "docs/inv-051.pdf",
+      "id": "inv-051",
+      "pages": 1,
+      "sha256": "bc388fbd01360db96f456c5a9e9c260565b09ccb76da01788604aaa97cc056bd"
+    },
+    {
+      "file": "docs/inv-052.pdf",
+      "id": "inv-052",
+      "pages": 1,
+      "sha256": "10cc3be1136e9ea02daeea9a977a514d47b32559ff4a57f279e3793179d4d42a"
+    },
+    {
+      "file": "docs/inv-053.jpg",
+      "id": "inv-053",
+      "pages": 1,
+      "sha256": "286750677c2aba45bc5b150c3591f9f95146043a87253e24d193b5a5bee0467e"
+    },
+    {
+      "file": "docs/inv-054.jpg",
+      "id": "inv-054",
+      "pages": 1,
+      "sha256": "a5ba58cfd962c607af051e760b2ea93315560a05578349770b2def6bb8e3f0e1"
+    },
+    {
+      "file": "docs/inv-055.pdf",
+      "id": "inv-055",
+      "pages": 1,
+      "sha256": "e43ee367aaf54f08ffcb3988ebe4c0f5aade36680a9c60186cc42cc9fc18a83c"
+    },
+    {
+      "file": "docs/inv-056.pdf",
+      "id": "inv-056",
+      "pages": 1,
+      "sha256": "5c7401f76dffec721ea7412d8c856b59a2f1bb0f81a597109b949f39c39e29fc"
+    },
+    {
+      "file": "docs/inv-057.pdf",
+      "id": "inv-057",
+      "pages": 1,
+      "sha256": "50a29b72bffe162c27b6e4e90a85cd004b202baad5ad1970db43e59d7bf17332"
+    },
+    {
+      "file": "docs/inv-058.pdf",
+      "id": "inv-058",
+      "pages": 1,
+      "sha256": "50d3d80abf856cac4a06b853414210c0a83b9f5665eceabb8a4f0b979496aba4"
+    },
+    {
+      "file": "docs/inv-059.jpg",
+      "id": "inv-059",
+      "pages": 1,
+      "sha256": "0eadad2988937deb6f46eb5e52be2f604d6260186c06b02d526dce707ca6cd85"
+    },
+    {
+      "file": "docs/inv-060.jpg",
+      "id": "inv-060",
+      "pages": 1,
+      "sha256": "7c96432ce325941380b4971b48453fcd42f2a0a5ba865a33b4a9984a66112757"
+    },
+    {
+      "file": "docs/inv-061.pdf",
+      "id": "inv-061",
+      "pages": 2,
+      "sha256": "f86e832d3aa33ad1f3fea275c5d617014431732803a0f17066f862ad6925e318"
+    },
+    {
+      "file": "docs/inv-062.pdf",
+      "id": "inv-062",
+      "pages": 1,
+      "sha256": "ab069bc0b0a230265d587f18299f364209ea6813749520dbf6099eb5a9666b93"
+    },
+    {
+      "file": "docs/inv-063.pdf",
+      "id": "inv-063",
+      "pages": 1,
+      "sha256": "30e43e7252e8c3bd303ec92028a8484b5cb63e61e8e1d0c8b331dbc593c9cfd4"
+    },
+    {
+      "file": "docs/inv-064.pdf",
+      "id": "inv-064",
+      "pages": 1,
+      "sha256": "2e0e3060a86324ace28f8c1163906cac405135e3435f9d733ee0a57772d2f358"
+    },
+    {
+      "file": "docs/inv-065.jpg",
+      "id": "inv-065",
+      "pages": 1,
+      "sha256": "8f990a845b4a7a34d0a6a873dae899a6e44916af339be47f09456d4556c616e0"
+    },
+    {
+      "file": "docs/inv-066.jpg",
+      "id": "inv-066",
+      "pages": 1,
+      "sha256": "01f72a7c014b4348a087e19c96883ca0b8763d155c65b18195c3d199c926007d"
+    },
+    {
+      "file": "docs/inv-067.pdf",
+      "id": "inv-067",
+      "pages": 1,
+      "sha256": "64c68945320e0544777d5bd8d438854fc488b14143fced97f520958ba4d54538"
+    },
+    {
+      "file": "docs/inv-068.pdf",
+      "id": "inv-068",
+      "pages": 1,
+      "sha256": "a59c17f0afb5131070c136ff6c9edd464d2e0d476235fac91e56cec469177464"
+    },
+    {
+      "file": "docs/inv-069.pdf",
+      "id": "inv-069",
+      "pages": 1,
+      "sha256": "250fe19b1e89e2af29317f5c1858b5ad2e1cf5c369a7d73844f3904c48418976"
+    },
+    {
+      "file": "docs/inv-070.pdf",
+      "id": "inv-070",
+      "pages": 1,
+      "sha256": "0d06a5c8ca0e2153ea1566361140f2ed89d38c37ed7059588929836c4d4a6275"
+    },
+    {
+      "file": "docs/inv-071.jpg",
+      "id": "inv-071",
+      "pages": 1,
+      "sha256": "2dacef096dc6816371b105adbb4e71c75ec9a309ab42a47db12eb9a43a14edaf"
+    },
+    {
+      "file": "docs/inv-072.jpg",
+      "id": "inv-072",
+      "pages": 1,
+      "sha256": "af2d403617d106b29b8699ee104656ee11f1703c9ac94cde8a510f662195e4e4"
+    },
+    {
+      "file": "docs/inv-073.pdf",
+      "id": "inv-073",
+      "pages": 1,
+      "sha256": "4761f764408aff90fcaddec42ebe9461e736bba3ce25be0c290a7758f456da3b"
+    },
+    {
+      "file": "docs/inv-074.pdf",
+      "id": "inv-074",
+      "pages": 1,
+      "sha256": "3295bfd4c8b2efd8d891a9f448587a299b5de31634b8d09d369168e1a8754a17"
+    },
+    {
+      "file": "docs/inv-075.pdf",
+      "id": "inv-075",
+      "pages": 1,
+      "sha256": "6dd5e6dd7e669e0430de005d205deeb472291873bcd4a4583115be70c7e2b933"
+    },
+    {
+      "file": "docs/inv-076.pdf",
+      "id": "inv-076",
+      "pages": 2,
+      "sha256": "a4d988a24cea9b3fcf7e6baf90708614c676fde5dddac1a2e41865726b60ee8b"
+    },
+    {
+      "file": "docs/inv-077.jpg",
+      "id": "inv-077",
+      "pages": 1,
+      "sha256": "db0be24704b3675660530e192e8cbdd5a0ba83185a1f6dd92f9400c48f7c9cb0"
+    },
+    {
+      "file": "docs/inv-078.jpg",
+      "id": "inv-078",
+      "pages": 1,
+      "sha256": "92bdcfb69cb1830fd705ded6ecc32f0bb1eb3a6e596c00d643ffe95a4be48d6c"
+    },
+    {
+      "file": "docs/inv-079.pdf",
+      "id": "inv-079",
+      "pages": 1,
+      "sha256": "c53676c7267a5522ab197cb53d948ef89047f41a2056f5b7537c1c0c7c700eaf"
+    },
+    {
+      "file": "docs/inv-080.pdf",
+      "id": "inv-080",
+      "pages": 1,
+      "sha256": "432335e9f742ddf6d6737101f4fbeb8c11b25dd5285addbaa86a0ed972193527"
+    },
+    {
+      "file": "docs/inv-081.pdf",
+      "id": "inv-081",
+      "pages": 1,
+      "sha256": "7232066eedfd93ab57cbd0183a1b7961af506125084d983a6bccae6aeb73e9fd"
+    },
+    {
+      "file": "docs/inv-082.pdf",
+      "id": "inv-082",
+      "pages": 1,
+      "sha256": "4f1a25277c365a3ef4f8975c77e9d812bbfe35848c7917cdd41ecfcdf932a76f"
+    },
+    {
+      "file": "docs/inv-083.jpg",
+      "id": "inv-083",
+      "pages": 1,
+      "sha256": "c4366f38644b59b5c1d47f875ae909fe436858aa67d667bf5ad623bccd57950b"
+    },
+    {
+      "file": "docs/inv-084.jpg",
+      "id": "inv-084",
+      "pages": 1,
+      "sha256": "dc748c3703571ec2ab847fbb7da39e50bcd49390e39ff18f1cf002014dd7b5cf"
+    },
+    {
+      "file": "docs/inv-085.pdf",
+      "id": "inv-085",
+      "pages": 1,
+      "sha256": "a9954b3470e3ffc9fe5b32c4d015452ac752c6551560baf5c0535f820e21f178"
+    },
+    {
+      "file": "docs/inv-086.pdf",
+      "id": "inv-086",
+      "pages": 1,
+      "sha256": "b9a704a022a70a80d14b3669ac0e4e3fe4d735368432603d235709ea2db5100b"
+    },
+    {
+      "file": "docs/inv-087.pdf",
+      "id": "inv-087",
+      "pages": 1,
+      "sha256": "e7d493c5e8f9fab5f49cae38b86f188ab4c4fc6be90d02f2d214ed77d662fb65"
+    },
+    {
+      "file": "docs/inv-088.jpg",
+      "id": "inv-088",
+      "pages": 1,
+      "sha256": "a9974e96f0e385b74be18f8062afcd9375c43b5b8df2ec5e7841306748ef3aaf"
+    },
+    {
+      "file": "docs/inv-089.jpg",
+      "id": "inv-089",
+      "pages": 1,
+      "sha256": "444f998525f74aa11e1cf0abfeb5745b9db13a482dcfc2e0b1729147607b6594"
+    },
+    {
+      "file": "docs/inv-090.pdf",
+      "id": "inv-090",
+      "pages": 1,
+      "sha256": "7012aab666d3e5750865a5af0b71178a01b0ec22de6f1e18f9851ecf528530f9"
+    },
+    {
+      "file": "docs/inv-091.pdf",
+      "id": "inv-091",
+      "pages": 2,
+      "sha256": "9a634b4afdc71489e7c838f91560cfba1697b3b8550045accd728346a82e3f20"
+    },
+    {
+      "file": "docs/inv-092.pdf",
+      "id": "inv-092",
+      "pages": 1,
+      "sha256": "2368d3be44d3d1871e8e1bc1feb7f99540b639ec2096c892c76a7ae04b8cefbe"
+    },
+    {
+      "file": "docs/inv-093.jpg",
+      "id": "inv-093",
+      "pages": 1,
+      "sha256": "8ad225bac344ab925c5c4b8862d6027e2d262f4eb16b3672294550c4366f2826"
+    },
+    {
+      "file": "docs/inv-094.pdf",
+      "id": "inv-094",
+      "pages": 1,
+      "sha256": "828835021c5b19950c8269260615f6f7b44cd15e798cf049f89a04911a82f61f"
+    },
+    {
+      "file": "docs/inv-095.pdf",
+      "id": "inv-095",
+      "pages": 1,
+      "sha256": "b286a669dfbce06a47ef494bf8e17b4ceaac31fd300b9a8666b97749e43d854e"
+    },
+    {
+      "file": "docs/inv-096.pdf",
+      "id": "inv-096",
+      "pages": 1,
+      "sha256": "83f05f1d1c2cf6d7635bd11000952d0a3bb1e327c15a270d69c4bd00ece54ad2"
+    },
+    {
+      "file": "docs/inv-097.jpg",
+      "id": "inv-097",
+      "pages": 1,
+      "sha256": "07d7c56ac0677c35e95ca9921e2d8730d26fa961813e37ff8a7c07b1b0b90ae9"
+    },
+    {
+      "file": "docs/inv-098.pdf",
+      "id": "inv-098",
+      "pages": 1,
+      "sha256": "23bdbc09ec7ef73db8aca054bc615b8cb49fa7a210502ff57a1ece972984b059"
+    },
+    {
+      "file": "docs/inv-099.pdf",
+      "id": "inv-099",
+      "pages": 1,
+      "sha256": "524598903c95064b2c8b2a7eb8e05ee36c3d2962c34d48257c78d545adf7738b"
+    },
+    {
+      "file": "docs/inv-100.pdf",
+      "id": "inv-100",
+      "pages": 1,
+      "sha256": "5a57d61f07d98bde40ad18460aa0e4309e028ae58b07ecd18049b1196a14ae45"
+    },
+    {
+      "file": "docs/inv-101.jpg",
+      "id": "inv-101",
+      "pages": 1,
+      "sha256": "eb251f6c1994b2673a2935b8b58b827db2c6098c778fe081c12dc0c2dfe6ee52"
+    },
+    {
+      "file": "docs/inv-102.pdf",
+      "id": "inv-102",
+      "pages": 1,
+      "sha256": "b2cb0cac3ee21d97ea62f08afd5d3650413190fb79d9e8d4a1f23c8b0564e9ae"
+    },
+    {
+      "file": "docs/inv-103.pdf",
+      "id": "inv-103",
+      "pages": 2,
+      "sha256": "a7c279b54224cc7fb60b8567859ed3cbcedc3279be68f8e025043d9a03e7e220"
+    },
+    {
+      "file": "docs/inv-104.pdf",
+      "id": "inv-104",
+      "pages": 1,
+      "sha256": "f9bf62d31901d4c2ca146a21b3fbd0698720baaded12bb5d879a4af349ed066b"
+    },
+    {
+      "file": "docs/inv-105.jpg",
+      "id": "inv-105",
+      "pages": 1,
+      "sha256": "96028c933a3727df7bbb5b8123eea8004712aa28e6e5bc67254b1e634e280cb0"
+    },
+    {
+      "file": "docs/inv-106.pdf",
+      "id": "inv-106",
+      "pages": 1,
+      "sha256": "653901946a079268ab02fe46e4d7828f17a1025a42b97a9c3bb6701e7bee101e"
+    },
+    {
+      "file": "docs/inv-107.pdf",
+      "id": "inv-107",
+      "pages": 1,
+      "sha256": "e7189e48ac9ec0f7fa97eb16227180538da7d51967723ae37458b1eabd2391df"
+    },
+    {
+      "file": "docs/inv-108.jpg",
+      "id": "inv-108",
+      "pages": 1,
+      "sha256": "1f07b48dd6245e5104483183746792e0bd3f12b04b08c9ae3076340ae8d98a7c"
+    },
+    {
+      "file": "docs/inv-109.pdf",
+      "id": "inv-109",
+      "pages": 1,
+      "sha256": "cc56b6ffab9a9ed311f9bbf312209a711ecf253540abbe326b58fffb12482935"
+    },
+    {
+      "file": "docs/inv-110.pdf",
+      "id": "inv-110",
+      "pages": 1,
+      "sha256": "4649ae04c0135b0b54dac9a80867cbd52866a6deb9e06ec1bf28c40061286d0d"
+    },
+    {
+      "file": "docs/inv-111.jpg",
+      "id": "inv-111",
+      "pages": 1,
+      "sha256": "ff9fbdf79a3c890b4ef19c9c6531e065f9932b9847b31aaf2191b9c4ce32100e"
+    },
+    {
+      "file": "docs/inv-112.pdf",
+      "id": "inv-112",
+      "pages": 1,
+      "sha256": "f5d6dfe3f93e3a84da0e51f7a33333e0159b4f1254b2354844f2aa0e118929fb"
+    },
+    {
+      "file": "docs/inv-113.pdf",
+      "id": "inv-113",
+      "pages": 1,
+      "sha256": "25055dd5769ba1b6fb9b4f58e747b09a5deba76e87046bdf071e7c3281d49aa2"
+    },
+    {
+      "file": "docs/inv-114.pdf",
+      "id": "inv-114",
+      "pages": 1,
+      "sha256": "cce1370801f9227f529b58fc38844c19786bd12ed2391de7d1473d92f360ad92"
+    },
+    {
+      "file": "docs/inv-115.pdf",
+      "id": "inv-115",
+      "pages": 1,
+      "sha256": "03e7a85e3c099c9588809f910d11685a2a226f23e8e696cf85084a5641825294"
+    },
+    {
+      "file": "docs/inv-116.pdf",
+      "id": "inv-116",
+      "pages": 1,
+      "sha256": "31d7113a0bcfe46d9272bbd93dc2f5545ef7fd642a40a1cfb48e54e6be8a9282"
+    },
+    {
+      "file": "docs/inv-117.pdf",
+      "id": "inv-117",
+      "pages": 1,
+      "sha256": "52c0bb74c6746bd6d8d4a0b4c137e17cfa9125156fdaaf3ce18bf4211bb411eb"
+    },
+    {
+      "file": "docs/inv-118.pdf",
+      "id": "inv-118",
+      "pages": 1,
+      "sha256": "8708243009a507944013389bca72570f5d5d50d21b03b9d8c9e1e226df997abe"
+    },
+    {
+      "file": "docs/inv-119.pdf",
+      "id": "inv-119",
+      "pages": 1,
+      "sha256": "6b13e9d5e32623a69a1ad7d616831f6e0e5a9b853fc2f272a828907476d4e1bf"
+    },
+    {
+      "file": "docs/inv-120.pdf",
+      "id": "inv-120",
+      "pages": 1,
+      "sha256": "7a6a8a7c530f0e826159f68580a734d4fab6b5b43c2847f61e2fe5e939f6a4a2"
+    }
+  ],
+  "generator": {
+    "font": "Liberation Sans and Liberation Serif 2.1.5 (SIL Open Font License 1.1)",
+    "pillow": "13.0.0",
+    "reportlab": "5.1.0"
+  },
+  "reference_date": "2026-10-01",
+  "seed": 20261023,
+  "summary": {
+    "by_input_type_language_corrupted": {
+      "photo|de|clean": 13,
+      "photo|de|corrupted": 2,
+      "photo|en|clean": 19,
+      "photo|en|corrupted": 2,
+      "scan_pdf|de|clean": 12,
+      "scan_pdf|de|corrupted": 2,
+      "scan_pdf|en|clean": 19,
+      "scan_pdf|en|corrupted": 3,
+      "text_pdf|de|clean": 17,
+      "text_pdf|de|corrupted": 2,
+      "text_pdf|en|clean": 25,
+      "text_pdf|en|corrupted": 4
+    },
+    "corrupted": 15,
+    "corruption_kinds": {
+      "bad_iban_check_digits": 2,
+      "bad_vat_format": 2,
+      "due_before_invoice_date": 2,
+      "line_amount_mismatch": 2,
+      "missing_invoice_number": 2,
+      "subtotal_mismatch": 2,
+      "total_mismatch": 3
+    },
+    "currencies": {
+      "CHF": 6,
+      "EUR": 75,
+      "GBP": 15,
+      "JPY": 4,
+      "USD": 20
+    },
+    "input_type": {
+      "photo": 36,
+      "scan_pdf": 36,
+      "text_pdf": 48
+    },
+    "language": {
+      "de": 48,
+      "en": 72
+    },
+    "templates": {
+      "t01": 12,
+      "t02": 12,
+      "t03": 12,
+      "t04": 12,
+      "t05": 12,
+      "t06": 12,
+      "t07": 12,
+      "t08": 12,
+      "t09": 12,
+      "t10": 12
+    },
+    "two_page_documents": 8
+  }
+}

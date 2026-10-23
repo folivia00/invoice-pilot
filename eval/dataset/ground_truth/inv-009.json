@@ -1,0 +1,65 @@
+{
+  "corruption": "line_amount_mismatch",
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [
+    "line_amount_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-009.pdf",
+  "id": "inv-009",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "580 Lakeshore Drive, Austin 01961",
+      "name": "Quill and Compass Inc.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-10-20",
+    "iban": null,
+    "invoice_date": "2026-09-05",
+    "invoice_number": "2605-61549",
+    "line_items": [
+      {
+        "amount": "1294.58",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "1294.08"
+      }
+    ],
+    "subtotal": "1294.08",
+    "supplier": {
+      "address": "713 Ridge Road, Austin 10249",
+      "name": "Silverline Components LLC",
+      "tax_id": "17-7483855"
+    },
+    "tax_amount": "80.88",
+    "tax_rate": "6.25",
+    "total": "1374.96"
+  },
+  "language": "en",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "20 October 2026",
+    "iban": "",
+    "invoice_date": "5 September 2026",
+    "invoice_number": "2605-61549",
+    "subtotal": "USD 1,294.08",
+    "supplier_tax_id": "17-7483855",
+    "tax_amount": "USD 80.88",
+    "total": "USD 1,374.96"
+  },
+  "sha256": "a547fb116b7261d4941dedad2f915231ebb107e45c0b2ae05829e66770c94e08",
+  "size_bytes": 233423,
+  "supplier_country": "US",
+  "template": "t09"
+}

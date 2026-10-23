@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "CHF",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-082.pdf",
+  "id": "inv-082",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "VYBUCHFFXXX",
+    "buyer": {
+      "address": "Industriestrasse 96, 1092 St. Gallen",
+      "name": "Dieter Schäfer",
+      "tax_id": null
+    },
+    "currency": "CHF",
+    "due_date": null,
+    "iban": "CH9803336FS1VGH2Z6MCT",
+    "invoice_date": "2026-01-31",
+    "invoice_number": "2602-36930",
+    "line_items": [
+      {
+        "amount": "15092.00",
+        "description": "Konferenztelefon",
+        "quantity": "50",
+        "unit_price": "301.84"
+      },
+      {
+        "amount": "177.59",
+        "description": "Catering, Mittagessen für 12 Personen",
+        "quantity": "1",
+        "unit_price": "177.59"
+      },
+      {
+        "amount": "127.17",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "22.75",
+        "unit_price": "5.59"
+      }
+    ],
+    "subtotal": "15396.76",
+    "supplier": {
+      "address": "Dorfstrasse 72, 9306 Chur",
+      "name": "Nordlicht Software GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "1247.14",
+    "tax_rate": "8.1",
+    "total": "16643.90"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "flat",
+    "weight"
+  ],
+  "number_format": "ch",
+  "pages": 1,
+  "printed": {
+    "bic": "VYBUCHFFXXX",
+    "buyer_tax_id": "",
+    "currency": "CHF",
+    "due_date": "",
+    "iban": "CH98 0333 6FS1 VGH2 Z6MC T",
+    "invoice_date": "31. Januar 2026",
+    "invoice_number": "2602-36930",
+    "subtotal": "CHF 15'396.76",
+    "supplier_tax_id": "",
+    "tax_amount": "CHF 1'247.14",
+    "total": "CHF 16'643.90"
+  },
+  "sha256": "4f1a25277c365a3ef4f8975c77e9d812bbfe35848c7917cdd41ecfcdf932a76f",
+  "size_bytes": 510720,
+  "supplier_country": "CH",
+  "template": "t02"
+}

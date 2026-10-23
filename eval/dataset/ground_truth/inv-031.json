@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-031.pdf",
+  "id": "inv-031",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "542 Mill Lane, Sheffield TD6 2BG",
+      "name": "Oakmont Training Limited",
+      "tax_id": "GB612232137"
+    },
+    "currency": "GBP",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2025-12-31",
+    "invoice_number": "R076228",
+    "line_items": [
+      {
+        "amount": "363.72",
+        "description": "Conference phone",
+        "quantity": "2",
+        "unit_price": "181.86"
+      },
+      {
+        "amount": "1010.50",
+        "description": "Data migration, hours",
+        "quantity": "11.75",
+        "unit_price": "86.00"
+      },
+      {
+        "amount": "86.00",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "86.00"
+      },
+      {
+        "amount": "1663.25",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1663.25"
+      },
+      {
+        "amount": "1083.16",
+        "description": "Office chair, ergonomic",
+        "quantity": "4",
+        "unit_price": "270.79"
+      },
+      {
+        "amount": "527.64",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "23.43",
+        "unit_price": "22.52"
+      },
+      {
+        "amount": "154.20",
+        "description": "Cable management kit",
+        "quantity": "10",
+        "unit_price": "15.42"
+      },
+      {
+        "amount": "457.38",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "7",
+        "unit_price": "65.34"
+      }
+    ],
+    "subtotal": "5345.85",
+    "supplier": {
+      "address": "292 Mill Lane, Bristol CR6 3SP",
+      "name": "Redstone Software Limited",
+      "tax_id": "GB128722563"
+    },
+    "tax_amount": "1069.17",
+    "tax_rate": "20",
+    "total": "6415.02"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "flat",
+    "flat",
+    "piece",
+    "length",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB612232137",
+    "currency": "GBP",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "2025-12-31",
+    "invoice_number": "R076228",
+    "subtotal": "GBP 5,345.85",
+    "supplier_tax_id": "GB128722563",
+    "tax_amount": "GBP 1,069.17",
+    "total": "GBP 6,415.02"
+  },
+  "sha256": "519b057d063bde4a0e213e017724bf54c99ed39fc3020f7f17e1692f8abed159",
+  "size_bytes": 41682,
+  "supplier_country": "GB",
+  "template": "t01"
+}

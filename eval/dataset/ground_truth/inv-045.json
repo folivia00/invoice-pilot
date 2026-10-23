@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-045.pdf",
+  "id": "inv-045",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Greywater Plumbing Co.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-04-25",
+    "iban": null,
+    "invoice_date": "2026-03-26",
+    "invoice_number": "2610-70027",
+    "line_items": [
+      {
+        "amount": "3357.36",
+        "description": "Network switch 24-port",
+        "quantity": "9",
+        "unit_price": "373.04"
+      },
+      {
+        "amount": "497.00",
+        "description": "LED panel light",
+        "quantity": "7",
+        "unit_price": "71.00"
+      },
+      {
+        "amount": "802.63",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "802.63"
+      },
+      {
+        "amount": "3364.14",
+        "description": "Photo editing, hours",
+        "quantity": "56.75",
+        "unit_price": "59.28"
+      },
+      {
+        "amount": "1651.00",
+        "description": "Technical support, hours",
+        "quantity": "31.75",
+        "unit_price": "52.00"
+      },
+      {
+        "amount": "1330.70",
+        "description": "Cable management kit",
+        "quantity": "35",
+        "unit_price": "38.02"
+      },
+      {
+        "amount": "289.75",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "5",
+        "unit_price": "57.95"
+      }
+    ],
+    "subtotal": "11292.58",
+    "supplier": {
+      "address": "688 Elm Court, Denver 17286",
+      "name": "Clearview Optics Corp.",
+      "tax_id": "48-6908158"
+    },
+    "tax_amount": "1002.22",
+    "tax_rate": "8.875",
+    "total": "12294.80"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece",
+    "flat",
+    "hour",
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 2,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "04/25/2026",
+    "iban": "",
+    "invoice_date": "03/26/2026",
+    "invoice_number": "2610-70027",
+    "subtotal": "USD 11,292.58",
+    "supplier_tax_id": "48-6908158",
+    "tax_amount": "USD 1,002.22",
+    "total": "USD 12,294.80"
+  },
+  "sha256": "1a94740acfdc1604963d656874c092c3cf239ce0681937b1e625e3480f56511e",
+  "size_bytes": 602785,
+  "supplier_country": "US",
+  "template": "t05"
+}

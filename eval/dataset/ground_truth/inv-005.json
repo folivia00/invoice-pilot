@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "JPY",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-005.jpg",
+  "id": "inv-005",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "1-2-3 Sakura-cho, 386-8369 Fukuoka",
+      "name": "Mara Ellis",
+      "tax_id": null
+    },
+    "currency": "JPY",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-04-09",
+    "invoice_number": "R029470",
+    "line_items": [
+      {
+        "amount": "3610",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "3610"
+      },
+      {
+        "amount": "385310",
+        "description": "Monitor 27 inch",
+        "quantity": "10",
+        "unit_price": "38531"
+      },
+      {
+        "amount": "132109",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "132109"
+      },
+      {
+        "amount": "214980",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "214980"
+      }
+    ],
+    "subtotal": "736009",
+    "supplier": {
+      "address": "5-6-2 Midori, 194-4869 Osaka",
+      "name": "Summit Ridge Tools Co., Ltd.",
+      "tax_id": null
+    },
+    "tax_amount": "73601",
+    "tax_rate": "10",
+    "total": "809610"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece",
+    "flat",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "JPY",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "09.04.2026",
+    "invoice_number": "R029470",
+    "subtotal": "¥736,009",
+    "supplier_tax_id": "",
+    "tax_amount": "¥73,601",
+    "total": "¥809,610"
+  },
+  "sha256": "7d157940415c853342a2fd0eb67cee9529f22d333875bfe6b70d03cabf7de862",
+  "size_bytes": 122727,
+  "supplier_country": "JP",
+  "template": "t05"
+}

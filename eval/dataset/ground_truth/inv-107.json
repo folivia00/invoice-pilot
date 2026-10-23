@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-107.pdf",
+  "id": "inv-107",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Rue des Lilas 175, 36533 Dijon",
+      "name": "Ironbridge Engineering SAS",
+      "tax_id": "FR87522567282"
+    },
+    "currency": "USD",
+    "due_date": "2025-12-09",
+    "iban": null,
+    "invoice_date": "2025-11-09",
+    "invoice_number": "INV-2025-74282",
+    "line_items": [
+      {
+        "amount": "122.00",
+        "description": "Laptop stand, aluminium",
+        "quantity": "2",
+        "unit_price": "61.00"
+      },
+      {
+        "amount": "47.00",
+        "description": "LED panel light",
+        "quantity": "1",
+        "unit_price": "47.00"
+      },
+      {
+        "amount": "248.85",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "23.7",
+        "unit_price": "10.50"
+      },
+      {
+        "amount": "1308.11",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "1308.11"
+      }
+    ],
+    "subtotal": "1725.96",
+    "supplier": {
+      "address": "683 Lakeshore Drive, Portland 11400",
+      "name": "Kestrel Aviation Parts Co.",
+      "tax_id": "10-6484073"
+    },
+    "tax_amount": "107.87",
+    "tax_rate": "6.25",
+    "total": "1833.83"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece",
+    "length",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "FR87522567282",
+    "currency": "USD",
+    "due_date": "12/09/2025",
+    "iban": "",
+    "invoice_date": "11/09/2025",
+    "invoice_number": "INV-2025-74282",
+    "subtotal": "USD 1,725.96",
+    "supplier_tax_id": "10-6484073",
+    "tax_amount": "USD 107.87",
+    "total": "USD 1,833.83"
+  },
+  "sha256": "e7189e48ac9ec0f7fa97eb16227180538da7d51967723ae37458b1eabd2391df",
+  "size_bytes": 580380,
+  "supplier_country": "US",
+  "template": "t07"
+}

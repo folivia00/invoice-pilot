@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-039.pdf",
+  "id": "inv-039",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "XHHRBEFF100",
+    "buyer": {
+      "address": "Kerkstraat 65, 8445 Mons",
+      "name": "Tidewater Services SRL",
+      "tax_id": "BE0808253150"
+    },
+    "currency": "EUR",
+    "due_date": "2026-07-22",
+    "iban": "BE32492301513406",
+    "invoice_date": "2026-06-22",
+    "invoice_number": "INV-2026-32563",
+    "line_items": [
+      {
+        "amount": "3518.60",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "175.93",
+        "unit_price": "20.00"
+      },
+      {
+        "amount": "3584.63",
+        "description": "Translation services, hours",
+        "quantity": "71.75",
+        "unit_price": "49.96"
+      },
+      {
+        "amount": "3.17",
+        "description": "Safety gloves, pair",
+        "quantity": "1",
+        "unit_price": "3.17"
+      },
+      {
+        "amount": "942.99",
+        "description": "Project management, hours",
+        "quantity": "8.5",
+        "unit_price": "110.94"
+      },
+      {
+        "amount": "414.85",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "414.85"
+      },
+      {
+        "amount": "84.00",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "84.00"
+      },
+      {
+        "amount": "41.76",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "4.80",
+        "unit_price": "8.70"
+      },
+      {
+        "amount": "220.56",
+        "description": "Laptop stand, aluminium",
+        "quantity": "6",
+        "unit_price": "36.76"
+      }
+    ],
+    "subtotal": "8810.56",
+    "supplier": {
+      "address": "Rue de la Gare 58, 8577 Namur",
+      "name": "Foxglove Design SRL",
+      "tax_id": "BE0340677719"
+    },
+    "tax_amount": "528.63",
+    "tax_rate": "6",
+    "total": "9339.19"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "hour",
+    "piece",
+    "hour",
+    "flat",
+    "flat",
+    "length",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "XHHRBEFF100",
+    "buyer_tax_id": "BE0808253150",
+    "currency": "EUR",
+    "due_date": "22.07.2026",
+    "iban": "BE32 4923 0151 3406",
+    "invoice_date": "22.06.2026",
+    "invoice_number": "INV-2026-32563",
+    "subtotal": "€8,810.56",
+    "supplier_tax_id": "BE0340677719",
+    "tax_amount": "€528.63",
+    "total": "€9,339.19"
+  },
+  "sha256": "0d881362de24ac5a24b1ab2069cecabfe1416881e740cb7bf35ee1c3940182c2",
+  "size_bytes": 348988,
+  "supplier_country": "BE",
+  "template": "t09"
+}

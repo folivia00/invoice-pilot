@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-040.pdf",
+  "id": "inv-040",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Kirchengasse 106, 7950 Klagenfurt",
+      "name": "Rheintal Logistik GmbH",
+      "tax_id": "ATU48640890"
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-09",
+    "iban": "AT854134944263334606",
+    "invoice_date": "2025-11-09",
+    "invoice_number": "R000273",
+    "line_items": [
+      {
+        "amount": "454.50",
+        "description": "Technischer Support (Std.)",
+        "quantity": "7.5",
+        "unit_price": "60.60"
+      },
+      {
+        "amount": "1076.00",
+        "description": "Netzwerk-Switch 24 Ports",
+        "quantity": "4",
+        "unit_price": "269.00"
+      },
+      {
+        "amount": "922.95",
+        "description": "Etikettendrucker",
+        "quantity": "9",
+        "unit_price": "102.55"
+      },
+      {
+        "amount": "356.06",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "356.06"
+      },
+      {
+        "amount": "1748.00",
+        "description": "Übersetzung (Std.)",
+        "quantity": "38",
+        "unit_price": "46.00"
+      },
+      {
+        "amount": "84.88",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "84.88"
+      },
+      {
+        "amount": "60.00",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "4",
+        "unit_price": "15.00"
+      }
+    ],
+    "subtotal": "4702.39",
+    "supplier": {
+      "address": "Salzburger Straße 35, 5010 Linz",
+      "name": "Birkenhain Design GmbH",
+      "tax_id": "ATU55541739"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "4702.39"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "piece",
+    "piece",
+    "flat",
+    "hour",
+    "flat",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "ATU48640890",
+    "currency": "EUR",
+    "due_date": "2025-12-09",
+    "iban": "AT85 4134 9442 6333 4606",
+    "invoice_date": "2025-11-09",
+    "invoice_number": "R000273",
+    "subtotal": "4.702,39 €",
+    "supplier_tax_id": "ATU55541739",
+    "tax_amount": "0,00 €",
+    "total": "4.702,39 €"
+  },
+  "sha256": "d736d283353a874e773158a5857ef9fe456c97b5ae25f8c96d1c1f9b710358b2",
+  "size_bytes": 408108,
+  "supplier_country": "AT",
+  "template": "t10"
+}

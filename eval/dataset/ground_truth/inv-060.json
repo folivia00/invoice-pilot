@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-060.jpg",
+  "id": "inv-060",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "CDRVDEXX200",
+    "buyer": {
+      "address": "Schillerplatz 128, 08660 Freiburg",
+      "name": "Florian Fischer",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-06-20",
+    "iban": "DE90529928259376351603",
+    "invoice_date": "2026-05-21",
+    "invoice_number": "R021212",
+    "line_items": [
+      {
+        "amount": "573.98",
+        "description": "Funktastatur",
+        "quantity": "22",
+        "unit_price": "26.09"
+      },
+      {
+        "amount": "37.44",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "8",
+        "unit_price": "4.68"
+      },
+      {
+        "amount": "855.00",
+        "description": "LED-Panel",
+        "quantity": "15",
+        "unit_price": "57.00"
+      }
+    ],
+    "subtotal": "1466.42",
+    "supplier": {
+      "address": "Schillerplatz 86, 02266 Münster",
+      "name": "Alpenblick Reinigung AG",
+      "tax_id": "DE115534325"
+    },
+    "tax_amount": "278.62",
+    "tax_rate": "19",
+    "total": "1745.04"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "CDRVDEXX200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-06-20",
+    "iban": "DE90 5299 2825 9376 3516 03",
+    "invoice_date": "2026-05-21",
+    "invoice_number": "R021212",
+    "subtotal": "1.466,42 €",
+    "supplier_tax_id": "DE115534325",
+    "tax_amount": "278,62 €",
+    "total": "1.745,04 €"
+  },
+  "sha256": "7c96432ce325941380b4971b48453fcd42f2a0a5ba865a33b4a9984a66112757",
+  "size_bytes": 131719,
+  "supplier_country": "DE",
+  "template": "t10"
+}

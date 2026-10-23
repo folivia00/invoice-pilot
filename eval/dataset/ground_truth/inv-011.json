@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-011.jpg",
+  "id": "inv-011",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "667 Orchard Way, Leeds AJ5 2XE",
+      "name": "Summit Ridge Tools Ltd",
+      "tax_id": "GB244624431"
+    },
+    "currency": "GBP",
+    "due_date": null,
+    "iban": "GB20RUIK78051531368451",
+    "invoice_date": "2026-09-25",
+    "invoice_number": "2026-051786",
+    "line_items": [
+      {
+        "amount": "1705.05",
+        "description": "Project management, hours",
+        "quantity": "27",
+        "unit_price": "63.15"
+      },
+      {
+        "amount": "1393.20",
+        "description": "Monitor 27 inch",
+        "quantity": "6",
+        "unit_price": "232.20"
+      },
+      {
+        "amount": "355.56",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "6",
+        "unit_price": "59.26"
+      }
+    ],
+    "subtotal": "3453.81",
+    "supplier": {
+      "address": "857 Birch Avenue, Bristol JX0 1NT",
+      "name": "Oakmont Training LLP",
+      "tax_id": "GB211748093"
+    },
+    "tax_amount": "690.76",
+    "tax_rate": "20",
+    "total": "4144.57"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB244624431",
+    "currency": "GBP",
+    "due_date": "",
+    "iban": "GB20 RUIK 7805 1531 3684 51",
+    "invoice_date": "2026-09-25",
+    "invoice_number": "2026-051786",
+    "subtotal": "£3,453.81",
+    "supplier_tax_id": "GB211748093",
+    "tax_amount": "£690.76",
+    "total": "£4,144.57"
+  },
+  "sha256": "2c4b801196f130492ac9822ff2f37bc12862169b70d15fde8cb4d0dc81f97106",
+  "size_bytes": 129463,
+  "supplier_country": "GB",
+  "template": "t01"
+}

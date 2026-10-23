@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-002.pdf",
+  "id": "inv-002",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Hauptstraße 125, 86860 Regensburg",
+      "name": "Donau Druckerei GmbH",
+      "tax_id": "DE109820661"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "DE93933318674327058045",
+    "invoice_date": "2026-03-21",
+    "invoice_number": "R057762",
+    "line_items": [
+      {
+        "amount": "83.20",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "8",
+        "unit_price": "10.40"
+      },
+      {
+        "amount": "363.10",
+        "description": "LED-Panel",
+        "quantity": "10",
+        "unit_price": "36.31"
+      },
+      {
+        "amount": "5290.00",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "10",
+        "unit_price": "529.00"
+      },
+      {
+        "amount": "286.06",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "1",
+        "unit_price": "286.06"
+      },
+      {
+        "amount": "525.00",
+        "description": "Funktastatur",
+        "quantity": "7",
+        "unit_price": "75.00"
+      },
+      {
+        "amount": "1296.85",
+        "description": "Softwarelizenz (Jahr)",
+        "quantity": "1",
+        "unit_price": "1296.85"
+      },
+      {
+        "amount": "4196.16",
+        "description": "Datenmigration (Std.)",
+        "quantity": "35.25",
+        "unit_price": "119.04"
+      }
+    ],
+    "subtotal": "12040.37",
+    "supplier": {
+      "address": "Hauptstraße 85, 80748 Lüneburg",
+      "name": "Sonnenhang Gartenbau GmbH & Co. KG",
+      "tax_id": "DE255992642"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "12040.37"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "piece",
+    "flat",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "DE109820661",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "DE93 9333 1867 4327 0580 45",
+    "invoice_date": "21. März 2026",
+    "invoice_number": "R057762",
+    "subtotal": "12.040,37 €",
+    "supplier_tax_id": "DE255992642",
+    "tax_amount": "0,00 €",
+    "total": "12.040,37 €"
+  },
+  "sha256": "1d03320a9523b45407ea02c7fa077d0224a04ac4812a63fa4c35bfbace5428ca",
+  "size_bytes": 42622,
+  "supplier_country": "DE",
+  "template": "t02"
+}

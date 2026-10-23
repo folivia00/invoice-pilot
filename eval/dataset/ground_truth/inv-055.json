@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-055.pdf",
+  "id": "inv-055",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "724 Birch Avenue, York GR1 7EU",
+      "name": "Jonas Fletcher",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-07-09",
+    "iban": "GB54YQFY25601220306707",
+    "invoice_date": "2026-06-09",
+    "invoice_number": "2026-001631",
+    "line_items": [
+      {
+        "amount": "2023.00",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "2023.00"
+      },
+      {
+        "amount": "151.56",
+        "description": "Vinyl banner print, m",
+        "quantity": "6",
+        "unit_price": "25.26"
+      },
+      {
+        "amount": "2214.49",
+        "description": "Data migration, hours",
+        "quantity": "22.75",
+        "unit_price": "97.34"
+      },
+      {
+        "amount": "28.00",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "4",
+        "unit_price": "7.00"
+      },
+      {
+        "amount": "30.24",
+        "description": "Steel bracket 40x40",
+        "quantity": "9",
+        "unit_price": "3.36"
+      },
+      {
+        "amount": "631.53",
+        "description": "LED panel light",
+        "quantity": "9",
+        "unit_price": "70.17"
+      }
+    ],
+    "subtotal": "5078.82",
+    "supplier": {
+      "address": "523 Mill Lane, York XP3 1ZV",
+      "name": "Meridian Labs Ltd",
+      "tax_id": "GB747427221"
+    },
+    "tax_amount": "1015.76",
+    "tax_rate": "20",
+    "total": "6094.58"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "length",
+    "hour",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "2026-07-09",
+    "iban": "GB54 YQFY 2560 1220 3067 07",
+    "invoice_date": "2026-06-09",
+    "invoice_number": "2026-001631",
+    "subtotal": "£5,078.82",
+    "supplier_tax_id": "GB747427221",
+    "tax_amount": "£1,015.76",
+    "total": "£6,094.58"
+  },
+  "sha256": "e43ee367aaf54f08ffcb3988ebe4c0f5aade36680a9c60186cc42cc9fc18a83c",
+  "size_bytes": 45031,
+  "supplier_country": "GB",
+  "template": "t05"
+}

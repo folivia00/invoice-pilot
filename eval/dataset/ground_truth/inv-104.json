@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-104.pdf",
+  "id": "inv-104",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "859 Foundry Close, Exeter MG1 2LB",
+      "name": "Tidewater Services LLP",
+      "tax_id": "GB556623320"
+    },
+    "currency": "GBP",
+    "due_date": "2026-06-15",
+    "iban": null,
+    "invoice_date": "2026-05-16",
+    "invoice_number": "2607-55414",
+    "line_items": [
+      {
+        "amount": "1374.84",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "1374.84"
+      },
+      {
+        "amount": "210.00",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "7",
+        "unit_price": "30.00"
+      },
+      {
+        "amount": "8.31",
+        "description": "Network cable Cat6, m",
+        "quantity": "8.48",
+        "unit_price": "0.98"
+      },
+      {
+        "amount": "9377.34",
+        "description": "Conference phone",
+        "quantity": "42",
+        "unit_price": "223.27"
+      },
+      {
+        "amount": "753.84",
+        "description": "Office chair, ergonomic",
+        "quantity": "6",
+        "unit_price": "125.64"
+      }
+    ],
+    "subtotal": "11724.33",
+    "supplier": {
+      "address": "504 Mill Lane, Exeter EA1 9KK",
+      "name": "Westmarch Textiles Ltd",
+      "tax_id": null
+    },
+    "tax_amount": "2344.87",
+    "tax_rate": "20",
+    "total": "14069.20"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "weight",
+    "length",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB556623320",
+    "currency": "GBP",
+    "due_date": "15 June 2026",
+    "iban": "",
+    "invoice_date": "16 May 2026",
+    "invoice_number": "2607-55414",
+    "subtotal": "£11,724.33",
+    "supplier_tax_id": "",
+    "tax_amount": "£2,344.87",
+    "total": "£14,069.20"
+  },
+  "sha256": "f9bf62d31901d4c2ca146a21b3fbd0698720baaded12bb5d879a4af349ed066b",
+  "size_bytes": 219159,
+  "supplier_country": "GB",
+  "template": "t04"
+}

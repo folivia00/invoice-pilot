@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-077.jpg",
+  "id": "inv-077",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "205 Castle Street, Exeter TS0 2DN",
+      "name": "Lantern Hill Books Ltd",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-05-04",
+    "iban": null,
+    "invoice_date": "2026-04-20",
+    "invoice_number": "R014493",
+    "line_items": [
+      {
+        "amount": "96.00",
+        "description": "Onsite installation, hours",
+        "quantity": "2",
+        "unit_price": "48.00"
+      },
+      {
+        "amount": "131.95",
+        "description": "Cable management kit",
+        "quantity": "5",
+        "unit_price": "26.39"
+      },
+      {
+        "amount": "7.88",
+        "description": "Steel bracket 40x40",
+        "quantity": "4",
+        "unit_price": "1.97"
+      }
+    ],
+    "subtotal": "235.83",
+    "supplier": {
+      "address": "711 Queensway, Norwich WT5 9AD",
+      "name": "Copperfield Printing LLP",
+      "tax_id": "GB504948191"
+    },
+    "tax_amount": "47.17",
+    "tax_rate": "20",
+    "total": "283.00"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "2026-05-04",
+    "iban": "",
+    "invoice_date": "2026-04-20",
+    "invoice_number": "R014493",
+    "subtotal": "£235.83",
+    "supplier_tax_id": "GB504948191",
+    "tax_amount": "£47.17",
+    "total": "£283.00"
+  },
+  "sha256": "db0be24704b3675660530e192e8cbdd5a0ba83185a1f6dd92f9400c48f7c9cb0",
+  "size_bytes": 95888,
+  "supplier_country": "GB",
+  "template": "t07"
+}

@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-030.jpg",
+  "id": "inv-030",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Salzburger Straße 38, 6202 Innsbruck",
+      "name": "Florian Dörfler",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-03",
+    "iban": "AT717353520816835612",
+    "invoice_date": "2026-02-01",
+    "invoice_number": "2026-041284",
+    "line_items": [
+      {
+        "amount": "1205.26",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "1205.26"
+      },
+      {
+        "amount": "74.56",
+        "description": "Kabelmanagement-Set",
+        "quantity": "2",
+        "unit_price": "37.28"
+      },
+      {
+        "amount": "1860.00",
+        "description": "Konferenztelefon",
+        "quantity": "5",
+        "unit_price": "372.00"
+      },
+      {
+        "amount": "250.44",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "250.44"
+      },
+      {
+        "amount": "46.22",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "21.40",
+        "unit_price": "2.16"
+      }
+    ],
+    "subtotal": "3436.48",
+    "supplier": {
+      "address": "Salzburger Straße 87, 3132 Klagenfurt",
+      "name": "Adlerhorst Sanitär KG",
+      "tax_id": null
+    },
+    "tax_amount": "687.30",
+    "tax_rate": "20",
+    "total": "4123.78"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "piece",
+    "piece",
+    "flat",
+    "weight"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "03.03.2026",
+    "iban": "AT71 7353 5208 1683 5612",
+    "invoice_date": "01.02.2026",
+    "invoice_number": "2026-041284",
+    "subtotal": "3.436,48 €",
+    "supplier_tax_id": "",
+    "tax_amount": "687,30 €",
+    "total": "4.123,78 €"
+  },
+  "sha256": "a6cba2f7bf79a98bc1fe03fbd1fa1deeab38a4af7837e7cab3e9536caafd1591",
+  "size_bytes": 169860,
+  "supplier_country": "AT",
+  "template": "t10"
+}

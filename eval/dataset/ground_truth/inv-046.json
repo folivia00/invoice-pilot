@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-046.pdf",
+  "id": "inv-046",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "MYASATHH100",
+    "buyer": {
+      "address": null,
+      "name": "Tannenberg Schulung GesmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-11",
+    "iban": "AT608180593184647343",
+    "invoice_date": "2025-11-27",
+    "invoice_number": "RE-202574318",
+    "line_items": [
+      {
+        "amount": "510.38",
+        "description": "Kaffeebohnen, geröstet, kg",
+        "quantity": "24.12",
+        "unit_price": "21.16"
+      },
+      {
+        "amount": "444.00",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "40",
+        "unit_price": "11.10"
+      },
+      {
+        "amount": "3326.08",
+        "description": "Netzwerk-Switch 24 Ports",
+        "quantity": "8",
+        "unit_price": "415.76"
+      }
+    ],
+    "subtotal": "4280.46",
+    "supplier": {
+      "address": "Ringstraße 97, 9049 Graz",
+      "name": "Kupferberg Metallbau KG",
+      "tax_id": null
+    },
+    "tax_amount": "856.09",
+    "tax_rate": "20",
+    "total": "5136.55"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "MYASATHH100",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2025-12-11",
+    "iban": "AT60 8180 5931 8464 7343",
+    "invoice_date": "2025-11-27",
+    "invoice_number": "RE-202574318",
+    "subtotal": "4.280,46 €",
+    "supplier_tax_id": "",
+    "tax_amount": "856,09 €",
+    "total": "5.136,55 €"
+  },
+  "sha256": "c95a7b5df131cc418e163ba5f19fa3217a1c1117ec405fd93d7926bb5fb4192b",
+  "size_bytes": 380657,
+  "supplier_country": "AT",
+  "template": "t06"
+}

@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-012.jpg",
+  "id": "inv-012",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "YINBDEMMXXX",
+    "buyer": {
+      "address": null,
+      "name": "Alpenblick Reinigung GmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-08-18",
+    "iban": "DE67191180349810779207",
+    "invoice_date": "2026-08-04",
+    "invoice_number": "R039481",
+    "line_items": [
+      {
+        "amount": "58.00",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "58",
+        "unit_price": "1.00"
+      },
+      {
+        "amount": "162.27",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "162.27"
+      },
+      {
+        "amount": "8105.76",
+        "description": "Monitor 27 Zoll",
+        "quantity": "36",
+        "unit_price": "225.16"
+      },
+      {
+        "amount": "48.00",
+        "description": "Kurierlieferung",
+        "quantity": "1",
+        "unit_price": "48.00"
+      },
+      {
+        "amount": "650.00",
+        "description": "Datenmigration (Std.)",
+        "quantity": "6.5",
+        "unit_price": "100.00"
+      },
+      {
+        "amount": "530.55",
+        "description": "Kabelmanagement-Set",
+        "quantity": "15",
+        "unit_price": "35.37"
+      },
+      {
+        "amount": "12199.04",
+        "description": "Konferenztelefon",
+        "quantity": "49",
+        "unit_price": "248.96"
+      }
+    ],
+    "subtotal": "21753.62",
+    "supplier": {
+      "address": "Schillerplatz 180, 26982 Lüneburg",
+      "name": "Silberberg Beratung KG",
+      "tax_id": "DE153599645"
+    },
+    "tax_amount": "4133.19",
+    "tax_rate": "19",
+    "total": "25886.81"
+  },
+  "language": "de",
+  "line_units": [
+    "length",
+    "flat",
+    "piece",
+    "flat",
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "YINBDEMMXXX",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "18. August 2026",
+    "iban": "DE67 1911 8034 9810 7792 07",
+    "invoice_date": "4. August 2026",
+    "invoice_number": "R039481",
+    "subtotal": "21.753,62 EUR",
+    "supplier_tax_id": "DE153599645",
+    "tax_amount": "4.133,19 EUR",
+    "total": "25.886,81 EUR"
+  },
+  "sha256": "427d3f1c70359232864e42220e7f787e4e5ae9ea245866f0011ff5e0c0be0dd3",
+  "size_bytes": 139549,
+  "supplier_country": "DE",
+  "template": "t02"
+}

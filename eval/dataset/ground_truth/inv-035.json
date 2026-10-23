@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-035.jpg",
+  "id": "inv-035",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "384 Harbour Road, Exeter WN2 1HB",
+      "name": "Granite Peak Consulting Ltd.",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-06-06",
+    "iban": "GB45MGSX97297687937068",
+    "invoice_date": "2026-04-22",
+    "invoice_number": "2605-84603",
+    "line_items": [
+      {
+        "amount": "1403.81",
+        "description": "Technical support, hours",
+        "quantity": "18.75",
+        "unit_price": "74.87"
+      }
+    ],
+    "subtotal": "1403.81",
+    "supplier": {
+      "address": "153 Queensway, Sheffield WR8 7CD",
+      "name": "Brightwater Analytics LLP",
+      "tax_id": "GB953338789"
+    },
+    "tax_amount": "280.76",
+    "tax_rate": "20",
+    "total": "1684.57"
+  },
+  "language": "en",
+  "line_units": [
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "6 June 2026",
+    "iban": "GB45 MGSX 9729 7687 9370 68",
+    "invoice_date": "22 April 2026",
+    "invoice_number": "2605-84603",
+    "subtotal": "GBP 1,403.81",
+    "supplier_tax_id": "GB953338789",
+    "tax_amount": "GBP 280.76",
+    "total": "GBP 1,684.57"
+  },
+  "sha256": "66a305f3ac8342473b4fc288932db33604f7982351bae95b1effc4ebecc9be8a",
+  "size_bytes": 161562,
+  "supplier_country": "GB",
+  "template": "t05"
+}

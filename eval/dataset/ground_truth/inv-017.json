@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-017.jpg",
+  "id": "inv-017",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Lindenstraat 71, 2817 FF Haarlem",
+      "name": "Redstone Software B.V.",
+      "tax_id": "NL302241134B31"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "NL05JVWL8669189436",
+    "invoice_date": "2026-02-10",
+    "invoice_number": "2026-028275",
+    "line_items": [
+      {
+        "amount": "15654.50",
+        "description": "Conference phone",
+        "quantity": "50",
+        "unit_price": "313.09"
+      },
+      {
+        "amount": "2680.96",
+        "description": "Technical support, hours",
+        "quantity": "59",
+        "unit_price": "45.44"
+      },
+      {
+        "amount": "107.78",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "3.46",
+        "unit_price": "31.15"
+      }
+    ],
+    "subtotal": "18443.24",
+    "supplier": {
+      "address": "Molenlaan 137, 6367 CC Leiden",
+      "name": "Riverbend Packaging V.O.F.",
+      "tax_id": "NL999520371B16"
+    },
+    "tax_amount": "3873.08",
+    "tax_rate": "21",
+    "total": "22316.32"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "NL302241134B31",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "NL05 JVWL 8669 1894 36",
+    "invoice_date": "10.02.2026",
+    "invoice_number": "2026-028275",
+    "subtotal": "EUR 18,443.24",
+    "supplier_tax_id": "NL999520371B16",
+    "tax_amount": "EUR 3,873.08",
+    "total": "EUR 22,316.32"
+  },
+  "sha256": "8e42f59eb4ab5bc9606fd3d2566854e260e3186fa4c00bb56080dbe911f7b579",
+  "size_bytes": 115302,
+  "supplier_country": "NL",
+  "template": "t07"
+}

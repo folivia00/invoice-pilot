@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-098.pdf",
+  "id": "inv-098",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "586 Elm Court, Austin 42722",
+      "name": "Peter Parrish",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-02-09",
+    "iban": null,
+    "invoice_date": "2026-01-10",
+    "invoice_number": "R002724",
+    "line_items": [
+      {
+        "amount": "1740.00",
+        "description": "Conference phone",
+        "quantity": "5",
+        "unit_price": "348.00"
+      },
+      {
+        "amount": "117.41",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "117.41"
+      },
+      {
+        "amount": "589.44",
+        "description": "Wireless keyboard",
+        "quantity": "8",
+        "unit_price": "73.68"
+      },
+      {
+        "amount": "474.00",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "474.00"
+      },
+      {
+        "amount": "43.43",
+        "description": "Vinyl banner print, m",
+        "quantity": "1.5",
+        "unit_price": "28.95"
+      },
+      {
+        "amount": "839.35",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "58.41",
+        "unit_price": "14.37"
+      }
+    ],
+    "subtotal": "3803.63",
+    "supplier": {
+      "address": "137 Industrial Parkway, Madison 89825",
+      "name": "Kestrel Aviation Parts Corp.",
+      "tax_id": "13-5083705"
+    },
+    "tax_amount": "337.57",
+    "tax_rate": "8.875",
+    "total": "4141.20"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "flat",
+    "piece",
+    "flat",
+    "length",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "9 February 2026",
+    "iban": "",
+    "invoice_date": "10 January 2026",
+    "invoice_number": "R002724",
+    "subtotal": "$3,803.63",
+    "supplier_tax_id": "13-5083705",
+    "tax_amount": "$337.57",
+    "total": "$4,141.20"
+  },
+  "sha256": "23bdbc09ec7ef73db8aca054bc615b8cb49fa7a210502ff57a1ece972984b059",
+  "size_bytes": 44619,
+  "supplier_country": "US",
+  "template": "t08"
+}

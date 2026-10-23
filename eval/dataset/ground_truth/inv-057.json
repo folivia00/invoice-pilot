@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "JPY",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-057.pdf",
+  "id": "inv-057",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Rue du Moulin 134, 31601 Rennes",
+      "name": "Larkspur Media SAS",
+      "tax_id": null
+    },
+    "currency": "JPY",
+    "due_date": "2025-12-03",
+    "iban": null,
+    "invoice_date": "2025-11-03",
+    "invoice_number": "R030565",
+    "line_items": [
+      {
+        "amount": "227135",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "227135"
+      },
+      {
+        "amount": "262160",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "144.60",
+        "unit_price": "1813"
+      },
+      {
+        "amount": "22951",
+        "description": "USB-C docking station",
+        "quantity": "1",
+        "unit_price": "22951"
+      },
+      {
+        "amount": "5842",
+        "description": "Cable management kit",
+        "quantity": "2",
+        "unit_price": "2921"
+      },
+      {
+        "amount": "12706",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "12706"
+      },
+      {
+        "amount": "91710",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "9",
+        "unit_price": "10190"
+      },
+      {
+        "amount": "3574",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "1",
+        "unit_price": "3574"
+      },
+      {
+        "amount": "12079",
+        "description": "Vinyl banner print, m",
+        "quantity": "4.68",
+        "unit_price": "2581"
+      }
+    ],
+    "subtotal": "638157",
+    "supplier": {
+      "address": "5-6-2 Midori, 413-9646 Osaka",
+      "name": "Granite Peak Consulting Co., Ltd.",
+      "tax_id": null
+    },
+    "tax_amount": "63816",
+    "tax_rate": "10",
+    "total": "701973"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "weight",
+    "piece",
+    "piece",
+    "flat",
+    "piece",
+    "weight",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "JPY",
+    "due_date": "2025-12-03",
+    "iban": "",
+    "invoice_date": "2025-11-03",
+    "invoice_number": "R030565",
+    "subtotal": "¥638,157",
+    "supplier_tax_id": "",
+    "tax_amount": "¥63,816",
+    "total": "¥701,973"
+  },
+  "sha256": "50a29b72bffe162c27b6e4e90a85cd004b202baad5ad1970db43e59d7bf17332",
+  "size_bytes": 371927,
+  "supplier_country": "JP",
+  "template": "t07"
+}

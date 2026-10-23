@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-085.pdf",
+  "id": "inv-085",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "ul. Polna 133, 80-728 Torun",
+      "name": "Granite Peak Consulting Sp. z o.o.",
+      "tax_id": "PL1888603340"
+    },
+    "currency": "EUR",
+    "due_date": "2026-05-12",
+    "iban": "PL44999086277851801220436816",
+    "invoice_date": "2026-03-28",
+    "invoice_number": "R080490",
+    "line_items": [
+      {
+        "amount": "195.85",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "13.1",
+        "unit_price": "14.95"
+      },
+      {
+        "amount": "817.89",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "56.68",
+        "unit_price": "14.43"
+      },
+      {
+        "amount": "712.00",
+        "description": "Technical support, hours",
+        "quantity": "8",
+        "unit_price": "89.00"
+      },
+      {
+        "amount": "704.00",
+        "description": "USB-C docking station",
+        "quantity": "8",
+        "unit_price": "88.00"
+      }
+    ],
+    "subtotal": "2429.74",
+    "supplier": {
+      "address": "ul. Ogrodowa 179, 97-573 Gdansk",
+      "name": "Harbourview Cleaning Sp. z o.o.",
+      "tax_id": "PL2547186969"
+    },
+    "tax_amount": "558.84",
+    "tax_rate": "23",
+    "total": "2988.58"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "length",
+    "hour",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "PL1888603340",
+    "currency": "EUR",
+    "due_date": "2026-05-12",
+    "iban": "PL44 9990 8627 7851 8012 2043 6816",
+    "invoice_date": "2026-03-28",
+    "invoice_number": "R080490",
+    "subtotal": "EUR 2,429.74",
+    "supplier_tax_id": "PL2547186969",
+    "tax_amount": "EUR 558.84",
+    "total": "EUR 2,988.58"
+  },
+  "sha256": "a9954b3470e3ffc9fe5b32c4d015452ac752c6551560baf5c0535f820e21f178",
+  "size_bytes": 44616,
+  "supplier_country": "PL",
+  "template": "t05"
+}

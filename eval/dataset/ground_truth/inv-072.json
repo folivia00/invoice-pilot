@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-072.jpg",
+  "id": "inv-072",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Mariahilfer Gasse 51, 5212 Innsbruck",
+      "name": "Felsenkeller Getränke GmbH",
+      "tax_id": "ATU08618587"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "AT893853884583635797",
+    "invoice_date": "2026-09-24",
+    "invoice_number": "R028566",
+    "line_items": [
+      {
+        "amount": "1180.62",
+        "description": "Projektleitung (Std.)",
+        "quantity": "15.75",
+        "unit_price": "74.96"
+      },
+      {
+        "amount": "588.60",
+        "description": "LED-Panel",
+        "quantity": "10",
+        "unit_price": "58.86"
+      },
+      {
+        "amount": "233.90",
+        "description": "Funktastatur",
+        "quantity": "2",
+        "unit_price": "116.95"
+      }
+    ],
+    "subtotal": "2003.12",
+    "supplier": {
+      "address": "Ringstraße 136, 8052 Linz",
+      "name": "Müller Bürotechnik GmbH",
+      "tax_id": "ATU37646350"
+    },
+    "tax_amount": "400.62",
+    "tax_rate": "20",
+    "total": "2403.74"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "ATU08618587",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "AT89 3853 8845 8363 5797",
+    "invoice_date": "24. September 2026",
+    "invoice_number": "R028566",
+    "subtotal": "2.003,12 EUR",
+    "supplier_tax_id": "ATU37646350",
+    "tax_amount": "400,62 EUR",
+    "total": "2.403,74 EUR"
+  },
+  "sha256": "af2d403617d106b29b8699ee104656ee11f1703c9ac94cde8a510f662195e4e4",
+  "size_bytes": 86945,
+  "supplier_country": "AT",
+  "template": "t02"
+}

@@ -1,0 +1,79 @@
+{
+  "corruption": "bad_iban_check_digits",
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [
+    "invalid_iban"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-028.pdf",
+  "id": "inv-028",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Brückenkopf Ingenieure GmbH",
+      "tax_id": "DE676026566"
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-02",
+    "iban": "DE28476333353119260077",
+    "invoice_date": "2025-11-02",
+    "invoice_number": "R073268",
+    "line_items": [
+      {
+        "amount": "1670.85",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "1670.85"
+      },
+      {
+        "amount": "1237.40",
+        "description": "Etikettendrucker",
+        "quantity": "10",
+        "unit_price": "123.74"
+      },
+      {
+        "amount": "585.00",
+        "description": "Übersetzung (Std.)",
+        "quantity": "13",
+        "unit_price": "45.00"
+      }
+    ],
+    "subtotal": "3493.25",
+    "supplier": {
+      "address": "Hauptstraße 23, 64485 Bamberg",
+      "name": "Steinbach Verpackung e.K.",
+      "tax_id": "DE296143415"
+    },
+    "tax_amount": "663.72",
+    "tax_rate": "19",
+    "total": "4156.97"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "piece",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "DE676026566",
+    "currency": "EUR",
+    "due_date": "2. Dezember 2025",
+    "iban": "DE28 4763 3335 3119 2600 77",
+    "invoice_date": "2. November 2025",
+    "invoice_number": "R073268",
+    "subtotal": "3.493,25 EUR",
+    "supplier_tax_id": "DE296143415",
+    "tax_amount": "663,72 EUR",
+    "total": "4.156,97 EUR"
+  },
+  "sha256": "22f7bf9218655f8353b53d64007507333c166e3e29687796974863156fd49b42",
+  "size_bytes": 205049,
+  "supplier_country": "DE",
+  "template": "t08"
+}

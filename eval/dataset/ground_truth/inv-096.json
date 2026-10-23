@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-096.pdf",
+  "id": "inv-096",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Chemin des Vignes 100, 61816 Lille",
+      "name": "Foxglove Design SAS",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-17",
+    "iban": null,
+    "invoice_date": "2025-12-10",
+    "invoice_number": "2025-032564",
+    "line_items": [
+      {
+        "amount": "1116.00",
+        "description": "Printer toner cartridge",
+        "quantity": "9",
+        "unit_price": "124.00"
+      },
+      {
+        "amount": "215.19",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "215.19"
+      },
+      {
+        "amount": "88.10",
+        "description": "LED panel light",
+        "quantity": "2",
+        "unit_price": "44.05"
+      },
+      {
+        "amount": "91.33",
+        "description": "Photo editing, hours",
+        "quantity": "1.25",
+        "unit_price": "73.06"
+      },
+      {
+        "amount": "948.91",
+        "description": "Data migration, hours",
+        "quantity": "15.5",
+        "unit_price": "61.22"
+      }
+    ],
+    "subtotal": "2459.53",
+    "supplier": {
+      "address": "Avenue du Port 88, 26269 Nantes",
+      "name": "Amberlane Catering SAS",
+      "tax_id": "FR46304752449"
+    },
+    "tax_amount": "491.91",
+    "tax_rate": "20",
+    "total": "2951.44"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "flat",
+    "piece",
+    "hour",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "17.12.2025",
+    "iban": "",
+    "invoice_date": "10.12.2025",
+    "invoice_number": "2025-032564",
+    "subtotal": "EUR 2,459.53",
+    "supplier_tax_id": "FR46304752449",
+    "tax_amount": "EUR 491.91",
+    "total": "EUR 2,951.44"
+  },
+  "sha256": "83f05f1d1c2cf6d7635bd11000952d0a3bb1e327c15a270d69c4bd00ece54ad2",
+  "size_bytes": 348430,
+  "supplier_country": "FR",
+  "template": "t06"
+}

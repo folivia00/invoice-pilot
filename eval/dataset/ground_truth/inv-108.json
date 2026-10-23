@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-108.jpg",
+  "id": "inv-108",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Summit Ridge Tools Sp. z o.o.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2025-12-10",
+    "invoice_number": "INV-2025-87553",
+    "line_items": [
+      {
+        "amount": "161.69",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "23",
+        "unit_price": "7.03"
+      },
+      {
+        "amount": "1400.46",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1400.46"
+      }
+    ],
+    "subtotal": "1562.15",
+    "supplier": {
+      "address": "ul. Dworcowa 36, 24-194 Lublin",
+      "name": "Clearview Optics Sp. z o.o.",
+      "tax_id": "PL8523247113"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "1562.15"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "10 December 2025",
+    "invoice_number": "INV-2025-87553",
+    "subtotal": "€1,562.15",
+    "supplier_tax_id": "PL8523247113",
+    "tax_amount": "€0.00",
+    "total": "€1,562.15"
+  },
+  "sha256": "1f07b48dd6245e5104483183746792e0bd3f12b04b08c9ae3076340ae8d98a7c",
+  "size_bytes": 205976,
+  "supplier_country": "PL",
+  "template": "t08"
+}

@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-093.jpg",
+  "id": "inv-093",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "ONOAGBMMB01",
+    "buyer": {
+      "address": "339 Castle Street, Leeds SX5 1DG",
+      "name": "Greywater Plumbing Limited",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2025-10-29",
+    "iban": "GB39WVEZ41159920153411",
+    "invoice_date": "2025-10-15",
+    "invoice_number": "2025-056463",
+    "line_items": [
+      {
+        "amount": "1704.00",
+        "description": "Monitor 27 inch",
+        "quantity": "6",
+        "unit_price": "284.00"
+      },
+      {
+        "amount": "252.00",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "9",
+        "unit_price": "28.00"
+      },
+      {
+        "amount": "546.20",
+        "description": "Consulting, hours",
+        "quantity": "5",
+        "unit_price": "109.24"
+      },
+      {
+        "amount": "143.49",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "7.54",
+        "unit_price": "19.03"
+      }
+    ],
+    "subtotal": "2645.69",
+    "supplier": {
+      "address": "13 Foundry Close, Exeter DV9 0DE",
+      "name": "Hollow Oak Furniture LLP",
+      "tax_id": "GB482638440"
+    },
+    "tax_amount": "529.14",
+    "tax_rate": "20",
+    "total": "3174.83"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece",
+    "hour",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "ONOAGBMMB01",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "29 October 2025",
+    "iban": "GB39 WVEZ 4115 9920 1534 11",
+    "invoice_date": "15 October 2025",
+    "invoice_number": "2025-056463",
+    "subtotal": "GBP 2,645.69",
+    "supplier_tax_id": "GB482638440",
+    "tax_amount": "GBP 529.14",
+    "total": "GBP 3,174.83"
+  },
+  "sha256": "8ad225bac344ab925c5c4b8862d6027e2d262f4eb16b3672294550c4366f2826",
+  "size_bytes": 124827,
+  "supplier_country": "GB",
+  "template": "t03"
+}

@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-025.pdf",
+  "id": "inv-025",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "OHSONLMM200",
+    "buyer": {
+      "address": "Lindenstraat 62, 0222 BK Leiden",
+      "name": "Alice Gardner",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "NL21TNMK4759526028",
+    "invoice_date": "2026-01-15",
+    "invoice_number": "INV-2026-12233",
+    "line_items": [
+      {
+        "amount": "229.30",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "10",
+        "unit_price": "22.93"
+      },
+      {
+        "amount": "2160.88",
+        "description": "Office chair, ergonomic",
+        "quantity": "8",
+        "unit_price": "270.11"
+      },
+      {
+        "amount": "61.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "61.00"
+      },
+      {
+        "amount": "31.14",
+        "description": "Cable management kit",
+        "quantity": "3",
+        "unit_price": "10.38"
+      },
+      {
+        "amount": "438.08",
+        "description": "Wireless keyboard",
+        "quantity": "4",
+        "unit_price": "109.52"
+      },
+      {
+        "amount": "2252.87",
+        "description": "Onsite installation, hours",
+        "quantity": "25.75",
+        "unit_price": "87.49"
+      },
+      {
+        "amount": "762.28",
+        "description": "Translation services, hours",
+        "quantity": "14.75",
+        "unit_price": "51.68"
+      }
+    ],
+    "subtotal": "5935.55",
+    "supplier": {
+      "address": "Stationsplein 146, 9669 EE Delft",
+      "name": "Hollow Oak Furniture V.O.F.",
+      "tax_id": "NL705145516B43"
+    },
+    "tax_amount": "1246.47",
+    "tax_rate": "21",
+    "total": "7182.02"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "piece",
+    "flat",
+    "piece",
+    "piece",
+    "hour",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "OHSONLMM200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "NL21 TNMK 4759 5260 28",
+    "invoice_date": "2026-01-15",
+    "invoice_number": "INV-2026-12233",
+    "subtotal": "EUR 5,935.55",
+    "supplier_tax_id": "NL705145516B43",
+    "tax_amount": "EUR 1,246.47",
+    "total": "EUR 7,182.02"
+  },
+  "sha256": "412becf9656942152d3a13ba2fde0c8d0a325665cdad6a3d1c0607ab9517b403",
+  "size_bytes": 44764,
+  "supplier_country": "NL",
+  "template": "t05"
+}

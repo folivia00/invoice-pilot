@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-090.pdf",
+  "id": "inv-090",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Rue du Canal 96, 9044 Namur",
+      "name": "Klara Parrish",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-23",
+    "iban": "BE15116991635033",
+    "invoice_date": "2026-03-16",
+    "invoice_number": "RE-202627786",
+    "line_items": [
+      {
+        "amount": "30.00",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "1",
+        "unit_price": "30.00"
+      },
+      {
+        "amount": "874.62",
+        "description": "Network switch 24-port",
+        "quantity": "2",
+        "unit_price": "437.31"
+      }
+    ],
+    "subtotal": "904.62",
+    "supplier": {
+      "address": "Rue du Canal 66, 7987 Hasselt",
+      "name": "Orbit Office Solutions SRL",
+      "tax_id": "BE0765586126"
+    },
+    "tax_amount": "54.28",
+    "tax_rate": "6",
+    "total": "958.90"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "23.03.2026",
+    "iban": "BE15 1169 9163 5033",
+    "invoice_date": "16.03.2026",
+    "invoice_number": "RE-202627786",
+    "subtotal": "EUR 904.62",
+    "supplier_tax_id": "BE0765586126",
+    "tax_amount": "EUR 54.28",
+    "total": "EUR 958.90"
+  },
+  "sha256": "7012aab666d3e5750865a5af0b71178a01b0ec22de6f1e18f9851ecf528530f9",
+  "size_bytes": 44461,
+  "supplier_country": "BE",
+  "template": "t10"
+}

@@ -1,0 +1,100 @@
+{
+  "corruption": "line_amount_mismatch",
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [
+    "line_amount_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-066.jpg",
+  "id": "inv-066",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Am Graben 97, 2400 Klagenfurt",
+      "name": "Monika Hofmann",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-08-04",
+    "iban": "DE10562478162624089457",
+    "invoice_date": "2026-07-21",
+    "invoice_number": "RE-202691818",
+    "line_items": [
+      {
+        "amount": "1395.35",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "21.5",
+        "unit_price": "64.90"
+      },
+      {
+        "amount": "606.38",
+        "description": "Datenmigration (Std.)",
+        "quantity": "8.75",
+        "unit_price": "69.30"
+      },
+      {
+        "amount": "3922.00",
+        "description": "Projektleitung (Std.)",
+        "quantity": "37",
+        "unit_price": "106.00"
+      },
+      {
+        "amount": "142.40",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "5",
+        "unit_price": "28.48"
+      },
+      {
+        "amount": "78.98",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "79.00"
+      },
+      {
+        "amount": "640.00",
+        "description": "LED-Panel",
+        "quantity": "10",
+        "unit_price": "64.00"
+      }
+    ],
+    "subtotal": "6785.13",
+    "supplier": {
+      "address": "Bahnhofstraße 58, 33837 Münster",
+      "name": "Silberberg Beratung GmbH & Co. KG",
+      "tax_id": "DE607556131"
+    },
+    "tax_amount": "1289.17",
+    "tax_rate": "19",
+    "total": "8074.30"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "hour",
+    "hour",
+    "length",
+    "flat",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "04.08.2026",
+    "iban": "DE10 5624 7816 2624 0894 57",
+    "invoice_date": "21.07.2026",
+    "invoice_number": "RE-202691818",
+    "subtotal": "6.785,13 €",
+    "supplier_tax_id": "DE607556131",
+    "tax_amount": "1.289,17 €",
+    "total": "8.074,30 €"
+  },
+  "sha256": "01f72a7c014b4348a087e19c96883ca0b8763d155c65b18195c3d199c926007d",
+  "size_bytes": 139595,
+  "supplier_country": "DE",
+  "template": "t06"
+}

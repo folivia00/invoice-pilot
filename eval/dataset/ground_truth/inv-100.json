@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-100.pdf",
+  "id": "inv-100",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "PYPCESHH200",
+    "buyer": {
+      "address": null,
+      "name": "Foxglove Design S.A.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-02-22",
+    "iban": "ES8770421204615754725942",
+    "invoice_date": "2026-01-23",
+    "invoice_number": "RE-202677519",
+    "line_items": [
+      {
+        "amount": "165.00",
+        "description": "Safety gloves, pair",
+        "quantity": "15",
+        "unit_price": "11.00"
+      },
+      {
+        "amount": "164.67",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "164.67"
+      },
+      {
+        "amount": "3847.73",
+        "description": "Consulting, hours",
+        "quantity": "36.75",
+        "unit_price": "104.70"
+      },
+      {
+        "amount": "4763.68",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "250.72",
+        "unit_price": "19.00"
+      },
+      {
+        "amount": "1740.21",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "1740.21"
+      },
+      {
+        "amount": "120.30",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "4.4",
+        "unit_price": "27.34"
+      },
+      {
+        "amount": "656.00",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "41",
+        "unit_price": "16.00"
+      }
+    ],
+    "subtotal": "11457.59",
+    "supplier": {
+      "address": "Calle Mayor 67, 71169 Valencia",
+      "name": "Copperfield Printing S.L.",
+      "tax_id": "ESC4326053A"
+    },
+    "tax_amount": "2406.09",
+    "tax_rate": "21",
+    "total": "13863.68"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "flat",
+    "hour",
+    "length",
+    "flat",
+    "weight",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "PYPCESHH200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-02-22",
+    "iban": "ES87 7042 1204 6157 5472 5942",
+    "invoice_date": "2026-01-23",
+    "invoice_number": "RE-202677519",
+    "subtotal": "€11,457.59",
+    "supplier_tax_id": "ESC4326053A",
+    "tax_amount": "€2,406.09",
+    "total": "€13,863.68"
+  },
+  "sha256": "5a57d61f07d98bde40ad18460aa0e4309e028ae58b07ecd18049b1196a14ae45",
+  "size_bytes": 162359,
+  "supplier_country": "ES",
+  "template": "t10"
+}

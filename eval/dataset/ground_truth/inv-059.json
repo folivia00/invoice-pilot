@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-059.jpg",
+  "id": "inv-059",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Rue du Moulin 74, 82387 Lyon",
+      "name": "Lantern Hill Books SARL",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-06",
+    "iban": "FR705666536835FYGEV4918H416",
+    "invoice_date": "2026-02-04",
+    "invoice_number": "R074517",
+    "line_items": [
+      {
+        "amount": "975.59",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "975.59"
+      },
+      {
+        "amount": "5774.16",
+        "description": "Printer toner cartridge",
+        "quantity": "49",
+        "unit_price": "117.84"
+      },
+      {
+        "amount": "915.08",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "915.08"
+      },
+      {
+        "amount": "17.24",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "6.2",
+        "unit_price": "2.78"
+      },
+      {
+        "amount": "4512.86",
+        "description": "Project management, hours",
+        "quantity": "36.5",
+        "unit_price": "123.64"
+      }
+    ],
+    "subtotal": "12194.93",
+    "supplier": {
+      "address": "Place de la Gare 161, 70140 Toulouse",
+      "name": "Orbit Office Solutions SAS",
+      "tax_id": null
+    },
+    "tax_amount": "1219.49",
+    "tax_rate": "10",
+    "total": "13414.42"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece",
+    "flat",
+    "weight",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-03-06",
+    "iban": "FR70 5666 5368 35FY GEV4 918H 416",
+    "invoice_date": "2026-02-04",
+    "invoice_number": "R074517",
+    "subtotal": "€12,194.93",
+    "supplier_tax_id": "",
+    "tax_amount": "€1,219.49",
+    "total": "€13,414.42"
+  },
+  "sha256": "0eadad2988937deb6f46eb5e52be2f604d6260186c06b02d526dce707ca6cd85",
+  "size_bytes": 126123,
+  "supplier_country": "FR",
+  "template": "t09"
+}

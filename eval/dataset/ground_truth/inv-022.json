@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-022.pdf",
+  "id": "inv-022",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "DQYRATXXXXX",
+    "buyer": {
+      "address": "Donaulände 132, 7834 Linz",
+      "name": "Grünwald Sicherheit GmbH",
+      "tax_id": "ATU63200426"
+    },
+    "currency": "EUR",
+    "due_date": "2026-04-21",
+    "iban": "AT134395781433247077",
+    "invoice_date": "2026-04-07",
+    "invoice_number": "RE-202666131",
+    "line_items": [
+      {
+        "amount": "828.00",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "828.00"
+      },
+      {
+        "amount": "112.00",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4",
+        "unit_price": "28.00"
+      },
+      {
+        "amount": "9043.84",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "26",
+        "unit_price": "347.84"
+      },
+      {
+        "amount": "299.00",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "59.80",
+        "unit_price": "5.00"
+      },
+      {
+        "amount": "54.79",
+        "description": "Kurierlieferung",
+        "quantity": "1",
+        "unit_price": "54.79"
+      }
+    ],
+    "subtotal": "10337.63",
+    "supplier": {
+      "address": "Mariahilfer Gasse 53, 6863 Linz",
+      "name": "Alpenblick Reinigung GmbH",
+      "tax_id": "ATU80787184"
+    },
+    "tax_amount": "2067.53",
+    "tax_rate": "20",
+    "total": "12405.16"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "length",
+    "piece",
+    "weight",
+    "flat"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "DQYRATXXXXX",
+    "buyer_tax_id": "ATU63200426",
+    "currency": "EUR",
+    "due_date": "21. April 2026",
+    "iban": "AT13 4395 7814 3324 7077",
+    "invoice_date": "7. April 2026",
+    "invoice_number": "RE-202666131",
+    "subtotal": "10.337,63 €",
+    "supplier_tax_id": "ATU80787184",
+    "tax_amount": "2.067,53 €",
+    "total": "12.405,16 €"
+  },
+  "sha256": "e1230600ee5521dafdeb98fe65521026c2625cf600e7065865baa6e65c5541b9",
+  "size_bytes": 203677,
+  "supplier_country": "AT",
+  "template": "t02"
+}

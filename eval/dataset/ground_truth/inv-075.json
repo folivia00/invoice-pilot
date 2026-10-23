@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-075.pdf",
+  "id": "inv-075",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "173 Commerce Boulevard, Madison 03698",
+      "name": "Mara Dawson",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-02-15",
+    "iban": null,
+    "invoice_date": "2026-01-01",
+    "invoice_number": "RE-202693724",
+    "line_items": [
+      {
+        "amount": "470.55",
+        "description": "LED panel light",
+        "quantity": "5",
+        "unit_price": "94.11"
+      },
+      {
+        "amount": "63.38",
+        "description": "Technical support, hours",
+        "quantity": "1",
+        "unit_price": "63.38"
+      },
+      {
+        "amount": "1027.59",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "1027.59"
+      }
+    ],
+    "subtotal": "1561.52",
+    "supplier": {
+      "address": "645 Sunset Avenue, Madison 50866",
+      "name": "Larkspur Media Co.",
+      "tax_id": "71-7438858"
+    },
+    "tax_amount": "97.60",
+    "tax_rate": "6.25",
+    "total": "1659.12"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "2026-02-15",
+    "iban": "",
+    "invoice_date": "2026-01-01",
+    "invoice_number": "RE-202693724",
+    "subtotal": "USD 1,561.52",
+    "supplier_tax_id": "71-7438858",
+    "tax_amount": "USD 97.60",
+    "total": "USD 1,659.12"
+  },
+  "sha256": "6dd5e6dd7e669e0430de005d205deeb472291873bcd4a4583115be70c7e2b933",
+  "size_bytes": 276841,
+  "supplier_country": "US",
+  "template": "t05"
+}

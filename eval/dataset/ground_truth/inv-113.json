@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-113.pdf",
+  "id": "inv-113",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "751 Orchard Way, Exeter DF5 0NZ",
+      "name": "Felix Bennett",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-08-03",
+    "iban": "GB97QHZN05729498411524",
+    "invoice_date": "2026-07-20",
+    "invoice_number": "2026-041954",
+    "line_items": [
+      {
+        "amount": "2767.00",
+        "description": "Data migration, hours",
+        "quantity": "39.75",
+        "unit_price": "69.61"
+      },
+      {
+        "amount": "869.75",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "869.75"
+      },
+      {
+        "amount": "535.40",
+        "description": "USB-C docking station",
+        "quantity": "10",
+        "unit_price": "53.54"
+      }
+    ],
+    "subtotal": "4172.15",
+    "supplier": {
+      "address": "946 Orchard Way, Exeter MC3 0ZU",
+      "name": "Foxglove Design Ltd.",
+      "tax_id": "GB792885763"
+    },
+    "tax_amount": "208.61",
+    "tax_rate": "5",
+    "total": "4380.76"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "03.08.2026",
+    "iban": "GB97 QHZN 0572 9498 4115 24",
+    "invoice_date": "20.07.2026",
+    "invoice_number": "2026-041954",
+    "subtotal": "£4,172.15",
+    "supplier_tax_id": "GB792885763",
+    "tax_amount": "£208.61",
+    "total": "£4,380.76"
+  },
+  "sha256": "25055dd5769ba1b6fb9b4f58e747b09a5deba76e87046bdf071e7c3281d49aa2",
+  "size_bytes": 232663,
+  "supplier_country": "GB",
+  "template": "t03"
+}

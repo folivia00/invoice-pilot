@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "CHF",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-091.pdf",
+  "id": "inv-091",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Birkenhain Design GmbH",
+      "tax_id": "ATU93960519"
+    },
+    "currency": "CHF",
+    "due_date": "2026-05-08",
+    "iban": "CH3413721J1Y4T2AVZKXW",
+    "invoice_date": "2026-03-24",
+    "invoice_number": "RE-202697229",
+    "line_items": [
+      {
+        "amount": "86.04",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "4",
+        "unit_price": "21.51"
+      },
+      {
+        "amount": "122.08",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "56",
+        "unit_price": "2.18"
+      },
+      {
+        "amount": "1312.71",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "7",
+        "unit_price": "187.53"
+      },
+      {
+        "amount": "403.62",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "31",
+        "unit_price": "13.02"
+      },
+      {
+        "amount": "968.00",
+        "description": "Etikettendrucker",
+        "quantity": "8",
+        "unit_price": "121.00"
+      },
+      {
+        "amount": "5005.50",
+        "description": "Beratung (Std.)",
+        "quantity": "35.5",
+        "unit_price": "141.00"
+      },
+      {
+        "amount": "3083.22",
+        "description": "Datenmigration (Std.)",
+        "quantity": "31.5",
+        "unit_price": "97.88"
+      },
+      {
+        "amount": "28.38",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "6",
+        "unit_price": "4.73"
+      }
+    ],
+    "subtotal": "11009.55",
+    "supplier": {
+      "address": "Seestrasse 13, 4190 Chur",
+      "name": "Adlerhorst Sanitär GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "286.25",
+    "tax_rate": "2.6",
+    "total": "11295.80"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "length",
+    "piece",
+    "weight",
+    "piece",
+    "hour",
+    "hour",
+    "piece"
+  ],
+  "number_format": "ch",
+  "pages": 2,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "ATU93960519",
+    "currency": "CHF",
+    "due_date": "08.05.2026",
+    "iban": "CH34 1372 1J1Y 4T2A VZKX W",
+    "invoice_date": "24.03.2026",
+    "invoice_number": "RE-202697229",
+    "subtotal": "11'009.55 CHF",
+    "supplier_tax_id": "",
+    "tax_amount": "286.25 CHF",
+    "total": "11'295.80 CHF"
+  },
+  "sha256": "9a634b4afdc71489e7c838f91560cfba1697b3b8550045accd728346a82e3f20",
+  "size_bytes": 43314,
+  "supplier_country": "CH",
+  "template": "t01"
+}

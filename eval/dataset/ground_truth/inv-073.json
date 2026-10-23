@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-073.pdf",
+  "id": "inv-073",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "WCEBNLZZXXX",
+    "buyer": {
+      "address": "Kanaalweg 82, 7943 JG Utrecht",
+      "name": "Summit Ridge Tools V.O.F.",
+      "tax_id": "NL785291749B76"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "NL06BUTX4060893838",
+    "invoice_date": "2026-08-30",
+    "invoice_number": "2612-96755",
+    "line_items": [
+      {
+        "amount": "154.61",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "154.61"
+      },
+      {
+        "amount": "22.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "22.00"
+      },
+      {
+        "amount": "522.88",
+        "description": "Laptop stand, aluminium",
+        "quantity": "8",
+        "unit_price": "65.36"
+      },
+      {
+        "amount": "490.00",
+        "description": "Photo editing, hours",
+        "quantity": "8.75",
+        "unit_price": "56.00"
+      },
+      {
+        "amount": "2016.50",
+        "description": "Project management, hours",
+        "quantity": "18.5",
+        "unit_price": "109.00"
+      },
+      {
+        "amount": "371.07",
+        "description": "USB-C docking station",
+        "quantity": "3",
+        "unit_price": "123.69"
+      }
+    ],
+    "subtotal": "3577.06",
+    "supplier": {
+      "address": "Kanaalweg 178, 9336 MB Haarlem",
+      "name": "Stonegate Security B.V.",
+      "tax_id": null
+    },
+    "tax_amount": "321.94",
+    "tax_rate": "9",
+    "total": "3899.00"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "flat",
+    "piece",
+    "hour",
+    "hour",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "WCEBNLZZXXX",
+    "buyer_tax_id": "NL785291749B76",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "NL06 BUTX 4060 8938 38",
+    "invoice_date": "30 August 2026",
+    "invoice_number": "2612-96755",
+    "subtotal": "€3,577.06",
+    "supplier_tax_id": "",
+    "tax_amount": "€321.94",
+    "total": "€3,899.00"
+  },
+  "sha256": "4761f764408aff90fcaddec42ebe9461e736bba3ce25be0c290a7758f456da3b",
+  "size_bytes": 45031,
+  "supplier_country": "NL",
+  "template": "t03"
+}

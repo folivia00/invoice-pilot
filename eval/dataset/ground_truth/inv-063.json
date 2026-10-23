@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-063.pdf",
+  "id": "inv-063",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Hollow Oak Furniture S.p.A.",
+      "tax_id": "IT60580077032"
+    },
+    "currency": "EUR",
+    "due_date": "2026-08-18",
+    "iban": "FR1234337134800SE0Y781GCV17",
+    "invoice_date": "2026-08-04",
+    "invoice_number": "INV-2026-16356",
+    "line_items": [
+      {
+        "amount": "3378.34",
+        "description": "Project management, hours",
+        "quantity": "29.5",
+        "unit_price": "114.52"
+      }
+    ],
+    "subtotal": "3378.34",
+    "supplier": {
+      "address": "Chemin des Vignes 113, 43196 Toulouse",
+      "name": "Hollow Oak Furniture SAS",
+      "tax_id": null
+    },
+    "tax_amount": "337.83",
+    "tax_rate": "10",
+    "total": "3716.17"
+  },
+  "language": "en",
+  "line_units": [
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "IT60580077032",
+    "currency": "EUR",
+    "due_date": "2026-08-18",
+    "iban": "FR12 3433 7134 800S E0Y7 81GC V17",
+    "invoice_date": "2026-08-04",
+    "invoice_number": "INV-2026-16356",
+    "subtotal": "EUR 3,378.34",
+    "supplier_tax_id": "",
+    "tax_amount": "EUR 337.83",
+    "total": "EUR 3,716.17"
+  },
+  "sha256": "30e43e7252e8c3bd303ec92028a8484b5cb63e61e8e1d0c8b331dbc593c9cfd4",
+  "size_bytes": 307828,
+  "supplier_country": "FR",
+  "template": "t03"
+}

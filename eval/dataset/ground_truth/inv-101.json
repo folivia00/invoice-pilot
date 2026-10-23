@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-101.jpg",
+  "id": "inv-101",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Corso Garibaldi 90, 22118 Pisa",
+      "name": "Greywater Plumbing S.p.A.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-08-27",
+    "iban": null,
+    "invoice_date": "2026-07-13",
+    "invoice_number": "INV-2026-81396",
+    "line_items": [
+      {
+        "amount": "573.00",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "573.00"
+      },
+      {
+        "amount": "377.00",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "377.00"
+      },
+      {
+        "amount": "40.32",
+        "description": "Safety gloves, pair",
+        "quantity": "9",
+        "unit_price": "4.48"
+      },
+      {
+        "amount": "1479.31",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1479.31"
+      },
+      {
+        "amount": "78.70",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "78.70"
+      },
+      {
+        "amount": "248.00",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "248.00"
+      },
+      {
+        "amount": "1990.00",
+        "description": "USB-C docking station",
+        "quantity": "10",
+        "unit_price": "199.00"
+      }
+    ],
+    "subtotal": "4786.33",
+    "supplier": {
+      "address": "766 Commerce Boulevard, Portland 11120",
+      "name": "Westmarch Textiles Co.",
+      "tax_id": null
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "4786.33"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "flat",
+    "piece",
+    "flat",
+    "flat",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "2026-08-27",
+    "iban": "",
+    "invoice_date": "2026-07-13",
+    "invoice_number": "INV-2026-81396",
+    "subtotal": "$4,786.33",
+    "supplier_tax_id": "",
+    "tax_amount": "$0.00",
+    "total": "$4,786.33"
+  },
+  "sha256": "eb251f6c1994b2673a2935b8b58b827db2c6098c778fe081c12dc0c2dfe6ee52",
+  "size_bytes": 244205,
+  "supplier_country": "US",
+  "template": "t01"
+}

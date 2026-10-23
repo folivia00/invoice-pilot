@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-115.pdf",
+  "id": "inv-115",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Granite Peak Consulting Limited",
+      "tax_id": "GB676870219"
+    },
+    "currency": "GBP",
+    "due_date": "2026-01-05",
+    "iban": "GB66QBLB63635208811022",
+    "invoice_date": "2025-12-06",
+    "invoice_number": "2510-57369",
+    "line_items": [
+      {
+        "amount": "595.35",
+        "description": "Technical support, hours",
+        "quantity": "11.25",
+        "unit_price": "52.92"
+      },
+      {
+        "amount": "15.01",
+        "description": "Network cable Cat6, m",
+        "quantity": "15.01",
+        "unit_price": "1.00"
+      },
+      {
+        "amount": "269.50",
+        "description": "Label printer",
+        "quantity": "2",
+        "unit_price": "134.75"
+      },
+      {
+        "amount": "653.02",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "42.13",
+        "unit_price": "15.50"
+      }
+    ],
+    "subtotal": "1532.88",
+    "supplier": {
+      "address": "88 Birch Avenue, Exeter YG7 7HA",
+      "name": "Larkspur Media Ltd",
+      "tax_id": "GB590183220"
+    },
+    "tax_amount": "306.58",
+    "tax_rate": "20",
+    "total": "1839.46"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "length",
+    "piece",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB676870219",
+    "currency": "GBP",
+    "due_date": "5 January 2026",
+    "iban": "GB66 QBLB 6363 5208 8110 22",
+    "invoice_date": "6 December 2025",
+    "invoice_number": "2510-57369",
+    "subtotal": "GBP 1,532.88",
+    "supplier_tax_id": "GB590183220",
+    "tax_amount": "GBP 306.58",
+    "total": "GBP 1,839.46"
+  },
+  "sha256": "03e7a85e3c099c9588809f910d11685a2a226f23e8e696cf85084a5641825294",
+  "size_bytes": 44598,
+  "supplier_country": "GB",
+  "template": "t05"
+}

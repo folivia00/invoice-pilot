@@ -1,0 +1,114 @@
+{
+  "corruption": "total_mismatch",
+  "currency": "GBP",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "total_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-109.pdf",
+  "id": "inv-109",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "979 Birch Avenue, Leeds YR4 9XP",
+      "name": "Lantern Hill Books Limited",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-01-19",
+    "iban": "GB92GWVB72147075243715",
+    "invoice_date": "2026-01-05",
+    "invoice_number": "2026-052292",
+    "line_items": [
+      {
+        "amount": "1112.57",
+        "description": "Technical support, hours",
+        "quantity": "25.5",
+        "unit_price": "43.63"
+      },
+      {
+        "amount": "246.68",
+        "description": "Laptop stand, aluminium",
+        "quantity": "4",
+        "unit_price": "61.67"
+      },
+      {
+        "amount": "585.39",
+        "description": "Consulting, hours",
+        "quantity": "6.5",
+        "unit_price": "90.06"
+      },
+      {
+        "amount": "1001.25",
+        "description": "Cable management kit",
+        "quantity": "45",
+        "unit_price": "22.25"
+      },
+      {
+        "amount": "72.40",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "18.1",
+        "unit_price": "4.00"
+      },
+      {
+        "amount": "1269.21",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1269.21"
+      },
+      {
+        "amount": "68.78",
+        "description": "Vinyl banner print, m",
+        "quantity": "3.5",
+        "unit_price": "19.65"
+      },
+      {
+        "amount": "104.65",
+        "description": "Network cable Cat6, m",
+        "quantity": "59.8",
+        "unit_price": "1.75"
+      }
+    ],
+    "subtotal": "4460.93",
+    "supplier": {
+      "address": "542 Castle Street, Leeds NG9 8NP",
+      "name": "Meridian Labs Limited",
+      "tax_id": "GB978439138"
+    },
+    "tax_amount": "892.19",
+    "tax_rate": "20",
+    "total": "5353.17"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "hour",
+    "piece",
+    "weight",
+    "flat",
+    "length",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "2026-01-19",
+    "iban": "GB92 GWVB 7214 7075 2437 15",
+    "invoice_date": "2026-01-05",
+    "invoice_number": "2026-052292",
+    "subtotal": "£4,460.93",
+    "supplier_tax_id": "GB978439138",
+    "tax_amount": "£892.19",
+    "total": "£5,353.17"
+  },
+  "sha256": "cc56b6ffab9a9ed311f9bbf312209a711ecf253540abbe326b58fffb12482935",
+  "size_bytes": 42145,
+  "supplier_country": "GB",
+  "template": "t09"
+}

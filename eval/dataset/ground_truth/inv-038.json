@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-038.pdf",
+  "id": "inv-038",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "HALKDE2LB01",
+    "buyer": {
+      "address": "Hauptstraße 146, 54409 Regensburg",
+      "name": "Alpenblick Reinigung GmbH & Co. KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-10-28",
+    "iban": "DE50469572253049874519",
+    "invoice_date": "2026-09-28",
+    "invoice_number": "R093467",
+    "line_items": [
+      {
+        "amount": "63.50",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "32.4",
+        "unit_price": "1.96"
+      },
+      {
+        "amount": "54.74",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "7",
+        "unit_price": "7.82"
+      },
+      {
+        "amount": "792.00",
+        "description": "Versandkartons, 50 Stück",
+        "quantity": "9",
+        "unit_price": "88.00"
+      },
+      {
+        "amount": "191.67",
+        "description": "LED-Panel",
+        "quantity": "3",
+        "unit_price": "63.89"
+      },
+      {
+        "amount": "2150.00",
+        "description": "Datenmigration (Std.)",
+        "quantity": "21.5",
+        "unit_price": "100.00"
+      }
+    ],
+    "subtotal": "3251.91",
+    "supplier": {
+      "address": "Schillerplatz 31, 31536 Göttingen",
+      "name": "Alpenblick Reinigung AG",
+      "tax_id": "DE788687513"
+    },
+    "tax_amount": "617.86",
+    "tax_rate": "19",
+    "total": "3869.77"
+  },
+  "language": "de",
+  "line_units": [
+    "length",
+    "piece",
+    "piece",
+    "piece",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "HALKDE2LB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-10-28",
+    "iban": "DE50 4695 7225 3049 8745 19",
+    "invoice_date": "2026-09-28",
+    "invoice_number": "R093467",
+    "subtotal": "3.251,91 EUR",
+    "supplier_tax_id": "DE788687513",
+    "tax_amount": "617,86 EUR",
+    "total": "3.869,77 EUR"
+  },
+  "sha256": "02d3dfe638af7e79e9034ee7ab037112811810616877cf758ed518686fd9c229",
+  "size_bytes": 45403,
+  "supplier_country": "DE",
+  "template": "t08"
+}

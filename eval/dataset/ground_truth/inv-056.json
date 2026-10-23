@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-056.pdf",
+  "id": "inv-056",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "XMESDEZZ200",
+    "buyer": {
+      "address": null,
+      "name": "Fuchsbau Werbung AG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "DE76499030660740799309",
+    "invoice_date": "2026-05-15",
+    "invoice_number": "2026-096067",
+    "line_items": [
+      {
+        "amount": "146.00",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "146.00"
+      }
+    ],
+    "subtotal": "146.00",
+    "supplier": {
+      "address": "Birkenallee 169, 22408 Münster",
+      "name": "Seeblick Fotografie KG",
+      "tax_id": "DE316105724"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "146.00"
+  },
+  "language": "de",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "XMESDEZZ200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "DE76 4990 3066 0740 7993 09",
+    "invoice_date": "2026-05-15",
+    "invoice_number": "2026-096067",
+    "subtotal": "146,00 €",
+    "supplier_tax_id": "DE316105724",
+    "tax_amount": "0,00 €",
+    "total": "146,00 €"
+  },
+  "sha256": "5c7401f76dffec721ea7412d8c856b59a2f1bb0f81a597109b949f39c39e29fc",
+  "size_bytes": 41886,
+  "supplier_country": "DE",
+  "template": "t06"
+}

@@ -1,0 +1,100 @@
+{
+  "corruption": "bad_vat_format",
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "invalid_tax_id"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-087.pdf",
+  "id": "inv-087",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "MKIQBEZZ200",
+    "buyer": {
+      "address": "Rue du Canal 99, 8721 Hasselt",
+      "name": "Stonegate Security NV",
+      "tax_id": "BE0366723294"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "BE46797313610906",
+    "invoice_date": "2026-08-24",
+    "invoice_number": "2602-8088",
+    "line_items": [
+      {
+        "amount": "485.29",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "44.4",
+        "unit_price": "10.93"
+      },
+      {
+        "amount": "3394.46",
+        "description": "Project management, hours",
+        "quantity": "35.75",
+        "unit_price": "94.95"
+      },
+      {
+        "amount": "1299.42",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1299.42"
+      },
+      {
+        "amount": "168.13",
+        "description": "Cable management kit",
+        "quantity": "17",
+        "unit_price": "9.89"
+      },
+      {
+        "amount": "2424.41",
+        "description": "Data migration, hours",
+        "quantity": "21.25",
+        "unit_price": "114.09"
+      },
+      {
+        "amount": "176.33",
+        "description": "LED panel light",
+        "quantity": "7",
+        "unit_price": "25.19"
+      }
+    ],
+    "subtotal": "7948.04",
+    "supplier": {
+      "address": "Rue du Canal 47, 7761 Hasselt",
+      "name": "Blue Harbour Logistics BV",
+      "tax_id": "BE000501460"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "7948.04"
+  },
+  "language": "en",
+  "line_units": [
+    "length",
+    "hour",
+    "flat",
+    "piece",
+    "hour",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "MKIQBEZZ200",
+    "buyer_tax_id": "BE0366723294",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "BE46 7973 1361 0906",
+    "invoice_date": "2026-08-24",
+    "invoice_number": "2602-8088",
+    "subtotal": "€7,948.04",
+    "supplier_tax_id": "BE000501460",
+    "tax_amount": "€0.00",
+    "total": "€7,948.04"
+  },
+  "sha256": "e7d493c5e8f9fab5f49cae38b86f188ab4c4fc6be90d02f2d214ed77d662fb65",
+  "size_bytes": 335500,
+  "supplier_country": "BE",
+  "template": "t07"
+}

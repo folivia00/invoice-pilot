@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-111.jpg",
+  "id": "inv-111",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "904 Lakeshore Drive, Denver 28901",
+      "name": "Harbourview Cleaning Corp.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-03-23",
+    "iban": null,
+    "invoice_date": "2026-02-21",
+    "invoice_number": "2026-094189",
+    "line_items": [
+      {
+        "amount": "1693.58",
+        "description": "Translation services, hours",
+        "quantity": "29.25",
+        "unit_price": "57.90"
+      },
+      {
+        "amount": "1912.07",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "1912.07"
+      },
+      {
+        "amount": "68.12",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "68.12"
+      },
+      {
+        "amount": "361.20",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "51.60",
+        "unit_price": "7.00"
+      },
+      {
+        "amount": "754.45",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "754.45"
+      },
+      {
+        "amount": "1679.36",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "32",
+        "unit_price": "52.48"
+      }
+    ],
+    "subtotal": "6468.78",
+    "supplier": {
+      "address": "455 Maple Street, Tucson 61275",
+      "name": "Ironbridge Engineering Inc.",
+      "tax_id": "95-2151100"
+    },
+    "tax_amount": "404.30",
+    "tax_rate": "6.25",
+    "total": "6873.08"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "flat",
+    "flat",
+    "length",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "2026-03-23",
+    "iban": "",
+    "invoice_date": "2026-02-21",
+    "invoice_number": "2026-094189",
+    "subtotal": "USD 6,468.78",
+    "supplier_tax_id": "95-2151100",
+    "tax_amount": "USD 404.30",
+    "total": "USD 6,873.08"
+  },
+  "sha256": "ff9fbdf79a3c890b4ef19c9c6531e065f9932b9847b31aaf2191b9c4ce32100e",
+  "size_bytes": 148203,
+  "supplier_country": "US",
+  "template": "t01"
+}

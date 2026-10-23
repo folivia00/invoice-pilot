@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-114.pdf",
+  "id": "inv-114",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "177 Foundry Close, York CV6 3VF",
+      "name": "Ashford Brothers LLP",
+      "tax_id": "GB252115792"
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-17",
+    "iban": "IT68M9928550844ME713UV9FVSR",
+    "invoice_date": "2026-03-03",
+    "invoice_number": "R023226",
+    "line_items": [
+      {
+        "amount": "28189.00",
+        "description": "Standing desk 160 cm",
+        "quantity": "50",
+        "unit_price": "563.78"
+      },
+      {
+        "amount": "1083.60",
+        "description": "Photo editing, hours",
+        "quantity": "14",
+        "unit_price": "77.40"
+      },
+      {
+        "amount": "322.51",
+        "description": "Data migration, hours",
+        "quantity": "5.25",
+        "unit_price": "61.43"
+      },
+      {
+        "amount": "315.89",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "315.89"
+      },
+      {
+        "amount": "1746.00",
+        "description": "Translation services, hours",
+        "quantity": "24.25",
+        "unit_price": "72.00"
+      },
+      {
+        "amount": "40.68",
+        "description": "Safety gloves, pair",
+        "quantity": "6",
+        "unit_price": "6.78"
+      },
+      {
+        "amount": "1010.00",
+        "description": "Label printer",
+        "quantity": "10",
+        "unit_price": "101.00"
+      }
+    ],
+    "subtotal": "32707.68",
+    "supplier": {
+      "address": "Piazza Verdi 161, 86499 Verona",
+      "name": "Silverline Components S.p.A.",
+      "tax_id": null
+    },
+    "tax_amount": "7195.69",
+    "tax_rate": "22",
+    "total": "39903.37"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "hour",
+    "flat",
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB252115792",
+    "currency": "EUR",
+    "due_date": "17 March 2026",
+    "iban": "IT68 M992 8550 844M E713 UV9F VSR",
+    "invoice_date": "3 March 2026",
+    "invoice_number": "R023226",
+    "subtotal": "EUR 32,707.68",
+    "supplier_tax_id": "",
+    "tax_amount": "EUR 7,195.69",
+    "total": "EUR 39,903.37"
+  },
+  "sha256": "cce1370801f9227f529b58fc38844c19786bd12ed2391de7d1473d92f360ad92",
+  "size_bytes": 41828,
+  "supplier_country": "IT",
+  "template": "t04"
+}

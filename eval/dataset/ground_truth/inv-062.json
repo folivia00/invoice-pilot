@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-062.pdf",
+  "id": "inv-062",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Lindenstraße 53, 72016 Bamberg",
+      "name": "Rheintal Logistik GmbH",
+      "tax_id": "DE121068107"
+    },
+    "currency": "EUR",
+    "due_date": "2026-05-01",
+    "iban": "DE15134501488487390413",
+    "invoice_date": "2026-04-24",
+    "invoice_number": "2026-092886",
+    "line_items": [
+      {
+        "amount": "114.44",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "2",
+        "unit_price": "57.22"
+      },
+      {
+        "amount": "68.45",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "37",
+        "unit_price": "1.85"
+      },
+      {
+        "amount": "94.20",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "12",
+        "unit_price": "7.85"
+      },
+      {
+        "amount": "490.96",
+        "description": "Versandkartons, 50 Stück",
+        "quantity": "8",
+        "unit_price": "61.37"
+      }
+    ],
+    "subtotal": "768.05",
+    "supplier": {
+      "address": "Bahnhofstraße 69, 28032 Regensburg",
+      "name": "Birkenhain Design GmbH & Co. KG",
+      "tax_id": "DE221607536"
+    },
+    "tax_amount": "145.93",
+    "tax_rate": "19",
+    "total": "913.98"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "DE121068107",
+    "currency": "EUR",
+    "due_date": "01.05.2026",
+    "iban": "DE15 1345 0148 8487 3904 13",
+    "invoice_date": "24.04.2026",
+    "invoice_number": "2026-092886",
+    "subtotal": "768,05 EUR",
+    "supplier_tax_id": "DE221607536",
+    "tax_amount": "145,93 EUR",
+    "total": "913,98 EUR"
+  },
+  "sha256": "ab069bc0b0a230265d587f18299f364209ea6813749520dbf6099eb5a9666b93",
+  "size_bytes": 41948,
+  "supplier_country": "DE",
+  "template": "t02"
+}

@@ -1,0 +1,100 @@
+{
+  "corruption": "missing_invoice_number",
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "missing_field"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-023.jpg",
+  "id": "inv-023",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Calle Olivo 107, 86604 Granada",
+      "name": "Peter Gardner",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-21",
+    "iban": "ES8247319002759495729637",
+    "invoice_date": "2026-01-07",
+    "invoice_number": null,
+    "line_items": [
+      {
+        "amount": "49.26",
+        "description": "Safety gloves, pair",
+        "quantity": "6",
+        "unit_price": "8.21"
+      },
+      {
+        "amount": "117.00",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "23.4",
+        "unit_price": "5.00"
+      },
+      {
+        "amount": "5130.00",
+        "description": "Network switch 24-port",
+        "quantity": "15",
+        "unit_price": "342.00"
+      },
+      {
+        "amount": "438.42",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "438.42"
+      },
+      {
+        "amount": "43.80",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "5",
+        "unit_price": "8.76"
+      },
+      {
+        "amount": "3753.10",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "222.34",
+        "unit_price": "16.88"
+      }
+    ],
+    "subtotal": "9531.58",
+    "supplier": {
+      "address": "Paseo de la Estacion 70, 06774 Zaragoza",
+      "name": "Larkspur Media S.L.",
+      "tax_id": "EST5818632Q"
+    },
+    "tax_amount": "2001.63",
+    "tax_rate": "21",
+    "total": "11533.21"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "weight",
+    "piece",
+    "flat",
+    "piece",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-01-21",
+    "iban": "ES82 4731 9002 7594 9572 9637",
+    "invoice_date": "2026-01-07",
+    "invoice_number": "",
+    "subtotal": "€9,531.58",
+    "supplier_tax_id": "EST5818632Q",
+    "tax_amount": "€2,001.63",
+    "total": "€11,533.21"
+  },
+  "sha256": "b7a7cb6ff572124cc3d915d3dd49c04847d3f1477225986a99832c14110395ab",
+  "size_bytes": 90698,
+  "supplier_country": "ES",
+  "template": "t03"
+}

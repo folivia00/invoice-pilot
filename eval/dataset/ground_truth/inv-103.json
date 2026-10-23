@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-103.pdf",
+  "id": "inv-103",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "JZOQAT2L200",
+    "buyer": {
+      "address": "Lindenstraße 80, 05638 Bamberg",
+      "name": "Silberberg Beratung AG",
+      "tax_id": "DE649131431"
+    },
+    "currency": "EUR",
+    "due_date": "2026-06-11",
+    "iban": "AT236148439316576584",
+    "invoice_date": "2026-05-12",
+    "invoice_number": "2608-90165",
+    "line_items": [
+      {
+        "amount": "1342.43",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "84.91",
+        "unit_price": "15.81"
+      },
+      {
+        "amount": "56.97",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4.50",
+        "unit_price": "12.66"
+      },
+      {
+        "amount": "1964.00",
+        "description": "Softwarelizenz (Jahr)",
+        "quantity": "1",
+        "unit_price": "1964.00"
+      },
+      {
+        "amount": "3317.30",
+        "description": "Konferenztelefon",
+        "quantity": "10",
+        "unit_price": "331.73"
+      },
+      {
+        "amount": "994.89",
+        "description": "LED-Panel",
+        "quantity": "13",
+        "unit_price": "76.53"
+      },
+      {
+        "amount": "143.81",
+        "description": "Etikettendrucker",
+        "quantity": "1",
+        "unit_price": "143.81"
+      },
+      {
+        "amount": "140.63",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "140.63"
+      },
+      {
+        "amount": "78.00",
+        "description": "Kabelmanagement-Set",
+        "quantity": "8",
+        "unit_price": "9.75"
+      }
+    ],
+    "subtotal": "8038.03",
+    "supplier": {
+      "address": "Am Graben 81, 1031 Innsbruck",
+      "name": "Brückenkopf Ingenieure GesmbH",
+      "tax_id": "ATU32161518"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "8038.03"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "length",
+    "flat",
+    "piece",
+    "piece",
+    "piece",
+    "flat",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 2,
+  "printed": {
+    "bic": "JZOQAT2L200",
+    "buyer_tax_id": "DE649131431",
+    "currency": "EUR",
+    "due_date": "11. Juni 2026",
+    "iban": "AT23 6148 4393 1657 6584",
+    "invoice_date": "12. Mai 2026",
+    "invoice_number": "2608-90165",
+    "subtotal": "8.038,03 €",
+    "supplier_tax_id": "ATU32161518",
+    "tax_amount": "0,00 €",
+    "total": "8.038,03 €"
+  },
+  "sha256": "a7c279b54224cc7fb60b8567859ed3cbcedc3279be68f8e025043d9a03e7e220",
+  "size_bytes": 47188,
+  "supplier_country": "AT",
+  "template": "t03"
+}

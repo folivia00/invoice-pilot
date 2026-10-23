@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-024.jpg",
+  "id": "inv-024",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "RZZXDEXXB01",
+    "buyer": {
+      "address": "Gartenweg 112, 88447 Lüneburg",
+      "name": "Donau Druckerei AG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-06-05",
+    "iban": "DE42683569639571297966",
+    "invoice_date": "2026-05-22",
+    "invoice_number": "RE-202635026",
+    "line_items": [
+      {
+        "amount": "221.88",
+        "description": "Kabelmanagement-Set",
+        "quantity": "6",
+        "unit_price": "36.98"
+      },
+      {
+        "amount": "636.00",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "4",
+        "unit_price": "159.00"
+      },
+      {
+        "amount": "840.66",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "840.66"
+      },
+      {
+        "amount": "765.00",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "153",
+        "unit_price": "5.00"
+      }
+    ],
+    "subtotal": "2463.54",
+    "supplier": {
+      "address": "Birkenallee 105, 17539 Regensburg",
+      "name": "Steinbach Verpackung KG",
+      "tax_id": "DE880689948"
+    },
+    "tax_amount": "468.07",
+    "tax_rate": "19",
+    "total": "2931.61"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "flat",
+    "weight"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "RZZXDEXXB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "05.06.2026",
+    "iban": "DE42 6835 6963 9571 2979 66",
+    "invoice_date": "22.05.2026",
+    "invoice_number": "RE-202635026",
+    "subtotal": "2.463,54 €",
+    "supplier_tax_id": "DE880689948",
+    "tax_amount": "468,07 €",
+    "total": "2.931,61 €"
+  },
+  "sha256": "7aaa69655081be0472b928545bf4d76380c0de804dfe9ff484cff3a807cbc7bb",
+  "size_bytes": 91009,
+  "supplier_country": "DE",
+  "template": "t04"
+}

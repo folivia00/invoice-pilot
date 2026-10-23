@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-001.pdf",
+  "id": "inv-001",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "244 Industrial Parkway, Portland 56295",
+      "name": "Orbit Office Solutions LLC",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2025-12-11",
+    "iban": null,
+    "invoice_date": "2025-11-27",
+    "invoice_number": "2025-053582",
+    "line_items": [
+      {
+        "amount": "292.05",
+        "description": "Onsite installation, hours",
+        "quantity": "3",
+        "unit_price": "97.35"
+      },
+      {
+        "amount": "320.00",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "8",
+        "unit_price": "40.00"
+      },
+      {
+        "amount": "117.08",
+        "description": "Vinyl banner print, m",
+        "quantity": "5.7",
+        "unit_price": "20.54"
+      },
+      {
+        "amount": "2845.84",
+        "description": "Office chair, ergonomic",
+        "quantity": "8",
+        "unit_price": "355.73"
+      }
+    ],
+    "subtotal": "3574.97",
+    "supplier": {
+      "address": "565 Elm Court, Raleigh 78792",
+      "name": "Northwind Supplies Corp.",
+      "tax_id": null
+    },
+    "tax_amount": "223.44",
+    "tax_rate": "6.25",
+    "total": "3798.41"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "length",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "11 December 2025",
+    "iban": "",
+    "invoice_date": "27 November 2025",
+    "invoice_number": "2025-053582",
+    "subtotal": "USD 3,574.97",
+    "supplier_tax_id": "",
+    "tax_amount": "USD 223.44",
+    "total": "USD 3,798.41"
+  },
+  "sha256": "3ea66889354b2fb7c1f79929481c82a97d2a4e8d059f79965e60bb391ec7d001",
+  "size_bytes": 41416,
+  "supplier_country": "US",
+  "template": "t01"
+}

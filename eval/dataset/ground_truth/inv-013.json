@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-013.pdf",
+  "id": "inv-013",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "797 Ridge Road, Portland 00202",
+      "name": "Maple Grove Studio Corp.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-02-17",
+    "invoice_number": "R054625",
+    "line_items": [
+      {
+        "amount": "23.09",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "1",
+        "unit_price": "23.09"
+      },
+      {
+        "amount": "836.77",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "34.14",
+        "unit_price": "24.51"
+      },
+      {
+        "amount": "406.00",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "406.00"
+      },
+      {
+        "amount": "1647.30",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "1647.30"
+      },
+      {
+        "amount": "35.22",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "35.22"
+      },
+      {
+        "amount": "52.66",
+        "description": "Network cable Cat6, m",
+        "quantity": "52.66",
+        "unit_price": "1.00"
+      },
+      {
+        "amount": "978.69",
+        "description": "Translation services, hours",
+        "quantity": "14.25",
+        "unit_price": "68.68"
+      },
+      {
+        "amount": "1525.00",
+        "description": "Conference phone",
+        "quantity": "5",
+        "unit_price": "305.00"
+      }
+    ],
+    "subtotal": "5504.73",
+    "supplier": {
+      "address": "755 Industrial Parkway, Denver 22012",
+      "name": "Quill and Compass Inc.",
+      "tax_id": null
+    },
+    "tax_amount": "488.54",
+    "tax_rate": "8.875",
+    "total": "5993.27"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "length",
+    "flat",
+    "flat",
+    "flat",
+    "length",
+    "hour",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "02/17/2026",
+    "invoice_number": "R054625",
+    "subtotal": "$5,504.73",
+    "supplier_tax_id": "",
+    "tax_amount": "$488.54",
+    "total": "$5,993.27"
+  },
+  "sha256": "1b6a68f674d50487a9143d4669f62d513782a904e0928d4d7a502e404ce0f458",
+  "size_bytes": 44588,
+  "supplier_country": "US",
+  "template": "t03"
+}

@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-049.pdf",
+  "id": "inv-049",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "UGOMFRXXXXX",
+    "buyer": {
+      "address": "Avenue du Port 180, 01951 Lyon",
+      "name": "Kestrel Aviation Parts SARL",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-11-07",
+    "iban": "FR608904964488GBT0CNSTBQM27",
+    "invoice_date": "2025-10-31",
+    "invoice_number": "2025-077630",
+    "line_items": [
+      {
+        "amount": "605.38",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "605.38"
+      }
+    ],
+    "subtotal": "605.38",
+    "supplier": {
+      "address": "Boulevard Saint-Martin 77, 49846 Rennes",
+      "name": "Ironbridge Engineering SAS",
+      "tax_id": "FR16340024908"
+    },
+    "tax_amount": "60.54",
+    "tax_rate": "10",
+    "total": "665.92"
+  },
+  "language": "en",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "UGOMFRXXXXX",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "07.11.2025",
+    "iban": "FR60 8904 9644 88GB T0CN STBQ M27",
+    "invoice_date": "31.10.2025",
+    "invoice_number": "2025-077630",
+    "subtotal": "€605.38",
+    "supplier_tax_id": "FR16340024908",
+    "tax_amount": "€60.54",
+    "total": "€665.92"
+  },
+  "sha256": "612ee782da999c27c735aae2b1df4ec93031cc91c1ec93974df1d81573a0cd89",
+  "size_bytes": 41794,
+  "supplier_country": "FR",
+  "template": "t09"
+}

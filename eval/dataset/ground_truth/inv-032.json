@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "CHF",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-032.pdf",
+  "id": "inv-032",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Rütliweg 41, 0587 Biel",
+      "name": "Grünwald Sicherheit AG",
+      "tax_id": null
+    },
+    "currency": "CHF",
+    "due_date": "2025-12-21",
+    "iban": null,
+    "invoice_date": "2025-11-21",
+    "invoice_number": "2508-69202",
+    "line_items": [
+      {
+        "amount": "6525.75",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "275",
+        "unit_price": "23.73"
+      },
+      {
+        "amount": "294.45",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "39",
+        "unit_price": "7.55"
+      },
+      {
+        "amount": "412.59",
+        "description": "Catering, Mittagessen für 12 Personen",
+        "quantity": "1",
+        "unit_price": "412.59"
+      },
+      {
+        "amount": "6.25",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "1",
+        "unit_price": "6.25"
+      },
+      {
+        "amount": "15273.90",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "45",
+        "unit_price": "339.42"
+      },
+      {
+        "amount": "1225.00",
+        "description": "Bildbearbeitung (Std.)",
+        "quantity": "25",
+        "unit_price": "49.00"
+      }
+    ],
+    "subtotal": "23737.94",
+    "supplier": {
+      "address": "Dorfstrasse 11, 5774 Chur",
+      "name": "Alpenblick Reinigung AG",
+      "tax_id": null
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "23737.94"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "piece",
+    "flat",
+    "piece",
+    "piece",
+    "hour"
+  ],
+  "number_format": "ch",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "CHF",
+    "due_date": "21.12.2025",
+    "iban": "",
+    "invoice_date": "21.11.2025",
+    "invoice_number": "2508-69202",
+    "subtotal": "CHF 23'737.94",
+    "supplier_tax_id": "",
+    "tax_amount": "CHF 0.00",
+    "total": "CHF 23'737.94"
+  },
+  "sha256": "f537390059e1e84daa9325a82ce4a65216df8779b338e6273fd6a1e0ec8e2f7d",
+  "size_bytes": 41917,
+  "supplier_country": "CH",
+  "template": "t02"
+}

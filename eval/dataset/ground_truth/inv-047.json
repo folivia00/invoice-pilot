@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-047.jpg",
+  "id": "inv-047",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "LYQTGBMM200",
+    "buyer": {
+      "address": "Avenida del Mar 39, 10305 Bilbao",
+      "name": "Henry Thorne",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": null,
+    "iban": "GB29SEDM43602873127316",
+    "invoice_date": "2026-08-03",
+    "invoice_number": "INV-2026-28352",
+    "line_items": [
+      {
+        "amount": "479.23",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "277.01",
+        "unit_price": "1.73"
+      },
+      {
+        "amount": "8.12",
+        "description": "Network cable Cat6, m",
+        "quantity": "8.12",
+        "unit_price": "1.00"
+      }
+    ],
+    "subtotal": "487.35",
+    "supplier": {
+      "address": "39 Orchard Way, Exeter BA2 5XK",
+      "name": "Orbit Office Solutions Limited",
+      "tax_id": "GB161425540"
+    },
+    "tax_amount": "97.47",
+    "tax_rate": "20",
+    "total": "584.82"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "LYQTGBMM200",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "",
+    "iban": "GB29 SEDM 4360 2873 1273 16",
+    "invoice_date": "03.08.2026",
+    "invoice_number": "INV-2026-28352",
+    "subtotal": "£487.35",
+    "supplier_tax_id": "GB161425540",
+    "tax_amount": "£97.47",
+    "total": "£584.82"
+  },
+  "sha256": "070d975633701146521958855efbd408e3e0a5296fa29ece4369384cebaff1f9",
+  "size_bytes": 79333,
+  "supplier_country": "GB",
+  "template": "t07"
+}

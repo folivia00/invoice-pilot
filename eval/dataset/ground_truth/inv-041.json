@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-041.jpg",
+  "id": "inv-041",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Molenlaan 116, 5702 FY Leiden",
+      "name": "Harbourview Cleaning V.O.F.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-02-09",
+    "invoice_number": "2601-42675",
+    "line_items": [
+      {
+        "amount": "291.76",
+        "description": "Photo editing, hours",
+        "quantity": "3.5",
+        "unit_price": "83.36"
+      },
+      {
+        "amount": "1064.44",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1064.44"
+      },
+      {
+        "amount": "140.60",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "28.12",
+        "unit_price": "5.00"
+      },
+      {
+        "amount": "1523.04",
+        "description": "Translation services, hours",
+        "quantity": "24",
+        "unit_price": "63.46"
+      },
+      {
+        "amount": "1783.08",
+        "description": "Office chair, ergonomic",
+        "quantity": "9",
+        "unit_price": "198.12"
+      },
+      {
+        "amount": "328.00",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "328.00"
+      },
+      {
+        "amount": "110.38",
+        "description": "Vinyl banner print, m",
+        "quantity": "3.6",
+        "unit_price": "30.66"
+      },
+      {
+        "amount": "294.86",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "11.50",
+        "unit_price": "25.64"
+      }
+    ],
+    "subtotal": "5536.16",
+    "supplier": {
+      "address": "747 Industrial Parkway, Austin 98655",
+      "name": "Northwind Supplies Corp.",
+      "tax_id": null
+    },
+    "tax_amount": "346.01",
+    "tax_rate": "6.25",
+    "total": "5882.17"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "flat",
+    "weight",
+    "hour",
+    "piece",
+    "flat",
+    "length",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "2026-02-09",
+    "invoice_number": "2601-42675",
+    "subtotal": "$5,536.16",
+    "supplier_tax_id": "",
+    "tax_amount": "$346.01",
+    "total": "$5,882.17"
+  },
+  "sha256": "030c114a3fd8869d24cc1a4a753ce409674acb7d5e3fd648ebb97f54e42f073e",
+  "size_bytes": 215158,
+  "supplier_country": "US",
+  "template": "t01"
+}

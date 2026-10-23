@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "JPY",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-094.pdf",
+  "id": "inv-094",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Charlotte Thorne",
+      "tax_id": null
+    },
+    "currency": "JPY",
+    "due_date": "2026-06-21",
+    "iban": null,
+    "invoice_date": "2026-06-07",
+    "invoice_number": "R043466",
+    "line_items": [
+      {
+        "amount": "213410",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "213410"
+      },
+      {
+        "amount": "14100",
+        "description": "Safety gloves, pair",
+        "quantity": "6",
+        "unit_price": "2350"
+      }
+    ],
+    "subtotal": "227510",
+    "supplier": {
+      "address": "4-5-6 Minato, 781-5095 Nagoya",
+      "name": "Tidewater Services K.K.",
+      "tax_id": null
+    },
+    "tax_amount": "22751",
+    "tax_rate": "10",
+    "total": "250261"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "JPY",
+    "due_date": "21.06.2026",
+    "iban": "",
+    "invoice_date": "07.06.2026",
+    "invoice_number": "R043466",
+    "subtotal": "¥227,510",
+    "supplier_tax_id": "",
+    "tax_amount": "¥22,751",
+    "total": "¥250,261"
+  },
+  "sha256": "828835021c5b19950c8269260615f6f7b44cd15e798cf049f89a04911a82f61f",
+  "size_bytes": 41613,
+  "supplier_country": "JP",
+  "template": "t04"
+}

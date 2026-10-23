@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-117.pdf",
+  "id": "inv-117",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "GFEAIT2LXXX",
+    "buyer": {
+      "address": "Via Lunga 172, 33321 Pisa",
+      "name": "Westmarch Textiles S.p.A.",
+      "tax_id": "IT86703176784"
+    },
+    "currency": "EUR",
+    "due_date": "2026-08-26",
+    "iban": "IT47K3382310295UF8N2KL8G4XY",
+    "invoice_date": "2026-07-27",
+    "invoice_number": "2026-030736",
+    "line_items": [
+      {
+        "amount": "405.13",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "405.13"
+      },
+      {
+        "amount": "2107.00",
+        "description": "Office chair, ergonomic",
+        "quantity": "7",
+        "unit_price": "301.00"
+      },
+      {
+        "amount": "376.00",
+        "description": "Conference phone",
+        "quantity": "1",
+        "unit_price": "376.00"
+      },
+      {
+        "amount": "1007.54",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "44.7",
+        "unit_price": "22.54"
+      },
+      {
+        "amount": "503.01",
+        "description": "Laptop stand, aluminium",
+        "quantity": "9",
+        "unit_price": "55.89"
+      },
+      {
+        "amount": "73.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "73.00"
+      },
+      {
+        "amount": "1938.00",
+        "description": "Software license (annual)",
+        "quantity": "1",
+        "unit_price": "1938.00"
+      },
+      {
+        "amount": "36.00",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "9",
+        "unit_price": "4.00"
+      }
+    ],
+    "subtotal": "6445.68",
+    "supplier": {
+      "address": "Piazza Verdi 55, 18172 Bologna",
+      "name": "Ashford Brothers S.p.A.",
+      "tax_id": "IT79450882624"
+    },
+    "tax_amount": "1418.05",
+    "tax_rate": "22",
+    "total": "7863.73"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece",
+    "piece",
+    "length",
+    "piece",
+    "flat",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "GFEAIT2LXXX",
+    "buyer_tax_id": "IT86703176784",
+    "currency": "EUR",
+    "due_date": "26.08.2026",
+    "iban": "IT47 K338 2310 295U F8N2 KL8G 4XY",
+    "invoice_date": "27.07.2026",
+    "invoice_number": "2026-030736",
+    "subtotal": "€6,445.68",
+    "supplier_tax_id": "IT79450882624",
+    "tax_amount": "€1,418.05",
+    "total": "€7,863.73"
+  },
+  "sha256": "52c0bb74c6746bd6d8d4a0b4c137e17cfa9125156fdaaf3ce18bf4211bb411eb",
+  "size_bytes": 42233,
+  "supplier_country": "IT",
+  "template": "t07"
+}

@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-020.pdf",
+  "id": "inv-020",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "VIMEAT2L100",
+    "buyer": {
+      "address": "Industriestrasse 55, 8427 Biel",
+      "name": "Schwarzwald Holzbau AG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "AT224410751595249601",
+    "invoice_date": "2026-05-02",
+    "invoice_number": "2603-80635",
+    "line_items": [
+      {
+        "amount": "288.33",
+        "description": "Reinigungsleistung",
+        "quantity": "1",
+        "unit_price": "288.33"
+      },
+      {
+        "amount": "87.20",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "10",
+        "unit_price": "8.72"
+      },
+      {
+        "amount": "67.69",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4.35",
+        "unit_price": "15.56"
+      }
+    ],
+    "subtotal": "443.22",
+    "supplier": {
+      "address": "Salzburger Straße 27, 3583 Klagenfurt",
+      "name": "Hafenstadt Textil GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "88.64",
+    "tax_rate": "20",
+    "total": "531.86"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "piece",
+    "length"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "VIMEAT2L100",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "AT22 4410 7515 9524 9601",
+    "invoice_date": "2. Mai 2026",
+    "invoice_number": "2603-80635",
+    "subtotal": "443,22 €",
+    "supplier_tax_id": "",
+    "tax_amount": "88,64 €",
+    "total": "531,86 €"
+  },
+  "sha256": "25a1a7cbb2b43f1c9af1ee74ddba2e6105540f65fa0fba23ef2240b843c74a53",
+  "size_bytes": 45672,
+  "supplier_country": "AT",
+  "template": "t10"
+}

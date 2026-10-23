@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-086.pdf",
+  "id": "inv-086",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Lindenhof Catering GesmbH",
+      "tax_id": "ATU92987838"
+    },
+    "currency": "EUR",
+    "due_date": "2026-09-09",
+    "iban": null,
+    "invoice_date": "2026-08-10",
+    "invoice_number": "R079069",
+    "line_items": [
+      {
+        "amount": "12.02",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "2",
+        "unit_price": "6.01"
+      },
+      {
+        "amount": "1175.90",
+        "description": "Versandkartons, 50 Stück",
+        "quantity": "22",
+        "unit_price": "53.45"
+      },
+      {
+        "amount": "1785.00",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "1785.00"
+      },
+      {
+        "amount": "1596.00",
+        "description": "Datenmigration (Std.)",
+        "quantity": "18.75",
+        "unit_price": "85.12"
+      },
+      {
+        "amount": "352.44",
+        "description": "Konferenztelefon",
+        "quantity": "2",
+        "unit_price": "176.22"
+      }
+    ],
+    "subtotal": "4921.36",
+    "supplier": {
+      "address": "Donaulände 120, 8907 Steyr",
+      "name": "Birkenhain Design KG",
+      "tax_id": "ATU70124205"
+    },
+    "tax_amount": "984.27",
+    "tax_rate": "20",
+    "total": "5905.63"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "flat",
+    "hour",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "ATU92987838",
+    "currency": "EUR",
+    "due_date": "9. September 2026",
+    "iban": "",
+    "invoice_date": "10. August 2026",
+    "invoice_number": "R079069",
+    "subtotal": "4.921,36 €",
+    "supplier_tax_id": "ATU70124205",
+    "tax_amount": "984,27 €",
+    "total": "5.905,63 €"
+  },
+  "sha256": "b9a704a022a70a80d14b3669ac0e4e3fe4d735368432603d235709ea2db5100b",
+  "size_bytes": 42253,
+  "supplier_country": "AT",
+  "template": "t06"
+}

@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "CHF",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-095.pdf",
+  "id": "inv-095",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Mariahilfer Gasse 108, 1725 Steyr",
+      "name": "Felsenkeller Getränke KG",
+      "tax_id": null
+    },
+    "currency": "CHF",
+    "due_date": "2026-07-30",
+    "iban": "CH73807230HO8JAPZYWD7",
+    "invoice_date": "2026-06-30",
+    "invoice_number": "R022057",
+    "line_items": [
+      {
+        "amount": "288.04",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "288.04"
+      },
+      {
+        "amount": "1254.00",
+        "description": "USB-C-Dockingstation",
+        "quantity": "19",
+        "unit_price": "66.00"
+      },
+      {
+        "amount": "36.00",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "9",
+        "unit_price": "4.00"
+      },
+      {
+        "amount": "79.50",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "15.2",
+        "unit_price": "5.23"
+      },
+      {
+        "amount": "717.95",
+        "description": "Aluminiumprofil 40x40, m",
+        "quantity": "49.04",
+        "unit_price": "14.64"
+      },
+      {
+        "amount": "78.88",
+        "description": "Tonerkartusche",
+        "quantity": "2",
+        "unit_price": "39.44"
+      }
+    ],
+    "subtotal": "2454.37",
+    "supplier": {
+      "address": "Dorfstrasse 172, 1030 Winterthur",
+      "name": "Kupferberg Metallbau AG",
+      "tax_id": null
+    },
+    "tax_amount": "198.80",
+    "tax_rate": "8.1",
+    "total": "2653.17"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "piece",
+    "piece",
+    "weight",
+    "length",
+    "piece"
+  ],
+  "number_format": "ch",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "CHF",
+    "due_date": "30. Juli 2026",
+    "iban": "CH73 8072 30HO 8JAP ZYWD 7",
+    "invoice_date": "30. Juni 2026",
+    "invoice_number": "R022057",
+    "subtotal": "CHF 2'454.37",
+    "supplier_tax_id": "",
+    "tax_amount": "CHF 198.80",
+    "total": "CHF 2'653.17"
+  },
+  "sha256": "b286a669dfbce06a47ef494bf8e17b4ceaac31fd300b9a8666b97749e43d854e",
+  "size_bytes": 45545,
+  "supplier_country": "CH",
+  "template": "t05"
+}

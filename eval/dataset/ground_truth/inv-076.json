@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-076.pdf",
+  "id": "inv-076",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Industriestraße 55, 01432 Regensburg",
+      "name": "Kastanienallee Buchhandlung e.K.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-12",
+    "iban": null,
+    "invoice_date": "2025-12-13",
+    "invoice_number": "R021026",
+    "line_items": [
+      {
+        "amount": "52.00",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4",
+        "unit_price": "13.00"
+      },
+      {
+        "amount": "1684.93",
+        "description": "Projektleitung (Std.)",
+        "quantity": "23.25",
+        "unit_price": "72.47"
+      },
+      {
+        "amount": "4305.00",
+        "description": "Tonerkartusche",
+        "quantity": "35",
+        "unit_price": "123.00"
+      },
+      {
+        "amount": "3120.00",
+        "description": "Monitor 27 Zoll",
+        "quantity": "8",
+        "unit_price": "390.00"
+      },
+      {
+        "amount": "50.51",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "1",
+        "unit_price": "50.51"
+      },
+      {
+        "amount": "46.17",
+        "description": "Kaffeebohnen, geröstet, kg",
+        "quantity": "1.21",
+        "unit_price": "38.16"
+      },
+      {
+        "amount": "2232.36",
+        "description": "Übersetzung (Std.)",
+        "quantity": "26.5",
+        "unit_price": "84.24"
+      }
+    ],
+    "subtotal": "11490.97",
+    "supplier": {
+      "address": "Bahnhofstraße 113, 16709 Göttingen",
+      "name": "Kastanienallee Buchhandlung e.K.",
+      "tax_id": null
+    },
+    "tax_amount": "804.37",
+    "tax_rate": "7",
+    "total": "12295.34"
+  },
+  "language": "de",
+  "line_units": [
+    "length",
+    "hour",
+    "piece",
+    "piece",
+    "piece",
+    "weight",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 2,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "12. Januar 2026",
+    "iban": "",
+    "invoice_date": "13. Dezember 2025",
+    "invoice_number": "R021026",
+    "subtotal": "11.490,97 €",
+    "supplier_tax_id": "",
+    "tax_amount": "804,37 €",
+    "total": "12.295,34 €"
+  },
+  "sha256": "a4d988a24cea9b3fcf7e6baf90708614c676fde5dddac1a2e41865726b60ee8b",
+  "size_bytes": 749164,
+  "supplier_country": "DE",
+  "template": "t06"
+}

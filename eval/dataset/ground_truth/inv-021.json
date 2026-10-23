@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-021.pdf",
+  "id": "inv-021",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Westmarch Textiles Limited",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2026-02-22",
+    "iban": "GB54BXTO48536896089055",
+    "invoice_date": "2026-02-08",
+    "invoice_number": "RE-202632639",
+    "line_items": [
+      {
+        "amount": "1419.87",
+        "description": "Data migration, hours",
+        "quantity": "14.25",
+        "unit_price": "99.64"
+      },
+      {
+        "amount": "1037.91",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1037.91"
+      },
+      {
+        "amount": "63.95",
+        "description": "Network cable Cat6, m",
+        "quantity": "42.35",
+        "unit_price": "1.51"
+      },
+      {
+        "amount": "278.29",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "278.29"
+      },
+      {
+        "amount": "2156.34",
+        "description": "Network switch 24-port",
+        "quantity": "6",
+        "unit_price": "359.39"
+      }
+    ],
+    "subtotal": "4956.36",
+    "supplier": {
+      "address": "28 Castle Street, Leeds ZL0 2LD",
+      "name": "Quill and Compass LLP",
+      "tax_id": "GB947361520"
+    },
+    "tax_amount": "991.27",
+    "tax_rate": "20",
+    "total": "5947.63"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "flat",
+    "length",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "22 February 2026",
+    "iban": "GB54 BXTO 4853 6896 0890 55",
+    "invoice_date": "8 February 2026",
+    "invoice_number": "RE-202632639",
+    "subtotal": "£4,956.36",
+    "supplier_tax_id": "GB947361520",
+    "tax_amount": "£991.27",
+    "total": "£5,947.63"
+  },
+  "sha256": "a99e779e91e78f4b28f06fa25b8ec41b1142196bc04d770e31f617f4eeb81ff8",
+  "size_bytes": 266570,
+  "supplier_country": "GB",
+  "template": "t01"
+}

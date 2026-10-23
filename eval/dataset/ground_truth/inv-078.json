@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-078.jpg",
+  "id": "inv-078",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "NDDYDEXXB01",
+    "buyer": {
+      "address": "Bahnhofstraße 59, 88305 Lüneburg",
+      "name": "Lerchenfeld Bäckerei KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-04-08",
+    "iban": "DE82722685465784038141",
+    "invoice_date": "2026-03-25",
+    "invoice_number": "2026-069530",
+    "line_items": [
+      {
+        "amount": "112.00",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "8",
+        "unit_price": "14.00"
+      },
+      {
+        "amount": "361.02",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "361.02"
+      },
+      {
+        "amount": "353.45",
+        "description": "Funktastatur",
+        "quantity": "5",
+        "unit_price": "70.69"
+      },
+      {
+        "amount": "1430.00",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "1430.00"
+      },
+      {
+        "amount": "185.93",
+        "description": "Kaffeebohnen, geröstet, kg",
+        "quantity": "7.3",
+        "unit_price": "25.47"
+      },
+      {
+        "amount": "1491.01",
+        "description": "Bildbearbeitung (Std.)",
+        "quantity": "25.25",
+        "unit_price": "59.05"
+      }
+    ],
+    "subtotal": "3933.41",
+    "supplier": {
+      "address": "Hauptstraße 172, 94529 Regensburg",
+      "name": "Silberberg Beratung GmbH",
+      "tax_id": "DE881504691"
+    },
+    "tax_amount": "747.35",
+    "tax_rate": "19",
+    "total": "4680.76"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "flat",
+    "piece",
+    "flat",
+    "weight",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "NDDYDEXXB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "08.04.2026",
+    "iban": "DE82 7226 8546 5784 0381 41",
+    "invoice_date": "25.03.2026",
+    "invoice_number": "2026-069530",
+    "subtotal": "3.933,41 €",
+    "supplier_tax_id": "DE881504691",
+    "tax_amount": "747,35 €",
+    "total": "4.680,76 €"
+  },
+  "sha256": "92bdcfb69cb1830fd705ded6ecc32f0bb1eb3a6e596c00d643ffe95a4be48d6c",
+  "size_bytes": 147892,
+  "supplier_country": "DE",
+  "template": "t08"
+}

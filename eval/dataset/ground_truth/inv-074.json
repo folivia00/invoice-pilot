@@ -1,0 +1,93 @@
+{
+  "corruption": "bad_iban_check_digits",
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [
+    "invalid_iban"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-074.pdf",
+  "id": "inv-074",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "LQRAATXX200",
+    "buyer": {
+      "address": "Ringstraße 96, 3298 Linz",
+      "name": "Fuchsbau Werbung GesmbH",
+      "tax_id": "ATU15647360"
+    },
+    "currency": "EUR",
+    "due_date": "2026-09-03",
+    "iban": "AT774012892270590595",
+    "invoice_date": "2026-07-20",
+    "invoice_number": "2026-088936",
+    "line_items": [
+      {
+        "amount": "890.50",
+        "description": "LED-Panel",
+        "quantity": "10",
+        "unit_price": "89.05"
+      },
+      {
+        "amount": "137.82",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "5.6",
+        "unit_price": "24.61"
+      },
+      {
+        "amount": "2437.77",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "2437.77"
+      },
+      {
+        "amount": "798.84",
+        "description": "Beratung (Std.)",
+        "quantity": "7",
+        "unit_price": "114.12"
+      },
+      {
+        "amount": "28.14",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "3",
+        "unit_price": "9.38"
+      }
+    ],
+    "subtotal": "4293.07",
+    "supplier": {
+      "address": "Am Graben 21, 7224 Klagenfurt",
+      "name": "Nordlicht Software GesmbH",
+      "tax_id": "ATU36890206"
+    },
+    "tax_amount": "858.61",
+    "tax_rate": "20",
+    "total": "5151.68"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "weight",
+    "flat",
+    "hour",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "LQRAATXX200",
+    "buyer_tax_id": "ATU15647360",
+    "currency": "EUR",
+    "due_date": "03.09.2026",
+    "iban": "AT77 4012 8922 7059 0595",
+    "invoice_date": "20.07.2026",
+    "invoice_number": "2026-088936",
+    "subtotal": "4.293,07 EUR",
+    "supplier_tax_id": "ATU36890206",
+    "tax_amount": "858,61 EUR",
+    "total": "5.151,68 EUR"
+  },
+  "sha256": "3295bfd4c8b2efd8d891a9f448587a299b5de31634b8d09d369168e1a8754a17",
+  "size_bytes": 42193,
+  "supplier_country": "AT",
+  "template": "t04"
+}

@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-010.pdf",
+  "id": "inv-010",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "LKEUDEFFXXX",
+    "buyer": {
+      "address": "Schillerplatz 140, 78943 Bamberg",
+      "name": "Claudia Thaler",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-27",
+    "iban": "DE60995040152773952141",
+    "invoice_date": "2026-02-10",
+    "invoice_number": "RE-202695339",
+    "line_items": [
+      {
+        "amount": "2117.33",
+        "description": "Datenmigration (Std.)",
+        "quantity": "18.5",
+        "unit_price": "114.45"
+      },
+      {
+        "amount": "1052.84",
+        "description": "Konferenztelefon",
+        "quantity": "4",
+        "unit_price": "263.21"
+      },
+      {
+        "amount": "186.00",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "15.5",
+        "unit_price": "12.00"
+      },
+      {
+        "amount": "24.00",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "12",
+        "unit_price": "2.00"
+      }
+    ],
+    "subtotal": "3380.17",
+    "supplier": {
+      "address": "Gartenweg 154, 85093 Freiburg",
+      "name": "Kupferberg Metallbau KG",
+      "tax_id": "DE781432984"
+    },
+    "tax_amount": "236.61",
+    "tax_rate": "7",
+    "total": "3616.78"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "piece",
+    "weight",
+    "length"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "LKEUDEFFXXX",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-03-27",
+    "iban": "DE60 9950 4015 2773 9521 41",
+    "invoice_date": "2026-02-10",
+    "invoice_number": "RE-202695339",
+    "subtotal": "3.380,17 €",
+    "supplier_tax_id": "DE781432984",
+    "tax_amount": "236,61 €",
+    "total": "3.616,78 €"
+  },
+  "sha256": "b1573aa0b1b850822ee43b2efa9fe74b8860d09d40e617ad2cde8962eeb54df0",
+  "size_bytes": 368150,
+  "supplier_country": "DE",
+  "template": "t10"
+}

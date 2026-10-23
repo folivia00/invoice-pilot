@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-064.pdf",
+  "id": "inv-064",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "AWVPATFF200",
+    "buyer": {
+      "address": "Am Graben 4, 4838 Innsbruck",
+      "name": "Wiesengrund Labor KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "AT627576363816961688",
+    "invoice_date": "2026-05-22",
+    "invoice_number": "2605-15989",
+    "line_items": [
+      {
+        "amount": "430.58",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "7.25",
+        "unit_price": "59.39"
+      },
+      {
+        "amount": "852.21",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "3",
+        "unit_price": "284.07"
+      },
+      {
+        "amount": "889.74",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "889.74"
+      },
+      {
+        "amount": "84.72",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "6",
+        "unit_price": "14.12"
+      },
+      {
+        "amount": "205.56",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "3",
+        "unit_price": "68.52"
+      },
+      {
+        "amount": "719.00",
+        "description": "Wartungsvertrag Q3",
+        "quantity": "1",
+        "unit_price": "719.00"
+      },
+      {
+        "amount": "2429.51",
+        "description": "Datenmigration (Std.)",
+        "quantity": "31.75",
+        "unit_price": "76.52"
+      },
+      {
+        "amount": "150.15",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "55",
+        "unit_price": "2.73"
+      }
+    ],
+    "subtotal": "5761.47",
+    "supplier": {
+      "address": "Ringstraße 144, 4494 Wels",
+      "name": "Steinbach Verpackung GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "1152.29",
+    "tax_rate": "20",
+    "total": "6913.76"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "piece",
+    "flat",
+    "piece",
+    "piece",
+    "flat",
+    "hour",
+    "weight"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "AWVPATFF200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "AT62 7576 3638 1696 1688",
+    "invoice_date": "22.05.2026",
+    "invoice_number": "2605-15989",
+    "subtotal": "5.761,47 €",
+    "supplier_tax_id": "",
+    "tax_amount": "1.152,29 €",
+    "total": "6.913,76 €"
+  },
+  "sha256": "2e0e3060a86324ace28f8c1163906cac405135e3435f9d733ee0a57772d2f358",
+  "size_bytes": 331460,
+  "supplier_country": "AT",
+  "template": "t04"
+}

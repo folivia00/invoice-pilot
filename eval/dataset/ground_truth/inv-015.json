@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-015.pdf",
+  "id": "inv-015",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Harbourview Cleaning S.r.l.",
+      "tax_id": "IT19949284546"
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-03-25",
+    "invoice_number": "R024976",
+    "line_items": [
+      {
+        "amount": "813.72",
+        "description": "Network switch 24-port",
+        "quantity": "2",
+        "unit_price": "406.86"
+      },
+      {
+        "amount": "851.00",
+        "description": "Translation services, hours",
+        "quantity": "18.5",
+        "unit_price": "46.00"
+      },
+      {
+        "amount": "37.26",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "37.26"
+      },
+      {
+        "amount": "67.74",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "13.52",
+        "unit_price": "5.01"
+      },
+      {
+        "amount": "5206.89",
+        "description": "Consulting, hours",
+        "quantity": "59.25",
+        "unit_price": "87.88"
+      },
+      {
+        "amount": "55.92",
+        "description": "Data migration, hours",
+        "quantity": "0.75",
+        "unit_price": "74.56"
+      },
+      {
+        "amount": "46.62",
+        "description": "Steel bracket 40x40",
+        "quantity": "9",
+        "unit_price": "5.18"
+      }
+    ],
+    "subtotal": "7079.15",
+    "supplier": {
+      "address": "Piazza Verdi 8, 67954 Parma",
+      "name": "Stonegate Security S.r.l.",
+      "tax_id": null
+    },
+    "tax_amount": "1557.41",
+    "tax_rate": "22",
+    "total": "8636.56"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "flat",
+    "weight",
+    "hour",
+    "hour",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "IT19949284546",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "25.03.2026",
+    "invoice_number": "R024976",
+    "subtotal": "€7,079.15",
+    "supplier_tax_id": "",
+    "tax_amount": "€1,557.41",
+    "total": "€8,636.56"
+  },
+  "sha256": "e461c1747c9d48a4b1c9a3e5c7da1b2b877421bd8528719852b5c634ff386eef",
+  "size_bytes": 514297,
+  "supplier_country": "IT",
+  "template": "t05"
+}

@@ -1,0 +1,107 @@
+{
+  "corruption": "subtotal_mismatch",
+  "currency": "CHF",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [
+    "subtotal_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-014.pdf",
+  "id": "inv-014",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "RVYMCHZZ200",
+    "buyer": {
+      "address": "Bahnhofstrasse 133, 1317 Biel",
+      "name": "Paul Schäfer",
+      "tax_id": null
+    },
+    "currency": "CHF",
+    "due_date": "2025-12-30",
+    "iban": "CH3296488L69K79Z705A7",
+    "invoice_date": "2025-11-30",
+    "invoice_number": "INV-2025-95759",
+    "line_items": [
+      {
+        "amount": "1601.13",
+        "description": "Beratung (Std.)",
+        "quantity": "13.25",
+        "unit_price": "120.84"
+      },
+      {
+        "amount": "88.57",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4.26",
+        "unit_price": "20.79"
+      },
+      {
+        "amount": "229.00",
+        "description": "Konferenztelefon",
+        "quantity": "1",
+        "unit_price": "229.00"
+      },
+      {
+        "amount": "1199.00",
+        "description": "Projektleitung (Std.)",
+        "quantity": "10.5",
+        "unit_price": "114.19"
+      },
+      {
+        "amount": "159.39",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "33",
+        "unit_price": "4.83"
+      },
+      {
+        "amount": "850.82",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "38",
+        "unit_price": "22.39"
+      },
+      {
+        "amount": "1998.00",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "1998.00"
+      }
+    ],
+    "subtotal": "6126.01",
+    "supplier": {
+      "address": "Dorfstrasse 11, 7948 Biel",
+      "name": "Silberberg Beratung AG",
+      "tax_id": null
+    },
+    "tax_amount": "496.20",
+    "tax_rate": "8.1",
+    "total": "6622.11"
+  },
+  "language": "de",
+  "line_units": [
+    "hour",
+    "length",
+    "piece",
+    "hour",
+    "piece",
+    "weight",
+    "flat"
+  ],
+  "number_format": "ch",
+  "pages": 1,
+  "printed": {
+    "bic": "RVYMCHZZ200",
+    "buyer_tax_id": "",
+    "currency": "CHF",
+    "due_date": "30.12.2025",
+    "iban": "CH32 9648 8L69 K79Z 705A 7",
+    "invoice_date": "30.11.2025",
+    "invoice_number": "INV-2025-95759",
+    "subtotal": "6'126.01 CHF",
+    "supplier_tax_id": "",
+    "tax_amount": "496.20 CHF",
+    "total": "6'622.11 CHF"
+  },
+  "sha256": "05039e0853a31d8e2ab51aac7e8a7fe7c8f3c804bc11c72933e9a17d65b74b04",
+  "size_bytes": 42215,
+  "supplier_country": "CH",
+  "template": "t04"
+}

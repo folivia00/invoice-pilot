@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-043.pdf",
+  "id": "inv-043",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Calle Mayor 129, 14458 Vigo",
+      "name": "Noah Mercer",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-11",
+    "iban": "ES4715145731443488543835",
+    "invoice_date": "2026-01-25",
+    "invoice_number": "RE-202675751",
+    "line_items": [
+      {
+        "amount": "719.28",
+        "description": "Data migration, hours",
+        "quantity": "9.25",
+        "unit_price": "77.76"
+      },
+      {
+        "amount": "729.50",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "29.18",
+        "unit_price": "25.00"
+      },
+      {
+        "amount": "1152.40",
+        "description": "Printer toner cartridge",
+        "quantity": "8",
+        "unit_price": "144.05"
+      },
+      {
+        "amount": "85.00",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "85.00"
+      },
+      {
+        "amount": "50.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "50.00"
+      },
+      {
+        "amount": "1881.64",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1881.64"
+      },
+      {
+        "amount": "5017.04",
+        "description": "Translation services, hours",
+        "quantity": "68",
+        "unit_price": "73.78"
+      }
+    ],
+    "subtotal": "9634.86",
+    "supplier": {
+      "address": "Calle Olivo 11, 28147 Valencia",
+      "name": "Quill and Compass S.L.",
+      "tax_id": "ESD2934547M"
+    },
+    "tax_amount": "2023.32",
+    "tax_rate": "21",
+    "total": "11658.18"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "length",
+    "piece",
+    "flat",
+    "flat",
+    "flat",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "11 March 2026",
+    "iban": "ES47 1514 5731 4434 8854 3835",
+    "invoice_date": "25 January 2026",
+    "invoice_number": "RE-202675751",
+    "subtotal": "€9,634.86",
+    "supplier_tax_id": "ESD2934547M",
+    "tax_amount": "€2,023.32",
+    "total": "€11,658.18"
+  },
+  "sha256": "c80c8712797b1e26eb408a95fb07bb8b758b715aabcee47c2ae33ffd5760cb57",
+  "size_bytes": 45098,
+  "supplier_country": "ES",
+  "template": "t03"
+}

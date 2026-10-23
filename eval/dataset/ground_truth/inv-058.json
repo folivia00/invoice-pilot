@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-058.pdf",
+  "id": "inv-058",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "VVKNATHHB01",
+    "buyer": {
+      "address": "Salzburger Straße 151, 7688 Klagenfurt",
+      "name": "Paul Pfeiffer",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "AT233922941318758256",
+    "invoice_date": "2025-10-13",
+    "invoice_number": "2025-060197",
+    "line_items": [
+      {
+        "amount": "560.00",
+        "description": "Tonerkartusche",
+        "quantity": "4",
+        "unit_price": "140.00"
+      }
+    ],
+    "subtotal": "560.00",
+    "supplier": {
+      "address": "Donaulände 78, 2161 Innsbruck",
+      "name": "Falkenstein Maschinenbau GesmbH",
+      "tax_id": "ATU76681323"
+    },
+    "tax_amount": "112.00",
+    "tax_rate": "20",
+    "total": "672.00"
+  },
+  "language": "de",
+  "line_units": [
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "VVKNATHHB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "AT23 3922 9413 1875 8256",
+    "invoice_date": "2025-10-13",
+    "invoice_number": "2025-060197",
+    "subtotal": "560,00 EUR",
+    "supplier_tax_id": "ATU76681323",
+    "tax_amount": "112,00 EUR",
+    "total": "672,00 EUR"
+  },
+  "sha256": "50d3d80abf856cac4a06b853414210c0a83b9f5665eceabb8a4f0b979496aba4",
+  "size_bytes": 315870,
+  "supplier_country": "AT",
+  "template": "t08"
+}

@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-050.pdf",
+  "id": "inv-050",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "WYOODEHHXXX",
+    "buyer": {
+      "address": "Schillerplatz 73, 09349 Lüneburg",
+      "name": "Brückenkopf Ingenieure AG",
+      "tax_id": "DE896750255"
+    },
+    "currency": "EUR",
+    "due_date": "2026-09-08",
+    "iban": "DE88453498499132553176",
+    "invoice_date": "2026-07-25",
+    "invoice_number": "2610-80558",
+    "line_items": [
+      {
+        "amount": "1026.20",
+        "description": "Tonerkartusche",
+        "quantity": "10",
+        "unit_price": "102.62"
+      },
+      {
+        "amount": "9130.80",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "21",
+        "unit_price": "434.80"
+      },
+      {
+        "amount": "8099.25",
+        "description": "Datenmigration (Std.)",
+        "quantity": "73.25",
+        "unit_price": "110.57"
+      },
+      {
+        "amount": "416.68",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "5.5",
+        "unit_price": "75.76"
+      },
+      {
+        "amount": "2489.00",
+        "description": "Bildbearbeitung (Std.)",
+        "quantity": "32.75",
+        "unit_price": "76.00"
+      }
+    ],
+    "subtotal": "21161.93",
+    "supplier": {
+      "address": "Gartenweg 52, 96679 Freiburg",
+      "name": "Grünwald Sicherheit GmbH & Co. KG",
+      "tax_id": "DE294056635"
+    },
+    "tax_amount": "4020.77",
+    "tax_rate": "19",
+    "total": "25182.70"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "piece",
+    "hour",
+    "hour",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "WYOODEHHXXX",
+    "buyer_tax_id": "DE896750255",
+    "currency": "EUR",
+    "due_date": "8. September 2026",
+    "iban": "DE88 4534 9849 9132 5531 76",
+    "invoice_date": "25. Juli 2026",
+    "invoice_number": "2610-80558",
+    "subtotal": "21.161,93 €",
+    "supplier_tax_id": "DE294056635",
+    "tax_amount": "4.020,77 €",
+    "total": "25.182,70 €"
+  },
+  "sha256": "25c8b3098950adf68e58b30ea1f2d5f2740b8a7437b5e37e4b2865f5013d94e0",
+  "size_bytes": 46009,
+  "supplier_country": "DE",
+  "template": "t10"
+}

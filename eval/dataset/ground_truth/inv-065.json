@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-065.jpg",
+  "id": "inv-065",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "ADINPLXX100",
+    "buyer": {
+      "address": null,
+      "name": "Oakmont Training S.A.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-02-19",
+    "iban": "PL82889782110113910261264879",
+    "invoice_date": "2026-02-05",
+    "invoice_number": "INV-2026-69995",
+    "line_items": [
+      {
+        "amount": "585.43",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "585.43"
+      },
+      {
+        "amount": "295.00",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "295.00"
+      }
+    ],
+    "subtotal": "880.43",
+    "supplier": {
+      "address": "ul. Polna 164, 99-906 Lodz",
+      "name": "Tidewater Services Sp. z o.o.",
+      "tax_id": "PL8314517372"
+    },
+    "tax_amount": "202.50",
+    "tax_rate": "23",
+    "total": "1082.93"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "ADINPLXX100",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-02-19",
+    "iban": "PL82 8897 8211 0113 9102 6126 4879",
+    "invoice_date": "2026-02-05",
+    "invoice_number": "INV-2026-69995",
+    "subtotal": "EUR 880.43",
+    "supplier_tax_id": "PL8314517372",
+    "tax_amount": "EUR 202.50",
+    "total": "EUR 1,082.93"
+  },
+  "sha256": "8f990a845b4a7a34d0a6a873dae899a6e44916af339be47f09456d4556c616e0",
+  "size_bytes": 179924,
+  "supplier_country": "PL",
+  "template": "t05"
+}

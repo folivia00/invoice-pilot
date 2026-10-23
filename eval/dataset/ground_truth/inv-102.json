@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-102.pdf",
+  "id": "inv-102",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "MLJLESHH100",
+    "buyer": {
+      "address": "Calle Mayor 50, 34594 Sevilla",
+      "name": "Meridian Labs S.A.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-08-12",
+    "iban": "ES5078567993971200065131",
+    "invoice_date": "2026-07-29",
+    "invoice_number": "R061544",
+    "line_items": [
+      {
+        "amount": "240.54",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "240.54"
+      },
+      {
+        "amount": "2546.40",
+        "description": "Data migration, hours",
+        "quantity": "30",
+        "unit_price": "84.88"
+      },
+      {
+        "amount": "935.32",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "233.83",
+        "unit_price": "4.00"
+      },
+      {
+        "amount": "1622.72",
+        "description": "Translation services, hours",
+        "quantity": "22",
+        "unit_price": "73.76"
+      },
+      {
+        "amount": "28.65",
+        "description": "Network cable Cat6, m",
+        "quantity": "57.3",
+        "unit_price": "0.50"
+      },
+      {
+        "amount": "192.28",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "192.28"
+      },
+      {
+        "amount": "923.08",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "67.28",
+        "unit_price": "13.72"
+      }
+    ],
+    "subtotal": "6488.99",
+    "supplier": {
+      "address": "Avenida del Mar 52, 93275 Vigo",
+      "name": "Stonegate Security S.A.",
+      "tax_id": null
+    },
+    "tax_amount": "1362.69",
+    "tax_rate": "21",
+    "total": "7851.68"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "hour",
+    "weight",
+    "hour",
+    "length",
+    "flat",
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "MLJLESHH100",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "12 August 2026",
+    "iban": "ES50 7856 7993 9712 0006 5131",
+    "invoice_date": "29 July 2026",
+    "invoice_number": "R061544",
+    "subtotal": "EUR 6,488.99",
+    "supplier_tax_id": "",
+    "tax_amount": "EUR 1,362.69",
+    "total": "EUR 7,851.68"
+  },
+  "sha256": "b2cb0cac3ee21d97ea62f08afd5d3650413190fb79d9e8d4a1f23c8b0564e9ae",
+  "size_bytes": 41622,
+  "supplier_country": "ES",
+  "template": "t02"
+}

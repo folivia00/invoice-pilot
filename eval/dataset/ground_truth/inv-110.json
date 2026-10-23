@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-110.pdf",
+  "id": "inv-110",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "710 Mill Lane, Sheffield EZ8 3CJ",
+      "name": "Quill and Compass LLP",
+      "tax_id": "GB248001368"
+    },
+    "currency": "GBP",
+    "due_date": null,
+    "iban": "GB19PGDY83459508328380",
+    "invoice_date": "2026-09-07",
+    "invoice_number": "2612-38270",
+    "line_items": [
+      {
+        "amount": "189.93",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "189.93"
+      },
+      {
+        "amount": "228.61",
+        "description": "Hosting plan, monthly",
+        "quantity": "1",
+        "unit_price": "228.61"
+      },
+      {
+        "amount": "1528.00",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1528.00"
+      },
+      {
+        "amount": "163.39",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "5.55",
+        "unit_price": "29.44"
+      }
+    ],
+    "subtotal": "2109.93",
+    "supplier": {
+      "address": "749 Foundry Close, Bristol UP6 3WV",
+      "name": "Blue Harbour Logistics Ltd",
+      "tax_id": "GB827941211"
+    },
+    "tax_amount": "421.99",
+    "tax_rate": "20",
+    "total": "2531.92"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "flat",
+    "flat",
+    "weight"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "GB248001368",
+    "currency": "GBP",
+    "due_date": "",
+    "iban": "GB19 PGDY 8345 9508 3283 80",
+    "invoice_date": "7 September 2026",
+    "invoice_number": "2612-38270",
+    "subtotal": "GBP 2,109.93",
+    "supplier_tax_id": "GB827941211",
+    "tax_amount": "GBP 421.99",
+    "total": "GBP 2,531.92"
+  },
+  "sha256": "4649ae04c0135b0b54dac9a80867cbd52866a6deb9e06ec1bf28c40061286d0d",
+  "size_bytes": 259326,
+  "supplier_country": "GB",
+  "template": "t10"
+}

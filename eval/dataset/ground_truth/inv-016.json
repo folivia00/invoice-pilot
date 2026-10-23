@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-016.pdf",
+  "id": "inv-016",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Gartenweg 74, 25164 Regensburg",
+      "name": "Theresa Neumann",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-21",
+    "iban": null,
+    "invoice_date": "2026-03-07",
+    "invoice_number": "RE-202674601",
+    "line_items": [
+      {
+        "amount": "202.74",
+        "description": "Kaffeebohnen, geröstet, kg",
+        "quantity": "5.88",
+        "unit_price": "34.48"
+      },
+      {
+        "amount": "464.00",
+        "description": "LED-Panel",
+        "quantity": "8",
+        "unit_price": "58.00"
+      }
+    ],
+    "subtotal": "666.74",
+    "supplier": {
+      "address": "Hauptstraße 29, 26856 Bamberg",
+      "name": "Birkenhain Design KG",
+      "tax_id": null
+    },
+    "tax_amount": "126.68",
+    "tax_rate": "19",
+    "total": "793.42"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "21.03.2026",
+    "iban": "",
+    "invoice_date": "07.03.2026",
+    "invoice_number": "RE-202674601",
+    "subtotal": "666,74 EUR",
+    "supplier_tax_id": "",
+    "tax_amount": "126,68 EUR",
+    "total": "793,42 EUR"
+  },
+  "sha256": "64b7d1079dff56484f67af47da611d7f0d961e9a3e508771fe98899f0ffb8aa2",
+  "size_bytes": 279295,
+  "supplier_country": "DE",
+  "template": "t06"
+}

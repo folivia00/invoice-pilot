@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-081.pdf",
+  "id": "inv-081",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "723 Commerce Boulevard, Portland 21643",
+      "name": "Lantern Hill Books Co.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-01-30",
+    "iban": null,
+    "invoice_date": "2026-01-16",
+    "invoice_number": "RE-202681341",
+    "line_items": [
+      {
+        "amount": "116.90",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "11.69",
+        "unit_price": "10.00"
+      },
+      {
+        "amount": "85.12",
+        "description": "Safety gloves, pair",
+        "quantity": "14",
+        "unit_price": "6.08"
+      },
+      {
+        "amount": "264.00",
+        "description": "Cleaning service",
+        "quantity": "1",
+        "unit_price": "264.00"
+      },
+      {
+        "amount": "5550.33",
+        "description": "Conference phone",
+        "quantity": "17",
+        "unit_price": "326.49"
+      },
+      {
+        "amount": "2263.54",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "2263.54"
+      },
+      {
+        "amount": "61.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "61.00"
+      },
+      {
+        "amount": "171.44",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "171.44"
+      }
+    ],
+    "subtotal": "8512.33",
+    "supplier": {
+      "address": "50 Harbor View Lane, Tucson 54555",
+      "name": "Summit Ridge Tools LLC",
+      "tax_id": "79-4130768"
+    },
+    "tax_amount": "532.02",
+    "tax_rate": "6.25",
+    "total": "9044.35"
+  },
+  "language": "en",
+  "line_units": [
+    "weight",
+    "piece",
+    "flat",
+    "piece",
+    "flat",
+    "flat",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "01/30/2026",
+    "iban": "",
+    "invoice_date": "01/16/2026",
+    "invoice_number": "RE-202681341",
+    "subtotal": "USD 8,512.33",
+    "supplier_tax_id": "79-4130768",
+    "tax_amount": "USD 532.02",
+    "total": "USD 9,044.35"
+  },
+  "sha256": "7232066eedfd93ab57cbd0183a1b7961af506125084d983a6bccae6aeb73e9fd",
+  "size_bytes": 315818,
+  "supplier_country": "US",
+  "template": "t01"
+}

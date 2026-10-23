@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-026.pdf",
+  "id": "inv-026",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Bahnhofstraße 30, 31854 Regensburg",
+      "name": "Fuchsbau Werbung GmbH & Co. KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-09-16",
+    "iban": "DE05541652095381205285",
+    "invoice_date": "2026-08-17",
+    "invoice_number": "RE-202648715",
+    "line_items": [
+      {
+        "amount": "1164.86",
+        "description": "Aluminiumprofil 40x40, m",
+        "quantity": "42.7",
+        "unit_price": "27.28"
+      },
+      {
+        "amount": "2383.25",
+        "description": "Sicherheitsaudit",
+        "quantity": "1",
+        "unit_price": "2383.25"
+      },
+      {
+        "amount": "259.18",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "44.61",
+        "unit_price": "5.81"
+      },
+      {
+        "amount": "138.40",
+        "description": "LED-Panel",
+        "quantity": "2",
+        "unit_price": "69.20"
+      },
+      {
+        "amount": "30.52",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "7",
+        "unit_price": "4.36"
+      },
+      {
+        "amount": "64.00",
+        "description": "Versandkartons, 50 Stück",
+        "quantity": "1",
+        "unit_price": "64.00"
+      }
+    ],
+    "subtotal": "4040.21",
+    "supplier": {
+      "address": "Industriestraße 164, 12126 Freiburg",
+      "name": "Kupferberg Metallbau KG",
+      "tax_id": "DE519405163"
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "4040.21"
+  },
+  "language": "de",
+  "line_units": [
+    "length",
+    "flat",
+    "weight",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-09-16",
+    "iban": "DE05 5416 5209 5381 2052 85",
+    "invoice_date": "2026-08-17",
+    "invoice_number": "RE-202648715",
+    "subtotal": "4.040,21 €",
+    "supplier_tax_id": "DE519405163",
+    "tax_amount": "0,00 €",
+    "total": "4.040,21 €"
+  },
+  "sha256": "0441f609ca37f839a9421e19f1f98595a2befb4ffec700b4c409fbfcc5394912",
+  "size_bytes": 42623,
+  "supplier_country": "DE",
+  "template": "t06"
+}

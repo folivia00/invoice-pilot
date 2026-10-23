@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "JPY",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-029.jpg",
+  "id": "inv-029",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Felix Keller",
+      "tax_id": null
+    },
+    "currency": "JPY",
+    "due_date": "2026-03-15",
+    "iban": null,
+    "invoice_date": "2026-03-01",
+    "invoice_number": "2602-17517",
+    "line_items": [
+      {
+        "amount": "69933",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "69933"
+      },
+      {
+        "amount": "262296",
+        "description": "Office chair, ergonomic",
+        "quantity": "6",
+        "unit_price": "43716"
+      },
+      {
+        "amount": "39968",
+        "description": "USB-C docking station",
+        "quantity": "4",
+        "unit_price": "9992"
+      }
+    ],
+    "subtotal": "372197",
+    "supplier": {
+      "address": "4-5-6 Minato, 721-5048 Sapporo",
+      "name": "Westmarch Textiles Co., Ltd.",
+      "tax_id": null
+    },
+    "tax_amount": "29776",
+    "tax_rate": "8",
+    "total": "401973"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "JPY",
+    "due_date": "2026-03-15",
+    "iban": "",
+    "invoice_date": "2026-03-01",
+    "invoice_number": "2602-17517",
+    "subtotal": "JPY 372,197",
+    "supplier_tax_id": "",
+    "tax_amount": "JPY 29,776",
+    "total": "JPY 401,973"
+  },
+  "sha256": "7ecef50a303b69e04e2305d55218606337d160bb195ca5acda96f60f5b4a6cdb",
+  "size_bytes": 249907,
+  "supplier_country": "JP",
+  "template": "t09"
+}

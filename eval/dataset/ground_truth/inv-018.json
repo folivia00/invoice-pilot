@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-018.jpg",
+  "id": "inv-018",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Am Graben 127, 9121 Steyr",
+      "name": "Hafenstadt Textil GmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": null,
+    "invoice_date": "2026-01-17",
+    "invoice_number": "R053987",
+    "line_items": [
+      {
+        "amount": "53.15",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "10.63",
+        "unit_price": "5.00"
+      },
+      {
+        "amount": "319.05",
+        "description": "Etikettendrucker",
+        "quantity": "5",
+        "unit_price": "63.81"
+      },
+      {
+        "amount": "1208.00",
+        "description": "Softwarelizenz (Jahr)",
+        "quantity": "1",
+        "unit_price": "1208.00"
+      },
+      {
+        "amount": "22.71",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "3",
+        "unit_price": "7.57"
+      },
+      {
+        "amount": "76.80",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "4.8",
+        "unit_price": "16.00"
+      }
+    ],
+    "subtotal": "1679.71",
+    "supplier": {
+      "address": "Ringstraße 113, 7558 Graz",
+      "name": "Brückenkopf Ingenieure GmbH",
+      "tax_id": "ATU48853348"
+    },
+    "tax_amount": "335.94",
+    "tax_rate": "20",
+    "total": "2015.65"
+  },
+  "language": "de",
+  "line_units": [
+    "weight",
+    "piece",
+    "flat",
+    "piece",
+    "length"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "",
+    "invoice_date": "2026-01-17",
+    "invoice_number": "R053987",
+    "subtotal": "1.679,71 €",
+    "supplier_tax_id": "ATU48853348",
+    "tax_amount": "335,94 €",
+    "total": "2.015,65 €"
+  },
+  "sha256": "8ecc1ce6a73065b770922628b1911b66c0fd0129f10b969d8e316bc2cffb8574",
+  "size_bytes": 144802,
+  "supplier_country": "AT",
+  "template": "t08"
+}

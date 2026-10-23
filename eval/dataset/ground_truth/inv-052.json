@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-052.pdf",
+  "id": "inv-052",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "IBBPDE2L100",
+    "buyer": {
+      "address": "Bahnhofstraße 12, 78448 Lüneburg",
+      "name": "Müller Bürotechnik AG",
+      "tax_id": "DE304181764"
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-04",
+    "iban": "DE36115428979092642069",
+    "invoice_date": "2025-11-04",
+    "invoice_number": "2504-83039",
+    "line_items": [
+      {
+        "amount": "229.53",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "8.6",
+        "unit_price": "26.69"
+      },
+      {
+        "amount": "27.81",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "27",
+        "unit_price": "1.03"
+      },
+      {
+        "amount": "3093.62",
+        "description": "Technischer Support (Std.)",
+        "quantity": "51.75",
+        "unit_price": "59.78"
+      },
+      {
+        "amount": "360.00",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "360.00"
+      },
+      {
+        "amount": "88.75",
+        "description": "Kabelmanagement-Set",
+        "quantity": "5",
+        "unit_price": "17.75"
+      },
+      {
+        "amount": "3865.28",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "8",
+        "unit_price": "483.16"
+      },
+      {
+        "amount": "301.56",
+        "description": "Funktastatur",
+        "quantity": "7",
+        "unit_price": "43.08"
+      },
+      {
+        "amount": "2698.38",
+        "description": "Konferenztelefon",
+        "quantity": "9",
+        "unit_price": "299.82"
+      }
+    ],
+    "subtotal": "10664.93",
+    "supplier": {
+      "address": "Am Mühlbach 68, 07367 Freiburg",
+      "name": "Rheintal Logistik e.K.",
+      "tax_id": "DE160518474"
+    },
+    "tax_amount": "2026.34",
+    "tax_rate": "19",
+    "total": "12691.27"
+  },
+  "language": "de",
+  "line_units": [
+    "length",
+    "length",
+    "hour",
+    "flat",
+    "piece",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "IBBPDE2L100",
+    "buyer_tax_id": "DE304181764",
+    "currency": "EUR",
+    "due_date": "04.12.2025",
+    "iban": "DE36 1154 2897 9092 6420 69",
+    "invoice_date": "04.11.2025",
+    "invoice_number": "2504-83039",
+    "subtotal": "10.664,93 €",
+    "supplier_tax_id": "DE160518474",
+    "tax_amount": "2.026,34 €",
+    "total": "12.691,27 €"
+  },
+  "sha256": "10cc3be1136e9ea02daeea9a977a514d47b32559ff4a57f279e3793179d4d42a",
+  "size_bytes": 337170,
+  "supplier_country": "DE",
+  "template": "t02"
+}

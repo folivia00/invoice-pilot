@@ -1,0 +1,98 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-008.pdf",
+  "id": "inv-008",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Ringstraße 81, 0707 Steyr",
+      "name": "Seeblick Fotografie KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-03-19",
+    "iban": null,
+    "invoice_date": "2026-03-12",
+    "invoice_number": "INV-2026-28908",
+    "line_items": [
+      {
+        "amount": "2628.90",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "5",
+        "unit_price": "525.78"
+      },
+      {
+        "amount": "1384.41",
+        "description": "Wartungsvertrag Q3",
+        "quantity": "1",
+        "unit_price": "1384.41"
+      },
+      {
+        "amount": "691.58",
+        "description": "Aluminiumprofil 40x40, m",
+        "quantity": "28.9",
+        "unit_price": "23.93"
+      },
+      {
+        "amount": "975.37",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "975.37"
+      },
+      {
+        "amount": "489.60",
+        "description": "Funktastatur",
+        "quantity": "9",
+        "unit_price": "54.40"
+      },
+      {
+        "amount": "203.56",
+        "description": "Datenmigration (Std.)",
+        "quantity": "2.75",
+        "unit_price": "74.02"
+      }
+    ],
+    "subtotal": "6373.42",
+    "supplier": {
+      "address": "Am Graben 50, 3098 Steyr",
+      "name": "Silberberg Beratung KG",
+      "tax_id": null
+    },
+    "tax_amount": "0.00",
+    "tax_rate": "0",
+    "total": "6373.42"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "flat",
+    "length",
+    "flat",
+    "piece",
+    "hour"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "19. März 2026",
+    "iban": "",
+    "invoice_date": "12. März 2026",
+    "invoice_number": "INV-2026-28908",
+    "subtotal": "6.373,42 €",
+    "supplier_tax_id": "",
+    "tax_amount": "0,00 €",
+    "total": "6.373,42 €"
+  },
+  "sha256": "825fd926006c925841897600e23e900f04cd4f0ac9dbdf39bdac08da7b120087",
+  "size_bytes": 45772,
+  "supplier_country": "AT",
+  "template": "t08"
+}

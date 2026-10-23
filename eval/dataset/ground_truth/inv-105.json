@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "GBP",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-105.jpg",
+  "id": "inv-105",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Tidewater Services Limited",
+      "tax_id": null
+    },
+    "currency": "GBP",
+    "due_date": "2025-11-06",
+    "iban": null,
+    "invoice_date": "2025-10-23",
+    "invoice_number": "R009115",
+    "line_items": [
+      {
+        "amount": "1290.46",
+        "description": "Translation services, hours",
+        "quantity": "28.25",
+        "unit_price": "45.68"
+      },
+      {
+        "amount": "30.00",
+        "description": "Steel bracket 40x40",
+        "quantity": "6",
+        "unit_price": "5.00"
+      },
+      {
+        "amount": "898.46",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "898.46"
+      }
+    ],
+    "subtotal": "2218.92",
+    "supplier": {
+      "address": "516 Foundry Close, Exeter VV4 0VY",
+      "name": "Quill and Compass Ltd",
+      "tax_id": "GB837930616"
+    },
+    "tax_amount": "443.78",
+    "tax_rate": "20",
+    "total": "2662.70"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "GBP",
+    "due_date": "6 November 2025",
+    "iban": "",
+    "invoice_date": "23 October 2025",
+    "invoice_number": "R009115",
+    "subtotal": "£2,218.92",
+    "supplier_tax_id": "GB837930616",
+    "tax_amount": "£443.78",
+    "total": "£2,662.70"
+  },
+  "sha256": "96028c933a3727df7bbb5b8123eea8004712aa28e6e5bc67254b1e634e280cb0",
+  "size_bytes": 164292,
+  "supplier_country": "GB",
+  "template": "t05"
+}

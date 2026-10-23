@@ -1,0 +1,86 @@
+{
+  "corruption": "missing_invoice_number",
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [
+    "missing_field"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-070.pdf",
+  "id": "inv-070",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Ringstraße 88, 8884 Wels",
+      "name": "Sonnenhang Gartenbau KG",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-20",
+    "iban": "AT434363902640856615",
+    "invoice_date": "2025-12-06",
+    "invoice_number": null,
+    "line_items": [
+      {
+        "amount": "1954.43",
+        "description": "Softwarelizenz (Jahr)",
+        "quantity": "1",
+        "unit_price": "1954.43"
+      },
+      {
+        "amount": "262.30",
+        "description": "LED-Panel",
+        "quantity": "5",
+        "unit_price": "52.46"
+      },
+      {
+        "amount": "7.42",
+        "description": "Schutzhandschuhe, Paar",
+        "quantity": "2",
+        "unit_price": "3.71"
+      },
+      {
+        "amount": "1369.06",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "7",
+        "unit_price": "195.58"
+      }
+    ],
+    "subtotal": "3593.21",
+    "supplier": {
+      "address": "Donaulände 47, 0930 Klagenfurt",
+      "name": "Lerchenfeld Bäckerei GmbH",
+      "tax_id": "ATU17445306"
+    },
+    "tax_amount": "359.32",
+    "tax_rate": "10",
+    "total": "3952.53"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-01-20",
+    "iban": "AT43 4363 9026 4085 6615",
+    "invoice_date": "2025-12-06",
+    "invoice_number": "",
+    "subtotal": "3.593,21 €",
+    "supplier_tax_id": "ATU17445306",
+    "tax_amount": "359,32 €",
+    "total": "3.952,53 €"
+  },
+  "sha256": "0d06a5c8ca0e2153ea1566361140f2ed89d38c37ed7059588929836c4d4a6275",
+  "size_bytes": 265176,
+  "supplier_country": "AT",
+  "template": "t10"
+}

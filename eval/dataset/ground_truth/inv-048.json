@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-048.jpg",
+  "id": "inv-048",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "MUFSATZZ100",
+    "buyer": {
+      "address": "Donaulände 115, 3101 Wels",
+      "name": "Donau Druckerei GmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-05-25",
+    "iban": "AT609936515054237651",
+    "invoice_date": "2026-05-11",
+    "invoice_number": "INV-2026-24140",
+    "line_items": [
+      {
+        "amount": "1945.00",
+        "description": "Sicherheitsaudit",
+        "quantity": "1",
+        "unit_price": "1945.00"
+      },
+      {
+        "amount": "873.06",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "873.06"
+      },
+      {
+        "amount": "63.25",
+        "description": "Technischer Support (Std.)",
+        "quantity": "1.25",
+        "unit_price": "50.60"
+      },
+      {
+        "amount": "241.58",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "2",
+        "unit_price": "120.79"
+      }
+    ],
+    "subtotal": "3122.89",
+    "supplier": {
+      "address": "Ringstraße 50, 3071 Graz",
+      "name": "Felsenkeller Getränke KG",
+      "tax_id": null
+    },
+    "tax_amount": "624.58",
+    "tax_rate": "20",
+    "total": "3747.47"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "flat",
+    "hour",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "MUFSATZZ100",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "25.05.2026",
+    "iban": "AT60 9936 5150 5423 7651",
+    "invoice_date": "11.05.2026",
+    "invoice_number": "INV-2026-24140",
+    "subtotal": "3.122,89 €",
+    "supplier_tax_id": "",
+    "tax_amount": "624,58 €",
+    "total": "3.747,47 €"
+  },
+  "sha256": "721b8288726c00fabeeebd7e51ff0cf21fa3d9e98dbe8eb2bf215341f42e241f",
+  "size_bytes": 204685,
+  "supplier_country": "AT",
+  "template": "t08"
+}

@@ -1,0 +1,65 @@
+{
+  "corruption": "due_before_invoice_date",
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [
+    "due_before_invoice_date"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-083.jpg",
+  "id": "inv-083",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Daniel Rowe",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-08-13",
+    "iban": null,
+    "invoice_date": "2026-08-21",
+    "invoice_number": "R037659",
+    "line_items": [
+      {
+        "amount": "374.38",
+        "description": "Photo editing, hours",
+        "quantity": "5.25",
+        "unit_price": "71.31"
+      }
+    ],
+    "subtotal": "374.38",
+    "supplier": {
+      "address": "501 Industrial Parkway, Denver 21547",
+      "name": "Oakmont Training LLC",
+      "tax_id": null
+    },
+    "tax_amount": "33.23",
+    "tax_rate": "8.875",
+    "total": "407.61"
+  },
+  "language": "en",
+  "line_units": [
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "08/13/2026",
+    "iban": "",
+    "invoice_date": "08/21/2026",
+    "invoice_number": "R037659",
+    "subtotal": "$374.38",
+    "supplier_tax_id": "",
+    "tax_amount": "$33.23",
+    "total": "$407.61"
+  },
+  "sha256": "c4366f38644b59b5c1d47f875ae909fe436858aa67d667bf5ad623bccd57950b",
+  "size_bytes": 187546,
+  "supplier_country": "US",
+  "template": "t03"
+}

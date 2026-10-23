@@ -1,0 +1,84 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-116.pdf",
+  "id": "inv-116",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "SVFEFRFFB01",
+    "buyer": {
+      "address": "Place de la Gare 67, 72865 Dijon",
+      "name": "Mara Ellis",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-10-26",
+    "iban": "FR569669359905DJ10LX2VNUJ39",
+    "invoice_date": "2025-10-12",
+    "invoice_number": "2504-78052",
+    "line_items": [
+      {
+        "amount": "3529.66",
+        "description": "Data migration, hours",
+        "quantity": "36.25",
+        "unit_price": "97.37"
+      },
+      {
+        "amount": "4711.15",
+        "description": "Aluminium profile 40x40, m",
+        "quantity": "159.70",
+        "unit_price": "29.50"
+      },
+      {
+        "amount": "405.03",
+        "description": "Copper wire 2.5 mm, kg",
+        "quantity": "17.61",
+        "unit_price": "23.00"
+      },
+      {
+        "amount": "88.46",
+        "description": "Translation services, hours",
+        "quantity": "1.75",
+        "unit_price": "50.55"
+      }
+    ],
+    "subtotal": "8734.30",
+    "supplier": {
+      "address": "Chemin des Vignes 8, 45848 Toulouse",
+      "name": "Northwind Supplies SAS",
+      "tax_id": "FR42139794094"
+    },
+    "tax_amount": "480.39",
+    "tax_rate": "5.5",
+    "total": "9214.69"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "length",
+    "weight",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "SVFEFRFFB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "26.10.2025",
+    "iban": "FR56 9669 3599 05DJ 10LX 2VNU J39",
+    "invoice_date": "12.10.2025",
+    "invoice_number": "2504-78052",
+    "subtotal": "EUR 8,734.30",
+    "supplier_tax_id": "FR42139794094",
+    "tax_amount": "EUR 480.39",
+    "total": "EUR 9,214.69"
+  },
+  "sha256": "31d7113a0bcfe46d9272bbd93dc2f5545ef7fd642a40a1cfb48e54e6be8a9282",
+  "size_bytes": 41478,
+  "supplier_country": "FR",
+  "template": "t06"
+}

@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-071.jpg",
+  "id": "inv-071",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "MXCHITXX200",
+    "buyer": {
+      "address": "Via Lunga 98, 93549 Verona",
+      "name": "Copperfield Printing S.p.A.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-04-10",
+    "iban": "IT29O6267674861L8B7C1ITXSXC",
+    "invoice_date": "2026-02-24",
+    "invoice_number": "2605-19725",
+    "line_items": [
+      {
+        "amount": "26.04",
+        "description": "Copy paper A4, 500 sheets",
+        "quantity": "6",
+        "unit_price": "4.34"
+      },
+      {
+        "amount": "1395.00",
+        "description": "Translation services, hours",
+        "quantity": "23.25",
+        "unit_price": "60.00"
+      },
+      {
+        "amount": "127.05",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "5",
+        "unit_price": "25.41"
+      },
+      {
+        "amount": "355.25",
+        "description": "Technical support, hours",
+        "quantity": "7.25",
+        "unit_price": "49.00"
+      },
+      {
+        "amount": "1674.14",
+        "description": "Cable management kit",
+        "quantity": "47",
+        "unit_price": "35.62"
+      },
+      {
+        "amount": "497.40",
+        "description": "Packaging boxes, set of 50",
+        "quantity": "10",
+        "unit_price": "49.74"
+      },
+      {
+        "amount": "2209.98",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "2209.98"
+      }
+    ],
+    "subtotal": "6284.86",
+    "supplier": {
+      "address": "Via Roma 161, 08026 Verona",
+      "name": "Clearview Optics S.r.l.",
+      "tax_id": null
+    },
+    "tax_amount": "1382.67",
+    "tax_rate": "22",
+    "total": "7667.53"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "weight",
+    "hour",
+    "piece",
+    "piece",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "MXCHITXX200",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-04-10",
+    "iban": "IT29 O626 7674 861L 8B7C 1ITX SXC",
+    "invoice_date": "2026-02-24",
+    "invoice_number": "2605-19725",
+    "subtotal": "EUR 6,284.86",
+    "supplier_tax_id": "",
+    "tax_amount": "EUR 1,382.67",
+    "total": "EUR 7,667.53"
+  },
+  "sha256": "2dacef096dc6816371b105adbb4e71c75ec9a309ab42a47db12eb9a43a14edaf",
+  "size_bytes": 116639,
+  "supplier_country": "IT",
+  "template": "t01"
+}

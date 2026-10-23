@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-053.jpg",
+  "id": "inv-053",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "DIIMITXX100",
+    "buyer": {
+      "address": null,
+      "name": "Brightwater Analytics S.p.A.",
+      "tax_id": "IT78325576650"
+    },
+    "currency": "EUR",
+    "due_date": "2026-04-11",
+    "iban": "IT48M0792657130M04A7JLVUVAA",
+    "invoice_date": "2026-04-04",
+    "invoice_number": "R041309",
+    "line_items": [
+      {
+        "amount": "1543.02",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "1543.02"
+      }
+    ],
+    "subtotal": "1543.02",
+    "supplier": {
+      "address": "Corso Garibaldi 67, 34857 Pisa",
+      "name": "Westmarch Textiles S.r.l.",
+      "tax_id": "IT08747454402"
+    },
+    "tax_amount": "339.46",
+    "tax_rate": "22",
+    "total": "1882.48"
+  },
+  "language": "en",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "DIIMITXX100",
+    "buyer_tax_id": "IT78325576650",
+    "currency": "EUR",
+    "due_date": "11 April 2026",
+    "iban": "IT48 M079 2657 130M 04A7 JLVU VAA",
+    "invoice_date": "4 April 2026",
+    "invoice_number": "R041309",
+    "subtotal": "EUR 1,543.02",
+    "supplier_tax_id": "IT08747454402",
+    "tax_amount": "EUR 339.46",
+    "total": "EUR 1,882.48"
+  },
+  "sha256": "286750677c2aba45bc5b150c3591f9f95146043a87253e24d193b5a5bee0467e",
+  "size_bytes": 120463,
+  "supplier_country": "IT",
+  "template": "t03"
+}

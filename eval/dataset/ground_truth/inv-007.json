@@ -1,0 +1,93 @@
+{
+  "corruption": "total_mismatch",
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [
+    "total_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-007.pdf",
+  "id": "inv-007",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "522 Harbor View Lane, Tucson 42451",
+      "name": "Lantern Hill Books Inc.",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-01-10",
+    "iban": null,
+    "invoice_date": "2026-01-03",
+    "invoice_number": "RE-202694453",
+    "line_items": [
+      {
+        "amount": "46.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "46.00"
+      },
+      {
+        "amount": "190.12",
+        "description": "Printer toner cartridge",
+        "quantity": "4",
+        "unit_price": "47.53"
+      },
+      {
+        "amount": "276.00",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "46",
+        "unit_price": "6.00"
+      },
+      {
+        "amount": "1989.34",
+        "description": "Onsite installation, hours",
+        "quantity": "34",
+        "unit_price": "58.51"
+      },
+      {
+        "amount": "1491.12",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "1491.12"
+      }
+    ],
+    "subtotal": "3992.58",
+    "supplier": {
+      "address": "571 Harbor View Lane, Denver 93060",
+      "name": "Greywater Plumbing LLC",
+      "tax_id": "38-6726486"
+    },
+    "tax_amount": "249.54",
+    "tax_rate": "6.25",
+    "total": "4241.62"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "piece",
+    "weight",
+    "hour",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "10 January 2026",
+    "iban": "",
+    "invoice_date": "3 January 2026",
+    "invoice_number": "RE-202694453",
+    "subtotal": "$3,992.58",
+    "supplier_tax_id": "38-6726486",
+    "tax_amount": "$249.54",
+    "total": "$4,241.62"
+  },
+  "sha256": "1d0c65defa04817752e5d933e78ece3e76012f496676b13c38c3c15d7af0e09d",
+  "size_bytes": 41407,
+  "supplier_country": "US",
+  "template": "t07"
+}

@@ -1,0 +1,93 @@
+{
+  "corruption": "subtotal_mismatch",
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [
+    "subtotal_mismatch"
+  ],
+  "expected_status": "needs_review",
+  "file": "docs/inv-067.pdf",
+  "id": "inv-067",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Grace Lowry",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2026-05-13",
+    "iban": null,
+    "invoice_date": "2026-04-13",
+    "invoice_number": "INV-2026-15126",
+    "line_items": [
+      {
+        "amount": "51.78",
+        "description": "Vinyl banner print, m",
+        "quantity": "1.98",
+        "unit_price": "26.15"
+      },
+      {
+        "amount": "4393.72",
+        "description": "Consulting, hours",
+        "quantity": "28.25",
+        "unit_price": "155.53"
+      },
+      {
+        "amount": "160.84",
+        "description": "Coffee beans, roasted, kg",
+        "quantity": "3.87",
+        "unit_price": "41.56"
+      },
+      {
+        "amount": "177.00",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "177.00"
+      },
+      {
+        "amount": "1329.90",
+        "description": "USB-C docking station",
+        "quantity": "10",
+        "unit_price": "132.99"
+      }
+    ],
+    "subtotal": "6113.23",
+    "supplier": {
+      "address": "471 Elm Court, Austin 32011",
+      "name": "Summit Ridge Tools Corp.",
+      "tax_id": "91-6453044"
+    },
+    "tax_amount": "382.08",
+    "tax_rate": "6.25",
+    "total": "6495.32"
+  },
+  "language": "en",
+  "line_units": [
+    "length",
+    "hour",
+    "weight",
+    "flat",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "13 May 2026",
+    "iban": "",
+    "invoice_date": "13 April 2026",
+    "invoice_number": "INV-2026-15126",
+    "subtotal": "USD 6,113.23",
+    "supplier_tax_id": "91-6453044",
+    "tax_amount": "USD 382.08",
+    "total": "USD 6,495.32"
+  },
+  "sha256": "64c68945320e0544777d5bd8d438854fc488b14143fced97f520958ba4d54538",
+  "size_bytes": 41396,
+  "supplier_country": "US",
+  "template": "t07"
+}

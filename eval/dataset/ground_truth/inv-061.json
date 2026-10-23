@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-061.pdf",
+  "id": "inv-061",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Place de la Gare 158, 39255 Lyon",
+      "name": "Ironbridge Engineering SARL",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-30",
+    "iban": null,
+    "invoice_date": "2025-12-31",
+    "invoice_number": "2505-14898",
+    "line_items": [
+      {
+        "amount": "105.69",
+        "description": "Cable management kit",
+        "quantity": "3",
+        "unit_price": "35.23"
+      },
+      {
+        "amount": "1003.68",
+        "description": "Technical support, hours",
+        "quantity": "18",
+        "unit_price": "55.76"
+      },
+      {
+        "amount": "84.92",
+        "description": "Printer toner cartridge",
+        "quantity": "1",
+        "unit_price": "84.92"
+      },
+      {
+        "amount": "1393.20",
+        "description": "Network switch 24-port",
+        "quantity": "4",
+        "unit_price": "348.30"
+      },
+      {
+        "amount": "711.22",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "711.22"
+      },
+      {
+        "amount": "325.00",
+        "description": "Wireless keyboard",
+        "quantity": "5",
+        "unit_price": "65.00"
+      },
+      {
+        "amount": "153.87",
+        "description": "Catering, lunch for 12",
+        "quantity": "1",
+        "unit_price": "153.87"
+      }
+    ],
+    "subtotal": "3777.58",
+    "supplier": {
+      "address": "Rue du Moulin 166, 83749 Lille",
+      "name": "Granite Peak Consulting SAS",
+      "tax_id": "FR65122729874"
+    },
+    "tax_amount": "755.52",
+    "tax_rate": "20",
+    "total": "4533.10"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "hour",
+    "piece",
+    "piece",
+    "flat",
+    "piece",
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 2,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-01-30",
+    "iban": "",
+    "invoice_date": "2025-12-31",
+    "invoice_number": "2505-14898",
+    "subtotal": "EUR 3,777.58",
+    "supplier_tax_id": "FR65122729874",
+    "tax_amount": "EUR 755.52",
+    "total": "EUR 4,533.10"
+  },
+  "sha256": "f86e832d3aa33ad1f3fea275c5d617014431732803a0f17066f862ad6925e318",
+  "size_bytes": 42617,
+  "supplier_country": "FR",
+  "template": "t01"
+}

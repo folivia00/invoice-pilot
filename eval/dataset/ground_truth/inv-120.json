@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-120.pdf",
+  "id": "inv-120",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Molenweg 26, 4122 Mons",
+      "name": "Cobalt Sky Marketing NV",
+      "tax_id": "BE0761202424"
+    },
+    "currency": "EUR",
+    "due_date": "2026-09-28",
+    "iban": "NL66AGGV9383852148",
+    "invoice_date": "2026-08-29",
+    "invoice_number": "RE-202683687",
+    "line_items": [
+      {
+        "amount": "2706.04",
+        "description": "Data migration, hours",
+        "quantity": "25.25",
+        "unit_price": "107.17"
+      },
+      {
+        "amount": "292.67",
+        "description": "Printer toner cartridge",
+        "quantity": "7",
+        "unit_price": "41.81"
+      },
+      {
+        "amount": "1480.00",
+        "description": "Network switch 24-port",
+        "quantity": "4",
+        "unit_price": "370.00"
+      }
+    ],
+    "subtotal": "4478.71",
+    "supplier": {
+      "address": "Havenkade 75, 0741 SV Utrecht",
+      "name": "Silverline Components B.V.",
+      "tax_id": "NL573753384B84"
+    },
+    "tax_amount": "940.53",
+    "tax_rate": "21",
+    "total": "5419.24"
+  },
+  "language": "en",
+  "line_units": [
+    "hour",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "BE0761202424",
+    "currency": "EUR",
+    "due_date": "28 September 2026",
+    "iban": "NL66 AGGV 9383 8521 48",
+    "invoice_date": "29 August 2026",
+    "invoice_number": "RE-202683687",
+    "subtotal": "€4,478.71",
+    "supplier_tax_id": "NL573753384B84",
+    "tax_amount": "€940.53",
+    "total": "€5,419.24"
+  },
+  "sha256": "7a6a8a7c530f0e826159f68580a734d4fab6b5b43c2847f61e2fe5e939f6a4a2",
+  "size_bytes": 45068,
+  "supplier_country": "NL",
+  "template": "t10"
+}

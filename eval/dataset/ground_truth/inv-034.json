@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-034.pdf",
+  "id": "inv-034",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "OAJBAT2LB01",
+    "buyer": {
+      "address": "Seestrasse 74, 8312 Luzern",
+      "name": "Ingrid Maier",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-02-28",
+    "iban": "AT365212702125098281",
+    "invoice_date": "2026-01-29",
+    "invoice_number": "INV-2026-6217",
+    "line_items": [
+      {
+        "amount": "1724.00",
+        "description": "Sicherheitsaudit",
+        "quantity": "1",
+        "unit_price": "1724.00"
+      },
+      {
+        "amount": "235.67",
+        "description": "Aluminiumprofil 40x40, m",
+        "quantity": "17.8",
+        "unit_price": "13.24"
+      },
+      {
+        "amount": "1700.75",
+        "description": "Bürostuhl, ergonomisch",
+        "quantity": "5",
+        "unit_price": "340.15"
+      },
+      {
+        "amount": "1444.50",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "27",
+        "unit_price": "53.50"
+      },
+      {
+        "amount": "14.15",
+        "description": "Netzwerkkabel Cat6, m",
+        "quantity": "14.15",
+        "unit_price": "1.00"
+      },
+      {
+        "amount": "2444.00",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "2444.00"
+      },
+      {
+        "amount": "1793.53",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "43",
+        "unit_price": "41.71"
+      }
+    ],
+    "subtotal": "9356.60",
+    "supplier": {
+      "address": "Mariahilfer Gasse 21, 7455 Innsbruck",
+      "name": "Wiesengrund Labor GmbH",
+      "tax_id": "ATU36700981"
+    },
+    "tax_amount": "1871.32",
+    "tax_rate": "20",
+    "total": "11227.92"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "length",
+    "piece",
+    "hour",
+    "length",
+    "flat",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 2,
+  "printed": {
+    "bic": "OAJBAT2LB01",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "28.02.2026",
+    "iban": "AT36 5212 7021 2509 8281",
+    "invoice_date": "29.01.2026",
+    "invoice_number": "INV-2026-6217",
+    "subtotal": "9.356,60 €",
+    "supplier_tax_id": "ATU36700981",
+    "tax_amount": "1.871,32 €",
+    "total": "11.227,92 €"
+  },
+  "sha256": "fc27fcfce7b73cac2c70f73fb0c017b14e4d04581c7f5a713a418a0f4c7c309b",
+  "size_bytes": 582111,
+  "supplier_country": "AT",
+  "template": "t04"
+}

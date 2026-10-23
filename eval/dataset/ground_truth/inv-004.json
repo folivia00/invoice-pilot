@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-004.pdf",
+  "id": "inv-004",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Florian Ullmann",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-04-01",
+    "iban": null,
+    "invoice_date": "2026-03-18",
+    "invoice_number": "2026-086909",
+    "line_items": [
+      {
+        "amount": "219.60",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "219.60"
+      }
+    ],
+    "subtotal": "219.60",
+    "supplier": {
+      "address": "Industriestraße 68, 46438 Freiburg",
+      "name": "Kupferberg Metallbau KG",
+      "tax_id": "DE810738305"
+    },
+    "tax_amount": "41.72",
+    "tax_rate": "19",
+    "total": "261.32"
+  },
+  "language": "de",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-04-01",
+    "iban": "",
+    "invoice_date": "2026-03-18",
+    "invoice_number": "2026-086909",
+    "subtotal": "219,60 €",
+    "supplier_tax_id": "DE810738305",
+    "tax_amount": "41,72 €",
+    "total": "261,32 €"
+  },
+  "sha256": "5b57500a7e54f61335710efbed7d0ec090225cf74ef8dce9c38281453d9e0c85",
+  "size_bytes": 245105,
+  "supplier_country": "DE",
+  "template": "t04"
+}

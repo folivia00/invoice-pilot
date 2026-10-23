@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_de",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-099.pdf",
+  "id": "inv-099",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Lindenstraße 10, 85882 Bamberg",
+      "name": "Steinbach Verpackung GmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-06-03",
+    "iban": "DE64618861480420272583",
+    "invoice_date": "2026-05-20",
+    "invoice_number": "RE-202603180",
+    "line_items": [
+      {
+        "amount": "143.36",
+        "description": "Laptopständer, Aluminium",
+        "quantity": "7",
+        "unit_price": "20.48"
+      },
+      {
+        "amount": "1302.06",
+        "description": "Sicherheitsaudit",
+        "quantity": "1",
+        "unit_price": "1302.06"
+      },
+      {
+        "amount": "884.11",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "884.11"
+      }
+    ],
+    "subtotal": "2329.53",
+    "supplier": {
+      "address": "Industriestraße 173, 55302 Bamberg",
+      "name": "Rheintal Logistik KG",
+      "tax_id": "DE513116910"
+    },
+    "tax_amount": "442.61",
+    "tax_rate": "19",
+    "total": "2772.14"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "flat",
+    "flat"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "3. Juni 2026",
+    "iban": "DE64 6188 6148 0420 2725 83",
+    "invoice_date": "20. Mai 2026",
+    "invoice_number": "RE-202603180",
+    "subtotal": "2.329,53 €",
+    "supplier_tax_id": "DE513116910",
+    "tax_amount": "442,61 €",
+    "total": "2.772,14 €"
+  },
+  "sha256": "524598903c95064b2c8b2a7eb8e05ee36c3d2962c34d48257c78d545adf7738b",
+  "size_bytes": 42394,
+  "supplier_country": "DE",
+  "template": "t09"
+}

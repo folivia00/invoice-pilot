@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-088.jpg",
+  "id": "inv-088",
+  "input_type": "photo",
+  "invoice": {
+    "bic": "AGCFNLZZ100",
+    "buyer": {
+      "address": "Boulevard Saint-Martin 139, 96825 Rennes",
+      "name": "Ironbridge Engineering SARL",
+      "tax_id": "FR71548006636"
+    },
+    "currency": "EUR",
+    "due_date": "2026-07-10",
+    "iban": "NL45CTVT4418167115",
+    "invoice_date": "2026-06-10",
+    "invoice_number": "RE-202690302",
+    "line_items": [
+      {
+        "amount": "441.00",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "441.00"
+      }
+    ],
+    "subtotal": "441.00",
+    "supplier": {
+      "address": "Havenkade 167, 3175 ET Leiden",
+      "name": "Kestrel Aviation Parts V.O.F.",
+      "tax_id": "NL888021937B34"
+    },
+    "tax_amount": "92.61",
+    "tax_rate": "21",
+    "total": "533.61"
+  },
+  "language": "en",
+  "line_units": [
+    "flat"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "AGCFNLZZ100",
+    "buyer_tax_id": "FR71548006636",
+    "currency": "EUR",
+    "due_date": "10 July 2026",
+    "iban": "NL45 CTVT 4418 1671 15",
+    "invoice_date": "10 June 2026",
+    "invoice_number": "RE-202690302",
+    "subtotal": "EUR 441.00",
+    "supplier_tax_id": "NL888021937B34",
+    "tax_amount": "EUR 92.61",
+    "total": "EUR 533.61"
+  },
+  "sha256": "a9974e96f0e385b74be18f8062afcd9375c43b5b8df2ec5e7841306748ef3aaf",
+  "size_bytes": 117514,
+  "supplier_country": "NL",
+  "template": "t08"
+}

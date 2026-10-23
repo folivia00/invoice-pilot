@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-044.pdf",
+  "id": "inv-044",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "YJPXDEXXXXX",
+    "buyer": {
+      "address": "Birkenallee 63, 60866 Münster",
+      "name": "Bergmann Elektrotechnik e.K.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-10",
+    "iban": "DE78184937505324171172",
+    "invoice_date": "2025-11-26",
+    "invoice_number": "2510-79701",
+    "line_items": [
+      {
+        "amount": "662.63",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "662.63"
+      },
+      {
+        "amount": "273.00",
+        "description": "Catering, Mittagessen für 12 Personen",
+        "quantity": "1",
+        "unit_price": "273.00"
+      },
+      {
+        "amount": "705.28",
+        "description": "Kaffeebohnen, geröstet, kg",
+        "quantity": "44.08",
+        "unit_price": "16.00"
+      }
+    ],
+    "subtotal": "1640.91",
+    "supplier": {
+      "address": "Am Mühlbach 35, 13932 Göttingen",
+      "name": "Lerchenfeld Bäckerei KG",
+      "tax_id": null
+    },
+    "tax_amount": "311.77",
+    "tax_rate": "19",
+    "total": "1952.68"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "flat",
+    "weight"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "YJPXDEXXXXX",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "10.12.2025",
+    "iban": "DE78 1849 3750 5324 1711 72",
+    "invoice_date": "26.11.2025",
+    "invoice_number": "2510-79701",
+    "subtotal": "1.640,91 €",
+    "supplier_tax_id": "",
+    "tax_amount": "311,77 €",
+    "total": "1.952,68 €"
+  },
+  "sha256": "904de8df495a427db2a2d4bf0bf7f5cd7828a57d198227fb1e5fe56c7effd942",
+  "size_bytes": 42516,
+  "supplier_country": "DE",
+  "template": "t04"
+}

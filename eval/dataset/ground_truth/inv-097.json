@@ -1,0 +1,105 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-097.jpg",
+  "id": "inv-097",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "ul. Polna 73, 33-829 Lodz",
+      "name": "Grace Rowe",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-10-03",
+    "iban": "PL83380892928121581747025574",
+    "invoice_date": "2026-09-03",
+    "invoice_number": "R094730",
+    "line_items": [
+      {
+        "amount": "20.00",
+        "description": "Courier delivery",
+        "quantity": "1",
+        "unit_price": "20.00"
+      },
+      {
+        "amount": "2232.39",
+        "description": "Security audit",
+        "quantity": "1",
+        "unit_price": "2232.39"
+      },
+      {
+        "amount": "44.00",
+        "description": "Laptop stand, aluminium",
+        "quantity": "1",
+        "unit_price": "44.00"
+      },
+      {
+        "amount": "96.62",
+        "description": "Steel sheet 2 mm, kg",
+        "quantity": "24.4",
+        "unit_price": "3.96"
+      },
+      {
+        "amount": "1113.48",
+        "description": "Label printer",
+        "quantity": "6",
+        "unit_price": "185.58"
+      },
+      {
+        "amount": "66.50",
+        "description": "Cable management kit",
+        "quantity": "5",
+        "unit_price": "13.30"
+      },
+      {
+        "amount": "487.66",
+        "description": "Data migration, hours",
+        "quantity": "5.75",
+        "unit_price": "84.81"
+      }
+    ],
+    "subtotal": "4060.65",
+    "supplier": {
+      "address": "ul. Polna 68, 34-505 Lodz",
+      "name": "Tidewater Services S.A.",
+      "tax_id": null
+    },
+    "tax_amount": "933.95",
+    "tax_rate": "23",
+    "total": "4994.60"
+  },
+  "language": "en",
+  "line_units": [
+    "flat",
+    "flat",
+    "piece",
+    "weight",
+    "piece",
+    "piece",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "3 October 2026",
+    "iban": "PL83 3808 9292 8121 5817 4702 5574",
+    "invoice_date": "3 September 2026",
+    "invoice_number": "R094730",
+    "subtotal": "EUR 4,060.65",
+    "supplier_tax_id": "",
+    "tax_amount": "EUR 933.95",
+    "total": "EUR 4,994.60"
+  },
+  "sha256": "07d7c56ac0677c35e95ca9921e2d8730d26fa961813e37ff8a7c07b1b0b90ae9",
+  "size_bytes": 93574,
+  "supplier_country": "PL",
+  "template": "t07"
+}

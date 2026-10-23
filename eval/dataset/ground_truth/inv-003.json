@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-003.pdf",
+  "id": "inv-003",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": "FRMQFRHHXXX",
+    "buyer": {
+      "address": "Viale dei Pini 69, 43626 Trieste",
+      "name": "Lantern Hill Books S.p.A.",
+      "tax_id": "IT76497971963"
+    },
+    "currency": "EUR",
+    "due_date": "2026-10-15",
+    "iban": "FR327993656548CAAAC0ELHEL45",
+    "invoice_date": "2026-10-01",
+    "invoice_number": "RE-202634630",
+    "line_items": [
+      {
+        "amount": "41.46",
+        "description": "Network cable Cat6, m",
+        "quantity": "15.47",
+        "unit_price": "2.68"
+      },
+      {
+        "amount": "435.72",
+        "description": "Maintenance contract Q3",
+        "quantity": "1",
+        "unit_price": "435.72"
+      },
+      {
+        "amount": "1194.77",
+        "description": "Training session (half day)",
+        "quantity": "1",
+        "unit_price": "1194.77"
+      },
+      {
+        "amount": "1936.75",
+        "description": "Project management, hours",
+        "quantity": "15.25",
+        "unit_price": "127.00"
+      },
+      {
+        "amount": "249.87",
+        "description": "Label printer",
+        "quantity": "3",
+        "unit_price": "83.29"
+      },
+      {
+        "amount": "263.16",
+        "description": "Safety gloves, pair",
+        "quantity": "18",
+        "unit_price": "14.62"
+      },
+      {
+        "amount": "609.00",
+        "description": "Consulting, hours",
+        "quantity": "7",
+        "unit_price": "87.00"
+      },
+      {
+        "amount": "3393.00",
+        "description": "Technical support, hours",
+        "quantity": "39",
+        "unit_price": "87.00"
+      }
+    ],
+    "subtotal": "8123.73",
+    "supplier": {
+      "address": "Avenue du Port 46, 14572 Lyon",
+      "name": "Silverline Components SARL",
+      "tax_id": "FR50283701584"
+    },
+    "tax_amount": "812.37",
+    "tax_rate": "10",
+    "total": "8936.10"
+  },
+  "language": "en",
+  "line_units": [
+    "length",
+    "flat",
+    "flat",
+    "hour",
+    "piece",
+    "piece",
+    "hour",
+    "hour"
+  ],
+  "number_format": "en",
+  "pages": 2,
+  "printed": {
+    "bic": "FRMQFRHHXXX",
+    "buyer_tax_id": "IT76497971963",
+    "currency": "EUR",
+    "due_date": "15.10.2026",
+    "iban": "FR32 7993 6565 48CA AAC0 ELHE L45",
+    "invoice_date": "01.10.2026",
+    "invoice_number": "RE-202634630",
+    "subtotal": "EUR 8,123.73",
+    "supplier_tax_id": "FR50283701584",
+    "tax_amount": "EUR 812.37",
+    "total": "EUR 8,936.10"
+  },
+  "sha256": "e67c2b7452623454dcc4b7bbed9131c0a8636c0ce3b5804471b31299c7ce259e",
+  "size_bytes": 397465,
+  "supplier_country": "FR",
+  "template": "t03"
+}

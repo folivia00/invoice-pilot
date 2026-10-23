@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-089.jpg",
+  "id": "inv-089",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Wiesengrund Labor GmbH",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-01-04",
+    "iban": null,
+    "invoice_date": "2025-12-05",
+    "invoice_number": "2025-003749",
+    "line_items": [
+      {
+        "amount": "251.32",
+        "description": "Versandkartons, 50 Stück",
+        "quantity": "4",
+        "unit_price": "62.83"
+      },
+      {
+        "amount": "1613.94",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "27.75",
+        "unit_price": "58.16"
+      },
+      {
+        "amount": "803.06",
+        "description": "Wartungsvertrag Q3",
+        "quantity": "1",
+        "unit_price": "803.06"
+      },
+      {
+        "amount": "601.20",
+        "description": "Stahlblech 2 mm, kg",
+        "quantity": "150.3",
+        "unit_price": "4.00"
+      },
+      {
+        "amount": "41.57",
+        "description": "Werbebanner, Druck, m",
+        "quantity": "1.40",
+        "unit_price": "29.69"
+      },
+      {
+        "amount": "89.68",
+        "description": "Hosting-Paket, monatlich",
+        "quantity": "1",
+        "unit_price": "89.68"
+      },
+      {
+        "amount": "2357.09",
+        "description": "Sicherheitsaudit",
+        "quantity": "1",
+        "unit_price": "2357.09"
+      },
+      {
+        "amount": "176.28",
+        "description": "Kopierpapier A4, 500 Blatt",
+        "quantity": "26",
+        "unit_price": "6.78"
+      }
+    ],
+    "subtotal": "5934.14",
+    "supplier": {
+      "address": "Schillerplatz 133, 16225 Regensburg",
+      "name": "Mondsee Optik GmbH & Co. KG",
+      "tax_id": "DE723033028"
+    },
+    "tax_amount": "1127.49",
+    "tax_rate": "19",
+    "total": "7061.63"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "hour",
+    "flat",
+    "weight",
+    "length",
+    "flat",
+    "flat",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "04.01.2026",
+    "iban": "",
+    "invoice_date": "05.12.2025",
+    "invoice_number": "2025-003749",
+    "subtotal": "5.934,14 €",
+    "supplier_tax_id": "DE723033028",
+    "tax_amount": "1.127,49 €",
+    "total": "7.061,63 €"
+  },
+  "sha256": "444f998525f74aa11e1cf0abfeb5745b9db13a482dcfc2e0b1729147607b6594",
+  "size_bytes": 159066,
+  "supplier_country": "DE",
+  "template": "t09"
+}

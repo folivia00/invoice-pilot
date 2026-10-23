@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "long_en",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-069.pdf",
+  "id": "inv-069",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "492 Ridge Road, Tucson 09076",
+      "name": "Grace Irving",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2025-11-05",
+    "iban": null,
+    "invoice_date": "2025-10-22",
+    "invoice_number": "2025-003739",
+    "line_items": [
+      {
+        "amount": "46.86",
+        "description": "Laptop stand, aluminium",
+        "quantity": "2",
+        "unit_price": "23.43"
+      }
+    ],
+    "subtotal": "46.86",
+    "supplier": {
+      "address": "455 Sunset Avenue, Raleigh 51755",
+      "name": "Harbourview Cleaning Corp.",
+      "tax_id": "86-9289939"
+    },
+    "tax_amount": "3.28",
+    "tax_rate": "7",
+    "total": "50.14"
+  },
+  "language": "en",
+  "line_units": [
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "5 November 2025",
+    "iban": "",
+    "invoice_date": "22 October 2025",
+    "invoice_number": "2025-003739",
+    "subtotal": "$46.86",
+    "supplier_tax_id": "86-9289939",
+    "tax_amount": "$3.28",
+    "total": "$50.14"
+  },
+  "sha256": "250fe19b1e89e2af29317f5c1858b5ad2e1cf5c369a7d73844f3904c48418976",
+  "size_bytes": 261615,
+  "supplier_country": "US",
+  "template": "t09"
+}

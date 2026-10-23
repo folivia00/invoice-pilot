@@ -1,0 +1,112 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-118.pdf",
+  "id": "inv-118",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Orbit Office Solutions S.r.l.",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": "2026-06-07",
+    "iban": "IT91B7566113249B8WM6VAHM8UN",
+    "invoice_date": "2026-05-24",
+    "invoice_number": "2602-42938",
+    "line_items": [
+      {
+        "amount": "4425.00",
+        "description": "Standing desk 160 cm",
+        "quantity": "10",
+        "unit_price": "442.50"
+      },
+      {
+        "amount": "1117.23",
+        "description": "Network switch 24-port",
+        "quantity": "3",
+        "unit_price": "372.41"
+      },
+      {
+        "amount": "564.00",
+        "description": "Translation services, hours",
+        "quantity": "12",
+        "unit_price": "47.00"
+      },
+      {
+        "amount": "1590.75",
+        "description": "Technical support, hours",
+        "quantity": "25.25",
+        "unit_price": "63.00"
+      },
+      {
+        "amount": "2320.74",
+        "description": "UX design workshop",
+        "quantity": "1",
+        "unit_price": "2320.74"
+      },
+      {
+        "amount": "12.00",
+        "description": "Safety gloves, pair",
+        "quantity": "2",
+        "unit_price": "6.00"
+      },
+      {
+        "amount": "173.00",
+        "description": "USB-C docking station",
+        "quantity": "1",
+        "unit_price": "173.00"
+      },
+      {
+        "amount": "8930.00",
+        "description": "Office chair, ergonomic",
+        "quantity": "47",
+        "unit_price": "190.00"
+      }
+    ],
+    "subtotal": "19132.72",
+    "supplier": {
+      "address": "Viale dei Pini 123, 67934 Parma",
+      "name": "Kestrel Aviation Parts S.r.l.",
+      "tax_id": "IT93665229405"
+    },
+    "tax_amount": "1913.27",
+    "tax_rate": "10",
+    "total": "21045.99"
+  },
+  "language": "en",
+  "line_units": [
+    "piece",
+    "piece",
+    "hour",
+    "hour",
+    "flat",
+    "piece",
+    "piece",
+    "piece"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "2026-06-07",
+    "iban": "IT91 B756 6113 249B 8WM6 VAHM 8UN",
+    "invoice_date": "2026-05-24",
+    "invoice_number": "2602-42938",
+    "subtotal": "EUR 19,132.72",
+    "supplier_tax_id": "IT93665229405",
+    "tax_amount": "EUR 1,913.27",
+    "total": "EUR 21,045.99"
+  },
+  "sha256": "8708243009a507944013389bca72570f5d5d50d21b03b9d8c9e1e226df997abe",
+  "size_bytes": 44804,
+  "supplier_country": "IT",
+  "template": "t08"
+}

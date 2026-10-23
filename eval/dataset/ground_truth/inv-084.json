@@ -1,0 +1,77 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-084.jpg",
+  "id": "inv-084",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Industriestraße 167, 88361 Lüneburg",
+      "name": "Mondsee Optik GmbH & Co. KG",
+      "tax_id": "DE481443136"
+    },
+    "currency": "EUR",
+    "due_date": "2025-12-15",
+    "iban": "DE23192335772991418188",
+    "invoice_date": "2025-11-15",
+    "invoice_number": "2509-1917",
+    "line_items": [
+      {
+        "amount": "1448.00",
+        "description": "Monitor 27 Zoll",
+        "quantity": "8",
+        "unit_price": "181.00"
+      },
+      {
+        "amount": "1532.30",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "110",
+        "unit_price": "13.93"
+      },
+      {
+        "amount": "3758.58",
+        "description": "Netzwerk-Switch 24 Ports",
+        "quantity": "9",
+        "unit_price": "417.62"
+      }
+    ],
+    "subtotal": "6738.88",
+    "supplier": {
+      "address": "Gartenweg 133, 58474 Lüneburg",
+      "name": "Tannenberg Schulung GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "1280.39",
+    "tax_rate": "19",
+    "total": "8019.27"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "weight",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "DE481443136",
+    "currency": "EUR",
+    "due_date": "15.12.2025",
+    "iban": "DE23 1923 3577 2991 4181 88",
+    "invoice_date": "15.11.2025",
+    "invoice_number": "2509-1917",
+    "subtotal": "6.738,88 €",
+    "supplier_tax_id": "",
+    "tax_amount": "1.280,39 €",
+    "total": "8.019,27 €"
+  },
+  "sha256": "dc748c3703571ec2ab847fbb7da39e50bcd49390e39ff18f1cf002014dd7b5cf",
+  "size_bytes": 174926,
+  "supplier_country": "DE",
+  "template": "t04"
+}

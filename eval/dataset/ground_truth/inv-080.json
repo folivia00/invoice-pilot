@@ -1,0 +1,70 @@
+{
+  "corruption": null,
+  "currency": "CHF",
+  "date_format": "iso",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-080.pdf",
+  "id": "inv-080",
+  "input_type": "text_pdf",
+  "invoice": {
+    "bic": "NYYQCHMM200",
+    "buyer": {
+      "address": "Hauptstraße 100, 93787 Lüneburg",
+      "name": "Sonnenhang Gartenbau GmbH",
+      "tax_id": null
+    },
+    "currency": "CHF",
+    "due_date": "2026-07-05",
+    "iban": "CH43421511TK72GHIR2JF",
+    "invoice_date": "2026-06-21",
+    "invoice_number": "2026-051450",
+    "line_items": [
+      {
+        "amount": "10.38",
+        "description": "Stahlwinkel 40x40",
+        "quantity": "6",
+        "unit_price": "1.73"
+      },
+      {
+        "amount": "1576.62",
+        "description": "Montage vor Ort (Std.)",
+        "quantity": "18",
+        "unit_price": "87.59"
+      }
+    ],
+    "subtotal": "1587.00",
+    "supplier": {
+      "address": "Bergstrasse 92, 4578 Luzern",
+      "name": "Rheintal Logistik GmbH",
+      "tax_id": null
+    },
+    "tax_amount": "128.55",
+    "tax_rate": "8.1",
+    "total": "1715.55"
+  },
+  "language": "de",
+  "line_units": [
+    "piece",
+    "hour"
+  ],
+  "number_format": "ch",
+  "pages": 1,
+  "printed": {
+    "bic": "NYYQCHMM200",
+    "buyer_tax_id": "",
+    "currency": "CHF",
+    "due_date": "2026-07-05",
+    "iban": "CH43 4215 11TK 72GH IR2J F",
+    "invoice_date": "2026-06-21",
+    "invoice_number": "2026-051450",
+    "subtotal": "1'587.00 CHF",
+    "supplier_tax_id": "",
+    "tax_amount": "128.55 CHF",
+    "total": "1'715.55 CHF"
+  },
+  "sha256": "432335e9f742ddf6d6737101f4fbeb8c11b25dd5285addbaa86a0ed972193527",
+  "size_bytes": 45232,
+  "supplier_country": "CH",
+  "template": "t10"
+}

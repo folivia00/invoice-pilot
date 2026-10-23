@@ -1,0 +1,63 @@
+{
+  "corruption": null,
+  "currency": "USD",
+  "date_format": "mdy_slash",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-033.pdf",
+  "id": "inv-033",
+  "input_type": "scan_pdf",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": "Dorpsstraat 118, 2410 YA Breda",
+      "name": "Benjamin Parrish",
+      "tax_id": null
+    },
+    "currency": "USD",
+    "due_date": "2025-12-19",
+    "iban": null,
+    "invoice_date": "2025-12-05",
+    "invoice_number": "2025-049761",
+    "line_items": [
+      {
+        "amount": "47.40",
+        "description": "Network cable Cat6, m",
+        "quantity": "34.6",
+        "unit_price": "1.37"
+      }
+    ],
+    "subtotal": "47.40",
+    "supplier": {
+      "address": "893 Sunset Avenue, Portland 66338",
+      "name": "Ironbridge Engineering LLC",
+      "tax_id": null
+    },
+    "tax_amount": "2.96",
+    "tax_rate": "6.25",
+    "total": "50.36"
+  },
+  "language": "en",
+  "line_units": [
+    "length"
+  ],
+  "number_format": "en",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "USD",
+    "due_date": "12/19/2025",
+    "iban": "",
+    "invoice_date": "12/05/2025",
+    "invoice_number": "2025-049761",
+    "subtotal": "USD 47.40",
+    "supplier_tax_id": "",
+    "tax_amount": "USD 2.96",
+    "total": "USD 50.36"
+  },
+  "sha256": "79c1aea773302397bb1a15686a19d933fc3e9815ba40f9d4765cdded064efddb",
+  "size_bytes": 318069,
+  "supplier_country": "US",
+  "template": "t03"
+}

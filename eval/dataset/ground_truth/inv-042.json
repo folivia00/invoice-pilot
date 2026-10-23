@@ -1,0 +1,91 @@
+{
+  "corruption": null,
+  "currency": "EUR",
+  "date_format": "dmy_dot",
+  "expected_issue_codes": [],
+  "expected_status": "auto_approved",
+  "file": "docs/inv-042.jpg",
+  "id": "inv-042",
+  "input_type": "photo",
+  "invoice": {
+    "bic": null,
+    "buyer": {
+      "address": null,
+      "name": "Gisela Ullmann",
+      "tax_id": null
+    },
+    "currency": "EUR",
+    "due_date": null,
+    "iban": "DE20845093298949187347",
+    "invoice_date": "2026-01-08",
+    "invoice_number": "INV-2026-56552",
+    "line_items": [
+      {
+        "amount": "1063.23",
+        "description": "Schulung (halber Tag)",
+        "quantity": "1",
+        "unit_price": "1063.23"
+      },
+      {
+        "amount": "171.00",
+        "description": "Bildbearbeitung (Std.)",
+        "quantity": "3",
+        "unit_price": "57.00"
+      },
+      {
+        "amount": "2257.10",
+        "description": "Workshop UX-Design",
+        "quantity": "1",
+        "unit_price": "2257.10"
+      },
+      {
+        "amount": "335.28",
+        "description": "Kupferdraht 2,5 mm, kg",
+        "quantity": "24",
+        "unit_price": "13.97"
+      },
+      {
+        "amount": "11815.98",
+        "description": "Schreibtisch 160 cm",
+        "quantity": "33",
+        "unit_price": "358.06"
+      }
+    ],
+    "subtotal": "15642.59",
+    "supplier": {
+      "address": "Industriestraße 127, 30265 Regensburg",
+      "name": "Birkenhain Design GmbH & Co. KG",
+      "tax_id": "DE779948645"
+    },
+    "tax_amount": "2972.09",
+    "tax_rate": "19",
+    "total": "18614.68"
+  },
+  "language": "de",
+  "line_units": [
+    "flat",
+    "hour",
+    "flat",
+    "weight",
+    "piece"
+  ],
+  "number_format": "de",
+  "pages": 1,
+  "printed": {
+    "bic": "",
+    "buyer_tax_id": "",
+    "currency": "EUR",
+    "due_date": "",
+    "iban": "DE20 8450 9329 8949 1873 47",
+    "invoice_date": "08.01.2026",
+    "invoice_number": "INV-2026-56552",
+    "subtotal": "15.642,59 €",
+    "supplier_tax_id": "DE779948645",
+    "tax_amount": "2.972,09 €",
+    "total": "18.614,68 €"
+  },
+  "sha256": "e4dfd91a38e71ba2f0c50b33b7de9ab5ea56a907d6ffec78012729bf9b9e3636",
+  "size_bytes": 156115,
+  "supplier_country": "DE",
+  "template": "t02"
+}
