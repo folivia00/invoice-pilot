@@ -260,10 +260,11 @@ def _check_dates(invoice: Invoice, today: date, issues: list[Issue]) -> None:
 
 
 def _check_iban(invoice: Invoice, issues: list[Issue]) -> None:
-    """Rule j: IBAN structure, mod-97 check digits and registry length."""
+    """Rule j: IBAN shape, mod-97 check digits, then registry length and structure."""
     if invoice.iban is None or not invoice.iban.strip():
         return
-    result = check_iban(normalize_iban(invoice.iban))
+    iban = normalize_iban(invoice.iban)
+    result = check_iban(iban)
     if not result.well_formed:
         issues.append(
             _error(
@@ -278,21 +279,32 @@ def _check_iban(invoice: Invoice, issues: list[Issue]) -> None:
             _error(IssueCode.INVALID_IBAN, "iban", "IBAN check digits (mod 97) do not match.")
         )
         return
-    if result.length_ok is False:
-        issues.append(
-            _error(
-                IssueCode.INVALID_IBAN,
-                "iban",
-                f"IBAN length does not match the registry entry for {result.country}.",
-            )
-        )
-    elif result.length_ok is None:
+    if result.spec is None:
         issues.append(
             _warning(
                 IssueCode.IBAN_LENGTH_UNVERIFIED,
                 "iban",
-                f"IBAN length for country {result.country} was not verified "
-                "(country not in the registry table).",
+                f"IBAN length and structure for country {result.country} were not verified "
+                "(country not in the IBAN registry).",
+            )
+        )
+        return
+    if not result.length_ok:
+        issues.append(
+            _error(
+                IssueCode.INVALID_IBAN,
+                "iban",
+                f"IBAN for {result.country} must be {result.spec.length} characters long "
+                f"(registry), got {len(iban)}.",
+            )
+        )
+    elif not result.structure_ok:
+        issues.append(
+            _error(
+                IssueCode.INVALID_IBAN,
+                "iban",
+                f"IBAN does not match the registry structure for {result.country} "
+                f"({result.spec.structure}).",
             )
         )
 

@@ -7,6 +7,8 @@
    missing_field code at the right path.
 """
 
+import re
+import string
 from datetime import date, timedelta
 from decimal import Decimal
 
@@ -23,7 +25,7 @@ from invoice_pilot.domain import (
 )
 from invoice_pilot.domain.constants import minor_unit, quantize_to
 from invoice_pilot.domain.currencies import minor_units
-from invoice_pilot.domain.iban import compute_check_digits
+from invoice_pilot.domain.iban import IBAN_REGISTRY, compute_check_digits
 from invoice_pilot.domain.validation import REQUIRED_FIELDS, REQUIRED_LINE_ITEM_FIELDS
 
 TODAY = date(2026, 10, 23)
@@ -44,7 +46,25 @@ names = st.text(
     min_size=1,
     max_size=20,
 )
-digits = st.text(alphabet="0123456789", min_size=10, max_size=26)
+_STRUCTURE_TOKEN = re.compile(r"(\d+)!([nac])")
+_ALPHABETS = {
+    "n": string.digits,
+    "a": string.ascii_uppercase,
+    "c": string.ascii_uppercase + string.digits,
+}
+
+
+@st.composite
+def registry_ibans(draw: st.DrawFn, countries: tuple[str, ...] = IBAN_COUNTRIES) -> str:
+    """Build an IBAN that follows the registry structure of a country, with valid check digits."""
+    country = draw(st.sampled_from(countries))
+    tokens = _STRUCTURE_TOKEN.findall(IBAN_REGISTRY[country].structure[2:])
+    # tokens[0] is the check-digit field (2!n); the rest describe the BBAN.
+    bban = "".join(
+        draw(st.text(alphabet=_ALPHABETS[kind], min_size=int(n), max_size=int(n)))
+        for n, kind in tokens[1:]
+    )
+    return country + compute_check_digits(country, bban) + bban
 
 
 @st.composite
@@ -72,8 +92,7 @@ def consistent_invoices(draw: st.DrawFn) -> Invoice:
     tax_amount = quantize_to(subtotal * tax_rate / Decimal(100), units)
     invoice_date = draw(st.dates(min_value=date(2020, 1, 1), max_value=TODAY))
     due_date = invoice_date + timedelta(days=draw(st.integers(min_value=0, max_value=90)))
-    country = draw(st.sampled_from(IBAN_COUNTRIES))
-    bban = draw(digits)
+    iban = draw(registry_ibans())
     return Invoice(
         supplier=Party(name=draw(names), tax_id=draw(st.sampled_from(TAX_IDS))),
         buyer=Party(name=draw(names), tax_id=draw(st.sampled_from(TAX_IDS))),
@@ -86,7 +105,7 @@ def consistent_invoices(draw: st.DrawFn) -> Invoice:
         tax_rate=tax_rate,
         tax_amount=tax_amount,
         total=subtotal + tax_amount,
-        iban=country + compute_check_digits(country, bban) + bban,
+        iban=iban,
     )
 
 
