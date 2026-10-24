@@ -21,7 +21,7 @@ from invoice_pilot.domain import (
     ValidationStatus,
     validate,
 )
-from invoice_pilot.extraction.prepare import InputLimits, prepare
+from invoice_pilot.extraction.prepare import InputLimits, PreparedDocument, prepare
 from invoice_pilot.llm.errors import InvalidResponseError, LLMError
 from invoice_pilot.llm.parse import parse_invoice
 from invoice_pilot.llm.providers import Provider
@@ -60,14 +60,17 @@ async def extract_invoice(
     today: date,
     limits: InputLimits | None = None,
     on_usage: UsageSink | None = None,
+    prepared: PreparedDocument | None = None,
 ) -> ExtractionOutcome:
     """Run the full pipeline on one uploaded file.
 
     Raises ``InputError`` (unsupported, too large, too many pages) before any
     model call, and ``ProviderUnavailableError`` / ``ProviderError`` when the
-    provider fails; both are the caller's to present.
+    provider fails; both are the caller's to present. A caller that already ran
+    ``prepare`` on the bytes passes the result as ``prepared`` to avoid a second pass.
     """
-    prepared = prepare(file_bytes, limits=limits)
+    if prepared is None:
+        prepared = prepare(file_bytes, limits=limits)
     doc = prepared.input
     records: list[UsageRecord] = []
 
