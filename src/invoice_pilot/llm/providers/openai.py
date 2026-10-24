@@ -25,7 +25,13 @@ import httpx
 from invoice_pilot.llm.errors import InvalidResponseError, ProviderError
 from invoice_pilot.llm.http import JitterFn, SleepFn, latency_ms, post_with_retries
 from invoice_pilot.llm.prompts import load_prompt
-from invoice_pilot.llm.providers._common import as_int, encode_base64
+from invoice_pilot.llm.providers._common import (
+    as_int,
+    dict_field,
+    encode_base64,
+    json_envelope,
+    list_of_dicts,
+)
 from invoice_pilot.llm.schema import INVOICE_SCHEMA, SCHEMA_NAME
 from invoice_pilot.llm.types import (
     MIME_PDF,
@@ -143,40 +149,41 @@ class OpenAIProvider:
     def _parse(
         self, response: httpx.Response, failed: list[UsageRecord], started: float
     ) -> ProviderResponse:
-        try:
-            payload = response.json()
-        except ValueError:
-            raise ProviderError("openai: response is not JSON", tuple(failed)) from None
-        if not isinstance(payload, dict):
-            raise ProviderError("openai: unexpected response envelope", tuple(failed))
-        meta = payload.get("usage") or {}
-        reasoning = as_int((meta.get("output_tokens_details") or {}).get("reasoning_tokens"))
+        name = self.name
+        payload = json_envelope(response, name, failed)
+        meta = dict_field(payload.get("usage"), "usage", name, failed)
+        details = dict_field(
+            meta.get("output_tokens_details"), "output_tokens_details", name, failed
+        )
         usage = UsageRecord(
-            provider=self.name,
+            provider=name,
             model=self.model,
             status="ok",
             input_tokens=as_int(meta.get("input_tokens")),
             output_tokens=as_int(meta.get("output_tokens")),
-            thinking_tokens=reasoning,
+            thinking_tokens=as_int(details.get("reasoning_tokens")),
             latency_ms=latency_ms(started),
             http_status=response.status_code,
         )
         attempts = (*failed, usage)
-        error = payload.get("error")
-        if isinstance(error, dict):
+        error = dict_field(payload.get("error"), "error", name, attempts)
+        if error:
             code = error.get("code") or error.get("type") or "error"
             raise ProviderError(f"openai: response error ({code})", attempts)
         status = payload.get("status")
         if status != "completed":
-            reason = (payload.get("incomplete_details") or {}).get("reason", "unknown")
+            incomplete = dict_field(
+                payload.get("incomplete_details"), "incomplete_details", name, attempts
+            )
+            reason = incomplete.get("reason", "unknown")
             raise InvalidResponseError(
                 f"openai: response status {status} ({reason})", mark_invalid(attempts)
             )
         texts: list[str] = []
-        for item in payload.get("output") or []:
+        for item in list_of_dicts(payload.get("output"), "output", name, attempts):
             if item.get("type") != "message":
                 continue
-            for part in item.get("content") or []:
+            for part in list_of_dicts(item.get("content"), "message content", name, attempts):
                 kind = part.get("type")
                 if kind == "refusal":
                     raise InvalidResponseError("openai: model refused", mark_invalid(attempts))

@@ -20,10 +20,16 @@ from typing import Any, Final
 
 import httpx
 
-from invoice_pilot.llm.errors import InvalidResponseError, ProviderError
+from invoice_pilot.llm.errors import InvalidResponseError
 from invoice_pilot.llm.http import JitterFn, SleepFn, latency_ms, post_with_retries
 from invoice_pilot.llm.prompts import load_prompt
-from invoice_pilot.llm.providers._common import as_int, encode_base64
+from invoice_pilot.llm.providers._common import (
+    as_int,
+    dict_field,
+    encode_base64,
+    json_envelope,
+    list_of_dicts,
+)
 from invoice_pilot.llm.schema import INVOICE_SCHEMA
 from invoice_pilot.llm.types import DocumentInput, ProviderResponse, UsageRecord, mark_invalid
 
@@ -45,6 +51,12 @@ MEDIA_RESOLUTIONS: Final[dict[str, str]] = {
 }
 
 USER_LEAD: Final = "Extract the invoice fields from the following document."
+
+#: The only Candidate.finishReason that means a complete answer (v1beta discovery
+#: document, revision 20261023, checked 2026-10-24): STOP = "Natural stop point of the
+#: model or provided stop sequence". Everything else (MAX_TOKENS, SAFETY, RECITATION,
+#: PROHIBITED_CONTENT, MALFORMED_RESPONSE, ...) makes the answer unusable.
+FINISH_REASON_OK: Final = "STOP"
 
 
 class GeminiProvider:
@@ -130,16 +142,12 @@ class GeminiProvider:
     def _parse(
         self, response: httpx.Response, failed: list[UsageRecord], started: float
     ) -> ProviderResponse:
-        try:
-            payload = response.json()
-        except ValueError:
-            raise ProviderError("gemini: response is not JSON", tuple(failed)) from None
-        if not isinstance(payload, dict):
-            raise ProviderError("gemini: unexpected response envelope", tuple(failed))
-        meta = payload.get("usageMetadata") or {}
+        name = self.name
+        payload = json_envelope(response, name, failed)
+        meta = dict_field(payload.get("usageMetadata"), "usageMetadata", name, failed)
         thoughts = as_int(meta.get("thoughtsTokenCount"))
         usage = UsageRecord(
-            provider=self.name,
+            provider=name,
             model=self.model,
             status="ok",
             input_tokens=as_int(meta.get("promptTokenCount")),
@@ -149,22 +157,28 @@ class GeminiProvider:
             http_status=response.status_code,
         )
         attempts = (*failed, usage)
-        block = (payload.get("promptFeedback") or {}).get("blockReason")
-        if block:
-            raise InvalidResponseError(f"gemini: prompt blocked ({block})", mark_invalid(attempts))
-        candidates = payload.get("candidates") or []
+        feedback = dict_field(payload.get("promptFeedback"), "promptFeedback", name, attempts)
+        if feedback.get("blockReason"):
+            reason = feedback["blockReason"]
+            raise InvalidResponseError(f"gemini: prompt blocked ({reason})", mark_invalid(attempts))
+        candidates = list_of_dicts(payload.get("candidates"), "candidates", name, attempts)
         if not candidates:
             raise InvalidResponseError("gemini: no candidates in response", mark_invalid(attempts))
         candidate = candidates[0]
-        parts = (candidate.get("content") or {}).get("parts") or []
+        finish = candidate.get("finishReason")
+        if finish is not None and finish != FINISH_REASON_OK:
+            raise InvalidResponseError(
+                f"gemini: generation stopped (finishReason={finish})", mark_invalid(attempts)
+            )
+        content = dict_field(candidate.get("content"), "candidate content", name, attempts)
+        parts = list_of_dicts(content.get("parts"), "content parts", name, attempts)
         text = "".join(
             part["text"]
             for part in parts
             if isinstance(part.get("text"), str) and not part.get("thought")
         )
         if not text.strip():
-            reason = candidate.get("finishReason", "unknown")
             raise InvalidResponseError(
-                f"gemini: empty answer (finishReason={reason})", mark_invalid(attempts)
+                f"gemini: empty answer (finishReason={finish or 'missing'})", mark_invalid(attempts)
             )
         return ProviderResponse(raw_text=text, usage=usage, attempts=attempts)
