@@ -1,0 +1,203 @@
+{
+  "additionalProperties": false,
+  "description": "Fields of one invoice, copied exactly as printed.",
+  "properties": {
+    "bic": {
+      "description": "BIC/SWIFT code exactly as printed.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "buyer": {
+      "additionalProperties": false,
+      "description": "Party the invoice is addressed to (customer, bill to).",
+      "properties": {
+        "address": {
+          "description": "Full postal address on one line, as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "description": "Company or person name as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tax_id": {
+          "description": "VAT ID, EIN or other tax identifier exactly as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "tax_id",
+        "address"
+      ],
+      "type": "object"
+    },
+    "currency": {
+      "description": "ISO 4217 currency code, e.g. EUR, USD, GBP, CHF, JPY.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "due_date": {
+      "description": "ISO 8601 date (YYYY-MM-DD) as printed, or null.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "iban": {
+      "description": "IBAN exactly as printed, including spaces.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "invoice_date": {
+      "description": "ISO 8601 date (YYYY-MM-DD) as printed, or null.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "invoice_number": {
+      "description": "Invoice identifier as printed.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "line_items": {
+      "description": "Printed line items in document order; empty if none.",
+      "items": {
+        "additionalProperties": false,
+        "description": "One printed line.",
+        "properties": {
+          "amount": {
+            "description": "Amount as printed, as a number with a dot decimal separator; null if not printed.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "description": {
+            "description": "Line text as printed.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quantity": {
+            "description": "Quantity as printed; null if not printed.",
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit_price": {
+            "description": "Amount as printed, as a number with a dot decimal separator; null if not printed.",
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "description",
+          "quantity",
+          "unit_price",
+          "amount"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "subtotal": {
+      "description": "Amount as printed, as a number with a dot decimal separator; null if not printed.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "supplier": {
+      "additionalProperties": false,
+      "description": "Party that issued the invoice (seller, sender).",
+      "properties": {
+        "address": {
+          "description": "Full postal address on one line, as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "description": "Company or person name as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tax_id": {
+          "description": "VAT ID, EIN or other tax identifier exactly as printed.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "tax_id",
+        "address"
+      ],
+      "type": "object"
+    },
+    "tax_amount": {
+      "description": "Amount as printed, as a number with a dot decimal separator; null if not printed.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tax_rate": {
+      "description": "Tax rate in percent as printed, e.g. 19 for 19 %.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "total": {
+      "description": "Amount as printed, as a number with a dot decimal separator; null if not printed.",
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "supplier",
+    "buyer",
+    "invoice_number",
+    "invoice_date",
+    "due_date",
+    "currency",
+    "line_items",
+    "subtotal",
+    "tax_rate",
+    "tax_amount",
+    "total",
+    "iban",
+    "bic"
+  ],
+  "type": "object"
+}
