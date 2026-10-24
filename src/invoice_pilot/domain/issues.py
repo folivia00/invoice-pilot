@@ -36,6 +36,8 @@ class IssueCode(Enum):
     IBAN_LENGTH_UNVERIFIED = "iban_length_unverified"
     INVALID_TAX_ID = "invalid_tax_id"
     TAX_ID_UNVERIFIED = "tax_id_unverified"
+    #: The LLM returned no usable invoice after a retry (set by the extraction service).
+    EXTRACTION_FAILED = "extraction_failed"
 
 
 @dataclass(frozen=True, slots=True)
