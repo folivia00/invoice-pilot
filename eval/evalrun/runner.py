@@ -4,7 +4,7 @@ Replay (default) needs no key and never touches the network: every document is
 served from ``eval/recordings``; a missing recording is reported and the exit
 code is 1. Record mode requires ``--live``, an env file with the key and
 ``--max-cost``; a worst-case estimate is checked before the first call and the
-actual cost after every document.
+actual cost after every document. A provider spend limit stops the run at once.
 """
 
 import asyncio
@@ -26,9 +26,14 @@ from evalrun.envfile import EnvFileError, parse_env_file, require_key
 from evalrun.metrics import compute_metrics
 from evalrun.report import render_summary
 from invoice_pilot.domain import Invoice
-from invoice_pilot.extraction.prepare import prepare
+from invoice_pilot.extraction.prepare import PreparedDocument, prepare
 from invoice_pilot.llm.config import LLMConfig
-from invoice_pilot.llm.errors import ProviderError, ProviderUnavailableError, RecordingMissingError
+from invoice_pilot.llm.errors import (
+    ProviderError,
+    ProviderUnavailableError,
+    RecordingMissingError,
+    SpendLimitError,
+)
 from invoice_pilot.llm.pricing import cost_usd
 from invoice_pilot.llm.prompts import PROMPT_VERSION
 from invoice_pilot.llm.providers import Provider, make_provider
@@ -47,8 +52,11 @@ ProviderFactory = Callable[..., Provider]
 Clock = Callable[[], datetime]
 
 EXIT_OK: Final = 0
-EXIT_INCOMPLETE: Final = 1  # missing recordings or stopped by the cost cap
+EXIT_INCOMPLETE: Final = 1  # missing recordings, cost cap or provider spend limit
 EXIT_REFUSED: Final = 2  # nothing was run
+
+STOP_MAX_COST: Final = "max_cost"
+STOP_SPEND_LIMIT: Final = "provider_spend_limit"
 
 
 @dataclass(slots=True)
@@ -61,6 +69,7 @@ class RunOptions:
     env_file: Path | None = None
     max_cost: Decimal | None = None
     concurrency: int = 2
+    skip_recorded: bool = False
     dataset_dir: Path = DATASET_DIR
     recordings_dir: Path = RECORDINGS_DIR
     results_dir: Path = RESULTS_DIR
@@ -71,8 +80,10 @@ class ConfigResult:
     name: str
     processed: int
     selected: int
+    skipped: int
     missing: list[str]
     stopped: str | None
+    stop_detail: str | None
     cost_usd: Decimal
     metrics: dict[str, Any]
 
@@ -149,6 +160,34 @@ def select_documents(
     return chosen
 
 
+@dataclass(frozen=True, slots=True)
+class LoadedDocument:
+    gt: dict[str, Any]
+    data: bytes
+    prepared: PreparedDocument
+
+    @property
+    def id(self) -> str:
+        return self.gt["id"]
+
+
+def load_documents(docs: list[dict[str, Any]], dataset_dir: Path) -> list[LoadedDocument]:
+    """Read and prepare the selected documents once (shared by key lookup and extraction)."""
+    loaded = []
+    for gt in docs:
+        data = (dataset_dir / gt["file"]).read_bytes()
+        loaded.append(LoadedDocument(gt=gt, data=data, prepared=prepare(data)))
+    return loaded
+
+
+def document_inputs(dataset: Dataset, dataset_dir: Path) -> dict[str, DocumentInput]:
+    """Provider input of every dataset document (needed to compute recording keys)."""
+    return {
+        gt["id"]: prepare((dataset_dir / gt["file"]).read_bytes()).input
+        for gt in dataset.ground_truths
+    }
+
+
 # --- providers -------------------------------------------------------------------------
 
 
@@ -162,14 +201,6 @@ def _exploding_client() -> httpx.AsyncClient:
 def replay_inner(config: LLMConfig) -> Provider:
     """A real provider object (for identical recording keys) that can never be called."""
     return make_provider(config, api_key="replay-no-key", client=_exploding_client())
-
-
-def document_inputs(dataset: Dataset, dataset_dir: Path) -> dict[str, DocumentInput]:
-    """Provider input of every dataset document (needed to compute recording keys)."""
-    return {
-        gt["id"]: prepare((dataset_dir / gt["file"]).read_bytes()).input
-        for gt in dataset.ground_truths
-    }
 
 
 def configs_with_recordings(inputs: dict[str, DocumentInput], recordings_dir: Path) -> list[str]:
@@ -208,7 +239,7 @@ def _base_prediction(gt: dict[str, Any]) -> dict[str, Any]:
         "expected_issue_codes": list(gt["expected_issue_codes"]),
         "status": None,
         "issue_codes": [],
-        "fields": {},
+        "fields": compare_invoices(Invoice.model_validate(gt["invoice"]), None),
         "key_fields_correct": False,
         "attempts": 0,
         "usage": [],
@@ -218,31 +249,32 @@ def _base_prediction(gt: dict[str, Any]) -> dict[str, Any]:
         "cost_usd": "0",
         "recorded_at": None,
         "error": None,
+        "spend_limit_code": None,
     }
 
 
 async def process_document(
-    gt: dict[str, Any],
-    data: bytes,
+    doc: LoadedDocument,
     wrapper: RecordingProvider,
     reference_date: date,
     price_date: Callable[[str | None], date],
 ) -> dict[str, Any]:
     """Run the pipeline for one document and return its prediction row."""
-    pred = _base_prediction(gt)
-    expected = Invoice.model_validate(gt["invoice"])
-    prepared = prepare(data)
-    recording_path = wrapper.path(prepared.input)
+    pred = _base_prediction(doc.gt)
+    expected = Invoice.model_validate(doc.gt["invoice"])
+    recording_path = wrapper.path(doc.prepared.input)
     try:
-        outcome = await extract_invoice(data, provider=wrapper, today=reference_date)
+        outcome = await extract_invoice(
+            doc.data, provider=wrapper, today=reference_date, prepared=doc.prepared
+        )
     except RecordingMissingError:
         pred["status"] = "missing_recording"
-        pred["fields"] = compare_invoices(expected, None)
         return pred
     except (ProviderUnavailableError, ProviderError) as exc:
         pred["status"] = "provider_error"
         pred["error"] = f"{type(exc).__name__}: {exc}"
-        pred["fields"] = compare_invoices(expected, None)
+        if isinstance(exc, SpendLimitError):
+            pred["spend_limit_code"] = exc.code
         records = list(exc.attempts)
     else:
         pred["status"] = outcome.report.status.value
@@ -263,10 +295,16 @@ async def process_document(
     return pred
 
 
+def _skipped_prediction(gt: dict[str, Any]) -> dict[str, Any]:
+    pred = _base_prediction(gt)
+    pred["status"] = "skipped_recorded"
+    return pred
+
+
 # --- one configuration -----------------------------------------------------------------
 
 
-def _price_date_for(options: RunOptions, clock: Clock) -> Callable[[str | None], date]:
+def _price_date_for(clock: Clock) -> Callable[[str | None], date]:
     def price_date(recorded_at: str | None) -> date:
         if recorded_at:
             return date.fromisoformat(recorded_at[:10])
@@ -275,7 +313,17 @@ def _price_date_for(options: RunOptions, clock: Clock) -> Callable[[str | None],
     return price_date
 
 
-def _build_provider(
+@dataclass(slots=True)
+class Prepared:
+    """A configuration ready to run: its wrapper, the documents it will request, its estimate."""
+
+    config: EvalConfig
+    wrapper: RecordingProvider
+    skipped: set[str]
+    estimate: Decimal
+
+
+def _build_wrapper(
     config: EvalConfig,
     options: RunOptions,
     provider_factory: ProviderFactory,
@@ -295,49 +343,51 @@ def _build_provider(
 
 
 async def run_config(
-    config: EvalConfig,
+    prepared: Prepared,
     dataset: Dataset,
-    docs: list[dict[str, Any]],
+    docs: list[LoadedDocument],
     options: RunOptions,
-    provider_factory: ProviderFactory,
     clock: Clock,
 ) -> ConfigResult:
-    clients: list[httpx.AsyncClient] = []
-    wrapper = _build_provider(config, options, provider_factory, clock, clients)
-    price_date = _price_date_for(options, clock)
+    config, wrapper = prepared.config, prepared.wrapper
+    price_date = _price_date_for(clock)
     concurrency = options.concurrency if options.mode == "record" else 1
     semaphore = asyncio.Semaphore(max(1, concurrency))
     spent = Decimal(0)
     stopped: str | None = None
+    stop_detail: str | None = None
     results: list[dict[str, Any] | None] = [None] * len(docs)
 
-    async def worker(index: int, gt: dict[str, Any]) -> None:
-        nonlocal spent, stopped
+    async def worker(index: int, doc: LoadedDocument) -> None:
+        nonlocal spent, stopped, stop_detail
+        if doc.id in prepared.skipped:
+            results[index] = _skipped_prediction(doc.gt)
+            return
         async with semaphore:
             if stopped:
                 return
-            data = (options.dataset_dir / gt["file"]).read_bytes()
-            pred = await process_document(gt, data, wrapper, dataset.reference_date, price_date)
+            pred = await process_document(doc, wrapper, dataset.reference_date, price_date)
             results[index] = pred
             spent += Decimal(pred["cost_usd"])
-            if options.max_cost is not None and spent > options.max_cost:
-                stopped = "max_cost"
+            if pred["spend_limit_code"]:
+                stopped, stop_detail = STOP_SPEND_LIMIT, pred["spend_limit_code"]
+            elif options.max_cost is not None and spent > options.max_cost:
+                stopped = STOP_MAX_COST
 
-    try:
-        await asyncio.gather(*(worker(i, gt) for i, gt in enumerate(docs)))
-    finally:
-        for client in clients:
-            await client.aclose()
+    await asyncio.gather(*(worker(i, doc) for i, doc in enumerate(docs)))
     preds = [p for p in results if p is not None]
     metrics = compute_metrics(preds)
+    metrics["skipped_recorded"] = len(prepared.skipped)
     metrics["run"] = _run_header(config, wrapper, dataset, docs, preds, options, stopped)
     _write_results(options.results_dir / config.name, preds, metrics)
     return ConfigResult(
         name=config.name,
-        processed=len(preds),
+        processed=len(preds) - len(prepared.skipped),
         selected=len(docs),
+        skipped=len(prepared.skipped),
         missing=metrics["missing_recordings"],
         stopped=stopped,
+        stop_detail=stop_detail,
         cost_usd=spent,
         metrics=metrics,
     )
@@ -347,7 +397,7 @@ def _run_header(
     config: EvalConfig,
     wrapper: RecordingProvider,
     dataset: Dataset,
-    docs: list[dict[str, Any]],
+    docs: list[LoadedDocument],
     preds: list[dict[str, Any]],
     options: RunOptions,
     stopped: str | None,
@@ -415,6 +465,25 @@ def _resolve_configs(options: RunOptions, dataset: Dataset) -> list[EvalConfig]:
     return [CONFIGS[name] for name in names]
 
 
+def _plan_config(
+    config: EvalConfig, docs: list[LoadedDocument], options: RunOptions, clock: Clock
+) -> tuple[set[str], Decimal]:
+    """Documents to skip (already recorded) and the worst-case estimate for the rest.
+
+    Uses a key-only wrapper, so no provider with a real key exists until the
+    estimate has passed.
+    """
+    lookup = RecordingProvider(replay_inner(config.llm), mode="replay", root=options.recordings_dir)
+    skipped: set[str] = set()
+    if options.mode == "record" and options.skip_recorded:
+        skipped = {doc.id for doc in docs if lookup.path(doc.prepared.input).is_file()}
+    requested = [doc.gt["input_type"] for doc in docs if doc.id not in skipped]
+    estimate = Decimal(0)
+    if options.mode == "record":
+        estimate = estimate_cost(config, requested, clock().date())
+    return skipped, estimate
+
+
 async def run_eval(
     options: RunOptions,
     *,
@@ -423,50 +492,80 @@ async def run_eval(
 ) -> RunResult:
     """Run every selected configuration; never raises for expected failures."""
     result = RunResult(exit_code=EXIT_OK)
+    clients: list[httpx.AsyncClient] = []
     try:
-        dataset = load_dataset(options.dataset_dir)
-        configs = _resolve_configs(options, dataset)
-        _check_options(options, configs)
-        docs = select_documents(dataset, options.ids, options.limit)
-        if options.mode == "record":
-            assert options.max_cost is not None
-            for config in configs:
-                estimate = estimate_cost(config, [gt["input_type"] for gt in docs], clock().date())
-                if estimate > options.max_cost:
-                    raise RunRefused(
-                        f"{config.name}: worst-case estimate ${estimate:.4f} for {len(docs)} "
-                        f"documents exceeds --max-cost ${options.max_cost}"
+        try:
+            dataset = load_dataset(options.dataset_dir)
+            configs = _resolve_configs(options, dataset)
+            _check_options(options, configs)
+            selected = select_documents(dataset, options.ids, options.limit)
+            docs = load_documents(selected, options.dataset_dir)
+            plans = [(config, *_plan_config(config, docs, options, clock)) for config in configs]
+            for config, skipped, estimate in plans:
+                requested = len(docs) - len(skipped)
+                if options.mode == "record":
+                    assert options.max_cost is not None
+                    if estimate > options.max_cost:
+                        raise RunRefused(
+                            f"{config.name}: worst-case estimate ${estimate:.4f} for "
+                            f"{requested} documents exceeds --max-cost ${options.max_cost}"
+                        )
+                    result.messages.append(
+                        f"{config.name}: worst-case estimate ${estimate:.4f} for "
+                        f"{requested} documents ({len(skipped)} already recorded, skipped)"
                     )
-                result.messages.append(
-                    f"{config.name}: worst-case estimate ${estimate:.4f} for {len(docs)} documents"
+            prepared = [
+                Prepared(
+                    config=config,
+                    wrapper=_build_wrapper(config, options, provider_factory, clock, clients),
+                    skipped=skipped,
+                    estimate=estimate,
                 )
-    except (RunRefused, EnvFileError, ValueError, OSError) as exc:
-        result.exit_code = EXIT_REFUSED
-        result.messages.append(f"refused: {exc}")
-        return result
+                for config, skipped, estimate in plans
+            ]
+        except (RunRefused, EnvFileError, ValueError, OSError) as exc:
+            result.exit_code = EXIT_REFUSED
+            result.messages.append(f"refused: {exc}")
+            return result
 
-    for config in configs:
-        config_result = await run_config(config, dataset, docs, options, provider_factory, clock)
-        result.configs[config.name] = config_result
-        overall = config_result.metrics["overall"]
-        result.messages.append(
-            f"{config.name}: {config_result.processed}/{config_result.selected} documents, "
-            f"precision among auto-approved "
-            f"{_pct(overall['precision_auto_approved'])}, cost ${config_result.cost_usd:.4f}"
-        )
-        if config_result.missing:
-            result.exit_code = EXIT_INCOMPLETE
-            result.messages.append(
-                f"{config.name}: {len(config_result.missing)} missing recordings: "
-                + ", ".join(config_result.missing)
-            )
-        if config_result.stopped:
-            result.exit_code = EXIT_INCOMPLETE
-            result.messages.append(
-                f"{config.name}: stopped after {config_result.processed} documents "
-                f"({config_result.stopped}); partial results written"
-            )
+        for item in prepared:
+            config_result = await run_config(item, dataset, docs, options, clock)
+            result.configs[item.config.name] = config_result
+            _report_config(result, config_result)
+    finally:
+        for client in clients:
+            await client.aclose()
     return result
+
+
+def _report_config(result: RunResult, config_result: ConfigResult) -> None:
+    name = config_result.name
+    overall = config_result.metrics["overall"]
+    result.messages.append(
+        f"{name}: {config_result.processed}/{config_result.selected} documents"
+        f"{f' ({config_result.skipped} skipped)' if config_result.skipped else ''}, "
+        f"precision among auto-approved {_pct(overall['precision_auto_approved'])}, "
+        f"cost ${config_result.cost_usd:.4f}"
+    )
+    if config_result.missing:
+        result.exit_code = EXIT_INCOMPLETE
+        result.messages.append(
+            f"{name}: {len(config_result.missing)} missing recordings: "
+            + ", ".join(config_result.missing)
+        )
+    if config_result.stopped == STOP_SPEND_LIMIT:
+        result.exit_code = EXIT_INCOMPLETE
+        result.messages.append(
+            f"{name}: provider spend limit reached ({config_result.stop_detail}); stopped after "
+            f"{config_result.processed} documents, partial results written; add credits or "
+            "raise the limit before running again"
+        )
+    elif config_result.stopped:
+        result.exit_code = EXIT_INCOMPLETE
+        result.messages.append(
+            f"{name}: stopped after {config_result.processed} documents "
+            f"({config_result.stopped}); partial results written"
+        )
 
 
 def _pct(item: dict[str, Any]) -> str:

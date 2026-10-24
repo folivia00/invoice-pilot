@@ -4,7 +4,7 @@ Usage:
   uv run python eval/run.py                         # replay every configuration with recordings
   uv run python eval/run.py --config gemini-flash-lite --ids inv-001,inv-002
   uv run python eval/run.py --mode record --live --config gemini-flash-lite \
-      --env-file ../secrets/.env --max-cost 0.50 --limit 5
+      --env-file ../secrets/llm.env --max-cost 0.50 --limit 5 [--skip-recorded]
 Exit codes: 0 ok, 1 incomplete (missing recordings or stopped by --max-cost), 2 refused.
 """
 
@@ -39,6 +39,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--env-file", type=Path, help="KEY=VALUE file with the API keys (record)")
     parser.add_argument("--max-cost", type=_money, help="USD cap for a live run (record)")
     parser.add_argument("--concurrency", type=int, default=2, help="parallel live requests")
+    parser.add_argument(
+        "--skip-recorded",
+        action="store_true",
+        help="record: do not request documents that already have a recording",
+    )
     parser.add_argument("--recordings-dir", type=Path, default=RECORDINGS_DIR)
     parser.add_argument("--results-dir", type=Path, default=RESULTS_DIR)
     return parser
@@ -55,6 +60,7 @@ def main(argv: list[str] | None = None) -> int:
         env_file=args.env_file,
         max_cost=args.max_cost,
         concurrency=args.concurrency,
+        skip_recorded=args.skip_recorded,
         recordings_dir=args.recordings_dir,
         results_dir=args.results_dir,
     )
