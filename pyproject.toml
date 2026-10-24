@@ -33,7 +33,7 @@ target-version = "py312"
 select = ["E", "F", "I", "B", "UP"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["invoice_pilot", "evalgen"]
+known-first-party = ["invoice_pilot", "evalgen", "evalrun"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
