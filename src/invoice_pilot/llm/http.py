@@ -1,22 +1,24 @@
 """Shared HTTP layer: timeouts, bounded retries with backoff, typed failures.
 
 Retry policy (both providers document "retry with exponential backoff"):
-    retried   : HTTP 429, 500, 502, 503, 504, timeouts, transport errors
-    not retried: any other 4xx -> ProviderError at once
-    attempts  : MAX_ATTEMPTS in total; delay = base * 2**(n-1) * (0.5 + jitter),
-                capped, and at least Retry-After (seconds, capped) when present
+    retried    : HTTP 408, 429 (rate limit), 500, 502, 503, 504 and ``httpx.TransportError``
+                 (timeouts, connection and read errors)
+    not retried: 402 and a 429 whose ``error.code`` is a spend/credit limit -> SpendLimitError;
+                 any other status outside 2xx (3xx, other 4xx) -> ProviderError;
+                 other httpx errors (decoding and the like) -> ProviderError
+    attempts   : MAX_ATTEMPTS in total; delay = base * 2**(n-1) * (0.5 + jitter),
+                 capped, and at least Retry-After (seconds, capped) when present
 The sleep function is injected so tests run without waiting.
 """
 
 import json
 import time
 from collections.abc import Awaitable, Callable
-from dataclasses import dataclass
 from typing import Any, Final
 
 import httpx
 
-from invoice_pilot.llm.errors import ProviderError, ProviderUnavailableError
+from invoice_pilot.llm.errors import ProviderError, ProviderUnavailableError, SpendLimitError
 from invoice_pilot.llm.types import CallStatus, UsageRecord
 
 CONNECT_TIMEOUT_S: Final = 10.0
@@ -26,20 +28,26 @@ TIMEOUT: Final = httpx.Timeout(
 )
 
 MAX_ATTEMPTS: Final = 3
-RETRY_STATUSES: Final[frozenset[int]] = frozenset({429, 500, 502, 503, 504})
+RETRY_STATUSES: Final[frozenset[int]] = frozenset({408, 429, 500, 502, 503, 504})
 BASE_DELAY_S: Final = 1.0
 MAX_DELAY_S: Final = 20.0
 RETRY_AFTER_CAP_S: Final = 30.0
 
+#: ``error.code`` values that mean "no money or allowance left": retrying cannot help.
+#: OpenAI (spend-limits and error-codes guides, checked 2026-10-24): HTTP 429 with these
+#: codes. Gemini (api-errors, checked 2026-10-24): HTTP 402 ``payment_required``.
+SPEND_LIMIT_CODES: Final[frozenset[str]] = frozenset(
+    {
+        "organization_spend_limit_exceeded",
+        "project_spend_limit_exceeded",
+        "organization_usage_limit_exceeded",
+        "credit_balance_exhausted",
+        "payment_required",
+    }
+)
+
 SleepFn = Callable[[float], Awaitable[None]]
 JitterFn = Callable[[], float]  # uniform in [0, 1)
-
-
-@dataclass(frozen=True, slots=True)
-class Attempt:
-    status: CallStatus
-    http_status: int | None
-    latency_ms: int
 
 
 def retry_delay(attempt: int, retry_after_s: float | None, jitter: float) -> float:
@@ -61,18 +69,36 @@ def parse_retry_after(value: str | None) -> float | None:
     return seconds if seconds >= 0 else None
 
 
-def error_code(response: httpx.Response) -> str:
-    """Short machine-readable code from a JSON error body, or the HTTP status text."""
+def _error_object(response: httpx.Response) -> dict[str, Any]:
     try:
-        error = response.json().get("error")
-    except (ValueError, AttributeError):
-        error = None
-    if isinstance(error, dict):
-        for key in ("status", "code", "type"):
-            value = error.get(key)
-            if isinstance(value, str | int) and str(value):
-                return str(value)
+        payload = response.json()
+    except ValueError:
+        return {}
+    error = payload.get("error") if isinstance(payload, dict) else None
+    return error if isinstance(error, dict) else {}
+
+
+def error_code_field(response: httpx.Response) -> str | None:
+    """The ``error.code`` string of a JSON error body, if any (used for spend limits)."""
+    code = _error_object(response).get("code")
+    return code if isinstance(code, str) and code else None
+
+
+def error_code(response: httpx.Response) -> str:
+    """Short machine-readable code for messages: error.status, .code or .type, else reason."""
+    error = _error_object(response)
+    for key in ("status", "code", "type"):
+        value = error.get(key)
+        if isinstance(value, str | int) and not isinstance(value, bool) and str(value):
+            return str(value)
     return response.reason_phrase or "error"
+
+
+def is_spend_limit(response: httpx.Response) -> bool:
+    """402, or 429 whose ``error.code`` names a spend, usage or credit limit."""
+    if response.status_code == 402:
+        return True
+    return response.status_code == 429 and error_code_field(response) in SPEND_LIMIT_CODES
 
 
 async def post_with_retries(
@@ -105,21 +131,31 @@ async def post_with_retries(
         except httpx.TimeoutException:
             records.append(_record(provider, model, "timeout", None, started))
             last_failure = "timeout"
-        except httpx.HTTPError as exc:
+        except httpx.TransportError as exc:
             records.append(_record(provider, model, "provider_error", None, started))
             last_failure = f"network error ({type(exc).__name__})"
+        except httpx.HTTPError as exc:
+            records.append(_record(provider, model, "provider_error", None, started))
+            raise ProviderError(
+                f"{provider}: request failed ({type(exc).__name__})", tuple(records)
+            ) from None
         else:
             status = response.status_code
-            if status < 400:
+            if 200 <= status < 300:
                 return response, records
+            records.append(_record(provider, model, "provider_error", status, started))
             code = error_code(response)
-            if status in RETRY_STATUSES:
-                records.append(_record(provider, model, "provider_error", status, started))
-                last_failure = f"HTTP {status} {code}"
-                retry_after = parse_retry_after(response.headers.get("retry-after"))
-            else:
-                records.append(_record(provider, model, "provider_error", status, started))
+            if is_spend_limit(response):
+                limit_code = error_code_field(response) or code
+                raise SpendLimitError(
+                    f"{provider}: spend limit reached (HTTP {status} {limit_code})",
+                    tuple(records),
+                    code=limit_code,
+                )
+            if status not in RETRY_STATUSES:
                 raise ProviderError(f"{provider}: HTTP {status} {code}", tuple(records))
+            last_failure = f"HTTP {status} {code}"
+            retry_after = parse_retry_after(response.headers.get("retry-after"))
         if attempt < MAX_ATTEMPTS:
             await sleep(retry_delay(attempt, retry_after, jitter()))
     raise ProviderUnavailableError(

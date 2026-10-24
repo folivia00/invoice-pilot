@@ -19,6 +19,19 @@ class ProviderError(LLMError):
     """Non-retryable provider failure: 4xx other than 429, or a malformed response envelope."""
 
 
+class SpendLimitError(ProviderError):
+    """The provider refused for lack of money or allowance (402, or 429 with a limit code).
+
+    Retrying cannot help; the caller must stop sending requests.
+    """
+
+    def __init__(
+        self, message: str, attempts: tuple[UsageRecord, ...] = (), *, code: str = "unknown"
+    ) -> None:
+        super().__init__(message, attempts)
+        self.code = code
+
+
 class ProviderUnavailableError(LLMError):
     """Retries exhausted: rate limit, 5xx, timeout or network error on every attempt."""
 
