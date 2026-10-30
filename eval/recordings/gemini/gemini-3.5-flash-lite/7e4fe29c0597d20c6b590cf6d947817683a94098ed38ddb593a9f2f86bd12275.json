@@ -1,0 +1,21 @@
+{
+  "document_sha256": "34e887aa43980550303c890d07f711ac62a26f9a019bff8d924c7f62e3781c1d",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Northwind Supplies Corp.\",\n    \"tax_id\": null,\n    \"address\": \"565 Elm Court, Raleigh 78792\"\n  },\n  \"buyer\": {\n    \"name\": \"Orbit Office Solutions LLC\",\n    \"tax_id\": null,\n    \"address\": \"244 Industrial Parkway, Portland 56295\"\n  },\n  \"invoice_number\": \"2025-053582\",\n  \"invoice_date\": \"2025-11-27\",\n  \"due_date\": \"2025-12-11\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Onsite installation, hours\",\n      \"quantity\": 3.0,\n      \"unit_price\": 97.35,\n      \"amount\": 292.05\n    },\n    {\n      \"description\": \"Packaging boxes, set of 50\",\n      \"quantity\": 8.0,\n      \"unit_price\": 40.0,\n      \"amount\": 320.0\n    },\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 5.7,\n      \"unit_price\": 20.54,\n      \"amount\": 117.08\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 8.0,\n      \"unit_price\": 355.73,\n      \"amount\": 2845.84\n    }\n  ],\n  \"subtotal\": 3574.97,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 223.44,\n  \"total\": 3798.41,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:30:17+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 902,
+    "latency_ms": 3125,
+    "output_tokens": 466,
+    "thinking_tokens": 0
+  }
+}

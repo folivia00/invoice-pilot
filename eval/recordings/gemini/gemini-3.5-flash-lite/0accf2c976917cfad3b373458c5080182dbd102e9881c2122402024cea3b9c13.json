@@ -1,0 +1,21 @@
+{
+  "document_sha256": "be1c1ec6e38e0e9340ad69ba3a83c053ae739f51a085ce217aca101b8fbce57b",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Sonnenhang Gartenbau GmbH & Co. KG\",\n    \"tax_id\": \"DE255992642\",\n    \"address\": \"Hauptstraße 85, 80748 Lüneburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Donau Druckerei GmbH\",\n    \"tax_id\": \"DE109820661\",\n    \"address\": \"Hauptstraße 125, 86860 Regensburg\"\n  },\n  \"invoice_number\": \"R057762\",\n  \"invoice_date\": \"2026-03-21\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 8,\n      \"unit_price\": 10.4,\n      \"amount\": 83.2\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 10,\n      \"unit_price\": 36.31,\n      \"amount\": 363.1\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 10,\n      \"unit_price\": 529.0,\n      \"amount\": 5290.0\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 1,\n      \"unit_price\": 286.06,\n      \"amount\": 286.06\n    },\n    {\n      \"description\": \"Funktastatur\",\n      \"quantity\": 7,\n      \"unit_price\": 75.0,\n      \"amount\": 525.0\n    },\n    {\n      \"description\": \"Softwarelizenz (Jahr)\",\n      \"quantity\": 1,\n      \"unit_price\": 1296.85,\n      \"amount\": 1296.85\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 35.25,\n      \"unit_price\": 119.04,\n      \"amount\": 4196.16\n    }\n  ],\n  \"subtotal\": 12040.37,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.0,\n  \"total\": 12040.37,\n  \"iban\": \"DE93 9333 1867 4327 0580 45\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:30:42+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1051,
+    "latency_ms": 2376,
+    "output_tokens": 665,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a6cba2f7bf79a98bc1fe03fbd1fa1deeab38a4af7837e7cab3e9536caafd1591",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Adlerhorst Sanitär KG\",\n    \"tax_id\": null,\n    \"address\": \"Salzburger Straße 87, 3132 Klagenfurt\"\n  },\n  \"buyer\": {\n    \"name\": \"Florian Dörfler\",\n    \"tax_id\": null,\n    \"address\": \"Salzburger Straße 38, 6202 Innsbruck\"\n  },\n  \"invoice_number\": \"2026-041284\",\n  \"invoice_date\": \"2026-02-01\",\n  \"due_date\": \"2026-03-03\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 1205.26,\n      \"amount\": 1205.26\n    },\n    {\n      \"description\": \"Kabelmanagement-Set\",\n      \"quantity\": 2,\n      \"unit_price\": 37.28,\n      \"amount\": 74.56\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 5,\n      \"unit_price\": 372.00,\n      \"amount\": 1860.00\n    },\n    {\n      \"description\": \"Reinigungsleistung\",\n      \"quantity\": 1,\n      \"unit_price\": 250.44,\n      \"amount\": 250.44\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 21.4,\n      \"unit_price\": 2.16,\n      \"amount\": 46.22\n    }\n  ],\n  \"subtotal\": 3436.48,\n  \"tax_rate\": 20,\n  \"tax_amount\": 687.30,\n  \"total\": 4123.78,\n  \"iban\": \"AT71 7353 5208 1683 5612\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:24+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2627,
+    "output_tokens": 541,
+    "thinking_tokens": 0
+  }
+}

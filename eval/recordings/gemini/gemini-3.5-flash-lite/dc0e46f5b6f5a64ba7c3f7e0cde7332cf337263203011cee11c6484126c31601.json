@@ -1,0 +1,21 @@
+{
+  "document_sha256": "3f1dff70eb2cf7ecffc336d1718cb7bffcd7c28d960e70e31df62f3ddf4629ef",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kupferberg Metallbau AG\",\n    \"tax_id\": null,\n    \"address\": \"Dorfstrasse 172, 1030 Winterthur, Schweiz\"\n  },\n  \"buyer\": {\n    \"name\": \"Felsenkeller Getränke KG\",\n    \"tax_id\": null,\n    \"address\": \"Mariahilfer Gasse 108, 1725 Steyr, Österreich\"\n  },\n  \"invoice_number\": \"R022057\",\n  \"invoice_date\": \"2026-06-30\",\n  \"due_date\": \"2026-07-30\",\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Hosting-Paket, monatlich\",\n      \"quantity\": 1.0,\n      \"unit_price\": 288.04,\n      \"amount\": 288.04\n    },\n    {\n      \"description\": \"USB-C-Dockingstation\",\n      \"quantity\": 19.0,\n      \"unit_price\": 66.0,\n      \"amount\": 1254.0\n    },\n    {\n      \"description\": \"Kopierpapier A4, 500 Blatt\",\n      \"quantity\": 9.0,\n      \"unit_price\": 4.0,\n      \"amount\": 36.0\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 15.2,\n      \"unit_price\": 5.23,\n      \"amount\": 79.5\n    },\n    {\n      \"description\": \"Aluminiumprofil 40x40, m\",\n      \"quantity\": 49.04,\n      \"unit_price\": 14.64,\n      \"amount\": 717.95\n    },\n    {\n      \"description\": \"Tonerkartusche\",\n      \"quantity\": 2.0,\n      \"unit_price\": 39.44,\n      \"amount\": 78.88\n    }\n  ],\n  \"subtotal\": 2454.37,\n  \"tax_rate\": 8.1,\n  \"tax_amount\": 198.8,\n  \"total\": 2653.17,\n  \"iban\": \"CH73 8072 30HO 8JAP ZYWD 7\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:27+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1035,
+    "latency_ms": 1859,
+    "output_tokens": 621,
+    "thinking_tokens": 0
+  }
+}

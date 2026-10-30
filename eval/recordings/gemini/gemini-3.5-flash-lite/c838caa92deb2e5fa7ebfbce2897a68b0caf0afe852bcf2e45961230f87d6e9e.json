@@ -1,0 +1,21 @@
+{
+  "document_sha256": "ceec5a6dbb029a842dd9209f1119b2a556b3878a1ba8d1880f337fbb3f2db4f1",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Northwind Supplies SAS\",\n    \"tax_id\": \"FR42139794094\",\n    \"address\": \"Chemin des Vignes 8, 45848 Toulouse\"\n  },\n  \"buyer\": {\n    \"name\": \"Mara Ellis\",\n    \"tax_id\": null,\n    \"address\": \"Place de la Gare 67, 72865 Dijon\"\n  },\n  \"invoice_number\": \"2504-78052\",\n  \"invoice_date\": \"2025-10-12\",\n  \"due_date\": \"2025-10-26\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 36.25,\n      \"unit_price\": 97.37,\n      \"amount\": 3529.66\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 159.7,\n      \"unit_price\": 29.50,\n      \"amount\": 4711.15\n    },\n    {\n      \"description\": \"Copper wire 2.5 mm, kg\",\n      \"quantity\": 17.61,\n      \"unit_price\": 23.00,\n      \"amount\": 405.03\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 1.75,\n      \"unit_price\": 50.55,\n      \"amount\": 88.46\n    }\n  ],\n  \"subtotal\": 8734.30,\n  \"tax_rate\": 5.5,\n  \"tax_amount\": 480.39,\n  \"total\": 9214.69,\n  \"iban\": \"FR56 9669 3599 05DJ 10LX 2VNU J39\",\n  \"bic\": \"SVFEFRFFB01\"\n}",
+  "recorded_at": "2026-10-30T20:36:29+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 957,
+    "latency_ms": 1653,
+    "output_tokens": 528,
+    "thinking_tokens": 0
+  }
+}

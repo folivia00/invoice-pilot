@@ -1,0 +1,21 @@
+{
+  "document_sha256": "92859f08ddcd8d0880d571c47deb3b988a7e77788b4ee51937ce90d7cae7defa",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Lerchenfeld Bäckerei KG\",\n    \"tax_id\": null,\n    \"address\": \"Am Mühlbach 35, 13932 Göttingen, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Bergmann Elektrotechnik e.K.\",\n    \"tax_id\": null,\n    \"address\": \"Birkenallee 63, 60866 Münster\"\n  },\n  \"invoice_number\": \"2510-79701\",\n  \"invoice_date\": \"2025-11-26\",\n  \"due_date\": \"2025-12-10\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Schulung (halber Tag)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 662.63,\n      \"amount\": 662.63\n    },\n    {\n      \"description\": \"Catering, Mittagessen für 12 Personen\",\n      \"quantity\": 1.0,\n      \"unit_price\": 273.0,\n      \"amount\": 273.0\n    },\n    {\n      \"description\": \"Kaffeebohnen, geröstet, kg\",\n      \"quantity\": 44.08,\n      \"unit_price\": 16.0,\n      \"amount\": 705.28\n    }\n  ],\n  \"subtotal\": 1640.91,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 311.77,\n  \"total\": 1952.68,\n  \"iban\": \"DE78 1849 3750 5324 1711 72\",\n  \"bic\": \"YJPXDEXXXXX\"\n}",
+  "recorded_at": "2026-10-30T20:38:56+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 990,
+    "latency_ms": 2203,
+    "output_tokens": 469,
+    "thinking_tokens": 0
+  }
+}

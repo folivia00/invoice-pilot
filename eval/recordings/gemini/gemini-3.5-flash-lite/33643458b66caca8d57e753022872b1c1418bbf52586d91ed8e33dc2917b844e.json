@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a4d988a24cea9b3fcf7e6baf90708614c676fde5dddac1a2e41865726b60ee8b",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kastanienallee Buchhandlung e.K.\",\n    \"tax_id\": null,\n    \"address\": \"Bahnhofstraße 113, 16709 Göttingen\"\n  },\n  \"buyer\": {\n    \"name\": \"Kastanienallee Buchhandlung e.K.\",\n    \"tax_id\": null,\n    \"address\": \"Industriestraße 55, 01432 Regensburg\"\n  },\n  \"invoice_number\": \"R021026\",\n  \"invoice_date\": \"2025-12-13\",\n  \"due_date\": \"2026-01-12\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 4,\n      \"unit_price\": 13.0,\n      \"amount\": 52.0\n    },\n    {\n      \"description\": \"Projektleitung (Std.)\",\n      \"quantity\": 23.25,\n      \"unit_price\": 72.47,\n      \"amount\": 1684.93\n    },\n    {\n      \"description\": \"Tonerkartusche\",\n      \"quantity\": 35,\n      \"unit_price\": 123.0,\n      \"amount\": 4305.0\n    },\n    {\n      \"description\": \"Monitor 27 Zoll\",\n      \"quantity\": 8,\n      \"unit_price\": 390.0,\n      \"amount\": 3120.0\n    },\n    {\n      \"description\": \"Laptopständer, Aluminium\",\n      \"quantity\": 1,\n      \"unit_price\": 50.51,\n      \"amount\": 50.51\n    },\n    {\n      \"description\": \"Kaffeebohnen, geröstet, kg\",\n      \"quantity\": 1.21,\n      \"unit_price\": 38.16,\n      \"amount\": 46.17\n    },\n    {\n      \"description\": \"Übersetzung (Std.)\",\n      \"quantity\": 26.5,\n      \"unit_price\": 84.24,\n      \"amount\": 2232.36\n    }\n  ],\n  \"subtotal\": 11490.97,\n  \"tax_rate\": 7.0,\n  \"tax_amount\": 804.37,\n  \"total\": 12295.34,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:38+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1664,
+    "latency_ms": 4566,
+    "output_tokens": 643,
+    "thinking_tokens": 0
+  }
+}

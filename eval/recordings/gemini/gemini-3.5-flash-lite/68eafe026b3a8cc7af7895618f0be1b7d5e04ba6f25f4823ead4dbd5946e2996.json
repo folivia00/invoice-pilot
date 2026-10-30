@@ -1,0 +1,21 @@
+{
+  "document_sha256": "af2d403617d106b29b8699ee104656ee11f1703c9ac94cde8a510f662195e4e4",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Müller Bürotechnik GmbH\",\n    \"tax_id\": \"ATU37646350\",\n    \"address\": \"Ringstraße 136, 8052 Linz\"\n  },\n  \"buyer\": {\n    \"name\": \"Felsenkeller Getränke GmbH\",\n    \"tax_id\": \"ATU08618587\",\n    \"address\": \"Mariahilfer Gasse 51, 5212 Innsbruck\"\n  },\n  \"invoice_number\": \"R028566\",\n  \"invoice_date\": \"2026-09-24\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Projektleitung (Std.)\",\n      \"quantity\": 15.75,\n      \"unit_price\": 74.96,\n      \"amount\": 1180.62\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 10,\n      \"unit_price\": 58.86,\n      \"amount\": 588.60\n    },\n    {\n      \"description\": \"Funktastatur\",\n      \"quantity\": 2,\n      \"unit_price\": 116.95,\n      \"amount\": 233.90\n    }\n  ],\n  \"subtotal\": 2003.12,\n  \"tax_rate\": 20,\n  \"tax_amount\": 400.62,\n  \"total\": 2403.74,\n  \"iban\": \"AT89 3853 8845 8363 5797\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:26+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2104,
+    "output_tokens": 442,
+    "thinking_tokens": 0
+  }
+}

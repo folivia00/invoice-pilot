@@ -1,0 +1,21 @@
+{
+  "document_sha256": "951c30b2359742d9bafd08d70d9f723d26ade62f86168931efb0204b1aa88784",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Brückenkopf Ingenieure GesmbH\",\n    \"tax_id\": \"ATU32161518\",\n    \"address\": \"Am Graben 81, 1031 Innsbruck, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Silberberg Beratung AG\",\n    \"tax_id\": \"DE649131431\",\n    \"address\": \"Lindenstraße 80, 05638 Bamberg, Deutschland\"\n  },\n  \"invoice_number\": \"2608-90165\",\n  \"invoice_date\": \"2026-05-12\",\n  \"due_date\": \"2026-06-11\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 84.91,\n      \"unit_price\": 15.81,\n      \"amount\": 1342.43\n    },\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 4.5,\n      \"unit_price\": 12.66,\n      \"amount\": 56.97\n    },\n    {\n      \"description\": \"Softwarelizenz (Jahr)\",\n      \"quantity\": 1,\n      \"unit_price\": 1964.0,\n      \"amount\": 1964.0\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 10,\n      \"unit_price\": 331.73,\n      \"amount\": 3317.3\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 13,\n      \"unit_price\": 76.53,\n      \"amount\": 994.89\n    },\n    {\n      \"description\": \"Etikettendrucker\",\n      \"quantity\": 1,\n      \"unit_price\": 143.81,\n      \"amount\": 143.81\n    },\n    {\n      \"description\": \"Reinigungsleistung\",\n      \"quantity\": 1,\n      \"unit_price\": 140.63,\n      \"amount\": 140.63\n    },\n    {\n      \"description\": \"Kabelmanagement-Set\",\n      \"quantity\": 8,\n      \"unit_price\": 9.75,\n      \"amount\": 78.0\n    }\n  ],\n  \"subtotal\": 8038.03,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.0,\n  \"total\": 8038.03,\n  \"iban\": \"AT23 6148 4393 1657 6584\",\n  \"bic\": \"JZOQAT2L200\"\n}",
+  "recorded_at": "2026-10-30T20:35:51+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1190,
+    "latency_ms": 1978,
+    "output_tokens": 737,
+    "thinking_tokens": 0
+  }
+}

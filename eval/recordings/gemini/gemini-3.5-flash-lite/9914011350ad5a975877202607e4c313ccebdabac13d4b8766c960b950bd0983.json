@@ -1,0 +1,21 @@
+{
+  "document_sha256": "36f540f46cd505c0fe78521b7489b52c5209029a9a91c1962967627279b49fdc",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kupferberg Metallbau KG\",\n    \"tax_id\": \"DE519405163\",\n    \"address\": \"Industriestraße 164, 12126 Freiburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Fuchsbau Werbung GmbH & Co. KG\",\n    \"tax_id\": null,\n    \"address\": \"Bahnhofstraße 30, 31854 Regensburg\"\n  },\n  \"invoice_number\": \"RE-202648715\",\n  \"invoice_date\": \"2026-08-17\",\n  \"due_date\": \"2026-09-16\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Aluminiumprofil 40x40, m\",\n      \"quantity\": 42.7,\n      \"unit_price\": 27.28,\n      \"amount\": 1164.86\n    },\n    {\n      \"description\": \"Sicherheitsaudit\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2383.25,\n      \"amount\": 2383.25\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 44.61,\n      \"unit_price\": 5.81,\n      \"amount\": 259.18\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 2.0,\n      \"unit_price\": 69.2,\n      \"amount\": 138.4\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 7.0,\n      \"unit_price\": 4.36,\n      \"amount\": 30.52\n    },\n    {\n      \"description\": \"Versandkartons, 50 Stück\",\n      \"quantity\": 1.0,\n      \"unit_price\": 64.0,\n      \"amount\": 64.0\n    }\n  ],\n  \"subtotal\": 4040.21,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.0,\n  \"total\": 4040.21,\n  \"iban\": \"DE05 5416 5209 5381 2052 85\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:37:11+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1031,
+    "latency_ms": 2261,
+    "output_tokens": 632,
+    "thinking_tokens": 0
+  }
+}

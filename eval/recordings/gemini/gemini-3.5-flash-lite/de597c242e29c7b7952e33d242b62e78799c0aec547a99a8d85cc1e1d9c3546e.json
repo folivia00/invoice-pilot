@@ -1,0 +1,21 @@
+{
+  "document_sha256": "10cc3be1136e9ea02daeea9a977a514d47b32559ff4a57f279e3793179d4d42a",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Rheintal Logistik e.K.\",\n    \"tax_id\": \"DE160518474\",\n    \"address\": \"Am Mühlbach 68, 07367 Freiburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Müller Bürotechnik AG\",\n    \"tax_id\": \"DE304181764\",\n    \"address\": \"Bahnhofstraße 12, 78448 Lüneburg\"\n  },\n  \"invoice_number\": \"2504-83039\",\n  \"invoice_date\": \"2025-11-04\",\n  \"due_date\": \"2025-12-04\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 8.6,\n      \"unit_price\": 26.69,\n      \"amount\": 229.53\n    },\n    {\n      \"description\": \"Netzwerkkabel Cat6, m\",\n      \"quantity\": 27.0,\n      \"unit_price\": 1.03,\n      \"amount\": 27.81\n    },\n    {\n      \"description\": \"Technischer Support (Std.)\",\n      \"quantity\": 51.75,\n      \"unit_price\": 59.78,\n      \"amount\": 3093.62\n    },\n    {\n      \"description\": \"Hosting-Paket, monatlich\",\n      \"quantity\": 1.0,\n      \"unit_price\": 360.0,\n      \"amount\": 360.0\n    },\n    {\n      \"description\": \"Kabelmanagement-Set\",\n      \"quantity\": 5.0,\n      \"unit_price\": 17.75,\n      \"amount\": 88.75\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 8.0,\n      \"unit_price\": 483.16,\n      \"amount\": 3865.28\n    },\n    {\n      \"description\": \"Funktastatur\",\n      \"quantity\": 7.0,\n      \"unit_price\": 43.08,\n      \"amount\": 301.56\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 9.0,\n      \"unit_price\": 299.82,\n      \"amount\": 2698.38\n    }\n  ],\n  \"subtotal\": 10664.93,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 2026.34,\n  \"total\": 12691.27,\n  \"iban\": \"DE36 1154 2897 9092 6420 69\",\n  \"bic\": \"IBBPDE2L100\"\n}",
+  "recorded_at": "2026-10-30T20:33:26+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2807,
+    "output_tokens": 764,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "by_input_type": {
+    "photo": {
+      "all_key_fields_correct": {
+        "denominator": 36,
+        "numerator": 35,
+        "value": 0.9722
+      },
+      "auto_approved": {
+        "denominator": 36,
+        "numerator": 32,
+        "value": 0.8889
+      },
+      "clean_sent_to_review": {
+        "denominator": 32,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "corrupted_recall": {
+        "denominator": 4,
+        "numerator": 4,
+        "value": 1.0
+      },
+      "corrupted_recall_expected_code": {
+        "denominator": 4,
+        "numerator": 4,
+        "value": 1.0
+      },
+      "documents": 36,
+      "needs_review": {
+        "denominator": 36,
+        "numerator": 4,
+        "value": 0.1111
+      },
+      "precision_auto_approved": {
+        "denominator": 32,
+        "numerator": 31,
+        "value": 0.9688
+      }
+    },
+    "scan_pdf": {
+      "all_key_fields_correct": {
+        "denominator": 36,
+        "numerator": 34,
+        "value": 0.9444
+      },
+      "auto_approved": {
+        "denominator": 36,
+        "numerator": 31,
+        "value": 0.8611
+      },
+      "clean_sent_to_review": {
+        "denominator": 31,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "corrupted_recall": {
+        "denominator": 5,
+        "numerator": 5,
+        "value": 1.0
+      },
+      "corrupted_recall_expected_code": {
+        "denominator": 5,
+        "numerator": 5,
+        "value": 1.0
+      },
+      "documents": 36,
+      "needs_review": {
+        "denominator": 36,
+        "numerator": 5,
+        "value": 0.1389
+      },
+      "precision_auto_approved": {
+        "denominator": 31,
+        "numerator": 29,
+        "value": 0.9355
+      }
+    },
+    "text_pdf": {
+      "all_key_fields_correct": {
+        "denominator": 48,
+        "numerator": 47,
+        "value": 0.9792
+      },
+      "auto_approved": {
+        "denominator": 48,
+        "numerator": 41,
+        "value": 0.8542
+      },
+      "clean_sent_to_review": {
+        "denominator": 42,
+        "numerator": 1,
+        "value": 0.0238
+      },
+      "corrupted_recall": {
+        "denominator": 6,
+        "numerator": 6,
+        "value": 1.0
+      },
+      "corrupted_recall_expected_code": {
+        "denominator": 6,
+        "numerator": 6,
+        "value": 1.0
+      },
+      "documents": 48,
+      "needs_review": {
+        "denominator": 48,
+        "numerator": 7,
+        "value": 0.1458
+      },
+      "precision_auto_approved": {
+        "denominator": 41,
+        "numerator": 41,
+        "value": 1.0
+      }
+    }
+  },
+  "by_language": {
+    "de": {
+      "all_key_fields_correct": {
+        "denominator": 48,
+        "numerator": 47,
+        "value": 0.9792
+      },
+      "auto_approved": {
+        "denominator": 48,
+        "numerator": 42,
+        "value": 0.875
+      },
+      "clean_sent_to_review": {
+        "denominator": 42,
+        "numerator": 0,
+        "value": 0.0
+      },
+      "corrupted_recall": {
+        "denominator": 6,
+        "numerator": 6,
+        "value": 1.0
+      },
+      "corrupted_recall_expected_code": {
+        "denominator": 6,
+        "numerator": 6,
+        "value": 1.0
+      },
+      "documents": 48,
+      "needs_review": {
+        "denominator": 48,
+        "numerator": 6,
+        "value": 0.125
+      },
+      "precision_auto_approved": {
+        "denominator": 42,
+        "numerator": 41,
+        "value": 0.9762
+      }
+    },
+    "en": {
+      "all_key_fields_correct": {
+        "denominator": 72,
+        "numerator": 69,
+        "value": 0.9583
+      },
+      "auto_approved": {
+        "denominator": 72,
+        "numerator": 62,
+        "value": 0.8611
+      },
+      "clean_sent_to_review": {
+        "denominator": 63,
+        "numerator": 1,
+        "value": 0.0159
+      },
+      "corrupted_recall": {
+        "denominator": 9,
+        "numerator": 9,
+        "value": 1.0
+      },
+      "corrupted_recall_expected_code": {
+        "denominator": 9,
+        "numerator": 9,
+        "value": 1.0
+      },
+      "documents": 72,
+      "needs_review": {
+        "denominator": 72,
+        "numerator": 10,
+        "value": 0.1389
+      },
+      "precision_auto_approved": {
+        "denominator": 62,
+        "numerator": 60,
+        "value": 0.9677
+      }
+    }
+  },
+  "cost": {
+    "by_input_type": {
+      "photo": {
+        "cost_usd_per_1000": "1.77",
+        "cost_usd_per_document": "0.001767",
+        "cost_usd_total": "0.0636083",
+        "documents": 36,
+        "input_tokens": {
+          "mean": 1689.9,
+          "p95": 1692
+        },
+        "output_tokens": {
+          "mean": 504.0,
+          "p95": 695
+        },
+        "thinking_tokens": {
+          "mean": 0.0
+        }
+      },
+      "scan_pdf": {
+        "cost_usd_per_1000": "1.68",
+        "cost_usd_per_document": "0.001681",
+        "cost_usd_total": "0.0605080",
+        "documents": 36,
+        "input_tokens": {
+          "mean": 1187.8,
+          "p95": 1664
+        },
+        "output_tokens": {
+          "mean": 529.8,
+          "p95": 752
+        },
+        "thinking_tokens": {
+          "mean": 0.0
+        }
+      },
+      "text_pdf": {
+        "cost_usd_per_1000": "1.69",
+        "cost_usd_per_document": "0.001690",
+        "cost_usd_total": "0.0811315",
+        "documents": 48,
+        "input_tokens": {
+          "mean": 992.8,
+          "p95": 1190
+        },
+        "output_tokens": {
+          "mean": 557.0,
+          "p95": 718
+        },
+        "thinking_tokens": {
+          "mean": 0.0
+        }
+      }
+    },
+    "overall": {
+      "cost_usd_per_1000": "1.71",
+      "cost_usd_per_document": "0.001710",
+      "cost_usd_total": "0.2052478",
+      "documents": 120,
+      "input_tokens": {
+        "mean": 1260.4,
+        "p95": 1692
+      },
+      "output_tokens": {
+        "mean": 532.9,
+        "p95": 718
+      },
+      "thinking_tokens": {
+        "mean": 0.0
+      }
+    }
+  },
+  "documents_evaluated": 120,
+  "documents_selected": 120,
+  "extraction_failed": 0,
+  "field_accuracy": {
+    "key": {
+      "bic": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "buyer.name": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "buyer.tax_id": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "currency": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "due_date": {
+        "denominator": 120,
+        "numerator": 119,
+        "value": 0.9917
+      },
+      "iban": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "invoice_date": {
+        "denominator": 120,
+        "numerator": 118,
+        "value": 0.9833
+      },
+      "invoice_number": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "line_items": {
+        "denominator": 120,
+        "numerator": 119,
+        "value": 0.9917
+      },
+      "subtotal": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "supplier.name": {
+        "denominator": 120,
+        "numerator": 119,
+        "value": 0.9917
+      },
+      "supplier.tax_id": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "tax_amount": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "tax_rate": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      },
+      "total": {
+        "denominator": 120,
+        "numerator": 120,
+        "value": 1.0
+      }
+    },
+    "text": {
+      "buyer.address": {
+        "denominator": 120,
+        "numerator": 101,
+        "value": 0.8417
+      },
+      "line_items.description": {
+        "denominator": 120,
+        "numerator": 119,
+        "value": 0.9917
+      },
+      "supplier.address": {
+        "denominator": 120,
+        "numerator": 57,
+        "value": 0.475
+      }
+    }
+  },
+  "missing_recordings": [],
+  "model_only_vs_with_checks": {
+    "model_only": {
+      "denominator": 120,
+      "numerator": 116,
+      "value": 0.9667
+    },
+    "model_with_checks": {
+      "denominator": 104,
+      "numerator": 101,
+      "value": 0.9712
+    }
+  },
+  "model_retries": 0,
+  "overall": {
+    "all_key_fields_correct": {
+      "denominator": 120,
+      "numerator": 116,
+      "value": 0.9667
+    },
+    "auto_approved": {
+      "denominator": 120,
+      "numerator": 104,
+      "value": 0.8667
+    },
+    "clean_sent_to_review": {
+      "denominator": 105,
+      "numerator": 1,
+      "value": 0.0095
+    },
+    "corrupted_recall": {
+      "denominator": 15,
+      "numerator": 15,
+      "value": 1.0
+    },
+    "corrupted_recall_expected_code": {
+      "denominator": 15,
+      "numerator": 15,
+      "value": 1.0
+    },
+    "documents": 120,
+    "needs_review": {
+      "denominator": 120,
+      "numerator": 16,
+      "value": 0.1333
+    },
+    "precision_auto_approved": {
+      "denominator": 104,
+      "numerator": 101,
+      "value": 0.9712
+    }
+  },
+  "provider_errors": 0,
+  "run": {
+    "config": "gemini-flash-lite",
+    "dataset_version": "1.0",
+    "documents_processed": 120,
+    "documents_selected": 120,
+    "methodology_version": "1.0",
+    "mode": "replay",
+    "model": "gemini-3.5-flash-lite",
+    "params": {
+      "media_resolution": "default",
+      "thinking_level": "minimal"
+    },
+    "prompt_version": "extraction-v1",
+    "provider": "gemini",
+    "recordings_first": "2026-10-30T20:30:17+00:00",
+    "recordings_last": "2026-10-30T20:38:56+00:00",
+    "reference_date": "2026-10-01",
+    "run_date": "2026-10-30",
+    "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+    "stopped": null
+  },
+  "skipped_recorded": 0
+}

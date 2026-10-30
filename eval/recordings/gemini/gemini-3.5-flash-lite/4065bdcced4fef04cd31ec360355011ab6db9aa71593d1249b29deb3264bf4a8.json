@@ -1,0 +1,21 @@
+{
+  "document_sha256": "2c4b801196f130492ac9822ff2f37bc12862169b70d15fde8cb4d0dc81f97106",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Oakmont Training LLP\",\n    \"tax_id\": \"GB211748093\",\n    \"address\": \"857 Birch Avenue, Bristol JX0 1NT\"\n  },\n  \"buyer\": {\n    \"name\": \"Summit Ridge Tools Ltd\",\n    \"tax_id\": \"GB244624431\",\n    \"address\": \"667 Orchard Way, Leeds AJ5 2XE\"\n  },\n  \"invoice_number\": \"2026-051786\",\n  \"invoice_date\": \"2026-09-25\",\n  \"due_date\": null,\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 27,\n      \"unit_price\": 63.15,\n      \"amount\": 1705.05\n    },\n    {\n      \"description\": \"Monitor 27 inch\",\n      \"quantity\": 6,\n      \"unit_price\": 232.2,\n      \"amount\": 1393.2\n    },\n    {\n      \"description\": \"Packaging boxes, set of 50\",\n      \"quantity\": 6,\n      \"unit_price\": 59.26,\n      \"amount\": 355.56\n    }\n  ],\n  \"subtotal\": 3453.81,\n  \"tax_rate\": 20,\n  \"tax_amount\": 690.76,\n  \"total\": 4144.57,\n  \"iban\": \"GB20 RUIK 7805 1531 3684 51\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:34+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2238,
+    "output_tokens": 439,
+    "thinking_tokens": 0
+  }
+}

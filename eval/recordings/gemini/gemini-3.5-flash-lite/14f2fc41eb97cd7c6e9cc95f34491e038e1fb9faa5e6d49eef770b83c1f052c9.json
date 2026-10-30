@@ -1,0 +1,21 @@
+{
+  "document_sha256": "dc748c3703571ec2ab847fbb7da39e50bcd49390e39ff18f1cf002014dd7b5cf",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Tannemberg Schulung GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Gartenweg 133, 58474 Lüneburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Mondsee Optik GmbH & Co. KG\",\n    \"tax_id\": \"DE481443136\",\n    \"address\": \"Industriestraße 167, 88361 Lüneburg\"\n  },\n  \"invoice_number\": \"2509-1917\",\n  \"invoice_date\": \"2025-11-15\",\n  \"due_date\": \"2025-12-15\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Monitor 27 Zoll\",\n      \"quantity\": 8,\n      \"unit_price\": 181.00,\n      \"amount\": 1448.00\n    },\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 110,\n      \"unit_price\": 13.93,\n      \"amount\": 1532.30\n    },\n    {\n      \"description\": \"Netzwerk-Switch 24 Ports\",\n      \"quantity\": 9,\n      \"unit_price\": 417.62,\n      \"amount\": 3758.58\n    }\n  ],\n  \"subtotal\": 6738.88,\n  \"tax_rate\": 19,\n  \"tax_amount\": 1280.39,\n  \"total\": 8019.27,\n  \"iban\": \"DE23 1923 3577 2991 4181 88\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:59+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2693,
+    "output_tokens": 474,
+    "thinking_tokens": 0
+  }
+}

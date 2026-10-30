@@ -1,0 +1,21 @@
+{
+  "document_sha256": "ece15a85ad7e748c2da0fcf842468662ae2f0c8053a7423e3110abfc92de5124",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Hafenstadt Textil GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Salzburger Straße 27, 3583 Klagenfurt, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Schwarzwald Holzbau AG\",\n    \"tax_id\": null,\n    \"address\": \"Industriestrasse 55, 8427 Biel, Schweiz\"\n  },\n  \"invoice_number\": \"2603-80635\",\n  \"invoice_date\": \"2026-05-02\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Reinigungsleistung\",\n      \"quantity\": 1,\n      \"unit_price\": 288.33,\n      \"amount\": 288.33\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 10,\n      \"unit_price\": 8.72,\n      \"amount\": 87.20\n    },\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 4.35,\n      \"unit_price\": 15.56,\n      \"amount\": 67.69\n    }\n  ],\n  \"subtotal\": 443.22,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 88.64,\n  \"total\": 531.86,\n  \"iban\": \"AT22 4410 7515 9524 9601\",\n  \"bic\": \"VIMEAT2L100\"\n}",
+  "recorded_at": "2026-10-30T20:31:54+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 924,
+    "latency_ms": 1806,
+    "output_tokens": 440,
+    "thinking_tokens": 0
+  }
+}

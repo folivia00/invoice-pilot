@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e7189e48ac9ec0f7fa97eb16227180538da7d51967723ae37458b1eabd2391df",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kestrel Aviation Parts Co.\",\n    \"tax_id\": \"10-6484073\",\n    \"address\": \"683 Lakeshore Drive, Portland 11400, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Ironbridge Engineering SAS\",\n    \"tax_id\": \"FR87522567282\",\n    \"address\": \"Rue des Lilas 175, 36533 Dijon, France\"\n  },\n  \"invoice_number\": \"INV-2025-74282\",\n  \"invoice_date\": \"2025-09-11\",\n  \"due_date\": \"2025-09-12\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 2,\n      \"unit_price\": 61.0,\n      \"amount\": 122.0\n    },\n    {\n      \"description\": \"LED panel light\",\n      \"quantity\": 1,\n      \"unit_price\": 47.0,\n      \"amount\": 47.0\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 23.7,\n      \"unit_price\": 10.5,\n      \"amount\": 248.85\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 1308.11,\n      \"amount\": 1308.11\n    }\n  ],\n  \"subtotal\": 1725.96,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 107.87,\n  \"total\": 1833.83,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:03+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1120,
+    "latency_ms": 4359,
+    "output_tokens": 492,
+    "thinking_tokens": 0
+  }
+}

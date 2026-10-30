@@ -1,0 +1,21 @@
+{
+  "document_sha256": "eb251f6c1994b2673a2935b8b58b827db2c6098c778fe081c12dc0c2dfe6ee52",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles Co.\",\n    \"tax_id\": null,\n    \"address\": \"766 Commerce Boulevard, Portland 11120, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Greywater Plumbing S.p.A.\",\n    \"tax_id\": null,\n    \"address\": \"Corso Garibaldi 90, 22118 Pisa, Italy\"\n  },\n  \"invoice_number\": \"INV-2026-81396\",\n  \"invoice_date\": \"2026-07-13\",\n  \"due_date\": \"2026-08-27\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 573.0,\n      \"amount\": 573.0\n    },\n    {\n      \"description\": \"Hosting plan, monthly\",\n      \"quantity\": 1,\n      \"unit_price\": 377.0,\n      \"amount\": 377.0\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 9,\n      \"unit_price\": 4.48,\n      \"amount\": 40.32\n    },\n    {\n      \"description\": \"Security audit\",\n      \"quantity\": 1,\n      \"unit_price\": 1479.31,\n      \"amount\": 1479.31\n    },\n    {\n      \"description\": \"Courier delivery\",\n      \"quantity\": 1,\n      \"unit_price\": 78.7,\n      \"amount\": 78.7\n    },\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1,\n      \"unit_price\": 248.0,\n      \"amount\": 248.0\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 10,\n      \"unit_price\": 199.0,\n      \"amount\": 1990.0\n    }\n  ],\n  \"subtotal\": 4786.33,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.0,\n  \"total\": 4786.33,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:47+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1673,
+    "latency_ms": 3102,
+    "output_tokens": 605,
+    "thinking_tokens": 0
+  }
+}

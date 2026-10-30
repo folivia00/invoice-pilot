@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a6a8f09f7f85ac6bad07bba37a99d695f87f16beeb7d4b3eff2eeaebf389a3a7",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles Co.\",\n    \"tax_id\": null,\n    \"address\": \"546 Lakeshore Drive, Raleigh 54549\"\n  },\n  \"buyer\": {\n    \"name\": \"Orbit Office Solutions Inc.\",\n    \"tax_id\": null,\n    \"address\": \"150 Commerce Boulevard, Denver 12580\"\n  },\n  \"invoice_number\": \"2026-001634\",\n  \"invoice_date\": \"2026-09-23\",\n  \"due_date\": \"2026-09-30\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 1,\n      \"unit_price\": 32.38,\n      \"amount\": 32.38\n    },\n    {\n      \"description\": \"LED panel light\",\n      \"quantity\": 1,\n      \"unit_price\": 97.48,\n      \"amount\": 97.48\n    }\n  ],\n  \"subtotal\": 129.86,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 8.12,\n  \"total\": 137.98,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:59+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 813,
+    "latency_ms": 1382,
+    "output_tokens": 344,
+    "thinking_tokens": 0
+  }
+}

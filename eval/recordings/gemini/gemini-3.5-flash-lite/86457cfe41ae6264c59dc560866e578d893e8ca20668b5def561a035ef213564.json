@@ -1,0 +1,21 @@
+{
+  "document_sha256": "5b57500a7e54f61335710efbed7d0ec090225cf74ef8dce9c38281453d9e0c85",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kupferberg Metallbau KG\",\n    \"tax_id\": \"DE810738305\",\n    \"address\": \"Industriestraße 68, 46438 Freiburg\"\n  },\n  \"buyer\": {\n    \"name\": \"Florian Ullmann\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"2026-086909\",\n  \"invoice_date\": \"2026-03-18\",\n  \"due_date\": \"2026-04-01\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Hosting-Paket, monatlich\",\n      \"quantity\": 1,\n      \"unit_price\": 219.60,\n      \"amount\": 219.60\n    }\n  ],\n  \"subtotal\": 219.60,\n  \"tax_rate\": 19,\n  \"tax_amount\": 41.72,\n  \"total\": 261.32,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:30:47+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2154,
+    "output_tokens": 300,
+    "thinking_tokens": 0
+  }
+}

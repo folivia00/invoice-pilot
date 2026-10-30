@@ -1,0 +1,21 @@
+{
+  "document_sha256": "25055dd5769ba1b6fb9b4f58e747b09a5deba76e87046bdf071e7c3281d49aa2",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Foxglove Design Ltd.\",\n    \"tax_id\": \"GB792885763\",\n    \"address\": \"946 Orchard Way, Exeter MC3 0ZU, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Felix Bennett\",\n    \"tax_id\": null,\n    \"address\": \"751 Orchard Way, Exeter DF5 0NZ\"\n  },\n  \"invoice_number\": \"2026-041954\",\n  \"invoice_date\": \"2026-07-20\",\n  \"due_date\": \"2026-08-03\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 39.75,\n      \"unit_price\": 69.61,\n      \"amount\": 2767.00\n    },\n    {\n      \"description\": \"UX design workshop\",\n      \"quantity\": 1,\n      \"unit_price\": 869.75,\n      \"amount\": 869.75\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 10,\n      \"unit_price\": 53.54,\n      \"amount\": 535.40\n    }\n  ],\n  \"subtotal\": 4172.15,\n  \"tax_rate\": 5,\n  \"tax_amount\": 208.61,\n  \"total\": 4380.76,\n  \"iban\": \"GB97 QHZN 0572 9498 4115 24\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:23+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 3298,
+    "output_tokens": 438,
+    "thinking_tokens": 0
+  }
+}

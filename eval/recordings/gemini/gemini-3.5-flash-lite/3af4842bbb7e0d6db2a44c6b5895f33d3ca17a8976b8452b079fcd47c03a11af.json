@@ -1,0 +1,21 @@
+{
+  "document_sha256": "66a305f3ac8342473b4fc288932db33604f7982351bae95b1effc4ebecc9be8a",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Brightwater Analytics LLP\",\n    \"tax_id\": \"GB953338789\",\n    \"address\": \"153 Queensway, Sheffield WR8 7CD, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Granite Peak Consulting Ltd.\",\n    \"tax_id\": null,\n    \"address\": \"384 Harbour Road, Exeter WN2 1HB\"\n  },\n  \"invoice_number\": \"2605-84603\",\n  \"invoice_date\": \"2026-04-22\",\n  \"due_date\": \"2026-06-06\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 18.75,\n      \"unit_price\": 74.87,\n      \"amount\": 1403.81\n    }\n  ],\n  \"subtotal\": 1403.81,\n  \"tax_rate\": 20,\n  \"tax_amount\": 280.76,\n  \"total\": 1684.57,\n  \"iban\": \"GB45 MGSX 9729 7687 9370 68\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:35+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2217,
+    "output_tokens": 338,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e67c2b7452623454dcc4b7bbed9131c0a8636c0ce3b5804471b31299c7ce259e",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silverline Components SARL\",\n    \"tax_id\": \"FR50283701584\",\n    \"address\": \"Avenue du Port 46, 14572 Lyon, France\"\n  },\n  \"buyer\": {\n    \"name\": \"Lantern Hill Books S.p.A.\",\n    \"tax_id\": \"IT76497971963\",\n    \"address\": \"Viale dei Pini 69, 43626 Trieste, Italy\"\n  },\n  \"invoice_number\": \"RE-202634630\",\n  \"invoice_date\": \"2026-10-01\",\n  \"due_date\": \"2026-10-15\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 15.47,\n      \"unit_price\": 2.68,\n      \"amount\": 41.46\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1.0,\n      \"unit_price\": 435.72,\n      \"amount\": 435.72\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1194.77,\n      \"amount\": 1194.77\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 15.25,\n      \"unit_price\": 127.00,\n      \"amount\": 1936.75\n    },\n    {\n      \"description\": \"Label printer\",\n      \"quantity\": 3.0,\n      \"unit_price\": 83.29,\n      \"amount\": 249.87\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 18.0,\n      \"unit_price\": 14.62,\n      \"amount\": 263.16\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 7.0,\n      \"unit_price\": 87.00,\n      \"amount\": 609.00\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 39.0,\n      \"unit_price\": 87.00,\n      \"amount\": 3393.00\n    }\n  ],\n  \"subtotal\": 8123.73,\n  \"tax_rate\": 10.0,\n  \"tax_amount\": 812.37,\n  \"total\": 8936.10,\n  \"iban\": \"FR32 7993 6565 48CA AAC0 ELHE L45\",\n  \"bic\": \"FRMQFRHHXXX\"\n}",
+  "recorded_at": "2026-10-30T20:30:45+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1664,
+    "latency_ms": 2952,
+    "output_tokens": 752,
+    "thinking_tokens": 0
+  }
+}

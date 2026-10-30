@@ -1,0 +1,21 @@
+{
+  "document_sha256": "9f644e32ff5a829ccfb54f6c33a65adcc79fa3c9bf198fb8a7476dea6e254523",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kastanienallee Buchhandlung AG\",\n    \"tax_id\": \"DE430504484\",\n    \"address\": \"Industriestraße 132, 82012 Münster, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Felsenkeller Getränke AG\",\n    \"tax_id\": null,\n    \"address\": \"Lindenstraße 137, 66656 Freiburg\"\n  },\n  \"invoice_number\": \"R029935\",\n  \"invoice_date\": \"2025-12-12\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Bildbearbeitung (Std.)\",\n      \"quantity\": 8.75,\n      \"unit_price\": 72.31,\n      \"amount\": 632.71\n    },\n    {\n      \"description\": \"Reinigungsleistung\",\n      \"quantity\": 1.0,\n      \"unit_price\": 112.58,\n      \"amount\": 112.58\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 4.0,\n      \"unit_price\": 26.0,\n      \"amount\": 104.0\n    },\n    {\n      \"description\": \"Monitor 27 Zoll\",\n      \"quantity\": 6.0,\n      \"unit_price\": 358.0,\n      \"amount\": 2148.0\n    },\n    {\n      \"description\": \"Netzwerk-Switch 24 Ports\",\n      \"quantity\": 7.0,\n      \"unit_price\": 150.68,\n      \"amount\": 1054.76\n    }\n  ],\n  \"subtotal\": 4052.05,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 769.89,\n  \"total\": 4821.94,\n  \"iban\": \"DE62 4705 7725 7506 5064 16\",\n  \"bic\": \"RNLLDEHHB01\"\n}",
+  "recorded_at": "2026-10-30T20:37:24+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1001,
+    "latency_ms": 1956,
+    "output_tokens": 566,
+    "thinking_tokens": 0
+  }
+}

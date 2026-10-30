@@ -1,0 +1,21 @@
+{
+  "document_sha256": "22f7bf9218655f8353b53d64007507333c166e3e29687796974863156fd49b42",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Steinbach Verpackung e.K.\",\n    \"tax_id\": \"DE296143415\",\n    \"address\": \"Hauptstraße 23, 64485 Bamberg\"\n  },\n  \"buyer\": {\n    \"name\": \"Brückenkopf Ingenieure GmbH\",\n    \"tax_id\": \"DE676026566\",\n    \"address\": null\n  },\n  \"invoice_number\": \"R073268\",\n  \"invoice_date\": \"2025-11-02\",\n  \"due_date\": \"2025-12-02\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 1670.85,\n      \"amount\": 1670.85\n    },\n    {\n      \"description\": \"Etikettendrucker\",\n      \"quantity\": 10,\n      \"unit_price\": 123.74,\n      \"amount\": 1237.40\n    },\n    {\n      \"description\": \"Übersetzung (Std.)\",\n      \"quantity\": 13,\n      \"unit_price\": 45.00,\n      \"amount\": 585.00\n    }\n  ],\n  \"subtotal\": 3493.25,\n  \"tax_rate\": 19,\n  \"tax_amount\": 663.72,\n  \"total\": 4156.97,\n  \"iban\": \"DE28 4763 3335 3119 2600 77\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:19+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2240,
+    "output_tokens": 445,
+    "thinking_tokens": 0
+  }
+}

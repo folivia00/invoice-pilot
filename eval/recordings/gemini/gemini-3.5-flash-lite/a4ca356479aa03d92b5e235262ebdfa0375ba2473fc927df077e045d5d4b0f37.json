@@ -1,0 +1,21 @@
+{
+  "document_sha256": "d53b08b979fd064233fcb2363aa8a32c01b93247397964b2e678a0d58a1a8f99",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Seeblick Fotografie KG\",\n    \"tax_id\": \"DE651514835\",\n    \"address\": \"Birkenallee 21, 08630 Freiburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Mondsee Optik KG\",\n    \"tax_id\": \"ATU48067547\",\n    \"address\": \"Ringstraße 94, 7596 Innsbruck, Österreich\"\n  },\n  \"invoice_number\": \"R006612\",\n  \"invoice_date\": \"2025-11-23\",\n  \"due_date\": \"2025-12-07\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 50.2,\n      \"unit_price\": 14.0,\n      \"amount\": 702.8\n    },\n    {\n      \"description\": \"Kurierlieferung\",\n      \"quantity\": 1.0,\n      \"unit_price\": 38.05,\n      \"amount\": 38.05\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 2.0,\n      \"unit_price\": 53.53,\n      \"amount\": 107.06\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 5.0,\n      \"unit_price\": 66.09,\n      \"amount\": 330.45\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 26.79,\n      \"unit_price\": 5.15,\n      \"amount\": 137.97\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 13.0,\n      \"unit_price\": 541.3,\n      \"amount\": 7036.9\n    },\n    {\n      \"description\": \"Technischer Support (Std.)\",\n      \"quantity\": 68.75,\n      \"unit_price\": 50.17,\n      \"amount\": 3449.19\n    }\n  ],\n  \"subtotal\": 11802.42,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 2242.46,\n  \"total\": 14044.88,\n  \"iban\": \"DE69 9270 8281 0434 6447 43\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:24+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 3511,
+    "output_tokens": 695,
+    "thinking_tokens": 0
+  }
+}

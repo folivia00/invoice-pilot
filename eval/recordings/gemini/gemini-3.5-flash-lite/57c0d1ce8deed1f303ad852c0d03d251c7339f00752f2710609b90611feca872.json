@@ -1,0 +1,21 @@
+{
+  "document_sha256": "030c114a3fd8869d24cc1a4a753ce409674acb7d5e3fd648ebb97f54e42f073e",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Northwind Supplies Corp.\",\n    \"tax_id\": null,\n    \"address\": \"747 Industrial Parkway, Austin 98655, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Harbourview Cleaning V.O.F.\",\n    \"tax_id\": null,\n    \"address\": \"Molenlaan 116, 5702 FY Leiden, Netherlands\"\n  },\n  \"invoice_number\": \"2601-42675\",\n  \"invoice_date\": \"2026-02-09\",\n  \"due_date\": null,\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Photo editing, hours\",\n      \"quantity\": 3.5,\n      \"unit_price\": 83.36,\n      \"amount\": 291.76\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 1064.44,\n      \"amount\": 1064.44\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 28.12,\n      \"unit_price\": 5.0,\n      \"amount\": 140.6\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 24,\n      \"unit_price\": 63.46,\n      \"amount\": 1523.04\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 9,\n      \"unit_price\": 198.12,\n      \"amount\": 1783.08\n    },\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1,\n      \"unit_price\": 328.0,\n      \"amount\": 328.0\n    },\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 3.6,\n      \"unit_price\": 30.66,\n      \"amount\": 110.38\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 11.5,\n      \"unit_price\": 25.64,\n      \"amount\": 294.86\n    }\n  ],\n  \"subtotal\": 5536.16,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 346.01,\n  \"total\": 5882.17,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:54+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1673,
+    "latency_ms": 4510,
+    "output_tokens": 680,
+    "thinking_tokens": 0
+  }
+}

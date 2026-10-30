@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8ad225bac344ab925c5c4b8862d6027e2d262f4eb16b3672294550c4366f2826",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Hollow Oak Furniture LLP\",\n    \"tax_id\": \"GB482638440\",\n    \"address\": \"13 Foundry Close, Exeter DV9 0DE\"\n  },\n  \"buyer\": {\n    \"name\": \"Greywater Plumbing Limited\",\n    \"tax_id\": null,\n    \"address\": \"339 Castle Street, Leeds SX5 1DG\"\n  },\n  \"invoice_number\": \"2025-056463\",\n  \"invoice_date\": \"2025-10-15\",\n  \"due_date\": \"2025-10-29\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Monitor 27 inch\",\n      \"quantity\": 6,\n      \"unit_price\": 284.0,\n      \"amount\": 1704.0\n    },\n    {\n      \"description\": \"Packaging boxes, set of 50\",\n      \"quantity\": 9,\n      \"unit_price\": 28.0,\n      \"amount\": 252.0\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 5,\n      \"unit_price\": 109.24,\n      \"amount\": 546.2\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 7.54,\n      \"unit_price\": 19.03,\n      \"amount\": 143.49\n    }\n  ],\n  \"subtotal\": 2645.69,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 529.14,\n  \"total\": 3174.83,\n  \"iban\": \"GB39 WVEZ 4115 9920 1534 11\",\n  \"bic\": \"ONOAGBMMB01\"\n}",
+  "recorded_at": "2026-10-30T20:35:24+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2429,
+    "output_tokens": 500,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "308eca5b924a8146c784dfcf4035b46d8e30068447a9020f83d696cbf83e97b2",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kestrel Aviation Parts S.r.l.\",\n    \"tax_id\": \"IT93665229405\",\n    \"address\": \"Viale dei Pini 123, 67934 Parma, Italy\"\n  },\n  \"buyer\": {\n    \"name\": \"Orbit Office Solutions S.r.l.\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"2602-42938\",\n  \"invoice_date\": \"2026-05-24\",\n  \"due_date\": \"2026-06-07\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Standing desk 160 cm\",\n      \"quantity\": 10,\n      \"unit_price\": 442.50,\n      \"amount\": 4425.00\n    },\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 3,\n      \"unit_price\": 372.41,\n      \"amount\": 1117.23\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 12,\n      \"unit_price\": 47.00,\n      \"amount\": 564.00\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 25.25,\n      \"unit_price\": 63.00,\n      \"amount\": 1590.75\n    },\n    {\n      \"description\": \"UX design workshop\",\n      \"quantity\": 1,\n      \"unit_price\": 2320.74,\n      \"amount\": 2320.74\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 2,\n      \"unit_price\": 6.00,\n      \"amount\": 12.00\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 1,\n      \"unit_price\": 173.00,\n      \"amount\": 173.00\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 47,\n      \"unit_price\": 190.00,\n      \"amount\": 8930.00\n    }\n  ],\n  \"subtotal\": 19132.72,\n  \"tax_rate\": 10,\n  \"tax_amount\": 1913.27,\n  \"total\": 21045.99,\n  \"iban\": \"IT91 B756 6113 249B 8WM6 VAHM 8UN\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:33+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1051,
+    "latency_ms": 1815,
+    "output_tokens": 718,
+    "thinking_tokens": 0
+  }
+}

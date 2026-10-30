@@ -1,0 +1,21 @@
+{
+  "document_sha256": "50d3d80abf856cac4a06b853414210c0a83b9f5665eceabb8a4f0b979496aba4",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Falkenstein Maschinenbau GesmbH\",\n    \"tax_id\": \"ATU76681323\",\n    \"address\": \"Donaulände 78, 2161 Innsbruck\"\n  },\n  \"buyer\": {\n    \"name\": \"Paul Pfeiffer\",\n    \"tax_id\": null,\n    \"address\": \"Salzburger Straße 151, 7688 Klagenfurt\"\n  },\n  \"invoice_number\": \"2025-060197\",\n  \"invoice_date\": \"2025-10-13\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Tonerkartusche\",\n      \"quantity\": 4,\n      \"unit_price\": 140.0,\n      \"amount\": 560.0\n    }\n  ],\n  \"subtotal\": 560.0,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 112.0,\n  \"total\": 672.0,\n  \"iban\": \"AT23 3922 9413 1875 8256\",\n  \"bic\": \"VVKNATHHB01\"\n}",
+  "recorded_at": "2026-10-30T20:33:39+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2283,
+    "output_tokens": 331,
+    "thinking_tokens": 0
+  }
+}

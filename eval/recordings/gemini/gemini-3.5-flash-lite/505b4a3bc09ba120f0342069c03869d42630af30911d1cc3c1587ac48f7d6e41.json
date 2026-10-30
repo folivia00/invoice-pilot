@@ -1,0 +1,21 @@
+{
+  "document_sha256": "2e0e3060a86324ace28f8c1163906cac405135e3435f9d733ee0a57772d2f358",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Steinbach Verpackung GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Ringstraße 144, 4494 Wels\"\n  },\n  \"buyer\": {\n    \"name\": \"Wiesengrund Labor KG\",\n    \"tax_id\": null,\n    \"address\": \"Am Graben 4, 4838 Innsbruck\"\n  },\n  \"invoice_number\": \"2605-15989\",\n  \"invoice_date\": \"2026-05-22\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Montage vor Ort (Std.)\",\n      \"quantity\": 7.25,\n      \"unit_price\": 59.39,\n      \"amount\": 430.58\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 3.0,\n      \"unit_price\": 284.07,\n      \"amount\": 852.21\n    },\n    {\n      \"description\": \"Schulung (halber Tag)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 889.74,\n      \"amount\": 889.74\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 6.0,\n      \"unit_price\": 14.12,\n      \"amount\": 84.72\n    },\n    {\n      \"description\": \"Laptopständer, Aluminium\",\n      \"quantity\": 3.0,\n      \"unit_price\": 68.52,\n      \"amount\": 205.56\n    },\n    {\n      \"description\": \"Wartungsvertrag Q3\",\n      \"quantity\": 1.0,\n      \"unit_price\": 719.0,\n      \"amount\": 719.0\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 31.75,\n      \"unit_price\": 76.52,\n      \"amount\": 2429.51\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 55.0,\n      \"unit_price\": 2.73,\n      \"amount\": 150.15\n    }\n  ],\n  \"subtotal\": 5761.47,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 1152.29,\n  \"total\": 6913.76,\n  \"iban\": \"AT62 7576 3638 1696 1688\",\n  \"bic\": \"AWVPATFF200\"\n}",
+  "recorded_at": "2026-10-30T20:33:59+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2622,
+    "output_tokens": 722,
+    "thinking_tokens": 0
+  }
+}

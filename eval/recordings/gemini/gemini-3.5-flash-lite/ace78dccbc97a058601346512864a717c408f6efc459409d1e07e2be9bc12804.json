@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e4dfd91a38e71ba2f0c50b33b7de9ab5ea56a907d6ffec78012729bf9b9e3636",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Birkenhain Design GmbH & Co. KG\",\n    \"tax_id\": \"DE779948645\",\n    \"address\": \"Industriestraße 127, 30265 Regensburg\"\n  },\n  \"buyer\": {\n    \"name\": \"Gisela Ullmann\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"INV-2026-56552\",\n  \"invoice_date\": \"2026-01-08\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Schulung (halber Tag)\",\n      \"quantity\": 1,\n      \"unit_price\": 1063.23,\n      \"amount\": 1063.23\n    },\n    {\n      \"description\": \"Bildbearbeitung (Std.)\",\n      \"quantity\": 3,\n      \"unit_price\": 57.0,\n      \"amount\": 171.0\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 2257.1,\n      \"amount\": 2257.1\n    },\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 24,\n      \"unit_price\": 13.97,\n      \"amount\": 335.28\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 33,\n      \"unit_price\": 358.06,\n      \"amount\": 11815.98\n    }\n  ],\n  \"subtotal\": 15642.59,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 2972.09,\n  \"total\": 18614.68,\n  \"iban\": \"DE20 8450 9329 8949 1873 47\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:57+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 3357,
+    "output_tokens": 553,
+    "thinking_tokens": 0
+  }
+}

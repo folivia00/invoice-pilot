@@ -1,0 +1,21 @@
+{
+  "document_sha256": "c95a7b5df131cc418e163ba5f19fa3217a1c1117ec405fd93d7926bb5fb4192b",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kupferberg Metallbau KG\",\n    \"tax_id\": null,\n    \"address\": \"Ringstraße 97, 9049 Graz, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Tannenberg Schulung GesmbH\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"RE-202574318\",\n  \"invoice_date\": \"2025-11-27\",\n  \"due_date\": \"2025-12-11\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kaffeebohnen, geröstet, kg\",\n      \"quantity\": 24.12,\n      \"unit_price\": 21.16,\n      \"amount\": 510.38\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 40,\n      \"unit_price\": 11.10,\n      \"amount\": 444.00\n    },\n    {\n      \"description\": \"Netzwerk-Switch 24 Ports\",\n      \"quantity\": 8,\n      \"unit_price\": 415.76,\n      \"amount\": 3326.08\n    }\n  ],\n  \"subtotal\": 4280.46,\n  \"tax_rate\": 20,\n  \"tax_amount\": 856.09,\n  \"total\": 5136.55,\n  \"iban\": \"AT60 8180 5931 8464 7343\",\n  \"bic\": \"MYASATHH100\"\n}",
+  "recorded_at": "2026-10-30T20:33:12+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2261,
+    "output_tokens": 445,
+    "thinking_tokens": 0
+  }
+}

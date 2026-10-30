@@ -1,0 +1,21 @@
+{
+  "document_sha256": "4f1a25277c365a3ef4f8975c77e9d812bbfe35848c7917cdd41ecfcdf932a76f",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Nordlicht Software GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Dorfstrasse 72, 9306 Chur\"\n  },\n  \"buyer\": {\n    \"name\": \"Dieter Schäfer\",\n    \"tax_id\": null,\n    \"address\": \"Industriestrasse 96, 1092 St. Gallen\"\n  },\n  \"invoice_number\": \"2602-36930\",\n  \"invoice_date\": \"2026-01-31\",\n  \"due_date\": null,\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 50,\n      \"unit_price\": 301.84,\n      \"amount\": 15092.00\n    },\n    {\n      \"description\": \"Catering, Mittagessen für 12 Personen\",\n      \"quantity\": 1,\n      \"unit_price\": 177.59,\n      \"amount\": 177.59\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 22.75,\n      \"unit_price\": 5.59,\n      \"amount\": 127.17\n    }\n  ],\n  \"subtotal\": 15396.76,\n  \"tax_rate\": 8.1,\n  \"tax_amount\": 1247.14,\n  \"total\": 16643.90,\n  \"iban\": \"CH98 0333 6FS1 VGH2 Z6MC T\",\n  \"bic\": \"VYBUCHFFXXX\"\n}",
+  "recorded_at": "2026-10-30T20:34:53+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2442,
+    "output_tokens": 437,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8f990a845b4a7a34d0a6a873dae899a6e44916af339be47f09456d4556c616e0",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Tidewater Services Sp. z o.o.\",\n    \"tax_id\": \"PL8314517372\",\n    \"address\": \"ul. Polna 164, 99-906 Lodz\"\n  },\n  \"buyer\": {\n    \"name\": \"Oakmont Training S.A.\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"INV-2026-69995\",\n  \"invoice_date\": \"2026-02-05\",\n  \"due_date\": \"2026-02-19\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 585.43,\n      \"amount\": 585.43\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1,\n      \"unit_price\": 295.0,\n      \"amount\": 295.0\n    }\n  ],\n  \"subtotal\": 880.43,\n  \"tax_rate\": 23.0,\n  \"tax_amount\": 202.5,\n  \"total\": 1082.93,\n  \"iban\": \"PL82 8897 8211 0113 9102 6126 4879\",\n  \"bic\": \"ADINPLXX100\"\n}",
+  "recorded_at": "2026-10-30T20:34:02+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2357,
+    "output_tokens": 404,
+    "thinking_tokens": 0
+  }
+}

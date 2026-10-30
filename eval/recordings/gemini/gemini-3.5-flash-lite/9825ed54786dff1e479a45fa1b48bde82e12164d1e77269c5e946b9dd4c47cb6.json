@@ -1,0 +1,21 @@
+{
+  "document_sha256": "d24b0454add668f20ca8f55e9fb986f41eeae0d23b42e07fcaba4b3e7072f5f7",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Seeblick Fotografie KG\",\n    \"tax_id\": \"DE316105724\",\n    \"address\": \"Birkenallee 169, 22408 Münster\"\n  },\n  \"buyer\": {\n    \"name\": \"Fuchsbau Werbung AG\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"2026-096067\",\n  \"invoice_date\": \"2026-05-15\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Hosting-Paket, monatlich\",\n      \"quantity\": 1,\n      \"unit_price\": 146.0,\n      \"amount\": 146.0\n    }\n  ],\n  \"subtotal\": 146.0,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.0,\n  \"total\": 146.0,\n  \"iban\": \"DE76 4990 3066 0740 7993 09\",\n  \"bic\": \"XMESDEZZ200\"\n}",
+  "recorded_at": "2026-10-30T20:33:34+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 852,
+    "latency_ms": 1489,
+    "output_tokens": 321,
+    "thinking_tokens": 0
+  }
+}

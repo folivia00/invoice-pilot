@@ -1,0 +1,21 @@
+{
+  "document_sha256": "7ecef50a303b69e04e2305d55218606337d160bb195ca5acda96f60f5b4a6cdb",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles Co., Ltd.\",\n    \"tax_id\": null,\n    \"address\": \"4-5-6 Minato, 721-5048 Sapporo\"\n  },\n  \"buyer\": {\n    \"name\": \"Felix Keller\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"2602-17517\",\n  \"invoice_date\": \"2026-03-01\",\n  \"due_date\": \"2026-03-15\",\n  \"currency\": \"JPY\",\n  \"line_items\": [\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1.0,\n      \"unit_price\": 69933.0,\n      \"amount\": 69933.0\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 6.0,\n      \"unit_price\": 43716.0,\n      \"amount\": 262296.0\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 4.0,\n      \"unit_price\": 9992.0,\n      \"amount\": 39968.0\n    }\n  ],\n  \"subtotal\": 372197.0,\n  \"tax_rate\": 8.0,\n  \"tax_amount\": 29776.0,\n  \"total\": 401973.0,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:21+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2267,
+    "output_tokens": 411,
+    "thinking_tokens": 0
+  }
+}

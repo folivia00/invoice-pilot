@@ -1,0 +1,21 @@
+{
+  "document_sha256": "4f1998e09c1f1b0ab396c8362bebeba4ca9180bd7d7a93e40c5523e85661ff96",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Nordlicht Software GesmbH\",\n    \"tax_id\": \"ATU36890206\",\n    \"address\": \"Am Graben 21, 7224 Klagenfurt\"\n  },\n  \"buyer\": {\n    \"name\": \"Fuchsbau Werbung GesmbH\",\n    \"tax_id\": \"ATU15647360\",\n    \"address\": \"Ringstraße 96, 3298 Linz\"\n  },\n  \"invoice_number\": \"2026-088936\",\n  \"invoice_date\": \"2026-07-20\",\n  \"due_date\": \"2026-09-03\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 10.0,\n      \"unit_price\": 89.05,\n      \"amount\": 890.5\n    },\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 5.6,\n      \"unit_price\": 24.61,\n      \"amount\": 137.82\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1.0,\n      \"unit_price\": 2437.77,\n      \"amount\": 2437.77\n    },\n    {\n      \"description\": \"Beratung (Std.)\",\n      \"quantity\": 7.0,\n      \"unit_price\": 114.12,\n      \"amount\": 798.84\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 3.0,\n      \"unit_price\": 9.38,\n      \"amount\": 28.14\n    }\n  ],\n  \"subtotal\": 4293.07,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 858.61,\n  \"total\": 5151.68,\n  \"iban\": \"AT77 4012 8922 7059 0595\",\n  \"bic\": \"LQRAATXX200\"\n}",
+  "recorded_at": "2026-10-30T20:34:30+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1073,
+    "latency_ms": 1999,
+    "output_tokens": 582,
+    "thinking_tokens": 0
+  }
+}

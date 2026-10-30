@@ -1,0 +1,21 @@
+{
+  "document_sha256": "c1ed0b5898912b9811c2b589ba4f3daa39e5e324a5baff09018deef5b5eb59c6",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Rheintal Logistik GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Bergstrasse 92, 4578 Luzern, Schweiz\"\n  },\n  \"buyer\": {\n    \"name\": \"Sonnenhang Gartenbau GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Hauptstraße 100, 93787 Lüneburg, Deutschland\"\n  },\n  \"invoice_number\": \"2026-051450\",\n  \"invoice_date\": \"2026-06-21\",\n  \"due_date\": \"2026-07-05\",\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Stahlwinkel 40x40\",\n      \"quantity\": 6,\n      \"unit_price\": 1.73,\n      \"amount\": 10.38\n    },\n    {\n      \"description\": \"Montage vor Ort (Std.)\",\n      \"quantity\": 18,\n      \"unit_price\": 87.59,\n      \"amount\": 1576.62\n    }\n  ],\n  \"subtotal\": 1587.00,\n  \"tax_rate\": 8.1,\n  \"tax_amount\": 128.55,\n  \"total\": 1715.55,\n  \"iban\": \"CH43 4215 11TK 72GH IR2J F\",\n  \"bic\": \"NYYQCHMM200\"\n}",
+  "recorded_at": "2026-10-30T20:34:47+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 930,
+    "latency_ms": 1685,
+    "output_tokens": 397,
+    "thinking_tokens": 0
+  }
+}

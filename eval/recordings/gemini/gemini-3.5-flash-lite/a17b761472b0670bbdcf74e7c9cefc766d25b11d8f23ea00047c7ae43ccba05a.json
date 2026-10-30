@@ -1,0 +1,21 @@
+{
+  "document_sha256": "5816ec82c70a3fd2ee37321e77ac9dc4b9f3c6c2b479392fb157cd0c80522ab8",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Birkenhain Design KG\",\n    \"tax_id\": \"ATU70124205\",\n    \"address\": \"Donaulände 120, 8907 Steyr\"\n  },\n  \"buyer\": {\n    \"name\": \"Lindenhof Catering GesmbH\",\n    \"tax_id\": \"ATU92987838\",\n    \"address\": null\n  },\n  \"invoice_number\": \"R079069\",\n  \"invoice_date\": \"2026-08-10\",\n  \"due_date\": \"2026-09-09\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kopierpapier A4, 500 Blatt\",\n      \"quantity\": 2,\n      \"unit_price\": 6.01,\n      \"amount\": 12.02\n    },\n    {\n      \"description\": \"Versandkartons, 50 Stück\",\n      \"quantity\": 22,\n      \"unit_price\": 53.45,\n      \"amount\": 1175.9\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 1785.0,\n      \"amount\": 1785.0\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 18.75,\n      \"unit_price\": 85.12,\n      \"amount\": 1596.0\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 2,\n      \"unit_price\": 176.22,\n      \"amount\": 352.44\n    }\n  ],\n  \"subtotal\": 4921.36,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 984.27,\n  \"total\": 5905.63,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:03+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 961,
+    "latency_ms": 3042,
+    "output_tokens": 529,
+    "thinking_tokens": 0
+  }
+}

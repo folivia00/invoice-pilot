@@ -1,0 +1,21 @@
+{
+  "document_sha256": "0f3929047c54b999161924b7c21c8ba83b9327f98d11b7a7b553ec465f0eadd5",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Redstone Software Limited\",\n    \"tax_id\": \"GB128722563\",\n    \"address\": \"292 Mill Lane, Bristol CR6 3SP\"\n  },\n  \"buyer\": {\n    \"name\": \"Oakmont Training Limited\",\n    \"tax_id\": \"GB612232137\",\n    \"address\": \"542 Mill Lane, Sheffield TD6 2BG\"\n  },\n  \"invoice_number\": \"R076228\",\n  \"invoice_date\": \"2025-12-31\",\n  \"due_date\": null,\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Conference phone\",\n      \"quantity\": 2,\n      \"unit_price\": 181.86,\n      \"amount\": 363.72\n    },\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 11.75,\n      \"unit_price\": 86.0,\n      \"amount\": 1010.5\n    },\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1.0,\n      \"unit_price\": 86.0,\n      \"amount\": 86.0\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1663.25,\n      \"amount\": 1663.25\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 4,\n      \"unit_price\": 270.79,\n      \"amount\": 1083.16\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 23.43,\n      \"unit_price\": 22.52,\n      \"amount\": 527.64\n    },\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 10,\n      \"unit_price\": 15.42,\n      \"amount\": 154.2\n    },\n    {\n      \"description\": \"Packaging boxes, set of 50\",\n      \"quantity\": 7,\n      \"unit_price\": 65.34,\n      \"amount\": 457.38\n    }\n  ],\n  \"subtotal\": 5345.85,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 1069.17,\n  \"total\": 6415.02,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:26+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1002,
+    "latency_ms": 1926,
+    "output_tokens": 681,
+    "thinking_tokens": 0
+  }
+}

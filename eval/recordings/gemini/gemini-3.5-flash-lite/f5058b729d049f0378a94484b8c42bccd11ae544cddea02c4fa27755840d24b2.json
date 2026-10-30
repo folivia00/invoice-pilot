@@ -1,0 +1,21 @@
+{
+  "document_sha256": "03f6412c44184fbbf12d490cbb61c68aecb6cf435be549045a8330f11fe7630b",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Ashford Brothers LLP\",\n    \"tax_id\": \"GB184147523\",\n    \"address\": \"252 Foundry Close, Sheffield FH5 9PB\"\n  },\n  \"buyer\": {\n    \"name\": \"Clearview Optics Ltd\",\n    \"tax_id\": null,\n    \"address\": \"885 Castle Street, Exeter AH9 6DF\"\n  },\n  \"invoice_number\": \"INV-2026-28841\",\n  \"invoice_date\": \"2026-05-03\",\n  \"due_date\": null,\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 17.73,\n      \"unit_price\": 6.73,\n      \"amount\": 119.32\n    },\n    {\n      \"description\": \"Software license (annual)\",\n      \"quantity\": 1,\n      \"unit_price\": 1239.70,\n      \"amount\": 1239.70\n    },\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1,\n      \"unit_price\": 166.29,\n      \"amount\": 166.29\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 6.5,\n      \"unit_price\": 2.00,\n      \"amount\": 13.00\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 8.3,\n      \"unit_price\": 12.00,\n      \"amount\": 99.60\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 8.25,\n      \"unit_price\": 74.02,\n      \"amount\": 610.67\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 651.59,\n      \"amount\": 651.59\n    },\n    {\n      \"description\": \"Hosting plan, monthly\",\n      \"quantity\": 1,\n      \"unit_price\": 136.83,\n      \"amount\": 136.83\n    }\n  ],\n  \"subtotal\": 3037.00,\n  \"tax_rate\": 20,\n  \"tax_amount\": 607.40,\n  \"total\": 3644.40,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:17+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2421,
+    "output_tokens": 677,
+    "thinking_tokens": 0
+  }
+}

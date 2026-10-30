@@ -1,0 +1,21 @@
+{
+  "document_sha256": "41b0a5f78dde01e6b63c966fb5b1617aca17ff4666bd9fcb77393e147722d800",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silverline Components B.V.\",\n    \"tax_id\": \"NL573753384B84\",\n    \"address\": \"Havenkade 75, 0741 SV Utrecht, Netherlands\"\n  },\n  \"buyer\": {\n    \"name\": \"Cobalt Sky Marketing NV\",\n    \"tax_id\": \"BE0761202424\",\n    \"address\": \"Molenweg 26, 4122 Mons, Belgium\"\n  },\n  \"invoice_number\": \"RE-202683687\",\n  \"invoice_date\": \"2026-08-29\",\n  \"due_date\": \"2026-09-28\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 25.25,\n      \"unit_price\": 107.17,\n      \"amount\": 2706.04\n    },\n    {\n      \"description\": \"Printer toner cartridge\",\n      \"quantity\": 7.0,\n      \"unit_price\": 41.81,\n      \"amount\": 292.67\n    },\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 4.0,\n      \"unit_price\": 370.0,\n      \"amount\": 1480.0\n    }\n  ],\n  \"subtotal\": 4478.71,\n  \"tax_rate\": 21.0,\n  \"tax_amount\": 940.53,\n  \"total\": 5419.24,\n  \"iban\": \"NL66 AGGV 9383 8521 48\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:36+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 931,
+    "latency_ms": 1731,
+    "output_tokens": 463,
+    "thinking_tokens": 0
+  }
+}

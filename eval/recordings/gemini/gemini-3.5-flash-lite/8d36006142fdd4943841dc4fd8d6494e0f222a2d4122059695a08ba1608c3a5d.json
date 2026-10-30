@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8e14fe0c4ba6668b4cce46d548fe22385a8bf9fa54821eac9ee0cd52276e2acd",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Ashford Brothers S.p.A.\",\n    \"tax_id\": \"IT79450882624\",\n    \"address\": \"Piazza Verdi 55, 18172 Bologna, Italy\"\n  },\n  \"buyer\": {\n    \"name\": \"Westmarch Textiles S.p.A.\",\n    \"tax_id\": \"IT86703176784\",\n    \"address\": \"Via Lunga 172, 33321 Pisa\"\n  },\n  \"invoice_number\": \"2026-030736\",\n  \"invoice_date\": \"2026-07-27\",\n  \"due_date\": \"2026-08-26\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1.0,\n      \"unit_price\": 405.13,\n      \"amount\": 405.13\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 7.0,\n      \"unit_price\": 301.0,\n      \"amount\": 2107.0\n    },\n    {\n      \"description\": \"Conference phone\",\n      \"quantity\": 1.0,\n      \"unit_price\": 376.0,\n      \"amount\": 376.0\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 44.7,\n      \"unit_price\": 22.54,\n      \"amount\": 1007.54\n    },\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 9.0,\n      \"unit_price\": 55.89,\n      \"amount\": 503.01\n    },\n    {\n      \"description\": \"Courier delivery\",\n      \"quantity\": 1.0,\n      \"unit_price\": 73.0,\n      \"amount\": 73.0\n    },\n    {\n      \"description\": \"Software license (annual)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1938.0,\n      \"amount\": 1938.0\n    },\n    {\n      \"description\": \"Copy paper A4, 500 sheets\",\n      \"quantity\": 9.0,\n      \"unit_price\": 4.0,\n      \"amount\": 36.0\n    }\n  ],\n  \"subtotal\": 6445.68,\n  \"tax_rate\": 22.0,\n  \"tax_amount\": 1418.05,\n  \"total\": 7863.73,\n  \"iban\": \"IT47 K338 2310 295U F8N2 KL8G 4XY\",\n  \"bic\": \"GFEAIT2LXXX\"\n}",
+  "recorded_at": "2026-10-30T20:36:31+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1076,
+    "latency_ms": 2170,
+    "output_tokens": 753,
+    "thinking_tokens": 0
+  }
+}

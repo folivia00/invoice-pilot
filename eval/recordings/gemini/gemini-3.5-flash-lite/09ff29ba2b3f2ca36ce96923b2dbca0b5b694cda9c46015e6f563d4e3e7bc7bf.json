@@ -1,0 +1,21 @@
+{
+  "document_sha256": "bf57dfaa27b212c113f3d7b23c111cdd01d7f641eccc4c3bd1c37747eec4e143",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Hollow Oak Furniture V.O.F.\",\n    \"tax_id\": \"NL705145516B43\",\n    \"address\": \"Stationsplein 146, 9669 EE Delft\"\n  },\n  \"buyer\": {\n    \"name\": \"Alice Gardner\",\n    \"tax_id\": null,\n    \"address\": \"Lindenstraat 62, 0222 BK Leiden\"\n  },\n  \"invoice_number\": \"INV-2026-12233\",\n  \"invoice_date\": \"2026-01-15\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 10,\n      \"unit_price\": 22.93,\n      \"amount\": 229.3\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 8,\n      \"unit_price\": 270.11,\n      \"amount\": 2160.88\n    },\n    {\n      \"description\": \"Courier delivery\",\n      \"quantity\": 1,\n      \"unit_price\": 61.0,\n      \"amount\": 61.0\n    },\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 3,\n      \"unit_price\": 10.38,\n      \"amount\": 31.14\n    },\n    {\n      \"description\": \"Wireless keyboard\",\n      \"quantity\": 4,\n      \"unit_price\": 109.52,\n      \"amount\": 438.08\n    },\n    {\n      \"description\": \"Onsite installation, hours\",\n      \"quantity\": 25.75,\n      \"unit_price\": 87.49,\n      \"amount\": 2252.87\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 14.75,\n      \"unit_price\": 51.68,\n      \"amount\": 762.28\n    }\n  ],\n  \"subtotal\": 5935.55,\n  \"tax_rate\": 21.0,\n  \"tax_amount\": 1246.47,\n  \"total\": 7182.02,\n  \"iban\": \"NL21 TNMK 4759 5260 28\",\n  \"bic\": \"OHSONLMM200\"\n}",
+  "recorded_at": "2026-10-30T20:32:12+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1010,
+    "latency_ms": 3626,
+    "output_tokens": 647,
+    "thinking_tokens": 0
+  }
+}

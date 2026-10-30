@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e461c1747c9d48a4b1c9a3e5c7da1b2b877421bd8528719852b5c634ff386eef",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Stonegate Security S.r.l.\",\n    \"tax_id\": null,\n    \"address\": \"Piazza Verdi 8, 67954 Parma\"\n  },\n  \"buyer\": {\n    \"name\": \"Harbourview Cleaning S.r.l.\",\n    \"tax_id\": \"IT19949284546\",\n    \"address\": null\n  },\n  \"invoice_number\": \"R024976\",\n  \"invoice_date\": \"2026-03-25\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 2,\n      \"unit_price\": 406.86,\n      \"amount\": 813.72\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 18.5,\n      \"unit_price\": 46.0,\n      \"amount\": 851.0\n    },\n    {\n      \"description\": \"Courier delivery\",\n      \"quantity\": 1,\n      \"unit_price\": 37.26,\n      \"amount\": 37.26\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 13.52,\n      \"unit_price\": 5.01,\n      \"amount\": 67.74\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 59.25,\n      \"unit_price\": 87.88,\n      \"amount\": 5206.89\n    },\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 0.75,\n      \"unit_price\": 74.56,\n      \"amount\": 55.92\n    },\n    {\n      \"description\": \"Steel bracket 40x40\",\n      \"quantity\": 9,\n      \"unit_price\": 5.18,\n      \"amount\": 46.62\n    }\n  ],\n  \"subtotal\": 7079.15,\n  \"tax_rate\": 22.0,\n  \"tax_amount\": 1557.41,\n  \"total\": 8636.56,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:44+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2952,
+    "output_tokens": 615,
+    "thinking_tokens": 0
+  }
+}

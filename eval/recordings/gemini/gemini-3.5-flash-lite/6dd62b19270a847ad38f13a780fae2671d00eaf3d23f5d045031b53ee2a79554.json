@@ -1,0 +1,21 @@
+{
+  "document_sha256": "fbe52243031dddb00b996669cbcbeb5ed704a79c456541086c0e7860f2ba1a12",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Larkspur Media Ltd\",\n    \"tax_id\": \"GB590183220\",\n    \"address\": \"88 Birch Avenue, Exeter YG7 7HA\"\n  },\n  \"buyer\": {\n    \"name\": \"Granite Peak Consulting Limited\",\n    \"tax_id\": \"GB676870219\",\n    \"address\": null\n  },\n  \"invoice_number\": \"2510-57369\",\n  \"invoice_date\": \"2025-12-06\",\n  \"due_date\": \"2026-01-05\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 11.25,\n      \"unit_price\": 52.92,\n      \"amount\": 595.35\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 15.01,\n      \"unit_price\": 1.0,\n      \"amount\": 15.01\n    },\n    {\n      \"description\": \"Label printer\",\n      \"quantity\": 2.0,\n      \"unit_price\": 134.75,\n      \"amount\": 269.5\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 42.13,\n      \"unit_price\": 15.5,\n      \"amount\": 653.02\n    }\n  ],\n  \"subtotal\": 1532.88,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 306.58,\n  \"total\": 1839.46,\n  \"iban\": \"GB66 QBLB 6363 5208 8110 22\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:27+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 958,
+    "latency_ms": 2002,
+    "output_tokens": 498,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "427d3f1c70359232864e42220e7f787e4e5ae9ea245866f0011ff5e0c0be0dd3",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silberberg Beratung KG\",\n    \"tax_id\": \"DE153599645\",\n    \"address\": \"Schillerplatz 180, 26982 Lüneburg\"\n  },\n  \"buyer\": {\n    \"name\": \"Alpenblick Reinigung GmbH\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"R039481\",\n  \"invoice_date\": \"2026-08-04\",\n  \"due_date\": \"2026-08-18\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Netzwerkkabel Cat6, m\",\n      \"quantity\": 58,\n      \"unit_price\": 1.0,\n      \"amount\": 58.0\n    },\n    {\n      \"description\": \"Reinigungsleistung\",\n      \"quantity\": 1,\n      \"unit_price\": 162.27,\n      \"amount\": 162.27\n    },\n    {\n      \"description\": \"Monitor 27 Zoll\",\n      \"quantity\": 36,\n      \"unit_price\": 225.16,\n      \"amount\": 8105.76\n    },\n    {\n      \"description\": \"Kurierlieferung\",\n      \"quantity\": 1,\n      \"unit_price\": 48.0,\n      \"amount\": 48.0\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 6.5,\n      \"unit_price\": 100.0,\n      \"amount\": 650.0\n    },\n    {\n      \"description\": \"Kabelmanagement-Set\",\n      \"quantity\": 15,\n      \"unit_price\": 35.37,\n      \"amount\": 530.55\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 49,\n      \"unit_price\": 248.96,\n      \"amount\": 12199.04\n    }\n  ],\n  \"subtotal\": 21753.62,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 4133.19,\n  \"total\": 25886.81,\n  \"iban\": \"DE67 1911 8034 9810 7792 07\",\n  \"bic\": \"YINBDEMMXXX\"\n}",
+  "recorded_at": "2026-10-30T20:31:37+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2701,
+    "output_tokens": 650,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "2368d3be44d3d1871e8e1bc1feb7f99540b639ec2096c892c76a7ae04b8cefbe",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles Co.\",\n    \"tax_id\": \"35-3284115\",\n    \"address\": \"77 Elm Court, Denver 16046, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Hollow Oak Furniture Corp.\",\n    \"tax_id\": null,\n    \"address\": \"646 Harbor View Lane, Portland 87359\"\n  },\n  \"invoice_number\": \"RE-202661498\",\n  \"invoice_date\": \"2026-08-22\",\n  \"due_date\": \"2026-09-05\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Standing desk 160 cm\",\n      \"quantity\": 1,\n      \"unit_price\": 659.00,\n      \"amount\": 659.00\n    }\n  ],\n  \"subtotal\": 659.00,\n  \"tax_rate\": 8.875,\n  \"tax_amount\": 58.49,\n  \"total\": 717.49,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:22+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1120,
+    "latency_ms": 2052,
+    "output_tokens": 315,
+    "thinking_tokens": 0
+  }
+}

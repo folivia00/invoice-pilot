@@ -1,0 +1,21 @@
+{
+  "document_sha256": "4c3a4ace389218fb41463b887461d82e7edc6aff5d919b9cfb297ce971a5c29d",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silverline Components S.p.A.\",\n    \"tax_id\": null,\n    \"address\": \"Piazza Verdi 161, 86499 Verona, Italy\"\n  },\n  \"buyer\": {\n    \"name\": \"Ashford Brothers LLP\",\n    \"tax_id\": \"GB252115792\",\n    \"address\": \"177 Foundry Close, York CV6 3VF, United Kingdom\"\n  },\n  \"invoice_number\": \"R023226\",\n  \"invoice_date\": \"2026-03-03\",\n  \"due_date\": \"2026-03-17\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Standing desk 160 cm\",\n      \"quantity\": 50,\n      \"unit_price\": 563.78,\n      \"amount\": 28189.0\n    },\n    {\n      \"description\": \"Photo editing, hours\",\n      \"quantity\": 14,\n      \"unit_price\": 77.4,\n      \"amount\": 1083.6\n    },\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 5.25,\n      \"unit_price\": 61.43,\n      \"amount\": 322.51\n    },\n    {\n      \"description\": \"Hosting plan, monthly\",\n      \"quantity\": 1,\n      \"unit_price\": 315.89,\n      \"amount\": 315.89\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 24.25,\n      \"unit_price\": 72.0,\n      \"amount\": 1746.0\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 6,\n      \"unit_price\": 6.78,\n      \"amount\": 40.68\n    },\n    {\n      \"description\": \"Label printer\",\n      \"quantity\": 10,\n      \"unit_price\": 101.0,\n      \"amount\": 1010.0\n    }\n  ],\n  \"subtotal\": 32707.68,\n  \"tax_rate\": 22,\n  \"tax_amount\": 7195.69,\n  \"total\": 39903.37,\n  \"iban\": \"IT68 M992 8550 844M E713 UV9F VSR\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:25+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1045,
+    "latency_ms": 1889,
+    "output_tokens": 658,
+    "thinking_tokens": 0
+  }
+}

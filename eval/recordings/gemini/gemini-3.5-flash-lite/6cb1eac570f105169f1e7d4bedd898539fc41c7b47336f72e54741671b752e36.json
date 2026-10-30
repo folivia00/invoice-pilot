@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8b56dc213ba29ee07a5a112ef268e0b2492cf1ba26d78cccb6ef1eed0413d6fe",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Adlerhorst Sanitär GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Seestrasse 13, 4190 Chur, Schweiz\"\n  },\n  \"buyer\": {\n    \"name\": \"Birkenhain Design GmbH\",\n    \"tax_id\": \"ATU93960519\",\n    \"address\": null\n  },\n  \"invoice_number\": \"RE-202697229\",\n  \"invoice_date\": \"2026-03-24\",\n  \"due_date\": \"2026-05-08\",\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Laptopständer, Aluminium\",\n      \"quantity\": 4,\n      \"unit_price\": 21.51,\n      \"amount\": 86.04\n    },\n    {\n      \"description\": \"Netzwerkkabel Cat6, m\",\n      \"quantity\": 56,\n      \"unit_price\": 2.18,\n      \"amount\": 122.08\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 7,\n      \"unit_price\": 187.53,\n      \"amount\": 1312.71\n    },\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 31,\n      \"unit_price\": 13.02,\n      \"amount\": 403.62\n    },\n    {\n      \"description\": \"Etikettendrucker\",\n      \"quantity\": 8,\n      \"unit_price\": 121.0,\n      \"amount\": 968.0\n    },\n    {\n      \"description\": \"Beratung (Std.)\",\n      \"quantity\": 35.5,\n      \"unit_price\": 141.0,\n      \"amount\": 5005.5\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 31.5,\n      \"unit_price\": 97.88,\n      \"amount\": 3083.22\n    },\n    {\n      \"description\": \"Stahlwinkel 40x40\",\n      \"quantity\": 6,\n      \"unit_price\": 4.73,\n      \"amount\": 28.38\n    }\n  ],\n  \"subtotal\": 11009.55,\n  \"tax_rate\": 2.6,\n  \"tax_amount\": 286.25,\n  \"total\": 11295.8,\n  \"iban\": \"CH34 1372 1J1Y 4T2A VZKX W\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:20+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1214,
+    "latency_ms": 2989,
+    "output_tokens": 711,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a99e779e91e78f4b28f06fa25b8ec41b1142196bc04d770e31f617f4eeb81ff8",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Quill and Compass LLP\",\n    \"tax_id\": \"GB947361520\",\n    \"address\": \"28 Castle Street, Leeds ZL0 2LD, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Westmarch Textiles Limited\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"RE-202632639\",\n  \"invoice_date\": \"2026-02-08\",\n  \"due_date\": \"2026-02-22\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 14.25,\n      \"unit_price\": 99.64,\n      \"amount\": 1419.87\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 1037.91,\n      \"amount\": 1037.91\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 42.35,\n      \"unit_price\": 1.51,\n      \"amount\": 63.95\n    },\n    {\n      \"description\": \"Hosting plan, monthly\",\n      \"quantity\": 1,\n      \"unit_price\": 278.29,\n      \"amount\": 278.29\n    },\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 6,\n      \"unit_price\": 359.39,\n      \"amount\": 2156.34\n    }\n  ],\n  \"subtotal\": 4956.36,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 991.27,\n  \"total\": 5947.63,\n  \"iban\": \"GB54 BXTO 4853 6896 0890 55\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:56+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2201,
+    "output_tokens": 543,
+    "thinking_tokens": 0
+  }
+}

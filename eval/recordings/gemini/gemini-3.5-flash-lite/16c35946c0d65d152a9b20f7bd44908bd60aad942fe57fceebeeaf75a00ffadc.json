@@ -1,0 +1,21 @@
+{
+  "document_sha256": "1f0f858447eb0ea0e4ab8ffd37c11a69c76ba50646ae035d159ebdc320de8b04",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Summit Ridge Tools B.V.\",\n    \"tax_id\": \"NL490970972B8\",\n    \"address\": \"Havenkade 74, 1263 ZY Leiden, Netherlands\"\n  },\n  \"buyer\": {\n    \"name\": \"Lantern Hill Books SARL\",\n    \"tax_id\": null,\n    \"address\": \"Avenue du Port 155, 75069 Dijon, France\"\n  },\n  \"invoice_number\": \"2502-62968\",\n  \"invoice_date\": \"2025-12-26\",\n  \"due_date\": \"2026-01-25\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Software license (annual)\",\n      \"quantity\": 1,\n      \"unit_price\": 681.0,\n      \"amount\": 681.0\n    },\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 15,\n      \"unit_price\": 16.16,\n      \"amount\": 242.4\n    },\n    {\n      \"description\": \"Printer toner cartridge\",\n      \"quantity\": 10,\n      \"unit_price\": 45.5,\n      \"amount\": 455.0\n    },\n    {\n      \"description\": \"Steel bracket 40x40\",\n      \"quantity\": 6,\n      \"unit_price\": 2.13,\n      \"amount\": 12.78\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 38,\n      \"unit_price\": 7.0,\n      \"amount\": 266.0\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 1290.59,\n      \"amount\": 1290.59\n    },\n    {\n      \"description\": \"Copy paper A4, 500 sheets\",\n      \"quantity\": 3,\n      \"unit_price\": 7.0,\n      \"amount\": 21.0\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 25.75,\n      \"unit_price\": 103.0,\n      \"amount\": 2652.25\n    }\n  ],\n  \"subtotal\": 5621.02,\n  \"tax_rate\": 9.0,\n  \"tax_amount\": 505.89,\n  \"total\": 6126.91,\n  \"iban\": \"NL91 TRTU 5009 2138 41\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:42+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1031,
+    "latency_ms": 2335,
+    "output_tokens": 704,
+    "thinking_tokens": 0
+  }
+}

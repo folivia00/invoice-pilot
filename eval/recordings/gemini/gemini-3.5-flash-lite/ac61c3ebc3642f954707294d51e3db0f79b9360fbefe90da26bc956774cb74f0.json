@@ -1,0 +1,21 @@
+{
+  "document_sha256": "64b7d1079dff56484f67af47da611d7f0d961e9a3e508771fe98899f0ffb8aa2",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Birkenhain Design KG\",\n    \"tax_id\": null,\n    \"address\": \"Hauptstraße 29, 26856 Bamberg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Theresa Neumann\",\n    \"tax_id\": null,\n    \"address\": \"Gartenweg 74, 25164 Regensburg\"\n  },\n  \"invoice_number\": \"RE-202674601\",\n  \"invoice_date\": \"2026-03-07\",\n  \"due_date\": \"2026-03-21\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kaffeebohnen, geröstet, kg\",\n      \"quantity\": 5.88,\n      \"unit_price\": 34.48,\n      \"amount\": 202.74\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 8,\n      \"unit_price\": 58.0,\n      \"amount\": 464.0\n    }\n  ],\n  \"subtotal\": 666.74,\n  \"tax_rate\": 19,\n  \"tax_amount\": 126.68,\n  \"total\": 793.42,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:46+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2039,
+    "output_tokens": 357,
+    "thinking_tokens": 0
+  }
+}

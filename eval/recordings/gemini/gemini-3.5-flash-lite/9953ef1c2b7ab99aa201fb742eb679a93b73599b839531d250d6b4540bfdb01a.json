@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e66c8ade9ab4be7a9bd4b5ac7c2e067bc9307fa0af8fb95f3e7054068f046dd2",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Harbourview Cleaning Sp. z o.o.\",\n    \"tax_id\": \"PL2547186969\",\n    \"address\": \"ul. Ogrodowa 179, 97-573 Gdansk\"\n  },\n  \"buyer\": {\n    \"name\": \"Granite Peak Consulting Sp. z o.o.\",\n    \"tax_id\": \"PL1888603340\",\n    \"address\": \"ul. Polna 133, 80-728 Torun\"\n  },\n  \"invoice_number\": \"R080490\",\n  \"invoice_date\": \"2026-03-28\",\n  \"due_date\": \"2026-05-12\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 13.1,\n      \"unit_price\": 14.95,\n      \"amount\": 195.85\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 56.68,\n      \"unit_price\": 14.43,\n      \"amount\": 817.89\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 8,\n      \"unit_price\": 89.00,\n      \"amount\": 712.00\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 8,\n      \"unit_price\": 88.00,\n      \"amount\": 704.00\n    }\n  ],\n  \"subtotal\": 2429.74,\n  \"tax_rate\": 23,\n  \"tax_amount\": 558.84,\n  \"total\": 2988.58,\n  \"iban\": \"PL44 9990 8627 7851 8012 2043 6816\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:00+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1008,
+    "latency_ms": 1861,
+    "output_tokens": 541,
+    "thinking_tokens": 0
+  }
+}

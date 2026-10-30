@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a547fb116b7261d4941dedad2f915231ebb107e45c0b2ae05829e66770c94e08",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silverline Components LLC\",\n    \"tax_id\": \"17-7483855\",\n    \"address\": \"713 Ridge Road, Austin 10249\"\n  },\n  \"buyer\": {\n    \"name\": \"Quill and Compass Inc.\",\n    \"tax_id\": null,\n    \"address\": \"580 Lakeshore Drive, Austin 01961\"\n  },\n  \"invoice_number\": \"2605-61549\",\n  \"invoice_date\": \"2026-09-05\",\n  \"due_date\": \"2026-10-20\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Software license (annual)\",\n      \"quantity\": 1,\n      \"unit_price\": 1294.08,\n      \"amount\": 1294.58\n    }\n  ],\n  \"subtotal\": 1294.08,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 80.88,\n  \"total\": 1374.96,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:29+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1120,
+    "latency_ms": 1914,
+    "output_tokens": 312,
+    "thinking_tokens": 0
+  }
+}

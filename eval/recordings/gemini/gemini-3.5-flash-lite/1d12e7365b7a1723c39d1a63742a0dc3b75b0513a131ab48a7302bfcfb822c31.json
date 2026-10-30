@@ -1,0 +1,21 @@
+{
+  "document_sha256": "08c511cc890194fddddb53738e2555847689dcf5986ce1c9cd82c0ee71252c06",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Tidewater Services K.K.\",\n    \"tax_id\": null,\n    \"address\": \"4-5-6 Minato, 781-5095 Nagoya\"\n  },\n  \"buyer\": {\n    \"name\": \"Charlotte Thorne\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"R043466\",\n  \"invoice_date\": \"2026-06-07\",\n  \"due_date\": \"2026-06-21\",\n  \"currency\": \"JPY\",\n  \"line_items\": [\n    {\n      \"description\": \"UX design workshop\",\n      \"quantity\": 1,\n      \"unit_price\": 213410,\n      \"amount\": 213410\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 6,\n      \"unit_price\": 2350,\n      \"amount\": 14100\n    }\n  ],\n  \"subtotal\": 227510,\n  \"tax_rate\": 10,\n  \"tax_amount\": 22751,\n  \"total\": 250261,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:26+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 846,
+    "latency_ms": 1333,
+    "output_tokens": 331,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e7d493c5e8f9fab5f49cae38b86f188ab4c4fc6be90d02f2d214ed77d662fb65",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Blue Harbour Logistics BV\",\n    \"tax_id\": \"BE000501460\",\n    \"address\": \"Rue du Canal 47, 7761 Hasselt, Belgium\"\n  },\n  \"buyer\": {\n    \"name\": \"Stonegate Security NV\",\n    \"tax_id\": \"BE0366723294\",\n    \"address\": \"Rue du Canal 99, 8721 Hasselt\"\n  },\n  \"invoice_number\": \"2602-8088\",\n  \"invoice_date\": \"2026-08-24\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 44.4,\n      \"unit_price\": 10.93,\n      \"amount\": 485.29\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 35.75,\n      \"unit_price\": 94.95,\n      \"amount\": 3394.46\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 1299.42,\n      \"amount\": 1299.42\n    },\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 17,\n      \"unit_price\": 9.89,\n      \"amount\": 168.13\n    },\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 21.25,\n      \"unit_price\": 114.09,\n      \"amount\": 2424.41\n    },\n    {\n      \"description\": \"LED panel light\",\n      \"quantity\": 7,\n      \"unit_price\": 25.19,\n      \"amount\": 176.33\n    }\n  ],\n  \"subtotal\": 7948.04,\n  \"tax_rate\": 0,\n  \"tax_amount\": 0.00,\n  \"total\": 7948.04,\n  \"iban\": \"BE46 7973 1361 0906\",\n  \"bic\": \"MKIQBEZZ200\"\n}",
+  "recorded_at": "2026-10-30T20:35:10+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 6419,
+    "output_tokens": 611,
+    "thinking_tokens": 0
+  }
+}

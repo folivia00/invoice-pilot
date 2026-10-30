@@ -1,0 +1,21 @@
+{
+  "document_sha256": "5a57d61f07d98bde40ad18460aa0e4309e028ae58b07ecd18049b1196a14ae45",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Copperfield Printing S.L.\",\n    \"tax_id\": \"ESC4326053A\",\n    \"address\": \"Calle Mayor 67, 71169 Valencia, Spain\"\n  },\n  \"buyer\": {\n    \"name\": \"Foxglove Design S.A.\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"RE-202677519\",\n  \"invoice_date\": \"2026-01-23\",\n  \"due_date\": \"2026-02-22\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 15.0,\n      \"unit_price\": 11.0,\n      \"amount\": 165.0\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1.0,\n      \"unit_price\": 164.67,\n      \"amount\": 164.67\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 36.75,\n      \"unit_price\": 104.7,\n      \"amount\": 3847.73\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 250.72,\n      \"unit_price\": 19.0,\n      \"amount\": 4763.68\n    },\n    {\n      \"description\": \"UX design workshop\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1740.21,\n      \"amount\": 1740.21\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 4.4,\n      \"unit_price\": 27.34,\n      \"amount\": 120.3\n    },\n    {\n      \"description\": \"Copper wire 2.5 mm, kg\",\n      \"quantity\": 41.0,\n      \"unit_price\": 16.0,\n      \"amount\": 656.0\n    }\n  ],\n  \"subtotal\": 11457.59,\n  \"tax_rate\": 21.0,\n  \"tax_amount\": 2406.09,\n  \"total\": 13863.68,\n  \"iban\": \"ES87 7042 1204 6157 5472 5942\",\n  \"bic\": \"PYPCESHH200\"\n}",
+  "recorded_at": "2026-10-30T20:35:44+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 4366,
+    "output_tokens": 684,
+    "thinking_tokens": 0
+  }
+}

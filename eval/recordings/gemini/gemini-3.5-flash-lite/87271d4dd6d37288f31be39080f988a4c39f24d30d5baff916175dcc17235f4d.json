@@ -1,0 +1,21 @@
+{
+  "document_sha256": "1a94740acfdc1604963d656874c092c3cf239ce0681937b1e625e3480f56511e",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Clearview Optics Corp.\",\n    \"tax_id\": \"48-6908158\",\n    \"address\": \"688 Elm Court, Denver 17286\"\n  },\n  \"buyer\": {\n    \"name\": \"Greywater Plumbing Co.\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"2610-70027\",\n  \"invoice_date\": \"2026-03-26\",\n  \"due_date\": \"2026-04-25\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 9,\n      \"unit_price\": 373.04,\n      \"amount\": 3357.36\n    },\n    {\n      \"description\": \"LED panel light\",\n      \"quantity\": 7,\n      \"unit_price\": 71.00,\n      \"amount\": 497.00\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 802.63,\n      \"amount\": 802.63\n    },\n    {\n      \"description\": \"Photo editing, hours\",\n      \"quantity\": 56.75,\n      \"unit_price\": 59.28,\n      \"amount\": 3364.14\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 31.75,\n      \"unit_price\": 52.00,\n      \"amount\": 1651.00\n    },\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 35,\n      \"unit_price\": 38.02,\n      \"amount\": 1330.70\n    },\n    {\n      \"description\": \"Packaging boxes, set of 50\",\n      \"quantity\": 5,\n      \"unit_price\": 57.95,\n      \"amount\": 289.75\n    }\n  ],\n  \"subtotal\": 11292.58,\n  \"tax_rate\": 8.875,\n  \"tax_amount\": 1002.22,\n  \"total\": 12294.80,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:37:19+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1640,
+    "latency_ms": 2764,
+    "output_tokens": 624,
+    "thinking_tokens": 0
+  }
+}

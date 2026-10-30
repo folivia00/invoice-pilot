@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8e42f59eb4ab5bc9606fd3d2566854e260e3186fa4c00bb56080dbe911f7b579",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Riverbend Packaging V.O.F.\",\n    \"tax_id\": \"NL999520371B16\",\n    \"address\": \"Molenlaan 137, 6367 CC Leiden\"\n  },\n  \"buyer\": {\n    \"name\": \"Redstone Software B.V.\",\n    \"tax_id\": \"NL302241134B31\",\n    \"address\": \"Lindenstraat 71, 2817 FF Haarlem\"\n  },\n  \"invoice_number\": \"2026-028275\",\n  \"invoice_date\": \"2026-02-10\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Conference phone\",\n      \"quantity\": 50,\n      \"unit_price\": 313.09,\n      \"amount\": 15654.50\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 59,\n      \"unit_price\": 45.44,\n      \"amount\": 2680.96\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 3.46,\n      \"unit_price\": 31.15,\n      \"amount\": 107.78\n    }\n  ],\n  \"subtotal\": 18443.24,\n  \"tax_rate\": 21,\n  \"tax_amount\": 3873.08,\n  \"total\": 22316.32,\n  \"iban\": \"NL05 JVWL 8669 1894 36\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:48+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2238,
+    "output_tokens": 455,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "30e43e7252e8c3bd303ec92028a8484b5cb63e61e8e1d0c8b331dbc593c9cfd4",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Hollow Oak Furniture SAS\",\n    \"tax_id\": null,\n    \"address\": \"Chemin des Vignes 113, 43196 Toulouse, France\"\n  },\n  \"buyer\": {\n    \"name\": \"Hollow Oak Furniture S.p.A.\",\n    \"tax_id\": \"IT60580077032\",\n    \"address\": null\n  },\n  \"invoice_number\": \"INV-2026-16356\",\n  \"invoice_date\": \"2026-08-04\",\n  \"due_date\": \"2026-08-18\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 29.5,\n      \"unit_price\": 114.52,\n      \"amount\": 3378.34\n    }\n  ],\n  \"subtotal\": 3378.34,\n  \"tax_rate\": 10.0,\n  \"tax_amount\": 337.83,\n  \"total\": 3716.17,\n  \"iban\": \"FR12 3433 7134 800S E0Y7 81GC V17\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:33:57+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 6389,
+    "output_tokens": 344,
+    "thinking_tokens": 0
+  }
+}

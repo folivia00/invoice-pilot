@@ -1,0 +1,21 @@
+{
+  "document_sha256": "250fe19b1e89e2af29317f5c1858b5ad2e1cf5c369a7d73844f3904c48418976",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Harbourview Cleaning Corp.\",\n    \"tax_id\": \"86-9289939\",\n    \"address\": \"455 Sunset Avenue, Raleigh 51755, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Grace Irving\",\n    \"tax_id\": null,\n    \"address\": \"492 Ridge Road, Tucson 09076\"\n  },\n  \"invoice_number\": \"2025-003739\",\n  \"invoice_date\": \"2025-10-22\",\n  \"due_date\": \"2025-11-05\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 2,\n      \"unit_price\": 23.43,\n      \"amount\": 46.86\n    }\n  ],\n  \"subtotal\": 46.86,\n  \"tax_rate\": 7.0,\n  \"tax_amount\": 3.28,\n  \"total\": 50.14,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:17+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1120,
+    "latency_ms": 3058,
+    "output_tokens": 303,
+    "thinking_tokens": 0
+  }
+}

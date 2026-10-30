@@ -1,0 +1,21 @@
+{
+  "document_sha256": "721b8288726c00fabeeebd7e51ff0cf21fa3d9e98dbe8eb2bf215341f42e241f",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Felsenkeller Getränke KG\",\n    \"tax_id\": null,\n    \"address\": \"Ringstraße 50, 3071 Graz\"\n  },\n  \"buyer\": {\n    \"name\": \"Donau Druckerei GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Donaulände 115, 3101 Wels\"\n  },\n  \"invoice_number\": \"INV-2026-24140\",\n  \"invoice_date\": \"2026-05-11\",\n  \"due_date\": \"2026-05-25\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Sicherheitsaudit\",\n      \"quantity\": 1,\n      \"unit_price\": 1945.0,\n      \"amount\": 1945.0\n    },\n    {\n      \"description\": \"Schulung (halber Tag)\",\n      \"quantity\": 1,\n      \"unit_price\": 873.06,\n      \"amount\": 873.06\n    },\n    {\n      \"description\": \"Technischer Support (Std.)\",\n      \"quantity\": 1.25,\n      \"unit_price\": 50.6,\n      \"amount\": 63.25\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 2,\n      \"unit_price\": 120.79,\n      \"amount\": 241.58\n    }\n  ],\n  \"subtotal\": 3122.89,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 624.58,\n  \"total\": 3747.47,\n  \"iban\": \"AT60 9936 5150 5423 7651\",\n  \"bic\": \"MUFSATZZ100\"\n}",
+  "recorded_at": "2026-10-30T20:33:17+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2581,
+    "output_tokens": 502,
+    "thinking_tokens": 0
+  }
+}

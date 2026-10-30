@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a9974e96f0e385b74be18f8062afcd9375c43b5b8df2ec5e7841306748ef3aaf",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kestrel Aviation Parts V.O.F.\",\n    \"tax_id\": \"NL888021937B34\",\n    \"address\": \"Havenkade 167, 3175 ET Leiden, Netherlands\"\n  },\n  \"buyer\": {\n    \"name\": \"Ironbridge Engineering SARL\",\n    \"tax_id\": \"FR71548006636\",\n    \"address\": \"Boulevard Saint-Martin 139, 96825 Rennes, France\"\n  },\n  \"invoice_number\": \"RE-202690302\",\n  \"invoice_date\": \"2026-06-10\",\n  \"due_date\": \"2026-07-10\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 441.0,\n      \"amount\": 441.0\n    }\n  ],\n  \"subtotal\": 441.0,\n  \"tax_rate\": 21.0,\n  \"tax_amount\": 92.61,\n  \"total\": 533.61,\n  \"iban\": \"NL45 CTVT 4418 1671 15\",\n  \"bic\": \"AGCFNLZZ100\"\n}",
+  "recorded_at": "2026-10-30T20:35:12+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2275,
+    "output_tokens": 362,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "0d881362de24ac5a24b1ab2069cecabfe1416881e740cb7bf35ee1c3940182c2",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Foxglove Design SRL\",\n    \"tax_id\": \"BE0340677719\",\n    \"address\": \"Rue de la Gare 58, 8577 Namur\"\n  },\n  \"buyer\": {\n    \"name\": \"Tidewater Services SRL\",\n    \"tax_id\": \"BE0808253150\",\n    \"address\": \"Kerkstraat 65, 8445 Mons\"\n  },\n  \"invoice_number\": \"INV-2026-32563\",\n  \"invoice_date\": \"2026-06-22\",\n  \"due_date\": \"2026-07-22\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Copper wire 2.5 mm, kg\",\n      \"quantity\": 175.93,\n      \"unit_price\": 20.0,\n      \"amount\": 3518.60\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 71.75,\n      \"unit_price\": 49.96,\n      \"amount\": 3584.63\n    },\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 1.0,\n      \"unit_price\": 3.17,\n      \"amount\": 3.17\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 8.5,\n      \"unit_price\": 110.94,\n      \"amount\": 942.99\n    },\n    {\n      \"description\": \"Maintenance contract Q3\",\n      \"quantity\": 1.0,\n      \"unit_price\": 414.85,\n      \"amount\": 414.85\n    },\n    {\n      \"description\": \"Hosting plan, monthly\",\n      \"quantity\": 1.0,\n      \"unit_price\": 84.0,\n      \"amount\": 84.00\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 4.8,\n      \"unit_price\": 8.7,\n      \"amount\": 41.76\n    },\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 6.0,\n      \"unit_price\": 36.76,\n      \"amount\": 220.56\n    }\n  ],\n  \"subtotal\": 8810.56,\n  \"tax_rate\": 6.0,\n  \"tax_amount\": 528.63,\n  \"total\": 9339.19,\n  \"iban\": \"BE32 4923 0151 3406\",\n  \"bic\": \"XHHRBEFF100\"\n}",
+  "recorded_at": "2026-10-30T20:32:46+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 2636,
+    "output_tokens": 737,
+    "thinking_tokens": 0
+  }
+}

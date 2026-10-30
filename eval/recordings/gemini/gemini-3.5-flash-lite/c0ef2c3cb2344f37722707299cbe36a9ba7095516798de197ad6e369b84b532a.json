@@ -1,0 +1,21 @@
+{
+  "document_sha256": "01f72a7c014b4348a087e19c96883ca0b8763d155c65b18195c3d199c926007d",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silberberg Beratung GmbH & Co. KG\",\n    \"tax_id\": \"DE607556131\",\n    \"address\": \"Bahnhofstraße 58, 33837 Münster, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Monika Hofmann\",\n    \"tax_id\": null,\n    \"address\": \"Am Graben 97, 2400 Klagenfurt, Österreich\"\n  },\n  \"invoice_number\": \"RE-202691818\",\n  \"invoice_date\": \"2026-07-21\",\n  \"due_date\": \"2026-08-04\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Montage vor Ort (Std.)\",\n      \"quantity\": 21.5,\n      \"unit_price\": 64.9,\n      \"amount\": 1395.35\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 8.75,\n      \"unit_price\": 69.3,\n      \"amount\": 606.38\n    },\n    {\n      \"description\": \"Projektleitung (Std.)\",\n      \"quantity\": 37,\n      \"unit_price\": 106.0,\n      \"amount\": 3922.00\n    },\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 5,\n      \"unit_price\": 28.48,\n      \"amount\": 142.40\n    },\n    {\n      \"description\": \"Hosting-Paket, monatlich\",\n      \"quantity\": 1,\n      \"unit_price\": 79.0,\n      \"amount\": 78.98\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 10,\n      \"unit_price\": 64.0,\n      \"amount\": 640.00\n    }\n  ],\n  \"subtotal\": 6785.13,\n  \"tax_rate\": 19.0,\n  \"tax_amount\": 1289.17,\n  \"total\": 8074.30,\n  \"iban\": \"DE10 5624 7816 2624 0894 57\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:05+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2777,
+    "output_tokens": 618,
+    "thinking_tokens": 0
+  }
+}

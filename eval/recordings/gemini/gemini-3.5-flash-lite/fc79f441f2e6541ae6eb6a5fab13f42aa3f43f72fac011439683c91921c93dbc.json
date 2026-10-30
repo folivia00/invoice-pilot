@@ -1,0 +1,21 @@
+{
+  "document_sha256": "4d0d1ceffdef29a3b5dfd3177393339a8a01ccfab46c6bcbbdabc98ad80eecbd",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Grünwald Sicherheit GmbH & Co. KG\",\n    \"tax_id\": \"DE294056635\",\n    \"address\": \"Gartenweg 52, 96679 Freiburg\"\n  },\n  \"buyer\": {\n    \"name\": \"Brückenkopf Ingenieure AG\",\n    \"tax_id\": \"DE896750255\",\n    \"address\": \"Schillerplatz 73, 09349 Lüneburg\"\n  },\n  \"invoice_number\": \"2610-80558\",\n  \"invoice_date\": \"2026-07-25\",\n  \"due_date\": \"2026-09-08\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Tonerkartusche\",\n      \"quantity\": 10,\n      \"unit_price\": 102.62,\n      \"amount\": 1026.20\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 21,\n      \"unit_price\": 434.80,\n      \"amount\": 9130.80\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 73.25,\n      \"unit_price\": 110.57,\n      \"amount\": 8099.25\n    },\n    {\n      \"description\": \"Montage vor Ort (Std.)\",\n      \"quantity\": 5.5,\n      \"unit_price\": 75.76,\n      \"amount\": 416.68\n    },\n    {\n      \"description\": \"Bildbearbeitung (Std.)\",\n      \"quantity\": 32.75,\n      \"unit_price\": 76.00,\n      \"amount\": 2489.00\n    }\n  ],\n  \"subtotal\": 21161.93,\n  \"tax_rate\": 19,\n  \"tax_amount\": 4020.77,\n  \"total\": 25182.70,\n  \"iban\": \"DE88 4534 9849 9132 5531 76\",\n  \"bic\": \"WYOODEHHXXX\"\n}",
+  "recorded_at": "2026-10-30T20:33:20+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1052,
+    "latency_ms": 1978,
+    "output_tokens": 598,
+    "thinking_tokens": 0
+  }
+}

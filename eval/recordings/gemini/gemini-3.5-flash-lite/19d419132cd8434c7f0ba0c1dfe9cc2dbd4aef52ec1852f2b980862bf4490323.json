@@ -1,0 +1,21 @@
+{
+  "document_sha256": "bd2b183cf30cac8b1f67879d2703cd8db21e49fff4ba47af4f1397e7d4170eca",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Stonegate Security S.A.\",\n    \"tax_id\": null,\n    \"address\": \"Avenida del Mar 52, 93275 Vigo, Spain\"\n  },\n  \"buyer\": {\n    \"name\": \"Meridian Labs S.A.\",\n    \"tax_id\": null,\n    \"address\": \"Calle Mayor 50, 34594 Sevilla\"\n  },\n  \"invoice_number\": \"R061544\",\n  \"invoice_date\": \"2026-07-29\",\n  \"due_date\": \"2026-08-12\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1.0,\n      \"unit_price\": 240.54,\n      \"amount\": 240.54\n    },\n    {\n      \"description\": \"Data migration, hours\",\n      \"quantity\": 30.0,\n      \"unit_price\": 84.88,\n      \"amount\": 2546.4\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 233.83,\n      \"unit_price\": 4.0,\n      \"amount\": 935.32\n    },\n    {\n      \"description\": \"Translation services, hours\",\n      \"quantity\": 22.0,\n      \"unit_price\": 73.76,\n      \"amount\": 1622.72\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 57.3,\n      \"unit_price\": 0.5,\n      \"amount\": 28.65\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1.0,\n      \"unit_price\": 192.28,\n      \"amount\": 192.28\n    },\n    {\n      \"description\": \"Aluminium profile 40x40, m\",\n      \"quantity\": 67.28,\n      \"unit_price\": 13.72,\n      \"amount\": 923.08\n    }\n  ],\n  \"subtotal\": 6488.99,\n  \"tax_rate\": 21.0,\n  \"tax_amount\": 1362.69,\n  \"total\": 7851.68,\n  \"iban\": \"ES50 7856 7993 9712 0006 5131\",\n  \"bic\": \"MLJLESHH100\"\n}",
+  "recorded_at": "2026-10-30T20:35:49+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1021,
+    "latency_ms": 1978,
+    "output_tokens": 681,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "aa6903e9bf49c21ae7d54d4bfe20169d5f79accd4c139866c3354b196fc1bb59",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Kestrel Aviation Parts Corp.\",\n    \"tax_id\": \"13-5083705\",\n    \"address\": \"137 Industrial Parkway, Madison 89825, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Peter Parrish\",\n    \"tax_id\": null,\n    \"address\": \"586 Elm Court, Austin 42722\"\n  },\n  \"invoice_number\": \"R002724\",\n  \"invoice_date\": \"2026-01-10\",\n  \"due_date\": \"2026-02-09\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Conference phone\",\n      \"quantity\": 5,\n      \"unit_price\": 348.00,\n      \"amount\": 1740.00\n    },\n    {\n      \"description\": \"Cleaning service\",\n      \"quantity\": 1,\n      \"unit_price\": 117.41,\n      \"amount\": 117.41\n    },\n    {\n      \"description\": \"Wireless keyboard\",\n      \"quantity\": 8,\n      \"unit_price\": 73.68,\n      \"amount\": 589.44\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 474.00,\n      \"amount\": 474.00\n    },\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 1.5,\n      \"unit_price\": 28.95,\n      \"amount\": 43.43\n    },\n    {\n      \"description\": \"Copper wire 2.5 mm, kg\",\n      \"quantity\": 58.41,\n      \"unit_price\": 14.37,\n      \"amount\": 839.35\n    }\n  ],\n  \"subtotal\": 3803.63,\n  \"tax_rate\": 8.875,\n  \"tax_amount\": 337.57,\n  \"total\": 4141.20,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:37+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 948,
+    "latency_ms": 1993,
+    "output_tokens": 573,
+    "thinking_tokens": 0
+  }
+}

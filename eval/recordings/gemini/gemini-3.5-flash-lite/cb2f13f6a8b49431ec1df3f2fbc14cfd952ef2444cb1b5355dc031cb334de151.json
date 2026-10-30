@@ -1,0 +1,21 @@
+{
+  "document_sha256": "e7e55acc32dcda6552d0d1446182dce1b0fd6269e3e5b8183d97d5a279a4a9a3",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Alpenblick Reinigung AG\",\n    \"tax_id\": null,\n    \"address\": \"Dorfstrasse 11, 5774 Chur\"\n  },\n  \"buyer\": {\n    \"name\": \"Grünwald Sicherheit AG\",\n    \"tax_id\": null,\n    \"address\": \"Rütliweg 41, 0587 Biel\"\n  },\n  \"invoice_number\": \"2508-69202\",\n  \"invoice_date\": \"2025-11-21\",\n  \"due_date\": \"2025-12-21\",\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 275,\n      \"unit_price\": 23.73,\n      \"amount\": 6525.75\n    },\n    {\n      \"description\": \"Kopierpapier A4, 500 Blatt\",\n      \"quantity\": 39,\n      \"unit_price\": 7.55,\n      \"amount\": 294.45\n    },\n    {\n      \"description\": \"Catering, Mittagessen für 12 Personen\",\n      \"quantity\": 1,\n      \"unit_price\": 412.59,\n      \"amount\": 412.59\n    },\n    {\n      \"description\": \"Stahlwinkel 40x40\",\n      \"quantity\": 1,\n      \"unit_price\": 6.25,\n      \"amount\": 6.25\n    },\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 45,\n      \"unit_price\": 339.42,\n      \"amount\": 15273.90\n    },\n    {\n      \"description\": \"Bildbearbeitung (Std.)\",\n      \"quantity\": 25,\n      \"unit_price\": 49.00,\n      \"amount\": 1225.00\n    }\n  ],\n  \"subtotal\": 23737.94,\n  \"tax_rate\": 0,\n  \"tax_amount\": 0.00,\n  \"total\": 23737.94,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:28+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 996,
+    "latency_ms": 1883,
+    "output_tokens": 593,
+    "thinking_tokens": 0
+  }
+}

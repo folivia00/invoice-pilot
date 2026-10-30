@@ -1,0 +1,21 @@
+{
+  "document_sha256": "03c687bf15abab5bae283d39289040b7683b7c6014d33a08e74935d2a6b2cb92",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Granite Peak Consulting SAS\",\n    \"tax_id\": \"FR65122729874\",\n    \"address\": \"Rue du Moulin 166, 83749 Lille\"\n  },\n  \"buyer\": {\n    \"name\": \"Ironbridge Engineering SARL\",\n    \"tax_id\": null,\n    \"address\": \"Place de la Gare 158, 39255 Lyon\"\n  },\n  \"invoice_number\": \"2505-14898\",\n  \"invoice_date\": \"2025-12-31\",\n  \"due_date\": \"2026-01-30\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 3,\n      \"unit_price\": 35.23,\n      \"amount\": 105.69\n    },\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 18,\n      \"unit_price\": 55.76,\n      \"amount\": 1003.68\n    },\n    {\n      \"description\": \"Printer toner cartridge\",\n      \"quantity\": 1,\n      \"unit_price\": 84.92,\n      \"amount\": 84.92\n    },\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 4,\n      \"unit_price\": 348.3,\n      \"amount\": 1393.2\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": null,\n      \"amount\": 711.22\n    },\n    {\n      \"description\": \"Wireless keyboard\",\n      \"quantity\": 5,\n      \"unit_price\": 65.0,\n      \"amount\": 325.0\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1,\n      \"unit_price\": null,\n      \"amount\": 153.87\n    }\n  ],\n  \"subtotal\": 3777.58,\n  \"tax_rate\": 20,\n  \"tax_amount\": 755.52,\n  \"total\": 4533.1,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:37:20+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1059,
+    "latency_ms": 1831,
+    "output_tokens": 613,
+    "thinking_tokens": 0
+  }
+}

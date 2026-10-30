@@ -1,0 +1,21 @@
+{
+  "document_sha256": "6a2e5aaabc16c180d8c8bb99e6116a3f76ae9298a663155ae728d69de7514678",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Summit Ridge Tools Corp.\",\n    \"tax_id\": \"91-6453044\",\n    \"address\": \"471 Elm Court, Austin 32011, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Grace Lowry\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"INV-2026-15126\",\n  \"invoice_date\": \"2026-04-13\",\n  \"due_date\": \"2026-05-13\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 1.98,\n      \"unit_price\": 26.15,\n      \"amount\": 51.78\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 28.25,\n      \"unit_price\": 155.53,\n      \"amount\": 4393.72\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 3.87,\n      \"unit_price\": 41.56,\n      \"amount\": 160.84\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1,\n      \"unit_price\": 177.0,\n      \"amount\": 177.0\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 10,\n      \"unit_price\": 132.99,\n      \"amount\": 1329.9\n    }\n  ],\n  \"subtotal\": 6113.23,\n  \"tax_rate\": 6.25,\n  \"tax_amount\": 382.08,\n  \"total\": 6495.32,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:37:22+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 929,
+    "latency_ms": 1776,
+    "output_tokens": 521,
+    "thinking_tokens": 0
+  }
+}

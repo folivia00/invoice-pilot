@@ -1,0 +1,21 @@
+{
+  "document_sha256": "fc27fcfce7b73cac2c70f73fb0c017b14e4d04581c7f5a713a418a0f4c7c309b",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Wiesengrund Labor GmbH\",\n    \"tax_id\": \"ATU36700981\",\n    \"address\": \"Mariahilfer Gasse 21, 7455 Innsbruck, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Ingrid Maier\",\n    \"tax_id\": null,\n    \"address\": \"Seestrasse 74, 8312 Luzern, Schweiz\"\n  },\n  \"invoice_number\": \"INV-2026-6217\",\n  \"invoice_date\": \"2026-01-29\",\n  \"due_date\": \"2026-02-28\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Sicherheitsaudit\",\n      \"quantity\": 1,\n      \"unit_price\": 1724.0,\n      \"amount\": 1724.0\n    },\n    {\n      \"description\": \"Aluminiumprofil 40x40, m\",\n      \"quantity\": 17.8,\n      \"unit_price\": 13.24,\n      \"amount\": 235.67\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 5,\n      \"unit_price\": 340.15,\n      \"amount\": 1700.75\n    },\n    {\n      \"description\": \"Montage vor Ort (Std.)\",\n      \"quantity\": 27,\n      \"unit_price\": 53.5,\n      \"amount\": 1444.5\n    },\n    {\n      \"description\": \"Netzwerkkabel Cat6, m\",\n      \"quantity\": 14.15,\n      \"unit_price\": 1.0,\n      \"amount\": 14.15\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 2444.0,\n      \"amount\": 2444.0\n    },\n    {\n      \"description\": \"Laptopständer, Aluminium\",\n      \"quantity\": 43,\n      \"unit_price\": 41.71,\n      \"amount\": 1793.53\n    }\n  ],\n  \"subtotal\": 9356.6,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 1871.32,\n  \"total\": 11227.92,\n  \"iban\": \"AT36 5212 7021 2509 8281\",\n  \"bic\": \"OAJBAT2LB01\"\n}",
+  "recorded_at": "2026-10-30T20:32:33+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1664,
+    "latency_ms": 3095,
+    "output_tokens": 684,
+    "thinking_tokens": 0
+  }
+}

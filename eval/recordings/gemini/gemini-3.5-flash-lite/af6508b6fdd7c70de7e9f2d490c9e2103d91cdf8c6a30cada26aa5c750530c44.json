@@ -1,0 +1,21 @@
+{
+  "document_sha256": "286750677c2aba45bc5b150c3591f9f95146043a87253e24d193b5a5bee0467e",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles S.r.l.\",\n    \"tax_id\": \"IT08747454402\",\n    \"address\": \"Corso Garibaldi 67, 34857 Pisa, Italy\"\n  },\n  \"buyer\": {\n    \"name\": \"Brightwater Analytics S.p.A.\",\n    \"tax_id\": \"IT78325576650\",\n    \"address\": null\n  },\n  \"invoice_number\": \"R041309\",\n  \"invoice_date\": \"2026-04-04\",\n  \"due_date\": \"2026-04-11\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Security audit\",\n      \"quantity\": 1,\n      \"unit_price\": 1543.02,\n      \"amount\": 1543.02\n    }\n  ],\n  \"subtotal\": 1543.02,\n  \"tax_rate\": 22,\n  \"tax_amount\": 339.46,\n  \"total\": 1882.48,\n  \"iban\": \"IT48 M079 2657 130M 04A7 JLVU VAA\",\n  \"bic\": \"DIIMITXX100\"\n}",
+  "recorded_at": "2026-10-30T20:33:28+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2483,
+    "output_tokens": 350,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "d5048926c3c3dccc8964ae24b69e4a3bdd83e14eaa0ba34c1d53d216350a8204",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Meridian Labs Limited\",\n    \"tax_id\": \"GB978439138\",\n    \"address\": \"542 Castle Street, Leeds NG9 8NP, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Lantern Hill Books Limited\",\n    \"tax_id\": null,\n    \"address\": \"979 Birch Avenue, Leeds YR4 9XP\"\n  },\n  \"invoice_number\": \"2026-052292\",\n  \"invoice_date\": \"2026-01-05\",\n  \"due_date\": \"2026-01-19\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Technical support, hours\",\n      \"quantity\": 25.5,\n      \"unit_price\": 43.63,\n      \"amount\": 1112.57\n    },\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 4,\n      \"unit_price\": 61.67,\n      \"amount\": 246.68\n    },\n    {\n      \"description\": \"Consulting, hours\",\n      \"quantity\": 6.5,\n      \"unit_price\": 90.06,\n      \"amount\": 585.39\n    },\n    {\n      \"description\": \"Cable management kit\",\n      \"quantity\": 45,\n      \"unit_price\": 22.25,\n      \"amount\": 1001.25\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 18.1,\n      \"unit_price\": 4.0,\n      \"amount\": 72.4\n    },\n    {\n      \"description\": \"Security audit\",\n      \"quantity\": 1,\n      \"unit_price\": 1269.21,\n      \"amount\": 1269.21\n    },\n    {\n      \"description\": \"Vinyl banner print, m\",\n      \"quantity\": 3.5,\n      \"unit_price\": 19.65,\n      \"amount\": 68.78\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 59.8,\n      \"unit_price\": 1.75,\n      \"amount\": 104.65\n    }\n  ],\n  \"subtotal\": 4460.93,\n  \"tax_rate\": 20,\n  \"tax_amount\": 892.19,\n  \"total\": 5353.17,\n  \"iban\": \"GB92 GWVB 7214 7075 2437 15\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:36:08+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1068,
+    "latency_ms": 2079,
+    "output_tokens": 705,
+    "thinking_tokens": 0
+  }
+}

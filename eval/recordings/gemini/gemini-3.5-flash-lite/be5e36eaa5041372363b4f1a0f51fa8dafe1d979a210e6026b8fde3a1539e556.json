@@ -1,0 +1,21 @@
+{
+  "document_sha256": "f9bf62d31901d4c2ca146a21b3fbd0698720baaded12bb5d879a4af349ed066b",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Westmarch Textiles Ltd\",\n    \"tax_id\": null,\n    \"address\": \"504 Mill Lane, Exeter EA1 9KK, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Tidewater Services LLP\",\n    \"tax_id\": \"GB556623320\",\n    \"address\": \"859 Foundry Close, Exeter MG1 2LB\"\n  },\n  \"invoice_number\": \"2607-55414\",\n  \"invoice_date\": \"2026-05-16\",\n  \"due_date\": \"2026-06-15\",\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"UX design workshop\",\n      \"quantity\": 1,\n      \"unit_price\": 1374.84,\n      \"amount\": 1374.84\n    },\n    {\n      \"description\": \"Coffee beans, roasted, kg\",\n      \"quantity\": 7,\n      \"unit_price\": 30.00,\n      \"amount\": 210.00\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 8.48,\n      \"unit_price\": 0.98,\n      \"amount\": 8.31\n    },\n    {\n      \"description\": \"Conference phone\",\n      \"quantity\": 42,\n      \"unit_price\": 223.27,\n      \"amount\": 9377.34\n    },\n    {\n      \"description\": \"Office chair, ergonomic\",\n      \"quantity\": 6,\n      \"unit_price\": 125.64,\n      \"amount\": 753.84\n    }\n  ],\n  \"subtotal\": 11724.33,\n  \"tax_rate\": 20,\n  \"tax_amount\": 2344.87,\n  \"total\": 14069.20,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:35:54+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 3695,
+    "output_tokens": 523,
+    "thinking_tokens": 0
+  }
+}

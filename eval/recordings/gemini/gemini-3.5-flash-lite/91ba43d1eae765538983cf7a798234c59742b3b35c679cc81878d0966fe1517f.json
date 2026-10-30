@@ -1,0 +1,21 @@
+{
+  "document_sha256": "070d975633701146521958855efbd408e3e0a5296fa29ece4369384cebaff1f9",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Orbit Office Solutions Limited\",\n    \"tax_id\": \"GB161425540\",\n    \"address\": \"39 Orchard Way, Exeter BA2 5XK, United Kingdom\"\n  },\n  \"buyer\": {\n    \"name\": \"Henry Thorne\",\n    \"tax_id\": null,\n    \"address\": \"Avenida del Mar 39, 10305 Bilbao, Spain\"\n  },\n  \"invoice_number\": \"INV-2026-28352\",\n  \"invoice_date\": \"2026-08-03\",\n  \"due_date\": null,\n  \"currency\": \"GBP\",\n  \"line_items\": [\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 277.01,\n      \"unit_price\": 1.73,\n      \"amount\": 479.23\n    },\n    {\n      \"description\": \"Network cable Cat6, m\",\n      \"quantity\": 8.12,\n      \"unit_price\": 1.0,\n      \"amount\": 8.12\n    }\n  ],\n  \"subtotal\": 487.35,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 97.47,\n  \"total\": 584.82,\n  \"iban\": \"GB29 SEDM 4360 2873 1273 16\",\n  \"bic\": \"LYQTGBMM200\"\n}",
+  "recorded_at": "2026-10-30T20:33:14+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2532,
+    "output_tokens": 391,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "7aaa69655081be0472b928545bf4d76380c0de804dfe9ff484cff3a807cbc7bb",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Steinbach Verpackung KG\",\n    \"tax_id\": \"DE880689948\",\n    \"address\": \"Birkenallee 105, 17539 Regensburg, Deutschland\"\n  },\n  \"buyer\": {\n    \"name\": \"Donau Druckerei AG\",\n    \"tax_id\": null,\n    \"address\": \"Gartenweg 112, 88447 Lüneburg\"\n  },\n  \"invoice_number\": \"RE-202635026\",\n  \"invoice_date\": \"2026-05-22\",\n  \"due_date\": \"2026-06-05\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Kabelmanagement-Set\",\n      \"quantity\": 6,\n      \"unit_price\": 36.98,\n      \"amount\": 221.88\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 4,\n      \"unit_price\": 159.00,\n      \"amount\": 636.00\n    },\n    {\n      \"description\": \"Schulung (halber Tag)\",\n      \"quantity\": 1,\n      \"unit_price\": 840.66,\n      \"amount\": 840.66\n    },\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 153,\n      \"unit_price\": 5.00,\n      \"amount\": 765.00\n    }\n  ],\n  \"subtotal\": 2463.54,\n  \"tax_rate\": 19,\n  \"tax_amount\": 468.07,\n  \"total\": 2931.61,\n  \"iban\": \"DE42 6835 6963 9571 2979 66\",\n  \"bic\": \"RZZXDEXXB01\"\n}",
+  "recorded_at": "2026-10-30T20:32:08+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 5653,
+    "output_tokens": 521,
+    "thinking_tokens": 0
+  }
+}

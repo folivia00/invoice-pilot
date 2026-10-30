@@ -1,0 +1,21 @@
+{
+  "document_sha256": "a494084fbde85349857179124f5e8e5e6947af0a856c84f4c472d1d0b7cf151b",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Stonegate Security B.V.\",\n    \"tax_id\": null,\n    \"address\": \"Kanaalweg 178, 9336 MB Haarlem\"\n  },\n  \"buyer\": {\n    \"name\": \"Summit Ridge Tools V.O.F.\",\n    \"tax_id\": \"NL785291749B76\",\n    \"address\": \"Kanaalweg 82, 7943 JG Utrecht\"\n  },\n  \"invoice_number\": \"2612-96755\",\n  \"invoice_date\": \"2026-08-30\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1.0,\n      \"unit_price\": 154.61,\n      \"amount\": 154.61\n    },\n    {\n      \"description\": \"Courier delivery\",\n      \"quantity\": 1.0,\n      \"unit_price\": 22.0,\n      \"amount\": 22.0\n    },\n    {\n      \"description\": \"Laptop stand, aluminium\",\n      \"quantity\": 8.0,\n      \"unit_price\": 65.36,\n      \"amount\": 522.88\n    },\n    {\n      \"description\": \"Photo editing, hours\",\n      \"quantity\": 8.75,\n      \"unit_price\": 56.0,\n      \"amount\": 490.0\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 18.5,\n      \"unit_price\": 109.0,\n      \"amount\": 2016.5\n    },\n    {\n      \"description\": \"USB-C docking station\",\n      \"quantity\": 3.0,\n      \"unit_price\": 123.69,\n      \"amount\": 371.07\n    }\n  ],\n  \"subtotal\": 3577.06,\n  \"tax_rate\": 9.0,\n  \"tax_amount\": 321.94,\n  \"total\": 3899.0,\n  \"iban\": \"NL06 BUTX 4060 8938 38\",\n  \"bic\": \"WCEBNLZZXXX\"\n}",
+  "recorded_at": "2026-10-30T20:34:28+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 971,
+    "latency_ms": 2255,
+    "output_tokens": 603,
+    "thinking_tokens": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_sha256": "330b475522e4026a0fa84cceace090d00469482f541e27b8a7abaa8f62b393b0",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silberberg Beratung KG\",\n    \"tax_id\": null,\n    \"address\": \"Am Graben 50, 3098 Steyr, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Seeblick Fotografie KG\",\n    \"tax_id\": null,\n    \"address\": \"Ringstraße 81, 0707 Steyr\"\n  },\n  \"invoice_number\": \"INV-2026-28908\",\n  \"invoice_date\": \"2026-03-12\",\n  \"due_date\": \"2026-03-19\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Schreibtisch 160 cm\",\n      \"quantity\": 5,\n      \"unit_price\": 525.78,\n      \"amount\": 2628.90\n    },\n    {\n      \"description\": \"Wartungsvertrag Q3\",\n      \"quantity\": 1,\n      \"unit_price\": 1384.41,\n      \"amount\": 1384.41\n    },\n    {\n      \"description\": \"Aluminiumprofil 40x40, m\",\n      \"quantity\": 28.9,\n      \"unit_price\": 23.93,\n      \"amount\": 691.58\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1,\n      \"unit_price\": 975.37,\n      \"amount\": 975.37\n    },\n    {\n      \"description\": \"Funktastatur\",\n      \"quantity\": 9,\n      \"unit_price\": 54.40,\n      \"amount\": 489.60\n    },\n    {\n      \"description\": \"Datenmigration (Std.)\",\n      \"quantity\": 2.75,\n      \"unit_price\": 74.02,\n      \"amount\": 203.56\n    }\n  ],\n  \"subtotal\": 6373.42,\n  \"tax_rate\": 0.0,\n  \"tax_amount\": 0.00,\n  \"total\": 6373.42,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:27+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 985,
+    "latency_ms": 1780,
+    "output_tokens": 584,
+    "thinking_tokens": 0
+  }
+}

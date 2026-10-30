@@ -1,0 +1,21 @@
+{
+  "document_sha256": "0d06a5c8ca0e2153ea1566361140f2ed89d38c37ed7059588929836c4d4a6275",
+  "format": 1,
+  "input": "application/pdf",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Lerchenfeld Bäckerei GmbH\",\n    \"tax_id\": \"ATU17445306\",\n    \"address\": \"Donaulände 47, 0930 Klagenfurt, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Sonnenhang Gartenbau KG\",\n    \"tax_id\": null,\n    \"address\": \"Ringstraße 88, 8884 Wels\"\n  },\n  \"invoice_number\": null,\n  \"invoice_date\": \"2025-12-06\",\n  \"due_date\": \"2026-01-20\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Softwarelizenz (Jahr)\",\n      \"quantity\": 1,\n      \"unit_price\": 1954.43,\n      \"amount\": 1954.43\n    },\n    {\n      \"description\": \"LED-Panel\",\n      \"quantity\": 5,\n      \"unit_price\": 52.46,\n      \"amount\": 262.30\n    },\n    {\n      \"description\": \"Schutzhandschuhe, Paar\",\n      \"quantity\": 2,\n      \"unit_price\": 3.71,\n      \"amount\": 7.42\n    },\n    {\n      \"description\": \"Bürostuhl, ergonomisch\",\n      \"quantity\": 7,\n      \"unit_price\": 195.58,\n      \"amount\": 1369.06\n    }\n  ],\n  \"subtotal\": 3593.21,\n  \"tax_rate\": 10.0,\n  \"tax_amount\": 359.32,\n  \"total\": 3952.53,\n  \"iban\": \"AT43 4363 9026 4085 6615\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:20+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1132,
+    "latency_ms": 3645,
+    "output_tokens": 493,
+    "thinking_tokens": 0
+  }
+}

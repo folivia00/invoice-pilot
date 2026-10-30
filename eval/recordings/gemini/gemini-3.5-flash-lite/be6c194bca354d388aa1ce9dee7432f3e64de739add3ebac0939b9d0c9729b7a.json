@@ -1,0 +1,21 @@
+{
+  "document_sha256": "0eadad2988937deb6f46eb5e52be2f604d6260186c06b02d526dce707ca6cd85",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Orbit Office Solutions SAS\",\n    \"tax_id\": null,\n    \"address\": \"Place de la Gare 161, 70140 Toulouse, France\"\n  },\n  \"buyer\": {\n    \"name\": \"Lantern Hill Books SARL\",\n    \"tax_id\": null,\n    \"address\": \"Rue du Moulin 74, 82387 Lyon\"\n  },\n  \"invoice_number\": \"R074517\",\n  \"invoice_date\": \"2026-02-04\",\n  \"due_date\": \"2026-03-06\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Software license (annual)\",\n      \"quantity\": 1,\n      \"unit_price\": 975.59,\n      \"amount\": 975.59\n    },\n    {\n      \"description\": \"Printer toner cartridge\",\n      \"quantity\": 49,\n      \"unit_price\": 117.84,\n      \"amount\": 5774.16\n    },\n    {\n      \"description\": \"Training session (half day)\",\n      \"quantity\": 1,\n      \"unit_price\": 915.08,\n      \"amount\": 915.08\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 6.2,\n      \"unit_price\": 2.78,\n      \"amount\": 17.24\n    },\n    {\n      \"description\": \"Project management, hours\",\n      \"quantity\": 36.5,\n      \"unit_price\": 123.64,\n      \"amount\": 4512.86\n    }\n  ],\n  \"subtotal\": 12194.93,\n  \"tax_rate\": 10,\n  \"tax_amount\": 1219.49,\n  \"total\": 13414.42,\n  \"iban\": \"FR70 5666 5368 35FY GEV4 918H 416\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:33:41+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2488,
+    "output_tokens": 549,
+    "thinking_tokens": 0
+  }
+}

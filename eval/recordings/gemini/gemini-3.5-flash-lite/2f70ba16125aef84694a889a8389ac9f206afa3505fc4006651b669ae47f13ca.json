@@ -1,0 +1,21 @@
+{
+  "document_sha256": "89c60807fb8e833e57577953d0a6219d08be13373aa8c0020f4bd7cf71b3f340",
+  "format": 1,
+  "input": "text",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Silberberg Beratung AG\",\n    \"tax_id\": null,\n    \"address\": \"Dorfstrasse 11, 7948 Biel, Schweiz\"\n  },\n    \"buyer\": {\n    \"name\": \"Paul Schäfer\",\n    \"tax_id\": null,\n    \"address\": \"Bahnhofstrasse 133, 1317 Biel\"\n  },\n  \"invoice_number\": \"INV-2025-95759\",\n  \"invoice_date\": \"2025-11-30\",\n  \"due_date\": \"2025-12-30\",\n  \"currency\": \"CHF\",\n  \"line_items\": [\n    {\n      \"description\": \"Beratung (Std.)\",\n      \"quantity\": 13.25,\n      \"unit_price\": 120.84,\n      \"amount\": 1601.13\n    },\n    {\n      \"description\": \"Werbebanner, Druck, m\",\n      \"quantity\": 4.26,\n      \"unit_price\": 20.79,\n      \"amount\": 88.57\n    },\n    {\n      \"description\": \"Konferenztelefon\",\n      \"quantity\": 1.0,\n      \"unit_price\": 229.0,\n      \"amount\": 229.0\n    },\n    {\n      \"description\": \"Projektleitung (Std.)\",\n      \"quantity\": 10.5,\n      \"unit_price\": 114.19,\n      \"amount\": 1199.0\n    },\n    {\n      \"description\": \"Stahlwinkel 40x40\",\n      \"quantity\": 33.0,\n      \"unit_price\": 4.83,\n      \"amount\": 159.39\n    },\n    {\n      \"description\": \"Kupferdraht 2,5 mm, kg\",\n      \"quantity\": 38.0,\n      \"unit_price\": 22.39,\n      \"amount\": 850.82\n    },\n    {\n      \"description\": \"Workshop UX-Design\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1998.0,\n      \"amount\": 1998.0\n    }\n  ],\n  \"subtotal\": 6126.01,\n  \"tax_rate\": 8.1,\n  \"tax_amount\": 496.20,\n  \"total\": 6622.11,\n  \"iban\": \"CH32 9648 8L69 K79Z 705A 7\",\n  \"bic\": \"RVYMCHZZ200\"\n}",
+  "recorded_at": "2026-10-30T20:31:41+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1091,
+    "latency_ms": 2003,
+    "output_tokens": 678,
+    "thinking_tokens": 0
+  }
+}

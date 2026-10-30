@@ -1,0 +1,21 @@
+{
+  "document_sha256": "c4366f38644b59b5c1d47f875ae909fe436858aa67d667bf5ad623bccd57950b",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Oakmont Training LLC\",\n    \"tax_id\": null,\n    \"address\": \"501 Industrial Parkway, Denver 21547, United States\"\n  },\n  \"buyer\": {\n    \"name\": \"Daniel Rowe\",\n    \"tax_id\": null,\n    \"address\": null\n  },\n  \"invoice_number\": \"R037659\",\n  \"invoice_date\": \"2026-08-21\",\n  \"due_date\": \"2026-08-13\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Photo editing, hours\",\n      \"quantity\": 5.25,\n      \"unit_price\": 71.31,\n      \"amount\": 374.38\n    }\n  ],\n  \"subtotal\": 374.38,\n  \"tax_rate\": 8.875,\n  \"tax_amount\": 33.23,\n  \"total\": 407.61,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:34:56+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1673,
+    "latency_ms": 2589,
+    "output_tokens": 283,
+    "thinking_tokens": 0
+  }
+}

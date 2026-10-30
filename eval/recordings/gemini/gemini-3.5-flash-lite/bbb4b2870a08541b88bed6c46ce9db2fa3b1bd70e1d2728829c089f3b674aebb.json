@@ -1,0 +1,21 @@
+{
+  "document_sha256": "b7a7cb6ff572124cc3d915d3dd49c04847d3f1477225986a99832c14110395ab",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Larkspur Media S.L.\",\n    \"tax_id\": \"EST5818632Q\",\n    \"address\": \"Paseo de la Estacion 70, 06774 Zaragoza\"\n  },\n  \"buyer\": {\n    \"name\": \"Peter Gardner\",\n    \"tax_id\": null,\n    \"address\": \"Calle Olivo 107, 86604 Granada\"\n  },\n  \"invoice_number\": null,\n  \"invoice_date\": \"2026-01-07\",\n  \"due_date\": \"2026-01-21\",\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Safety gloves, pair\",\n      \"quantity\": 6,\n      \"unit_price\": 8.21,\n      \"amount\": 49.26\n    },\n    {\n      \"description\": \"Steel sheet 2 mm, kg\",\n      \"quantity\": 23.4,\n      \"unit_price\": 5.0,\n      \"amount\": 117.00\n    },\n    {\n      \"description\": \"Network switch 24-port\",\n      \"quantity\": 15,\n      \"unit_price\": 342.00,\n      \"amount\": 5130.00\n    },\n    {\n      \"description\": \"Catering, lunch for 12\",\n      \"quantity\": 1,\n      \"unit_price\": 438.42,\n      \"amount\": 438.42\n    },\n    {\n      \"description\": \"Copy paper A4, 500 sheets\",\n      \"quantity\": 5,\n      \"unit_price\": 8.76,\n      \"amount\": 43.80\n    },\n    {\n      \"description\": \"Copper wire 2.5 mm, kg\",\n      \"quantity\": 222.34,\n      \"unit_price\": 16.88,\n      \"amount\": 3753.10\n    }\n  ],\n  \"subtotal\": 9531.58,\n  \"tax_rate\": 21,\n  \"tax_amount\": 2001.63,\n  \"total\": 11533.21,\n  \"iban\": \"ES82 4731 9002 7594 9572 9637\",\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:32:02+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2555,
+    "output_tokens": 616,
+    "thinking_tokens": 0
+  }
+}

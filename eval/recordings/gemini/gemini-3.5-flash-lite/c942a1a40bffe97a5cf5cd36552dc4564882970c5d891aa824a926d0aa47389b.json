@@ -1,0 +1,21 @@
+{
+  "document_sha256": "8ecc1ce6a73065b770922628b1911b66c0fd0129f10b969d8e316bc2cffb8574",
+  "format": 1,
+  "input": "image/jpeg",
+  "model": "gemini-3.5-flash-lite",
+  "params": {
+    "media_resolution": "default",
+    "thinking_level": "minimal"
+  },
+  "prompt_version": "extraction-v1",
+  "provider": "gemini",
+  "raw_text": "{\n  \"supplier\": {\n    \"name\": \"Brückenkopf Ingenieure GmbH\",\n    \"tax_id\": \"ATU48853348\",\n    \"address\": \"Ringstraße 113, 7558 Graz, Österreich\"\n  },\n  \"buyer\": {\n    \"name\": \"Hafenstadt Textil GmbH\",\n    \"tax_id\": null,\n    \"address\": \"Am Graben 127, 9121 Steyr\"\n  },\n  \"invoice_number\": \"R053987\",\n  \"invoice_date\": \"2026-01-17\",\n  \"due_date\": null,\n  \"currency\": \"EUR\",\n  \"line_items\": [\n    {\n      \"description\": \"Stahlblech 2 mm, kg\",\n      \"quantity\": 10.63,\n      \"unit_price\": 5.0,\n      \"amount\": 53.15\n    },\n    {\n      \"description\": \"Etikettendrucker\",\n      \"quantity\": 5.0,\n      \"unit_price\": 63.81,\n      \"amount\": 319.05\n    },\n    {\n      \"description\": \"Softwarelizenz (Jahr)\",\n      \"quantity\": 1.0,\n      \"unit_price\": 1208.0,\n      \"amount\": 1208.0\n    },\n    {\n      \"description\": \"Kopierpapier A4, 500 Blatt\",\n      \"quantity\": 3.0,\n      \"unit_price\": 7.57,\n      \"amount\": 22.71\n    },\n    {\n      \"description\": \"Werbanner, Druck, m\",\n      \"quantity\": 4.8,\n      \"unit_price\": 16.0,\n      \"amount\": 76.8\n    }\n  ],\n  \"subtotal\": 1679.71,\n  \"tax_rate\": 20.0,\n  \"tax_amount\": 335.94,\n  \"total\": 2015.65,\n  \"iban\": null,\n  \"bic\": null\n}",
+  "recorded_at": "2026-10-30T20:31:50+00:00",
+  "schema_sha256": "a90fb4433f7f6a3c42cbf83f4ae5e90601e068588133de10be250a0934862b91",
+  "usage": {
+    "input_tokens": 1692,
+    "latency_ms": 2332,
+    "output_tokens": 532,
+    "thinking_tokens": 0
+  }
+}
