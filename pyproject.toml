@@ -7,9 +7,14 @@ license = "MIT"
 authors = [{ name = "Vladimir K" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    "aiogram==3.28.2",
+    "aiohttp>=3.13,<3.14",
+    "aiosqlite>=0.22,<0.23",
+    "alembic>=1.20,<2",
     "httpx>=0.28.1,<1.0",
     "pydantic>=2.13,<2.14",
     "pypdf>=6.21,<7",
+    "sqlalchemy[asyncio]>=2.1.6,<2.2",
 ]
 
 [dependency-groups]
