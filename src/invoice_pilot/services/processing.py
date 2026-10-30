@@ -220,6 +220,10 @@ class DocumentProcessor:
     def user_daily_docs(self) -> int:
         return self._limits.user_daily_docs
 
+    @property
+    def queue(self) -> ProcessingQueue:
+        return self._queue
+
     async def remaining_today(self, user_id: int) -> int:
         return await self._limits.remaining_today(user_id)
 
