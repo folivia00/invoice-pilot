@@ -9,6 +9,7 @@ import asyncio
 import logging
 import time
 from contextlib import suppress
+from dataclasses import dataclass
 from datetime import UTC, datetime
 
 import httpx
@@ -19,6 +20,7 @@ from invoice_pilot.config import Settings
 from invoice_pilot.extraction.prepare import InputLimits
 from invoice_pilot.llm.config import LLMConfig
 from invoice_pilot.llm.providers import make_provider
+from invoice_pilot.services.export import ExportService
 from invoice_pilot.services.limits import DailyLimits
 from invoice_pilot.services.processing import DocumentProcessor, ProcessingQueue
 from invoice_pilot.services.rate_limit import (
@@ -27,6 +29,7 @@ from invoice_pilot.services.rate_limit import (
     limited_sleep,
 )
 from invoice_pilot.services.retention import retention_loop
+from invoice_pilot.services.stats import StatsService
 from invoice_pilot.storage import Storage
 
 logger = logging.getLogger(__name__)
@@ -40,9 +43,14 @@ class NotMigratedError(RuntimeError):
     pass
 
 
-def build_processor(
-    settings: Settings, storage: Storage, client: httpx.AsyncClient
-) -> DocumentProcessor:
+@dataclass(frozen=True, slots=True)
+class Services:
+    processor: DocumentProcessor
+    exports: ExportService
+    stats: StatsService
+
+
+def build_services(settings: Settings, storage: Storage, client: httpx.AsyncClient) -> Services:
     """Services for one bot process (real clock, real sleep, Gemini provider)."""
     limiter = SlidingWindowLimiter(settings.llm_rpm, monotonic=time.monotonic)
     inner = make_provider(
@@ -58,14 +66,36 @@ def build_processor(
         global_daily_budget_usd=settings.global_daily_budget_usd,
         clock=utc_now,
     )
-    return DocumentProcessor(
+    queue = ProcessingQueue(settings.concurrency, settings.queue_max)
+    processor = DocumentProcessor(
         storage=storage,
         limits=limits,
         provider=RateLimitedProvider(inner, limiter),
-        queue=ProcessingQueue(settings.concurrency),
+        queue=queue,
         input_limits=InputLimits(max_bytes=settings.max_file_bytes, max_pages=settings.max_pages),
         clock=utc_now,
     )
+    exports = ExportService(storage, retention_days=settings.retention_days, clock=utc_now)
+    stats = StatsService(
+        storage,
+        admin_ids=settings.admin_ids,
+        queue=queue,
+        global_daily_docs=settings.global_daily_docs,
+        global_daily_budget_usd=settings.global_daily_budget_usd,
+        retention_days=settings.retention_days,
+        clock=utc_now,
+    )
+    return Services(processor=processor, exports=exports, stats=stats)
+
+
+def build_dispatcher(settings: Settings, services: Services) -> Dispatcher:
+    dispatcher = Dispatcher()
+    dispatcher.include_router(build_router())
+    dispatcher["processor"] = services.processor
+    dispatcher["exports"] = services.exports
+    dispatcher["stats"] = services.stats
+    dispatcher["retention_days"] = settings.retention_days
+    return dispatcher
 
 
 async def run(settings: Settings) -> None:
@@ -79,10 +109,7 @@ async def run(settings: Settings) -> None:
     try:
         if not await storage.schema_ready():
             raise NotMigratedError("database is not migrated: run `uv run alembic upgrade head`")
-        dispatcher = Dispatcher()
-        dispatcher.include_router(build_router())
-        dispatcher["processor"] = build_processor(settings, storage, client)
-        dispatcher["retention_days"] = settings.retention_days
+        dispatcher = build_dispatcher(settings, build_services(settings, storage, client))
         retention = asyncio.create_task(
             retention_loop(storage, retention_days=settings.retention_days, clock=utc_now)
         )
