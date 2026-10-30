@@ -31,6 +31,7 @@ STATUS_NEEDS_REVIEW: Final = "needs_review"
 STATUS_PROVIDER_ERROR: Final = "provider_error"
 STATUS_REJECTED: Final = "rejected"
 STATUS_FAILED: Final = "failed"
+STATUS_QUEUE_FULL: Final = "queue_full"
 
 #: Statuses that use up a daily slot.
 COUNTED_STATUSES: Final[tuple[str, ...]] = (

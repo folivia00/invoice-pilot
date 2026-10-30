@@ -31,6 +31,8 @@ The bot uses long polling: no incoming ports or webhooks. Uploaded files are pro
 
 Settings are read from environment variables (see `.env.example`).
 
+Daily limits, the queue and the request-rate limit are enforced inside one bot process. Run a single process per database, in the `full` profile too.
+
 | Variable | Default | Meaning |
 |---|---|---|
 | `BOT_TOKEN` | required | Telegram bot token (secret) |
@@ -43,6 +45,7 @@ Settings are read from environment variables (see `.env.example`).
 | `USER_DAILY_DOCS` | `5` | Documents per user per UTC day |
 | `GLOBAL_DAILY_DOCS` | `300` | Documents for all users per UTC day |
 | `GLOBAL_DAILY_BUDGET_USD` | `0.50` | Daily LLM spend for all users (paid-tier list prices) |
+| `QUEUE_MAX` | `10` | Uploads allowed to wait for processing; more are refused |
 | `RETENTION_DAYS` | `7` | Days before extracted fields are deleted |
 | `LOG_LEVEL` | `INFO` | Log level |
 

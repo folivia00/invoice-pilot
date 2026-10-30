@@ -3,11 +3,12 @@
 Order (each step only if the previous one passed):
 1. type and size from Telegram metadata, before anything is downloaded;
 2. a daily slot is reserved (``limits``);
-3. the file is downloaded into memory (no file is ever written);
-4. ``prepare`` checks the bytes (signature, size, pages) and builds the model input;
-5. the document waits for a processing slot (Compact: one at a time) and for the
-   rate limiter, which sits inside the provider (``rate_limit``);
-6. ``extract_invoice`` runs, the result and every HTTP call are stored, one log line.
+3. the upload waits in line with its metadata only (Compact: one document at a
+   time, at most ``max_waiting`` waiting; a full line refuses the upload);
+4. with the slot taken, the file is downloaded into memory (never written to disk);
+5. ``prepare`` checks the bytes (signature, size, pages) and builds the model input;
+6. ``extract_invoice`` runs behind the rate limiter (inside the provider), the result
+   and every HTTP call are stored, one log line.
 
 Input problems and provider failures give the slot back. The bytes and the
 prepared input are dropped as soon as the model call returns.
@@ -35,8 +36,10 @@ from invoice_pilot.services.extraction import ExtractionOutcome, extract_invoice
 from invoice_pilot.services.limits import (
     STATUS_FAILED,
     STATUS_PROVIDER_ERROR,
+    STATUS_QUEUE_FULL,
     STATUS_REJECTED,
     DailyLimits,
+    Reservation,
 )
 from invoice_pilot.storage import CallRow, Storage
 
@@ -60,6 +63,7 @@ MSG_UNSUPPORTED: Final = (
 )
 MSG_LIMIT: Final = "Demo limit reached for today, please try again tomorrow (UTC)."
 MSG_BUSY: Final = "The AI service is busy right now. Please try again in a minute."
+MSG_QUEUE_FULL: Final = "The demo is busy right now. Please try again in a minute."
 MSG_DOWNLOAD_FAILED: Final = "Could not download the file from Telegram. Please send it again."
 MSG_FAILED: Final = "Something went wrong while processing the file. Please try again later."
 QUEUE_TEMPLATE: Final = "In queue (position {position}). I'll reply when it's your turn."
@@ -116,13 +120,23 @@ class ProcessingResult:
     document_id: int | None = None
 
 
-class ProcessingQueue:
-    """At most ``concurrency`` documents at the model; waiters learn their position."""
+class QueueFullError(Exception):
+    """The waiting line is at its limit; the upload is refused."""
 
-    def __init__(self, concurrency: int) -> None:
+
+class ProcessingQueue:
+    """At most ``concurrency`` documents at the model, at most ``max_waiting`` in line.
+
+    Waiters hold no file bytes: the download happens after the slot is taken.
+    """
+
+    def __init__(self, concurrency: int, max_waiting: int = 10) -> None:
         if concurrency < 1:
             raise ValueError("concurrency must be at least 1")
+        if max_waiting < 0:
+            raise ValueError("max_waiting must not be negative")
         self._semaphore = asyncio.Semaphore(concurrency)
+        self.max_waiting = max_waiting
         self._waiting = 0
         self.active = 0
         #: Highest number of documents processed at the same time (for tests).
@@ -134,7 +148,10 @@ class ProcessingQueue:
 
     @asynccontextmanager
     async def slot(self, on_wait: Callable[[int], Awaitable[None]]) -> AsyncIterator[None]:
+        """Take a processing slot; raise ``QueueFullError`` if the line is full."""
         if self._semaphore.locked() or self._waiting:
+            if self._waiting >= self.max_waiting:
+                raise QueueFullError
             self._waiting += 1
             try:
                 position = self._waiting
@@ -209,7 +226,11 @@ class DocumentProcessor:
     async def process(
         self, user_id: int, meta: UploadMeta, download: Download, notify: Notify
     ) -> ProcessingResult:
-        """Run one upload through the pipeline; never raises for expected failures."""
+        """Run one upload through the pipeline; never raises for expected failures.
+
+        Only the metadata waits in the queue: ``download`` is called once the
+        document holds a processing slot.
+        """
         rejection = check_upload(meta, self._input_limits.max_bytes)
         if rejection is not None:
             logger.warning("document rejected before download: kind=%s", meta.kind)
@@ -219,8 +240,18 @@ class DocumentProcessor:
         if reservation is None:
             logger.warning("document refused: daily demo limit reached")
             return ProcessingResult(ResultKind.LIMIT, message=MSG_LIMIT)
-        doc_id = reservation.document_id
+        try:
+            async with self._queue.slot(lambda position: notify(queue_message(position))):
+                return await self._process_in_slot(reservation, user_id, download)
+        except QueueFullError:
+            await self._limits.release(reservation, STATUS_QUEUE_FULL, user_id)
+            logger.warning("document %d refused: queue full", reservation.document_id)
+            return ProcessingResult(ResultKind.BUSY, message=MSG_QUEUE_FULL)
 
+    async def _process_in_slot(
+        self, reservation: Reservation, user_id: int, download: Download
+    ) -> ProcessingResult:
+        doc_id = reservation.document_id
         try:
             data = await download()
         except Exception as exc:
@@ -237,12 +268,11 @@ class DocumentProcessor:
 
         input_kind = prepared.input_kind
         try:
-            async with self._queue.slot(lambda position: notify(queue_message(position))):
-                started = self._monotonic()
-                outcome = await extract_invoice(
-                    data, provider=self._provider, today=self._clock().date(), prepared=prepared
-                )
-                elapsed_ms = int((self._monotonic() - started) * 1000)
+            started = self._monotonic()
+            outcome = await extract_invoice(
+                data, provider=self._provider, today=self._clock().date(), prepared=prepared
+            )
+            elapsed_ms = int((self._monotonic() - started) * 1000)
         except (ProviderUnavailableError, ProviderError) as exc:
             del data, prepared
             await self._store_provider_failure(doc_id, input_kind, list(exc.attempts))

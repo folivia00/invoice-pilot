@@ -29,6 +29,7 @@ ENV_VARS: Final[tuple[str, ...]] = (
     "USER_DAILY_DOCS",
     "GLOBAL_DAILY_DOCS",
     "GLOBAL_DAILY_BUDGET_USD",
+    "QUEUE_MAX",
     "RETENTION_DAYS",
     "LOG_LEVEL",
 )
@@ -43,6 +44,8 @@ DEFAULT_USER_DAILY_DOCS: Final = 5
 DEFAULT_GLOBAL_DAILY_DOCS: Final = 300
 DEFAULT_GLOBAL_DAILY_BUDGET_USD: Final = Decimal("0.50")
 DEFAULT_RETENTION_DAYS: Final = 7
+#: Uploads allowed to wait for a processing slot (the one being processed not counted).
+DEFAULT_QUEUE_MAX: Final = 10
 LOG_LEVELS: Final[frozenset[str]] = frozenset({"DEBUG", "INFO", "WARNING", "ERROR"})
 
 #: The Bot API refuses to download files above 20 MB (getFile limit).
@@ -81,6 +84,7 @@ class Settings:
     user_daily_docs: int = DEFAULT_USER_DAILY_DOCS
     global_daily_docs: int = DEFAULT_GLOBAL_DAILY_DOCS
     global_daily_budget_usd: Decimal = DEFAULT_GLOBAL_DAILY_BUDGET_USD
+    queue_max: int = DEFAULT_QUEUE_MAX
     retention_days: int = DEFAULT_RETENTION_DAYS
     log_level: str = "INFO"
 
@@ -186,6 +190,7 @@ def load_settings(env: Mapping[str, str]) -> Settings:
         global_daily_budget_usd=_decimal(
             env, "GLOBAL_DAILY_BUDGET_USD", DEFAULT_GLOBAL_DAILY_BUDGET_USD
         ),
+        queue_max=_int(env, "QUEUE_MAX", DEFAULT_QUEUE_MAX, minimum=0),
         retention_days=_int(env, "RETENTION_DAYS", DEFAULT_RETENTION_DAYS, minimum=1),
         log_level=log_level,
     )
