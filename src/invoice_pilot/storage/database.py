@@ -145,6 +145,59 @@ class Repository:
         docs = await self._session.execute(delete(Document).where(Document.created_at < cutoff))
         return int(docs.rowcount or 0), int(calls.rowcount or 0)
 
+    async def delete_inactive_users(self, cutoff: datetime) -> int:
+        """Delete users first seen before ``cutoff`` who have no documents left."""
+        has_documents = select(Document.id).where(Document.user_telegram_id == User.telegram_id)
+        result = await self._session.execute(
+            delete(User).where(User.first_seen_at < cutoff, ~has_documents.exists())
+        )
+        return int(result.rowcount or 0)
+
+    async def list_user_documents(
+        self, user: int, *, since: datetime, statuses: Iterable[str]
+    ) -> list[Document]:
+        rows = await self._session.execute(
+            select(Document)
+            .where(
+                Document.user_telegram_id == user,
+                Document.created_at >= since,
+                Document.status.in_(list(statuses)),
+            )
+            .order_by(Document.id)
+        )
+        return list(rows.scalars())
+
+    async def status_counts(self, *, since: datetime) -> dict[str, int]:
+        """Documents per status created since ``since``."""
+        rows = await self._session.execute(
+            select(Document.status, func.count(Document.id))
+            .where(Document.created_at >= since)
+            .group_by(Document.status)
+        )
+        return {status: int(count) for status, count in rows.all()}
+
+    async def distinct_users(self, *, since: datetime) -> int:
+        """Users who sent at least one document since ``since``."""
+        query = select(func.count(func.distinct(Document.user_telegram_id))).where(
+            Document.created_at >= since
+        )
+        return int((await self._session.execute(query)).scalar_one())
+
+    async def call_totals(self, *, since: datetime) -> list[tuple[str, int | None, int, int, int]]:
+        """(status, http_status, calls, input_tokens, output_tokens) groups since ``since``."""
+        rows = await self._session.execute(
+            select(
+                LLMCall.status,
+                LLMCall.http_status,
+                func.count(LLMCall.id),
+                func.coalesce(func.sum(LLMCall.input_tokens), 0),
+                func.coalesce(func.sum(LLMCall.output_tokens), 0),
+            )
+            .where(LLMCall.created_at >= since)
+            .group_by(LLMCall.status, LLMCall.http_status)
+        )
+        return [(s, h, int(c), int(i), int(o)) for s, h, c, i, o in rows.all()]
+
     async def get_document(self, document_id: int) -> Document | None:
         return await self._session.get(Document, document_id)
 
