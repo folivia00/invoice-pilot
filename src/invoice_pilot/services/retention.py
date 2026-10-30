@@ -1,4 +1,4 @@
-"""Daily deletion of extracted fields and call metadata older than the retention period.
+"""Daily deletion of extracted fields, call metadata and idle users past the retention period.
 
 Runs inside the bot process at 05:00 UTC (the time agreed with the host). The
 clock and sleep are injected so tests run without waiting.
@@ -29,13 +29,20 @@ def seconds_until_next_run(now: datetime, run_at: time = RUN_AT_UTC) -> float:
     return (target - now).total_seconds()
 
 
-async def purge_expired(storage: Storage, *, now: datetime, retention_days: int) -> tuple[int, int]:
-    """Delete documents and llm_calls created more than ``retention_days`` before ``now``."""
+async def purge_expired(
+    storage: Storage, *, now: datetime, retention_days: int
+) -> tuple[int, int, int]:
+    """Delete rows older than ``retention_days``: documents, their llm_calls, idle users.
+
+    A user is deleted when first seen before the cutoff and no documents remain.
+    Returns the counts (documents, llm_calls, users).
+    """
     cutoff = now - timedelta(days=retention_days)
     async with storage.transaction() as repo:
         documents, calls = await repo.delete_older_than(cutoff)
-    logger.info("retention: deleted documents=%d llm_calls=%d", documents, calls)
-    return documents, calls
+        users = await repo.delete_inactive_users(cutoff)
+    logger.info("retention: deleted documents=%d llm_calls=%d users=%d", documents, calls, users)
+    return documents, calls, users
 
 
 async def retention_loop(
