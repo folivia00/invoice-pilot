@@ -23,7 +23,17 @@ from helpers_app import (
 from pypdf import PdfWriter
 
 from invoice_pilot.bot.card import STATUS_APPROVED, STATUS_REVIEW
-from invoice_pilot.bot.handlers import build_router, on_document, on_other, on_photo, on_start
+from invoice_pilot.bot.handlers import (
+    build_router,
+    on_document,
+    on_export,
+    on_export_choice,
+    on_json,
+    on_other,
+    on_photo,
+    on_start,
+    on_stats,
+)
 from invoice_pilot.bot.messages import HINT
 from invoice_pilot.services.processing import MSG_UNSUPPORTED
 
@@ -54,7 +64,10 @@ def test_text_pdf_is_approved(db_path: Path, clock: FakeClock) -> None:
     assert "Northwind Supplies Corp." in card
     assert "<b>Total:</b> 3798.41 USD" in card
     assert "gemini-3.5-flash-lite" in card
-    assert message.answers[0][1] == {"parse_mode": "HTML"}
+    kwargs = message.answers[0][1]
+    assert kwargs["parse_mode"] == "HTML"
+    button = kwargs["reply_markup"].inline_keyboard[0][0]
+    assert (button.text, button.callback_data) == ("JSON", "json:1")
 
 
 def test_scan_pdf_is_approved(db_path: Path, clock: FakeClock) -> None:
@@ -187,4 +200,5 @@ def test_other_messages_get_a_hint() -> None:
 def test_router_registers_the_handlers() -> None:
     router = build_router()
     callbacks = [handler.callback for handler in router.message.handlers]
-    assert callbacks == [on_start, on_document, on_photo, on_other]
+    assert callbacks == [on_start, on_export, on_stats, on_document, on_photo, on_other]
+    assert [h.callback for h in router.callback_query.handlers] == [on_export_choice, on_json]

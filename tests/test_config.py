@@ -49,6 +49,7 @@ def test_defaults() -> None:
     assert settings.user_daily_docs == 5
     assert settings.global_daily_docs == 300
     assert settings.global_daily_budget_usd == Decimal("0.50")
+    assert settings.queue_max == 10
     assert settings.retention_days == 7
     assert settings.log_level == "INFO"
 
@@ -88,6 +89,7 @@ def test_values_are_parsed() -> None:
         ("GLOBAL_DAILY_BUDGET_USD", "abc"),
         ("GLOBAL_DAILY_BUDGET_USD", "-1"),
         ("RETENTION_DAYS", "0"),
+        ("QUEUE_MAX", "-1"),
         ("ADMIN_IDS", "1,admin"),
         ("LOG_LEVEL", "LOUD"),
         ("LLM_MODEL", "unknown-model"),

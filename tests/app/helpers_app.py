@@ -153,6 +153,7 @@ def make_processor(
     global_daily: int = 300,
     budget: Decimal = Decimal("0.50"),
     concurrency: int = 1,
+    queue_max: int = 10,
     lock_factory: LockFactory = asyncio.Lock,
     max_bytes: int = 5 * 1024 * 1024,
     max_pages: int = 5,
@@ -169,7 +170,7 @@ def make_processor(
         storage=storage,
         limits=limits,
         provider=provider,
-        queue=ProcessingQueue(concurrency),
+        queue=ProcessingQueue(concurrency, queue_max),
         input_limits=InputLimits(max_bytes=max_bytes, max_pages=max_pages),
         clock=clock,
         monotonic=clock.monotonic,
@@ -180,11 +181,19 @@ def make_processor(
 
 
 class FakeBot:
-    """Serves file bytes by file_id; records downloads."""
+    """Serves file bytes by file_id; records downloads and sent messages/documents."""
 
     def __init__(self, files: dict[str, bytes] | None = None) -> None:
         self.files = files or {}
         self.downloads: list[str] = []
+        self.sent_documents: list[tuple[int, str, bytes]] = []
+        self.sent_messages: list[tuple[int, str]] = []
+
+    async def send_document(self, chat_id: int, document: Any, **kwargs: Any) -> None:
+        self.sent_documents.append((chat_id, document.filename, document.data))
+
+    async def send_message(self, chat_id: int, text: str, **kwargs: Any) -> None:
+        self.sent_messages.append((chat_id, text))
 
     async def download(self, file_id: str, destination: Any) -> Any:
         self.downloads.append(file_id)
@@ -246,3 +255,24 @@ def photo_message(data: bytes, *, user_id: int = 42) -> FakeMessage:
 
 
 Runner = Callable[[Any], Any]
+
+
+@dataclass
+class FakeCallback:
+    """The attributes of aiogram.types.CallbackQuery that the handlers use."""
+
+    data: str
+    user_id: int = 42
+    bot: FakeBot = field(default_factory=FakeBot)
+    answered: int = 0
+
+    @property
+    def from_user(self) -> Any:
+        return SimpleNamespace(id=self.user_id)
+
+    @property
+    def message(self) -> Any:
+        return SimpleNamespace(chat=SimpleNamespace(id=self.user_id))
+
+    async def answer(self, *args: Any, **kwargs: Any) -> None:
+        self.answered += 1

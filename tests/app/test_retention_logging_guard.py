@@ -58,7 +58,7 @@ async def _seed(storage: object, ages_days: list[float]) -> None:
 
 
 def test_purge_deletes_only_expired_rows(db_path: Path) -> None:
-    async def scenario() -> tuple[tuple[int, int], list[Document], int]:
+    async def scenario() -> tuple[tuple[int, int, int], list[Document], int]:
         async with open_storage(db_path) as storage:
             await _seed(storage, [10, 7.01, 6.99, 0])
             deleted = await purge_expired(storage, now=NOW, retention_days=7)
@@ -66,7 +66,7 @@ def test_purge_deletes_only_expired_rows(db_path: Path) -> None:
                 return deleted, await repo.list_documents(), len(await repo.list_llm_calls())
 
     deleted, docs, calls = asyncio.run(scenario())
-    assert deleted == (2, 2)
+    assert deleted == (2, 2, 0)  # the user still has documents
     assert sorted(round((NOW - d.created_at).total_seconds() / 86400, 2) for d in docs) == [0, 6.99]
     assert calls == 2
 
@@ -97,8 +97,8 @@ def test_retention_loop_runs_at_0500_utc(db_path: Path, caplog: pytest.LogCaptur
     ]
     lines = [r.getMessage() for r in caplog.records if r.name.endswith("retention")]
     assert lines == [
-        "retention: deleted documents=1 llm_calls=1",
-        "retention: deleted documents=0 llm_calls=0",
+        "retention: deleted documents=1 llm_calls=1 users=1",
+        "retention: deleted documents=0 llm_calls=0 users=0",
     ]
 
 
