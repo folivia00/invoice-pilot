@@ -21,7 +21,7 @@ from invoice_pilot.extraction.prepare import InputLimits
 from invoice_pilot.llm.config import LLMConfig
 from invoice_pilot.llm.providers import make_provider
 from invoice_pilot.services.export import ExportService
-from invoice_pilot.services.limits import DailyLimits
+from invoice_pilot.services.limits import DailyLimits, fail_stale_reservations
 from invoice_pilot.services.processing import DocumentProcessor, ProcessingQueue
 from invoice_pilot.services.rate_limit import (
     RateLimitedProvider,
@@ -109,6 +109,7 @@ async def run(settings: Settings) -> None:
     try:
         if not await storage.schema_ready():
             raise NotMigratedError("database is not migrated: run `uv run alembic upgrade head`")
+        await fail_stale_reservations(storage)
         dispatcher = build_dispatcher(settings, build_services(settings, storage, client))
         retention = asyncio.create_task(
             retention_loop(storage, retention_days=settings.retention_days, clock=utc_now)

@@ -87,6 +87,13 @@ class Repository:
             update(Document).where(Document.id == document_id).values(status=status)
         )
 
+    async def set_status_where(self, current: str, status: str) -> int:
+        """Move every document in status ``current`` to ``status``; return the count."""
+        result = await self._session.execute(
+            update(Document).where(Document.status == current).values(status=status)
+        )
+        return int(result.rowcount or 0)
+
     async def finish_document(
         self,
         document_id: int,

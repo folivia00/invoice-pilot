@@ -11,6 +11,7 @@ Both locks are in-process: the Compact profile runs a single process.
 """
 
 import asyncio
+import logging
 from collections.abc import Callable
 from contextlib import AbstractAsyncContextManager
 from dataclasses import dataclass
@@ -20,6 +21,8 @@ from typing import Final
 from weakref import WeakValueDictionary
 
 from invoice_pilot.storage import Storage
+
+logger = logging.getLogger(__name__)
 
 Clock = Callable[[], datetime]
 LockFactory = Callable[[], AbstractAsyncContextManager[object]]
@@ -88,13 +91,16 @@ class DailyLimits:
         return lock
 
     async def reserve(self, user_id: int) -> Reservation | None:
-        """Reserve one slot; None if any daily limit is reached (nothing is written then)."""
+        """Reserve one slot; None if any daily limit is reached.
+
+        A refusal writes nothing: the user row is created only together with the
+        reserved document, in the same transaction.
+        """
         user_lock = self._user_lock(user_id)
         async with user_lock, self._global_lock:
             now = self._clock()
             since = day_start(now)
             async with self._storage.transaction() as repo:
-                await repo.ensure_user(user_id, now)
                 used = await repo.count_documents(
                     since=since, statuses=COUNTED_STATUSES, user=user_id
                 )
@@ -108,6 +114,7 @@ class DailyLimits:
                 held = RESERVED_COST_PER_DOCUMENT_USD * (in_progress + 1)
                 if spent + held > self.global_daily_budget_usd:
                     return None
+                await repo.ensure_user(user_id, now)
                 document_id = await repo.add_document(user=user_id, now=now, status=STATUS_RESERVED)
             return Reservation(document_id)
 
@@ -126,3 +133,16 @@ class DailyLimits:
             used = await repo.count_documents(since=since, statuses=COUNTED_STATUSES, user=user_id)
             total = await repo.count_documents(since=since, statuses=COUNTED_STATUSES)
         return max(0, min(self.user_daily_docs - used, self.global_daily_docs - total))
+
+
+async def fail_stale_reservations(storage: Storage) -> int:
+    """At startup: move documents left in ``reserved`` to ``failed``; return the count.
+
+    The Compact profile runs one process, so no document can be in progress when
+    it starts: a reservation left by a crash or a kill would otherwise keep the
+    user's slot and hold budget for the rest of the day.
+    """
+    async with storage.transaction() as repo:
+        count = await repo.set_status_where(STATUS_RESERVED, STATUS_FAILED)
+    logger.info("startup: stale reservations marked failed=%d", count)
+    return count
