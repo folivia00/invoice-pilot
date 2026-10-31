@@ -158,7 +158,7 @@ async def on_export_choice(callback: CallbackQuery, exports: ExportService) -> N
         await _send_text(callback, NOTHING_TO_EXPORT)
     else:
         await _send_file(callback, file.filename, file.content)
-        logger.info("export sent: format=%s bytes=%d", fmt, len(file.content))
+        logger.info("export sent: format=%s rows=%d", fmt, file.rows)
     await callback.answer()
 
 
@@ -171,6 +171,7 @@ async def on_json(callback: CallbackQuery, exports: ExportService) -> None:
         await _send_text(callback, DOCUMENT_UNAVAILABLE)
     else:
         await _send_file(callback, file.filename, file.content)
+        logger.info("json sent")
     await callback.answer()
 
 
@@ -181,6 +182,7 @@ async def on_stats(message: Message, stats: StatsService) -> None:
         await message.answer(HINT)  # same reply as any unknown command
         return
     await message.answer(stats_text(snapshot), parse_mode=HTML)
+    logger.info("stats shown")
 
 
 async def on_other(message: Message) -> None:

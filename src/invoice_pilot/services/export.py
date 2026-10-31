@@ -204,6 +204,7 @@ def build_document_json(doc: Document) -> bytes:
 class ExportFile:
     filename: str
     content: bytes
+    rows: int = 1  # documents in the file
 
 
 class ExportService:
@@ -228,7 +229,7 @@ class ExportService:
             return None
         stamp = self._clock().strftime("%Y%m%d-%H%M%S")
         content = build_csv(docs) if fmt == "csv" else build_xlsx(docs)
-        return ExportFile(f"invoices-{stamp}.{fmt}", content)
+        return ExportFile(f"invoices-{stamp}.{fmt}", content, rows=len(docs))
 
     async def document_json(self, user_id: int, document_id: int) -> ExportFile | None:
         """JSON of one document if it exists, belongs to ``user_id`` and is exportable."""
