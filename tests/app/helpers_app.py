@@ -1,6 +1,7 @@
 """Shared helpers for storage, service and bot tests (no network, no Telegram)."""
 
 import asyncio
+import gc
 import json
 import re
 import shutil
@@ -157,6 +158,7 @@ def make_processor(
     lock_factory: LockFactory = asyncio.Lock,
     max_bytes: int = 5 * 1024 * 1024,
     max_pages: int = 5,
+    collect: Callable[[], object] = gc.collect,
 ) -> DocumentProcessor:
     limits = DailyLimits(
         storage,
@@ -174,6 +176,7 @@ def make_processor(
         input_limits=InputLimits(max_bytes=max_bytes, max_pages=max_pages),
         clock=clock,
         monotonic=clock.monotonic,
+        collect=collect,
     )
 
 

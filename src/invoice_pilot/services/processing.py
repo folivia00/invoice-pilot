@@ -11,10 +11,15 @@ Order (each step only if the previous one passed):
    and every HTTP call are stored, one log line.
 
 Input problems and provider failures give the slot back. The bytes and the
-prepared input are dropped as soon as the model call returns.
+prepared input are dropped as soon as the model call returns, and a full garbage
+collection runs when the document leaves its slot (on every path): httpx request
+objects form reference cycles that keep the request body (~7 MB for a 5 MB scan)
+alive until the cyclic collector runs, so a series of large documents would
+otherwise pile up in memory.
 """
 
 import asyncio
+import gc
 import logging
 import time
 from collections.abc import AsyncIterator, Awaitable, Callable
@@ -49,6 +54,7 @@ Clock = Callable[[], datetime]
 Monotonic = Callable[[], float]
 Notify = Callable[[str], Awaitable[None]]
 Download = Callable[[], Awaitable[bytes]]
+Collect = Callable[[], object]
 
 _EXTENSIONS: Final[dict[str, str]] = {
     ".pdf": "application/pdf",
@@ -118,6 +124,7 @@ class ProcessingResult:
     model: str | None = None
     processing_s: float | None = None
     document_id: int | None = None
+    cost_usd: Decimal | None = None
 
 
 class QueueFullError(Exception):
@@ -203,6 +210,7 @@ class DocumentProcessor:
         input_limits: InputLimits,
         clock: Clock,
         monotonic: Monotonic = time.monotonic,
+        collect: Collect = gc.collect,
     ) -> None:
         self._storage = storage
         self._limits = limits
@@ -211,6 +219,7 @@ class DocumentProcessor:
         self._input_limits = input_limits
         self._clock = clock
         self._monotonic = monotonic
+        self._collect = collect
 
     @property
     def model(self) -> str:
@@ -253,6 +262,35 @@ class DocumentProcessor:
             return ProcessingResult(ResultKind.BUSY, message=MSG_QUEUE_FULL)
 
     async def _process_in_slot(
+        self, reservation: Reservation, user_id: int, download: Download
+    ) -> ProcessingResult:
+        """Process with the slot held, then collect garbage whatever the outcome."""
+        try:
+            result = await self._process_downloaded(reservation, user_id, download)
+        finally:
+            # the bytes and the prepared input went out of scope with the call above
+            started = self._monotonic()
+            self._collect()
+            gc_ms = round((self._monotonic() - started) * 1000)
+        outcome = result.outcome
+        if result.kind is ResultKind.DONE and outcome is not None:
+            logger.info(
+                "document processed: id=%d input_kind=%s status=%s issues=%d model=%s "
+                "tokens_in=%d tokens_out=%d latency_ms=%d cost_usd=%s gc_ms=%d",
+                result.document_id,
+                outcome.input_kind,
+                outcome.report.status.value,
+                len(outcome.report.issues),
+                result.model,
+                outcome.input_tokens,
+                outcome.output_tokens,
+                round((result.processing_s or 0) * 1000),
+                result.cost_usd,
+                gc_ms,
+            )
+        return result
+
+    async def _process_downloaded(
         self, reservation: Reservation, user_id: int, download: Download
     ) -> ProcessingResult:
         doc_id = reservation.document_id
@@ -298,25 +336,13 @@ class DocumentProcessor:
         del data, prepared
 
         cost = await self._store_outcome(doc_id, outcome, elapsed_ms)
-        logger.info(
-            "document processed: id=%d input_kind=%s status=%s issues=%d model=%s "
-            "tokens_in=%d tokens_out=%d latency_ms=%d cost_usd=%s",
-            doc_id,
-            outcome.input_kind,
-            outcome.report.status.value,
-            len(outcome.report.issues),
-            self._provider.model,
-            outcome.input_tokens,
-            outcome.output_tokens,
-            elapsed_ms,
-            cost,
-        )
         return ProcessingResult(
             ResultKind.DONE,
             outcome=outcome,
             model=self._provider.model,
             processing_s=elapsed_ms / 1000,
             document_id=doc_id,
+            cost_usd=cost,
         )
 
     async def _store_outcome(
