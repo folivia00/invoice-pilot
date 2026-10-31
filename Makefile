@@ -1,4 +1,4 @@
-.PHONY: lint format test eval-generate eval cost-report
+.PHONY: lint format test eval-generate eval cost-report deploy-requirements
 
 lint:
 	uv run ruff check .
@@ -18,3 +18,6 @@ eval:
 
 cost-report:
 	uv run python eval/cost_report.py
+
+deploy-requirements:
+	uv export --frozen --no-dev --no-emit-project --no-header --format requirements.txt --output-file deploy/requirements.txt
