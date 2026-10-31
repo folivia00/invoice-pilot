@@ -13,6 +13,11 @@ One run = one fresh process, no network and no Telegram:
    a 5 MB scan PDF, a 5 MB photo, and 10 uploads waiting in the queue while a
    5 MB scan is processed (then all 11 are processed).
 
+The processor runs ``gc.collect()`` after every document and logs the time as
+``gc_ms``; the benchmark collects those values from the log records. The
+allocator setting comes from the environment (``container.sh`` sets
+``MALLOC_MMAP_THRESHOLD_``) and is reported back.
+
 Uploads are "downloaded" the way the handler does it: bytes into a BytesIO,
 then ``getvalue()``. Prints one JSON line with the values in MiB.
 
@@ -26,7 +31,9 @@ import gc
 import hashlib
 import io
 import json
+import logging
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -44,6 +51,19 @@ def status_kib(field: str) -> int:
         if line.startswith(field + ":"):
             return int(line.split()[1])
     raise RuntimeError(f"{field} not found in /proc/self/status")
+
+
+class GcTimes(logging.Handler):
+    """Keeps ``gc_ms`` of every "document processed" log line."""
+
+    def __init__(self) -> None:
+        super().__init__(logging.INFO)
+        self.values: list[int] = []
+
+    def emit(self, record: logging.LogRecord) -> None:
+        match = re.search(r" gc_ms=(\d+)", record.getMessage())
+        if match:
+            self.values.append(int(match.group(1)))
 
 
 def mib(kib: int) -> float:
@@ -106,6 +126,11 @@ async def run(big_dir: Path) -> dict[str, Any]:
     from invoice_pilot.storage import Storage
 
     after_import = status_kib("VmRSS")
+    gc_times = GcTimes()
+    processing_log = logging.getLogger("invoice_pilot.services.processing")
+    processing_log.addHandler(gc_times)
+    processing_log.setLevel(logging.INFO)
+    processing_log.propagate = False
     tmp = Path(tempfile.mkdtemp(prefix="bench-"))
     migrate(tmp)
     settings = load_settings(
@@ -171,7 +196,10 @@ async def run(big_dir: Path) -> dict[str, Any]:
     def set_answer(path: Path) -> None:
         current["body"] = answer_for(path.read_bytes())
 
-    results: dict[str, Any] = {"after_import_mib": mib(after_import)}
+    results: dict[str, Any] = {
+        "after_import_mib": mib(after_import),
+        "malloc_mmap_threshold": os.environ.get("MALLOC_MMAP_THRESHOLD_"),
+    }
     kinds = []
     for name, mime in (
         ("inv-001.pdf", "application/pdf"),
@@ -229,6 +257,7 @@ async def run(big_dir: Path) -> dict[str, Any]:
     results["queue_peak_hwm_mib"] = mib(status_kib("VmHWM"))
     gc.collect()
     results["final_rss_mib"] = mib(status_kib("VmRSS"))
+    results["gc_ms"] = gc_times.values
 
     await client.aclose()
     await storage.dispose()

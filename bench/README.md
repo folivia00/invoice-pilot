@@ -6,7 +6,19 @@ dispatcher and Gemini provider, with an `httpx.MockTransport` answering from
 
 - **rest**: VmRSS after a warm-up (text PDF, scan PDF, photo, CSV and XLSX export) and `gc`;
 - **peaks**: VmHWM, reset through `/proc/self/clear_refs` before each case: a 5 MB scan PDF,
-  a 5 MB photo, and 10 uploads waiting in the queue while a 5 MB scan is processed.
+  a 5 MB photo, and 10 uploads waiting in the queue while a 5 MB scan is processed (then all
+  11 scans are processed one after another);
+- **gc_ms**: the time of the `gc.collect()` the processor runs after every document.
+
+Two settings keep a series of large documents within the peak target:
+
+- the processor runs `gc.collect()` when a document leaves its processing slot: httpx
+  request objects form reference cycles that keep each request body (~7 MB for a 5 MB scan)
+  alive until the cyclic collector runs, so without it the bodies of several documents pile
+  up;
+- `container.sh` starts the measured process with `MALLOC_MMAP_THRESHOLD_=131072`, so glibc
+  serves the large buffers with `mmap` and returns them to the system when freed instead of
+  keeping them in the heap. The server start script (`run.sh`) sets the same variable.
 
 It runs on Linux only. The host limits are reproduced with Docker:
 
