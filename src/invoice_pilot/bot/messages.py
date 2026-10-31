@@ -7,6 +7,16 @@ from invoice_pilot.services.stats import PeriodStats, StatsSnapshot
 
 HINT: Final = "Send me an invoice as a PDF, a scan or a photo."
 
+#: Telegram limits: short description 120 characters, description 512.
+BOT_SHORT_DESCRIPTION: Final = (
+    "Demo: extracts invoice fields with AI and checks them. Do not upload real documents."
+)
+BOT_DESCRIPTION: Final = (
+    "Invoice Pilot demo: send an invoice PDF, scan or photo and get the extracted fields, "
+    "checked by deterministic rules. Synthetic test invoices only: do not upload real or "
+    "confidential documents."
+)
+
 
 def start_text(*, retention_days: int, remaining_today: int, daily_limit: int) -> str:
     """Greeting with usage, the privacy disclaimer and today's remaining documents."""
