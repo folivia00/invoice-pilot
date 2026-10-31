@@ -10,6 +10,7 @@ from decimal import Decimal
 from typing import Final
 
 from invoice_pilot.domain import Invoice, Issue, Party, ValidationStatus
+from invoice_pilot.domain.currencies import minor_units
 from invoice_pilot.services.extraction import ExtractionOutcome
 from invoice_pilot.services.processing import ProcessingResult, ResultKind
 
@@ -19,6 +20,8 @@ MAX_LINE_ITEMS: Final = 10
 #: A single value is cut to this many characters before escaping.
 MAX_VALUE_CHARS: Final = 300
 TRUNCATED_MARK: Final = "<i>…message truncated</i>"
+#: Decimal places of an amount whose currency is missing or unknown.
+DEFAULT_MINOR_UNITS: Final = 2
 
 STATUS_APPROVED: Final = "✅ <b>Approved automatically</b>"
 STATUS_REVIEW: Final = "⚠️ <b>Needs review</b>"
@@ -39,10 +42,37 @@ def esc(value: object) -> str:
     return html.escape(text, quote=False)
 
 
+def format_number(value: Decimal, min_places: int = 0) -> str:
+    """``value`` with "," thousands and "." decimals, at least ``min_places`` places.
+
+    Never rounds: a value with more places than ``min_places`` keeps all of them.
+    """
+    if not value.is_finite():
+        return str(value)
+    exponent = value.as_tuple().exponent
+    places = max(min_places, -exponent if isinstance(exponent, int) else 0)
+    return f"{value:,.{places}f}"
+
+
+def format_amount(value: Decimal, currency: str | None) -> str:
+    """A money amount with at least the minor units of ``currency`` (2 if unknown)."""
+    places = minor_units(currency) if currency else None
+    return format_number(value, DEFAULT_MINOR_UNITS if places is None else places)
+
+
+def _amount(value: Decimal | None, currency: str | None) -> str:
+    return "—" if value is None else esc(format_amount(value, currency))
+
+
+def _quantity(value: Decimal | None) -> str:
+    return "—" if value is None else esc(format_number(value))
+
+
 def _money(value: Decimal | None, currency: str | None) -> str:
     if value is None:
         return "—"
-    return f"{esc(value)} {esc(currency)}" if currency else esc(value)
+    amount = _amount(value, currency)
+    return f"{amount} {esc(currency)}" if currency else amount
 
 
 def _party(label: str, party: Party) -> str:
@@ -71,8 +101,9 @@ def _invoice_lines(invoice: Invoice) -> list[str]:
         lines.append(f"<b>Items ({len(items)}):</b>")
         for index, item in enumerate(items[:MAX_LINE_ITEMS], start=1):
             lines.append(
-                f"{index}. {esc(item.description)} — {esc(item.quantity)} × "
-                f"{esc(item.unit_price)} = {esc(item.amount)}"
+                f"{index}. {esc(item.description)} — {_quantity(item.quantity)} × "
+                f"{_amount(item.unit_price, invoice.currency)} = "
+                f"{_amount(item.amount, invoice.currency)}"
             )
         if len(items) > MAX_LINE_ITEMS:
             lines.append(f"…and {len(items) - MAX_LINE_ITEMS} more")

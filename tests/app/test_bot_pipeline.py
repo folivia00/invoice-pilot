@@ -62,7 +62,7 @@ def test_text_pdf_is_approved(db_path: Path, clock: FakeClock) -> None:
     (card,) = message.texts
     assert card.startswith(STATUS_APPROVED)
     assert "Northwind Supplies Corp." in card
-    assert "<b>Total:</b> 3798.41 USD" in card
+    assert "<b>Total:</b> 3,798.41 USD" in card
     assert "gemini-3.5-flash-lite" in card
     kwargs = message.answers[0][1]
     assert kwargs["parse_mode"] == "HTML"
