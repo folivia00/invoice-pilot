@@ -106,10 +106,11 @@ Requires Python 3.12 and [uv](https://docs.astral.sh/uv/), or Docker.
 **a) Docker, no keys.** The fake model (`LLM_FAKE=1`) answers the three sample files with their printed fields and makes no network calls:
 
 ```sh
-printf 'API_TOKEN=change-me\nLLM_FAKE=1\n' > .env
+export API_TOKEN=change-me
+printf 'API_TOKEN=%s\nLLM_FAKE=1\n' "$API_TOKEN" > .env
 docker compose up -d --wait api   # builds the image, waits for /health
 for f in inv-001.pdf inv-005.jpg inv-007.pdf; do
-  curl -s -H "Authorization: Bearer change-me" -F "file=@examples/invoices/$f" \
+  curl -s -H "Authorization: Bearer $API_TOKEN" -F "file=@examples/invoices/$f" \
     http://127.0.0.1:8080/extract | grep -o '"status": "[a-z_]*"'
 done
 # "status": "auto_approved"   inv-001.pdf
