@@ -14,6 +14,7 @@ from typing import Any
 import pytest
 from helpers_app import NOW, REPO, FakeCallback, FakeClock, FakeMessage, ground_truth, open_storage
 from openpyxl import load_workbook
+from openpyxl.utils import get_column_letter
 
 from invoice_pilot.bot.handlers import on_export, on_export_choice, on_json
 from invoice_pilot.bot.messages import DOCUMENT_UNAVAILABLE, NOTHING_TO_EXPORT
@@ -21,6 +22,10 @@ from invoice_pilot.domain import Invoice
 from invoice_pilot.services.export import (
     COLUMNS,
     LINE_COLUMNS,
+    XLSX_AMOUNT_COLUMNS,
+    XLSX_AMOUNT_FORMAT,
+    XLSX_LINE_WIDTHS,
+    XLSX_WIDTHS,
     ExportService,
     build_csv,
     escape_formula,
@@ -136,6 +141,42 @@ def test_xlsx_sheets_columns_and_numbers(db_path: Path) -> None:
     assert lines[1][:3] == (1, 1, "Onsite installation, hours")
     assert all(isinstance(v, int | float) for v in lines[1][3:])
     assert len(lines) == 1 + 4 + 5  # inv-001 has 4 lines, inv-007 has 5
+
+
+def _shown(value: Any, number_format: str) -> str:
+    """Rough text Excel shows for a cell, to compare with the column width."""
+    if number_format == XLSX_AMOUNT_FORMAT:
+        return f"{value:,.2f}"
+    if number_format.startswith("yyyy"):
+        return number_format  # same length as the rendered date
+    return str(value)
+
+
+def test_xlsx_columns_are_wide_enough_and_amounts_stay_numbers(db_path: Path) -> None:
+    big = _invoice("inv-001", total="999999999999.99", invoice_number="RE-2026-000000001")
+    file = _export(db_path, "xlsx", seed=[(OWNER, "auto_approved", big, 0)])
+    workbook = load_workbook(io.BytesIO(file.content))
+    for name, columns, widths in (
+        ("Invoices", COLUMNS, XLSX_WIDTHS),
+        ("Line items", LINE_COLUMNS, XLSX_LINE_WIDTHS),
+    ):
+        sheet = workbook[name]
+        assert set(widths) == set(columns)
+        for index, column in enumerate(columns, start=1):
+            width = sheet.column_dimensions[get_column_letter(index)].width
+            assert width == widths[column], (name, column)
+            assert width > len(column), (name, column)  # the header fits
+            for (cell,) in sheet.iter_rows(min_row=2, min_col=index, max_col=index):
+                if cell.value is None:
+                    continue
+                if column in XLSX_AMOUNT_COLUMNS:
+                    assert cell.number_format == XLSX_AMOUNT_FORMAT, (name, column)
+                    assert isinstance(cell.value, int | float), (name, column)
+                    assert cell.data_type == "n", (name, column)
+                if not isinstance(cell.value, str):  # numbers and dates never wrap
+                    assert width > len(_shown(cell.value, cell.number_format)), (name, column)
+    total = workbook["Invoices"].cell(row=2, column=COLUMNS.index("total") + 1)
+    assert total.value == pytest.approx(999999999999.99)
 
 
 @pytest.mark.parametrize(

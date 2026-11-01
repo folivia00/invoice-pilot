@@ -58,6 +58,47 @@ LINE_COLUMNS: Final[tuple[str, ...]] = (
     "amount",
 )
 
+#: XLSX column widths (characters): long enough for the header, dates, IDs and amounts
+#: up to 999,999,999,999.99, so no cell shows "#######"; long names wrap at the edge.
+XLSX_WIDTHS: Final[dict[str, float]] = {
+    "id": 8,
+    "processed_at": 20,
+    "status": 15,
+    "reasons": 30,
+    "supplier": 32,
+    "supplier_tax_id": 18,
+    "buyer": 32,
+    "invoice_number": 18,
+    "invoice_date": 13,
+    "due_date": 13,
+    "currency": 10,
+    "subtotal": 20,
+    "tax_rate": 10,
+    "tax_amount": 20,
+    "total": 20,
+    "iban": 34,
+    "bic": 13,
+    "line_items": 11,
+}
+XLSX_LINE_WIDTHS: Final[dict[str, float]] = {
+    "document_id": 13,
+    "line": 6,
+    "description": 40,
+    "quantity": 11,
+    "unit_price": 20,
+    "amount": 20,
+}
+#: Amounts keep their exact value; only the display has two decimals and thousands separators.
+XLSX_AMOUNT_FORMAT: Final = "#,##0.00"
+XLSX_AMOUNT_COLUMNS: Final[frozenset[str]] = frozenset(
+    {"subtotal", "tax_amount", "total", "unit_price", "amount"}
+)
+_XLSX_FORMATS: Final[dict[str, str]] = {
+    **{column: "yyyy-mm-dd" for column in DATE_COLUMNS},
+    "processed_at": "yyyy-mm-dd hh:mm:ss",
+    **{column: XLSX_AMOUNT_FORMAT for column in XLSX_AMOUNT_COLUMNS},
+}
+
 _FORMULA_START: Final = ("=", "+", "-", "@", "\t", "\r")
 _PLAIN_NUMBER: Final = re.compile(r"^[+-]?\d+(\.\d+)?$")
 
@@ -161,6 +202,17 @@ def _xlsx_cell(value: Any) -> Any:
     return value
 
 
+def _format_sheet(sheet: Any, columns: tuple[str, ...], widths: dict[str, float]) -> None:
+    from openpyxl.utils import get_column_letter
+
+    for index, column in enumerate(columns, start=1):
+        sheet.column_dimensions[get_column_letter(index)].width = widths[column]
+    for row in sheet.iter_rows(min_row=2):
+        for cell, column in zip(row, columns, strict=True):
+            if column in _XLSX_FORMATS and cell.value is not None:
+                cell.number_format = _XLSX_FORMATS[column]
+
+
 def build_xlsx(docs: list[Document]) -> bytes:
     """Workbook with sheets "Invoices" and "Line items"; amounts are numbers."""
     from openpyxl import Workbook  # lazy: loaded only when a user exports XLSX
@@ -177,12 +229,8 @@ def build_xlsx(docs: list[Document]) -> bytes:
         invoices.append([_xlsx_cell(row[c]) for c in COLUMNS])
         for line in line_rows(doc):
             lines.append([_xlsx_cell(line[c]) for c in LINE_COLUMNS])
-    for row in invoices.iter_rows(min_row=2):
-        for cell, column in zip(row, COLUMNS, strict=True):
-            if column in DATE_COLUMNS and cell.value is not None:
-                cell.number_format = "yyyy-mm-dd"
-            elif column == "processed_at" and cell.value is not None:
-                cell.number_format = "yyyy-mm-dd hh:mm:ss"
+    _format_sheet(invoices, COLUMNS, XLSX_WIDTHS)
+    _format_sheet(lines, LINE_COLUMNS, XLSX_LINE_WIDTHS)
     buffer = io.BytesIO()
     workbook.save(buffer)
     return buffer.getvalue()
