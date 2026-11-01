@@ -27,11 +27,28 @@ The bot uses long polling: no incoming ports or webhooks. Uploaded files are pro
 
 **Privacy.** The demo runs on the Gemini API free tier, where Google may use inputs to improve its products. Do not upload real or confidential documents. Costs reported by this project are computed from actual token usage at paid-tier list prices.
 
+## HTTP API, Docker and n8n
+
+`python -m invoice_pilot.api` serves `POST /extract` with the same pipeline as the bot
+(bearer token, JSON errors): see [docs/api.md](docs/api.md). It is a separate process with
+its own database. The demo server runs only the bot and exposes no ports.
+
+```sh
+# .env with API_TOKEN (and GEMINI_API_KEY, or LLM_FAKE=1 to try it without keys)
+docker compose up api          # http://127.0.0.1:8080
+docker compose up bot          # the Telegram bot, with its own volume
+```
+
+The image (`Dockerfile`, profile `full`) installs the same hashed wheels as the server and
+runs as a non-root user. Ready-made n8n workflows, a local one and a Gmail to Google Sheets
+template, are in [examples/n8n](examples/n8n/). Synthetic sample invoices are in
+[examples/invoices](examples/invoices/).
+
 ## Configuration
 
 Settings are read from environment variables (see `.env.example`).
 
-Daily limits, the queue and the request-rate limit are enforced inside one bot process. Run a single process per database, in the `full` profile too.
+Daily limits, the queue and the request-rate limit are enforced inside one bot process. Run a single process per database, in the `full` profile too: the bot and the HTTP API each need their own `DATA_DIR`.
 
 | Variable | Default | Meaning |
 |---|---|---|

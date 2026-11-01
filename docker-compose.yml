@@ -1,0 +1,54 @@
+# Full profile / quick start. Each process has its own SQLite volume: daily limits,
+# the queue and the rate limiter live inside one process, so a database is never
+# shared between processes.
+#
+#   docker compose up api        # HTTP API on 127.0.0.1:8080 (API_PUBLISH_PORT), docs/api.md
+#   docker compose up bot        # Telegram bot (long polling)
+#
+# Settings come from .env (see .env.example); ENV_FILE points to another file.
+# LLM_FAKE=1 answers with a built-in synthetic invoice, for checks without keys.
+
+x-app: &app
+  build: .
+  image: invoice-pilot:local
+  env_file:
+    - path: ${ENV_FILE:-.env}
+      required: true
+  restart: unless-stopped
+
+services:
+  bot:
+    <<: *app
+    command: ["bot"]
+    environment:
+      PROFILE: full
+      DATA_DIR: /data
+    volumes:
+      - bot-data:/data
+
+  api:
+    <<: *app
+    command: ["api"]
+    environment:
+      PROFILE: full
+      DATA_DIR: /data
+      API_HOST: 0.0.0.0
+      API_PORT: "8080"
+    ports:
+      - "127.0.0.1:${API_PUBLISH_PORT:-8080}:8080"
+    volumes:
+      - api-data:/data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+
+volumes:
+  bot-data:
+  api-data:

@@ -1,0 +1,8 @@
+# Allow list: only what the image needs (no tests, eval data, local env files or databases).
+*
+!src/
+!migrations/
+!alembic.ini
+!deploy/requirements.txt
+!docker/entrypoint.sh
+**/__pycache__
