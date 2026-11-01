@@ -35,8 +35,8 @@ Daily limits, the queue and the request-rate limit are enforced inside one bot p
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `BOT_TOKEN` | required | Telegram bot token (secret) |
-| `GEMINI_API_KEY` | required | Gemini API key (secret) |
+| `BOT_TOKEN` | required for the bot | Telegram bot token (secret) |
+| `GEMINI_API_KEY` | required | Gemini API key (secret); not needed with `LLM_FAKE=1` |
 | `PROFILE` | `compact` | `compact`: 5 MB files, one document at a time; `full`: 10 MB, 4 in parallel; up to 5 pages in both |
 | `DATA_DIR` | `./data` | Directory of the SQLite database |
 | `ADMIN_IDS` | empty | Comma-separated Telegram user IDs with admin rights |
@@ -48,6 +48,11 @@ Daily limits, the queue and the request-rate limit are enforced inside one bot p
 | `QUEUE_MAX` | `10` | Uploads allowed to wait for processing; more are refused |
 | `RETENTION_DAYS` | `7` | Days before extracted fields are deleted |
 | `LOG_LEVEL` | `INFO` | Log level |
+| `API_TOKEN` | required for the API | Bearer token for `POST /extract` (secret) |
+| `API_HOST` | `127.0.0.1` | Address the HTTP API listens on |
+| `API_PORT` | `8080` | Port the HTTP API listens on |
+| `API_DAILY_DOCS` | `100` | Documents the HTTP API accepts per UTC day |
+| `LLM_FAKE` | `0` | `1`: built-in synthetic answer instead of the model, for checks without keys |
 
 ## Author
 
