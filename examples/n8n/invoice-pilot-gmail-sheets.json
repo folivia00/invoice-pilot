@@ -1,0 +1,192 @@
+{
+  "id": "InvPilotGmail001",
+  "name": "Invoice Pilot: Gmail attachment to Google Sheets",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {},
+  "tags": [],
+  "nodes": [
+    {
+      "id": "7d2e4b10-5c1a-4f3e-8b6d-000000000001",
+      "name": "New invoice email",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0],
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "has:attachment (filename:pdf OR filename:jpg OR filename:png) label:invoices",
+          "readStatus": "unread"
+        },
+        "options": {
+          "downloadAttachments": true,
+          "dataPropertyAttachmentsPrefixName": "attachment_"
+        }
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "id": "7d2e4b10-5c1a-4f3e-8b6d-000000000002",
+      "name": "Extract invoice",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [240, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "https://invoice-pilot.example.com/extract",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "attachment_0"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "REPLACE_WITH_BEARER_CREDENTIAL_ID",
+          "name": "Invoice Pilot API token"
+        }
+      }
+    },
+    {
+      "id": "7d2e4b10-5c1a-4f3e-8b6d-000000000003",
+      "name": "Needs review?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [480, 0],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9c1b7a4f-3e64-4e8d-9b4c-000000000001",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "needs_review",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "7d2e4b10-5c1a-4f3e-8b6d-000000000004",
+      "name": "Notify reviewer",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [720, -120],
+      "parameters": {
+        "sendTo": "accounts-payable@example.com",
+        "subject": "=Invoice needs review: {{ $json.invoice ? $json.invoice.invoice_number : 'unreadable' }}",
+        "emailType": "text",
+        "message": "=Invoice from {{ $json.invoice ? $json.invoice.supplier.name : 'unknown supplier' }} needs a manual check.\nIssues: {{ $json.issues.map(i => i.code + ' (' + i.field + ')').join(', ') }}\nDocument ID: {{ $json.document_id }}",
+        "options": {}
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "id": "7d2e4b10-5c1a-4f3e-8b6d-000000000005",
+      "name": "Append to sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [960, 0],
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "REPLACE_WITH_SPREADSHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Invoices"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "document_id": "={{ $('Extract invoice').item.json.document_id }}",
+            "status": "={{ $('Extract invoice').item.json.status }}",
+            "issues": "={{ $('Extract invoice').item.json.issues.map(i => i.code).join(', ') }}",
+            "supplier": "={{ $('Extract invoice').item.json.invoice?.supplier?.name }}",
+            "invoice_number": "={{ $('Extract invoice').item.json.invoice?.invoice_number }}",
+            "invoice_date": "={{ $('Extract invoice').item.json.invoice?.invoice_date }}",
+            "currency": "={{ $('Extract invoice').item.json.invoice?.currency }}",
+            "total": "={{ $('Extract invoice').item.json.invoice?.total }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {"id": "document_id", "displayName": "document_id", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "status", "displayName": "status", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "issues", "displayName": "issues", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "supplier", "displayName": "supplier", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "invoice_number", "displayName": "invoice_number", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "invoice_date", "displayName": "invoice_date", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "currency", "displayName": "currency", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true},
+            {"id": "total", "displayName": "total", "type": "string", "required": false, "display": true, "canBeUsedToMatch": true}
+          ]
+        },
+        "options": {}
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_WITH_SHEETS_CREDENTIAL_ID",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "New invoice email": {
+      "main": [[{"node": "Extract invoice", "type": "main", "index": 0}]]
+    },
+    "Extract invoice": {
+      "main": [[{"node": "Needs review?", "type": "main", "index": 0}]]
+    },
+    "Needs review?": {
+      "main": [
+        [{"node": "Notify reviewer", "type": "main", "index": 0}],
+        [{"node": "Append to sheet", "type": "main", "index": 0}]
+      ]
+    },
+    "Notify reviewer": {
+      "main": [[{"node": "Append to sheet", "type": "main", "index": 0}]]
+    }
+  }
+}
