@@ -5,6 +5,7 @@ import json
 import logging
 import subprocess
 import sys
+from collections.abc import Iterator
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
@@ -30,6 +31,20 @@ from invoice_pilot.services.retention import (
 )
 from invoice_pilot.storage import CallRow
 from invoice_pilot.storage.tables import Document
+
+
+@pytest.fixture(autouse=True)
+def restore_logger_levels() -> Iterator[None]:
+    """Put the library logger levels back as they were before the test.
+
+    Not NOTSET: SQLAlchemy sets ``sqlalchemy`` to WARNING at import, and resetting
+    it would let later tests log SQL statements with their parameters.
+    """
+    saved = {name: logging.getLogger(name).level for name in QUIET_LOGGERS}
+    yield
+    for name, level in saved.items():
+        logging.getLogger(name).setLevel(level)
+
 
 # --- retention -------------------------------------------------------------------------
 
@@ -127,11 +142,7 @@ def test_logs_carry_no_document_content(
 
     apply_quiet_levels()  # the production levels, with the root at DEBUG (worst case)
     caplog.set_level(logging.DEBUG)
-    try:
-        asyncio.run(scenario())
-    finally:
-        for name in QUIET_LOGGERS:
-            logging.getLogger(name).setLevel(logging.NOTSET)
+    asyncio.run(scenario())
     assert MARKER in message.texts[0]  # the user sees it ...
     text = caplog.text
     assert MARKER not in text  # ... the log does not
@@ -165,8 +176,46 @@ def test_configure_logging_quiets_libraries_and_uses_stdout() -> None:
     finally:
         root.handlers[:] = saved[0]
         root.setLevel(saved[1])
-        for name in QUIET_LOGGERS:
-            logging.getLogger(name).setLevel(logging.NOTSET)
+
+
+PROBE = """
+import logging
+
+
+def test_levels_after_the_logging_tests():
+    assert logging.getLogger("sqlalchemy").level == logging.WARNING  # SQLAlchemy's own
+    assert logging.getLogger("httpx").level == logging.NOTSET  # never set before
+"""
+
+
+def test_logging_tests_leave_logger_levels_as_they_found_them(tmp_path: Path) -> None:
+    """The two tests above change library levels; a test run after them sees the old ones."""
+    probe = tmp_path / "test_probe.py"
+    probe.write_text(PROBE, encoding="utf-8")
+    module = "tests/app/test_retention_logging_guard.py"
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "-q",
+            "-p",
+            "no:cacheprovider",
+            "-c",
+            "pyproject.toml",
+            "--rootdir",
+            ".",
+            f"{module}::test_logs_carry_no_document_content",
+            f"{module}::test_configure_logging_quiets_libraries_and_uses_stdout",
+            str(probe),
+        ],
+        cwd=REPO,
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    assert result.returncode == 0, result.stdout[-2000:]
+    assert "3 passed" in result.stdout
 
 
 # --- import guard ----------------------------------------------------------------------
