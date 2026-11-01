@@ -22,6 +22,8 @@ QUIET_LOGGERS: Final[dict[str, int]] = {
     "aiosqlite": logging.WARNING,
     "sqlalchemy": logging.WARNING,
     "invoice_pilot.services.extraction": logging.WARNING,
+    # one line per request with the client address; the API also turns it off
+    "aiohttp.access": logging.WARNING,
 }
 
 
