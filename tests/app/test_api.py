@@ -20,6 +20,7 @@ from invoice_pilot.api.app import (
     API_USER_ID,
     CHUNK_BYTES,
     MULTIPART_OVERHEAD_BYTES,
+    SERVER_HEADER,
     build_app,
 )
 from invoice_pilot.api.server import run
@@ -142,6 +143,26 @@ def test_extract_needs_the_bearer_token(db_path: Path, headers: dict[str, str]) 
         assert response.status == 401
         assert response.headers["WWW-Authenticate"] == "Bearer"
         assert (await response.json())["error"]["code"] == "unauthorized"
+
+    run_api(db_path, scenario)
+
+
+def test_responses_name_no_server_versions(db_path: Path) -> None:
+    """Handled, rejected and unknown routes all carry the plain ``Server`` value."""
+
+    async def scenario(client: TestClient[Any, Any]) -> None:
+        responses = [
+            await client.get("/health"),
+            await client.post("/extract", data=form(dataset_bytes("inv-001")), headers=AUTH),
+            await client.post("/extract", data=form(dataset_bytes("inv-001"))),
+            await client.get("/missing"),
+            await client.get("/extract"),
+        ]
+        assert [r.status for r in responses] == [200, 200, 401, 404, 405]
+        for response in responses:
+            assert response.headers.getall("Server") == [SERVER_HEADER]
+            assert "aiohttp" not in response.headers["Server"]
+            assert "Python" not in response.headers["Server"]
 
     run_api(db_path, scenario)
 

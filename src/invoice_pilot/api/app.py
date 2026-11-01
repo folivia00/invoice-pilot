@@ -10,7 +10,8 @@ written to disk (``request.post()`` would spool file parts to a temporary file).
 All API documents belong to one pseudo-user, ``API_USER_ID``: the API counts
 its own daily documents (``API_DAILY_DOCS``) in its own database, apart from
 Telegram users (whose IDs are positive). Logs: one INFO line per ``/extract``
-request with metadata only (no token, no client address, no content).
+request with metadata only (no token, no client address, no content). Every
+response carries ``Server: invoice-pilot``, without the Python and aiohttp versions.
 """
 
 import hmac
@@ -19,7 +20,7 @@ import time
 from collections.abc import Awaitable, Callable
 from typing import Any, Final
 
-from aiohttp import BodyPartReader, web
+from aiohttp import BodyPartReader, hdrs, web
 
 from invoice_pilot.extraction.prepare import detect_mime
 from invoice_pilot.services.processing import (
@@ -39,6 +40,8 @@ RETRY_AFTER_SECONDS: Final = 60
 #: Room for the multipart boundaries and part headers on top of the file limit.
 MULTIPART_OVERHEAD_BYTES: Final = 64 * 1024
 CHUNK_BYTES: Final = 64 * 1024
+#: ``Server`` header value: names no Python or aiohttp version.
+SERVER_HEADER: Final = "invoice-pilot"
 
 PROCESSOR_KEY: Final = web.AppKey("processor", DocumentProcessor)
 TOKEN_KEY: Final = web.AppKey("api_token", str)
@@ -58,6 +61,11 @@ def error_response(
 
 class FileTooLarge(Exception):
     pass
+
+
+async def _hide_server_version(request: web.Request, response: web.StreamResponse) -> None:
+    # aiohttp only fills in its default ``Server`` (with versions) when none is set.
+    response.headers[hdrs.SERVER] = SERVER_HEADER
 
 
 def _authorized(request: web.Request) -> bool:
@@ -212,6 +220,7 @@ def build_app(
     app[TOKEN_KEY] = api_token
     app[MAX_FILE_KEY] = max_file_bytes
     app[MONOTONIC_KEY] = monotonic
+    app.on_response_prepare.append(_hide_server_version)
     app.router.add_get("/health", health)
     app.router.add_post("/extract", extract)
     return app
