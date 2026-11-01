@@ -135,3 +135,8 @@ run keeps every attempt, the recording keeps only the answer that was used.
 - 15 corrupted documents of 7 kinds give coarse recall estimates; a single document is
   6.7 percentage points.
 - Free-text fields are compared loosely and excluded from the main metric by design.
+
+## Results
+
+Published results: [eval/results/](../eval/results/) (`metrics.json`, `summary.md` and
+`predictions.jsonl` per configuration; `cost.md` for costs).
