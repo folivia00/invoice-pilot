@@ -7,10 +7,8 @@ database engine and the bot session.
 
 import asyncio
 import logging
-import time
 from contextlib import suppress
 from dataclasses import dataclass
-from datetime import UTC, datetime
 
 import httpx
 from aiogram import Bot, Dispatcher
@@ -18,26 +16,15 @@ from aiogram import Bot, Dispatcher
 from invoice_pilot.bot.handlers import build_router
 from invoice_pilot.bot.profile import publish_profile
 from invoice_pilot.config import Settings
-from invoice_pilot.extraction.prepare import InputLimits
-from invoice_pilot.llm.config import LLMConfig
-from invoice_pilot.llm.providers import make_provider
 from invoice_pilot.services.export import ExportService
-from invoice_pilot.services.limits import DailyLimits, fail_stale_reservations
-from invoice_pilot.services.processing import DocumentProcessor, ProcessingQueue
-from invoice_pilot.services.rate_limit import (
-    RateLimitedProvider,
-    SlidingWindowLimiter,
-    limited_sleep,
-)
+from invoice_pilot.services.limits import fail_stale_reservations
+from invoice_pilot.services.processing import DocumentProcessor
 from invoice_pilot.services.retention import retention_loop
 from invoice_pilot.services.stats import StatsService
+from invoice_pilot.services.wiring import build_processor, utc_now
 from invoice_pilot.storage import Storage
 
 logger = logging.getLogger(__name__)
-
-
-def utc_now() -> datetime:
-    return datetime.now(UTC)
 
 
 class NotMigratedError(RuntimeError):
@@ -52,35 +39,13 @@ class Services:
 
 
 def build_services(settings: Settings, storage: Storage, client: httpx.AsyncClient) -> Services:
-    """Services for one bot process (real clock, real sleep, Gemini provider)."""
-    limiter = SlidingWindowLimiter(settings.llm_rpm, monotonic=time.monotonic)
-    inner = make_provider(
-        LLMConfig(provider="gemini", model=settings.llm_model),
-        api_key=settings.gemini_api_key,
-        client=client,
-        sleep=limited_sleep(limiter),
-    )
-    limits = DailyLimits(
-        storage,
-        user_daily_docs=settings.user_daily_docs,
-        global_daily_docs=settings.global_daily_docs,
-        global_daily_budget_usd=settings.global_daily_budget_usd,
-        clock=utc_now,
-    )
-    queue = ProcessingQueue(settings.concurrency, settings.queue_max)
-    processor = DocumentProcessor(
-        storage=storage,
-        limits=limits,
-        provider=RateLimitedProvider(inner, limiter),
-        queue=queue,
-        input_limits=InputLimits(max_bytes=settings.max_file_bytes, max_pages=settings.max_pages),
-        clock=utc_now,
-    )
+    """Services for one bot process (real clock, Gemini provider or ``LLM_FAKE``)."""
+    processor = build_processor(settings, storage, client, user_daily_docs=settings.user_daily_docs)
     exports = ExportService(storage, retention_days=settings.retention_days, clock=utc_now)
     stats = StatsService(
         storage,
         admin_ids=settings.admin_ids,
-        queue=queue,
+        queue=processor.queue,
         global_daily_docs=settings.global_daily_docs,
         global_daily_budget_usd=settings.global_daily_budget_usd,
         retention_days=settings.retention_days,

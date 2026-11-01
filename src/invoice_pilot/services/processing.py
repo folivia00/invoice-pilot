@@ -55,6 +55,8 @@ Monotonic = Callable[[], float]
 Notify = Callable[[str], Awaitable[None]]
 Download = Callable[[], Awaitable[bytes]]
 Collect = Callable[[], object]
+#: Cost of one call on a day (``llm.pricing.cost_usd``; the fake model costs nothing).
+Pricing = Callable[[UsageRecord, date], Decimal]
 
 _EXTENSIONS: Final[dict[str, str]] = {
     ".pdf": "application/pdf",
@@ -180,7 +182,9 @@ class ProcessingQueue:
             self._semaphore.release()
 
 
-def _call_rows(records: list[UsageRecord] | tuple[UsageRecord, ...], day: date) -> list[CallRow]:
+def _call_rows(
+    records: list[UsageRecord] | tuple[UsageRecord, ...], day: date, pricing: Pricing = cost_usd
+) -> list[CallRow]:
     return [
         CallRow(
             provider=r.provider,
@@ -191,7 +195,7 @@ def _call_rows(records: list[UsageRecord] | tuple[UsageRecord, ...], day: date) 
             output_tokens=r.output_tokens,
             thinking_tokens=r.thinking_tokens,
             latency_ms=r.latency_ms,
-            cost_usd=cost_usd(r, day),
+            cost_usd=pricing(r, day),
         )
         for r in records
     ]
@@ -211,6 +215,7 @@ class DocumentProcessor:
         clock: Clock,
         monotonic: Monotonic = time.monotonic,
         collect: Collect = gc.collect,
+        pricing: Pricing = cost_usd,
     ) -> None:
         self._storage = storage
         self._limits = limits
@@ -220,6 +225,7 @@ class DocumentProcessor:
         self._clock = clock
         self._monotonic = monotonic
         self._collect = collect
+        self._pricing = pricing
 
     @property
     def model(self) -> str:
@@ -349,7 +355,7 @@ class DocumentProcessor:
         self, doc_id: int, outcome: ExtractionOutcome, elapsed_ms: int
     ) -> Decimal:
         now = self._clock()
-        rows = _call_rows(outcome.usage, now.date())
+        rows = _call_rows(outcome.usage, now.date(), self._pricing)
         issues = [
             {
                 "code": issue.code.value,
@@ -391,7 +397,7 @@ class DocumentProcessor:
                 attempts=0,
                 processing_ms=None,
             )
-            await repo.add_llm_calls(doc_id, now, _call_rows(records, now.date()))
+            await repo.add_llm_calls(doc_id, now, _call_rows(records, now.date(), self._pricing))
 
 
 def _input_message(exc: InputError) -> str:
