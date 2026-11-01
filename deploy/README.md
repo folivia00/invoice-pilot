@@ -75,8 +75,9 @@ chmod 755 app/deploy/run.sh
 
 # 3. dependencies (the venv is created once; later runs only reinstall the pins)
 [ -x .venv/bin/python ] || python3 -m venv .venv
-.venv/bin/python -m pip install --no-input --disable-pip-version-check \
+.venv/bin/python -m pip install --no-input --disable-pip-version-check --no-cache-dir \
   --require-hashes --only-binary=:all: -r app/deploy/requirements.txt
+rm -rf .cache/pip   # left by installs made before --no-cache-dir
 
 # 4. permissions
 chmod 600 .env
@@ -90,6 +91,8 @@ journalctl -u invoicepilot.service -n 50
 
 `--only-binary=:all:` makes `pip` fail instead of building anything from source: the host
 has no compilers, and every runtime dependency has a wheel for CPython 3.12 on Linux x86-64.
+`--no-cache-dir` keeps the downloaded wheels out of `~/.cache/pip`, which would otherwise
+take about 20 MB of the service's disk quota.
 
 A healthy start logs, in this order: the Alembic migration lines, `startup: stale
 reservations marked failed=N`, `bot profile: set 3 of 3`, `bot starting: profile=compact …`
