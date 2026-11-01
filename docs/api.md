@@ -14,7 +14,9 @@ API_TOKEN=change-me uv run python -m invoice_pilot.api     # 127.0.0.1:8080
 
 Settings: `API_TOKEN` (required: without it the process refuses to start and names the
 variable), `API_HOST`, `API_PORT`, `API_DAILY_DOCS` and the common settings in the README.
-`LLM_FAKE=1` replaces the model with one built-in synthetic answer, for checks without keys.
+`LLM_FAKE=1` replaces the model with built-in synthetic answers, for checks without keys: the
+sample files in `examples/invoices` get their printed fields (`inv-007` needs review), any
+other file gets the `inv-001` answer.
 
 ## `GET /health`
 

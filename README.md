@@ -69,7 +69,7 @@ Daily limits, the queue and the request-rate limit are enforced inside one bot p
 | `API_HOST` | `127.0.0.1` | Address the HTTP API listens on |
 | `API_PORT` | `8080` | Port the HTTP API listens on |
 | `API_DAILY_DOCS` | `100` | Documents the HTTP API accepts per UTC day |
-| `LLM_FAKE` | `0` | `1`: built-in synthetic answer instead of the model, for checks without keys |
+| `LLM_FAKE` | `0` | `1`: built-in synthetic answers instead of the model, for checks without keys |
 
 ## Author
 

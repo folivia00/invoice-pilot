@@ -43,6 +43,14 @@ docker run --rm --network invoice-pilot_default \
 The result appears in `n8n-results/` (create the folder first) as `approved-invoice-<id>.json` or
 `needs_review-invoice-<id>.json`. The Write node does not create folders.
 
+With `LLM_FAKE=1`, each sample takes a known branch (see `examples/invoices/README.md`):
+
+| `INVOICE_PILOT_FILE` | Status | Branch, result file |
+|---|---|---|
+| `/files/invoices/inv-001.pdf` | `auto_approved` | approved, `approved-invoice-<id>.json` |
+| `/files/invoices/inv-005.jpg` | `auto_approved` | approved, `approved-invoice-<id>.json` |
+| `/files/invoices/inv-007.pdf` | `needs_review` (`total_mismatch`) | review, `needs_review-invoice-<id>.json` |
+
 | Variable | Meaning |
 |---|---|
 | `INVOICE_PILOT_URL` | Base URL of the API (default `http://api:8080`) |

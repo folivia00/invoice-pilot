@@ -28,9 +28,14 @@ from invoice_pilot.extraction.prepare import InputLimits
 from invoice_pilot.llm.errors import ProviderUnavailableError
 from invoice_pilot.llm.types import DocumentInput, ProviderResponse, UsageRecord
 from invoice_pilot.logging_setup import QUIET_LOGGERS, apply_quiet_levels
-from invoice_pilot.services.fake_llm import FAKE_MODEL, FakeProvider, zero_cost
+from invoice_pilot.services.fake_llm import FAKE_ANSWER, FAKE_MODEL, FakeProvider, zero_cost
 from invoice_pilot.services.limits import DailyLimits
-from invoice_pilot.services.processing import DocumentProcessor, ProcessingQueue
+from invoice_pilot.services.processing import (
+    DocumentProcessor,
+    ProcessingQueue,
+    ResultKind,
+    UploadMeta,
+)
 from invoice_pilot.services.rate_limit import RateLimitedProvider
 from invoice_pilot.services.wiring import build_provider
 
@@ -146,10 +151,13 @@ def test_extract_needs_the_bearer_token(db_path: Path, headers: dict[str, str]) 
 
 @pytest.mark.parametrize(
     ("doc_id", "input_kind"),
-    [("inv-001", "text_pdf"), ("inv-003", "scan_pdf"), ("inv-005", "photo")],
+    [("inv-001", "text_pdf"), ("inv-003", "scan_pdf"), ("inv-006", "photo")],
 )
 def test_extract_returns_the_validated_invoice(db_path: Path, doc_id: str, input_kind: str) -> None:
-    """The declared Content-Type does not matter: the file signature decides."""
+    """The declared Content-Type does not matter: the file signature decides.
+
+    ``inv-003`` and ``inv-006`` are not samples, so the fake gives the default answer.
+    """
 
     async def scenario(client: TestClient[Any, Any]) -> None:
         response = await client.post(
@@ -492,6 +500,82 @@ def test_fake_model_waives_the_api_key_and_logs_a_warning(caplog: pytest.LogCapt
     assert [r.getMessage() for r in warnings] == [
         "LLM_FAKE is on: built-in synthetic answers, no model is called"
     ]
+
+
+EXAMPLES = REPO / "examples" / "invoices"
+
+
+@pytest.mark.parametrize(
+    ("name", "input_kind", "status", "codes", "number", "total"),
+    [
+        ("inv-001.pdf", "text_pdf", "auto_approved", [], "2025-053582", "3798.41"),
+        ("inv-005.jpg", "photo", "auto_approved", [], "R029470", "809610"),
+        ("inv-007.pdf", "text_pdf", "needs_review", ["total_mismatch"], "RE-202694453", "4241.62"),
+    ],
+)
+def test_fake_model_answers_each_example_with_its_printed_fields(
+    db_path: Path,
+    name: str,
+    input_kind: str,
+    status: str,
+    codes: list[str],
+    number: str,
+    total: str,
+) -> None:
+    data = (EXAMPLES / name).read_bytes()
+    truth = ground_truth(name.split(".")[0])
+    assert truth["expected_status"] == status and truth["expected_issue_codes"] == codes
+
+    async def download() -> bytes:
+        return data
+
+    async def notify(text: str) -> None:
+        raise AssertionError("one document never waits")
+
+    async def main() -> None:
+        async with open_storage(db_path) as storage:
+            meta = UploadMeta("document", None, name, len(data))
+            result = await processor(storage).process(7, meta, download, notify)
+        assert result.kind is ResultKind.DONE and result.outcome is not None
+        outcome = result.outcome
+        assert outcome.input_kind == input_kind
+        assert outcome.report.status.value == status
+        assert [issue.code.value for issue in outcome.report.issues] == codes
+        assert outcome.invoice is not None
+        assert outcome.invoice.invoice_number == number
+        assert outcome.invoice.total == Decimal(total)
+
+    asyncio.run(main())
+
+
+def test_fake_model_gives_unknown_files_the_default_answer() -> None:
+    async def answer(doc: DocumentInput) -> str:
+        return (await FakeProvider().extract(doc)).raw_text
+
+    unknown = [
+        DocumentInput(text="Invoice 1, total 10.00"),
+        DocumentInput(data=dataset_bytes("inv-006"), mime="image/jpeg"),
+        DocumentInput(data=dataset_bytes("inv-003"), mime="application/pdf"),
+    ]
+    for doc in unknown:
+        assert asyncio.run(answer(doc)) == FAKE_ANSWER
+    example = (EXAMPLES / "inv-005.jpg").read_bytes()
+    assert asyncio.run(answer(DocumentInput(data=example, mime="image/jpeg"))) != FAKE_ANSWER
+
+
+def test_extract_reports_needs_review_for_the_mismatched_example(db_path: Path) -> None:
+    async def scenario(client: TestClient[Any, Any]) -> None:
+        data = (EXAMPLES / "inv-007.pdf").read_bytes()
+        response = await client.post("/extract", data=form(data), headers=AUTH)
+        assert response.status == 200
+        body = await response.json()
+        assert body["status"] == "needs_review"
+        assert [(issue["code"], issue["field"]) for issue in body["issues"]] == [
+            ("total_mismatch", "total")
+        ]
+        assert body["invoice"]["total"] == "4241.62"
+
+    run_api(db_path, scenario)
 
 
 # --- import isolation ----------------------------------------------------------------------
