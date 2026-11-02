@@ -7,6 +7,8 @@ Telegram bot and HTTP API that extract invoice fields with an LLM, check them wi
 [![CI](https://github.com/folivia00/invoice-pilot/actions/workflows/ci.yml/badge.svg)](https://github.com/folivia00/invoice-pilot/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+![Demo: inv-001 is approved automatically, inv-007 is sent to review, then the export arrives as XLSX and CSV](docs/media/demo.gif)
+
 ## Results
 
 Measured on the synthetic dataset v1.0 (120 invoices). The table is generated from
