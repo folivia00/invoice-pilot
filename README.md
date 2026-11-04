@@ -11,18 +11,30 @@ Telegram bot and HTTP API that extract invoice fields with an LLM, check them wi
 
 ## Results
 
-Measured on the synthetic dataset v1.0 (120 invoices). The table is generated from
-`eval/results/*/metrics.json`, and CI fails if it differs from a fresh replay.
+Measured on the synthetic dataset v1.0 (120 invoices). The block below is generated from
+`eval/results/*/` (`metrics.json`, `predictions.jsonl`), and CI fails if it differs from a fresh replay.
 
 <!-- eval:start -->
 | Configuration | Model | Docs | Precision among auto-approved | Auto-approved | All key fields correct (model only) | Corrupted caught | Cost / 1,000 invoices |
 |---|---|---:|---:|---:|---:|---:|---:|
-| gemini-flash-lite | gemini-3.5-flash-lite | 120 | 97.1 % (101/104) | 86.7 % (104/120) | 96.7 % (116/120) | 100.0 % (15/15) | $1.71 |
-<!-- eval:end -->
+| gemini-flash-lite | gemini-3.5-flash-lite | 120 | 97.1 % (101/104; 95 % CI 91.9–99.0) | 86.7 % (104/120) | 96.7 % (116/120) | 100.0 % (15/15) | $1.71 |
 
 - Corrupted invoices caught with the expected issue code: 100.0 % (15/15). Clean invoices sent to review: 0.9 % (1/105).
 - Model call latency: median 2.3 s, p95 4.4 s (120 recorded calls, from `predictions.jsonl`).
-- Run of 2026-10-30 on the Gemini API free tier. Cost uses the actual token counts at paid-tier list prices.
+- Run of 2026-10-30. Cost uses the actual token counts at paid-tier list prices.
+
+**By input type** (gemini-flash-lite):
+
+| Input type | Docs | Auto-approved | Precision among auto-approved | All key fields correct (model only) | Corrupted caught |
+|---|---:|---:|---:|---:|---:|
+| Text PDF | 48 | 41/48 | 100.0 % (41/41; 95 % CI 91.4–100.0) | 97.9 % (47/48) | 100.0 % (6/6) |
+| Scan (PDF) | 36 | 31/36 | 93.5 % (29/31; 95 % CI 79.3–98.2) | 94.4 % (34/36) | 100.0 % (5/5) |
+| Photo | 36 | 32/36 | 96.9 % (31/32; 95 % CI 84.3–99.4) | 97.2 % (35/36) | 100.0 % (4/4) |
+
+95 % Wilson score interval; small groups give wide intervals.
+<!-- eval:end -->
+
+- The evaluation ran on the Gemini API free tier; the cost column is priced as if on the paid tier.
 - "Precision among auto-approved" is the main metric: the share of automatically approved invoices with every key field right.
 
 ## Try it in 60 seconds
@@ -73,6 +85,7 @@ Modules, data flow and design decisions: [docs/architecture.md](docs/architectur
 ## How the numbers are measured
 
 - **Dataset v1.0:** 120 synthetic invoices: 48 text PDFs, 36 scans and 36 photos; 72 English and 48 German; 10 layouts; 5 currencies. 15 of them carry a deliberate error, such as a wrong total, a broken IBAN or a due date before the invoice date. Ground truth is the printed values.
+- **Intervals:** the range after "95 % CI" is a Wilson score interval: values of the true rate that are consistent with the observed count at 95 % confidence, so a small group gives a wide range.
 - **Frozen first:** the dataset (2026-10-24) and the methodology ([docs/evaluation.md](docs/evaluation.md)) were fixed before the first live model run. They are not changed to improve the numbers. A change is a new version, with every metric measured again.
 - **Reproduce without keys:** the model answers are recorded in `eval/recordings/`. A replay makes no network calls and rewrites `eval/results/` byte for byte:
 
