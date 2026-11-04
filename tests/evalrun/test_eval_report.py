@@ -56,6 +56,9 @@ def test_readme_block_matches_and_mismatches(
     ) in block
     assert "$1.05" in block
     assert "- Run of " in block and "paid-tier list prices." in block
+    assert (
+        "- Corrupted invoices caught: n/a (0/0); with the expected issue code: n/a (0/0)."
+    ) in block
     assert "**By input type** (gemini-flash-lite):" in block
     assert "| Text PDF | 1 | 1/1 | 100.0 % (1/1; 95 % CI 20.7–100.0) |" in block
     assert "| n/a (0/0) |\n" in block  # no corrupted documents in this slice

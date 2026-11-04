@@ -182,9 +182,9 @@ def _run_notes(metrics: dict[str, Any], predictions: list[dict[str, Any]]) -> li
         else "Model call latency: n/a (no recorded calls)."
     )
     return [
-        "Corrupted invoices caught with the expected issue code: "
-        f"{pct(overall['corrupted_recall_expected_code'])}. Clean invoices sent to review: "
-        f"{pct(overall['clean_sent_to_review'])}.",
+        f"Corrupted invoices caught: {pct_ci(overall['corrupted_recall'])}; with the expected "
+        f"issue code: {pct(overall['corrupted_recall_expected_code'])}. Clean invoices sent "
+        f"to review: {pct(overall['clean_sent_to_review'])}.",
         latency_line,
         f"Run of {metrics['run']['run_date'] or 'n/a'}. Cost uses the actual token counts at "
         "paid-tier list prices.",

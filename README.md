@@ -19,7 +19,7 @@ Measured on the synthetic dataset v1.0 (120 invoices). The block below is genera
 |---|---|---:|---:|---:|---:|---:|---:|
 | gemini-flash-lite | gemini-3.5-flash-lite | 120 | 97.1 % (101/104; 95 % CI 91.9–99.0) | 86.7 % (104/120) | 96.7 % (116/120) | 100.0 % (15/15) | $1.71 |
 
-- Corrupted invoices caught with the expected issue code: 100.0 % (15/15). Clean invoices sent to review: 0.9 % (1/105).
+- Corrupted invoices caught: 100.0 % (15/15; 95 % CI 79.6–100.0); with the expected issue code: 100.0 % (15/15). Clean invoices sent to review: 0.9 % (1/105).
 - Model call latency: median 2.3 s, p95 4.4 s (120 recorded calls, from `predictions.jsonl`).
 - Run of 2026-10-30. Cost uses the actual token counts at paid-tier list prices.
 
