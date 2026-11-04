@@ -15,12 +15,18 @@ from evalrun.configs import CONFIGS, get_config
 from evalrun.cost import TOKEN_UPPER_BOUNDS, bounds_key, estimate_cost
 from evalrun.envfile import EnvFileError, parse_env_file, require_key
 from evalrun.report import (
+    CI_NOTE,
     README_END,
     README_START,
+    ci_text,
     extract_readme_block,
+    latency_stats,
+    load_runs,
+    pct_ci,
     readme_block_matches,
     render_readme_block,
     replace_readme_block,
+    wilson_interval,
 )
 from evalrun.runner import RunOptions, run_eval
 
@@ -42,10 +48,18 @@ def _metrics(tmp_path: Path, truths: dict[str, Any], write_recordings: Callable[
 def test_readme_block_matches_and_mismatches(
     tmp_path: Path, truths: dict[str, Any], write_recordings: Callable[..., Any]
 ) -> None:
-    block = render_readme_block([_metrics(tmp_path, truths, write_recordings)])
+    _metrics(tmp_path, truths, write_recordings)
+    block = render_readme_block(load_runs(tmp_path / "res"))
     assert block.startswith(README_START) and block.endswith(README_END)
-    assert "| gemini-flash-lite | gemini-3.5-flash-lite | 3 | 100.0 % (3/3) |" in block
+    assert (
+        "| gemini-flash-lite | gemini-3.5-flash-lite | 3 | 100.0 % (3/3; 95 % CI 43.8–100.0) |"
+    ) in block
     assert "$1.05" in block
+    assert "- Run of " in block and "paid-tier list prices." in block
+    assert "**By input type** (gemini-flash-lite):" in block
+    assert "| Text PDF | 1 | 1/1 | 100.0 % (1/1; 95 % CI 20.7–100.0) |" in block
+    assert "| n/a (0/0) |\n" in block  # no corrupted documents in this slice
+    assert block.endswith(f"{CI_NOTE}\n{README_END}")
     readme = tmp_path / "README.md"
     readme.write_text(f"# Title\n\nIntro.\n\n{block}\n\nOutro.\n", encoding="utf-8")
     assert readme_block_matches(readme, block)
@@ -55,6 +69,38 @@ def test_readme_block_matches_and_mismatches(
     readme.write_text("# Title without markers\n", encoding="utf-8")
     assert not readme_block_matches(readme, block)
     assert extract_readme_block("no markers") is None
+
+
+def test_wilson_interval_reference_values() -> None:
+    # Reference bounds recomputed by inverting the score test numerically (report 18).
+    assert ci_text(101, 104) == "91.9–99.0"
+    low, high = wilson_interval(101, 104) or (0.0, 0.0)
+    assert round(low * 100, 1) == 91.9 and round(high * 100, 1) == 99.0
+    assert ci_text(15, 15).endswith("–100.0")
+    assert wilson_interval(15, 15) == (pytest.approx(0.79611, abs=1e-5), 1.0)
+    assert ci_text(0, 10).startswith("0.0–")
+    assert wilson_interval(0, 10) == (0.0, pytest.approx(0.27754, abs=1e-5))
+    assert wilson_interval(0, 0) is None
+    assert ci_text(0, 0) == "n/a"
+
+
+def test_pct_ci_formats_the_main_metric() -> None:
+    item = {"value": 0.9712, "numerator": 101, "denominator": 104}
+    assert pct_ci(item) == "97.1 % (101/104; 95 % CI 91.9–99.0)"
+    assert pct_ci({"value": None, "numerator": 0, "denominator": 0}) == "n/a (0/0)"
+
+
+def test_latency_stats_skips_failed_calls() -> None:
+    def call(ms: int, status: str = "ok") -> dict[str, Any]:
+        return {"latency_ms": ms, "status": status}
+
+    rows = [
+        {"usage": [call(900, "error"), call(1000)]},
+        {"usage": [call(3000)]},
+        {"usage": [call(2000)]},
+    ]
+    assert latency_stats(rows) == (2000, 3000, 3)
+    assert latency_stats([{"usage": [call(5, "error")]}]) is None
 
 
 def test_replace_readme_block() -> None:
