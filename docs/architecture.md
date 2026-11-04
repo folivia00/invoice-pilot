@@ -54,10 +54,11 @@ the Compact and Full profiles are switched by `PROFILE`, not by code branches.
 The model is good at reading and bad at knowing when it is wrong. So it only returns
 fields in a strict schema and never decides the verdict. The checks are plain code with
 tests: sums, tax, dates, IBAN check digits, VAT ID and EIN formats, currency codes. A
-document is auto-approved only when the printed numbers agree with each other. On the
-evaluation set this is the difference between 96.7 % of documents with every key field
-right (model only) and 97.1 % precision among auto-approved documents, with all 15
-corrupted documents sent to review ([evaluation.md](evaluation.md)).
+document is auto-approved only when the printed numbers agree with each other. The
+measured effect (documents with every key field right from the model alone, precision
+among auto-approved documents, corrupted documents caught) is in the
+[Results](../README.md#results) section of the README, generated from the evaluation
+results; the methodology is in [evaluation.md](evaluation.md).
 
 ### Tolerance only for rounding
 
